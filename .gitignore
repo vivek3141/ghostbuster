@@ -160,3 +160,6 @@ cython_debug/
 #.idea/
 
 openai.config
+
+.wp_source
+.wp_target

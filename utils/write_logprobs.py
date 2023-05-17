@@ -1,12 +1,11 @@
 import openai
 import json
 
-openai_config = json.loads(open("openai.config").read())
-openai.api_key = openai_config["api_key"]
-openai.organization = openai_config["organization"]
 
-
-def write_doc(text, file, model):
+def write_logprobs(text, file, model):
+    """
+    Run text under model and write logprobs to file, separated by newline.
+    """
     doc = "<|endoftext|>" + text
     response = openai.Completion.create(
         model=model,
