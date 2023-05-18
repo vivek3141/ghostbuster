@@ -1,5 +1,5 @@
 import tqdm
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 
 class NGramModel:
@@ -81,7 +81,7 @@ class KneserNeyBaseModel(NGramModel):
         ret_prob = self.prob[n_gram[0]]
 
         if ret_prob == 0:
-            return 1 / vocab_size
+            return 1 / self.vocab_size
         else:
             return ret_prob
 

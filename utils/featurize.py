@@ -1,5 +1,6 @@
 import numpy as np
 import os
+from nltk import ngrams
 
 
 def get_logprobs(file):
@@ -69,6 +70,8 @@ def score_ngram(file, model, tokenizer, strip_first=False):
 
     with open(file) as f:
         doc = f.read().strip()
+        if strip_first:
+            doc = doc[doc.index("\n") + 1:]
         doc = " ".join(doc.split()[:1000])
         for i in ngrams([50256, 50256] + tokenizer(doc), 3):
             scores.append(model.n_gram_probability(i))
@@ -82,15 +85,15 @@ def normalize(data, mu=None, sigma=None, ret_mu_sigma=False):
     """
     if mu is None:
         mu = np.mean(data.T, axis=1)
-    if std is None:
+    if sigma is None:
         raw_std = np.std(data.T, axis=1)
-        std = np.ones_like(raw_std)
-        std[raw_std != 0] = raw_std[raw_std != 0]
+        sigma = np.ones_like(raw_std)
+        sigma[raw_std != 0] = raw_std[raw_std != 0]
 
     if ret_mu_sigma:
-        return (data - mu) / std, mu, std
+        return (data - mu) / sigma, mu, sigma
     else:
-        return (data - mu) / std
+        return (data - mu) / sigma
 
 
 def convert_file_to_logprob_file(file_name, model):
