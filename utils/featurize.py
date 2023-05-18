@@ -1,4 +1,5 @@
 import numpy as np
+import os
 
 
 def get_logprobs(file):
@@ -60,6 +61,21 @@ def convolve(X, window=100):
     return np.array(ret)
 
 
+def score_ngram(file, model, tokenizer, strip_first=False):
+    """
+    Returns vector of ngram probabilities given document, model and tokenizer
+    """
+    scores = []
+
+    with open(file) as f:
+        doc = f.read().strip()
+        doc = " ".join(doc.split()[:1000])
+        for i in ngrams([50256, 50256] + tokenizer(doc), 3):
+            scores.append(model.n_gram_probability(i))
+
+    return np.array(scores)
+
+
 def normalize(data, mu=None, sigma=None, ret_mu_sigma=False):
     """
     Normalizes data, where data is a matrix where the first dimension is the number of examples
@@ -77,18 +93,19 @@ def normalize(data, mu=None, sigma=None, ret_mu_sigma=False):
         return (data - mu) / std
 
 
-def score_ngram(file, model, tokenizer, strip_first=False):
+def convert_file_to_logprob_file(file_name, model):
     """
-    Returns vector of ngram probabilities given document, model and tokenizer
+    Removes the extension of file_name, then goes to the logprobs folder of the current directory,
+    and appends a -{model}.txt to it.
+    Example: convert_file_to_logprob_file("data/test.txt", "davinci") = "data/logprobs/test-davinci.txt"
     """
-    scores = []
+    directory = os.path.dirname(file_name)
+    base_name = os.path.basename(file_name)
 
-    with open(file) as f:
-        doc = f.read().strip()
-        if strip_first:
-            doc = doc[doc.index("\n")+1:].strip()
-        doc = " ".join(doc.split()[:1000])
-        for i in ngrams([50256, 50256] + tokenizer(doc), 3):
-            scores.append(model.n_gram_probability(i))
+    file_name_without_ext = os.path.splitext(base_name)[0]
+    logprob_directory = os.path.join(directory, "logprobs")
 
-    return np.array(scores)
+    logprob_file_name = f"{file_name_without_ext}-{model}.txt"
+    logprob_file_path = os.path.join(logprob_directory, logprob_file_name)
+
+    return logprob_file_path

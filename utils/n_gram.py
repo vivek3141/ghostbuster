@@ -7,10 +7,14 @@ class NGramModel:
     An n-gram model, where alpha is the laplace smoothing parameter.
     """
 
-    def __init__(self, train_text, n=2, alpha=3e-3):
+    def __init__(self, train_text, n=2, alpha=3e-3, vocab_size=None):
         self.n = n
+        if vocab_size is None:
+            # Assume GPT tokenizer
+            self.vocab_size = 50257
+
         self.smoothing = alpha
-        self.smoothing_f = alpha * vocab_size
+        self.smoothing_f = alpha * self.vocab_size
 
         self.c = defaultdict(lambda: [0, Counter()])
         for i in tqdm.tqdm(range(len(train_text)-n)):
@@ -57,8 +61,8 @@ class KneserNeyBaseModel(NGramModel):
     A Kneser-Ney base model, where n=1.
     """
 
-    def __init__(self, train_text):
-        super().__init__(train_text, n=1)
+    def __init__(self, train_text, vocab_size=None):
+        super().__init__(train_text, n=1, vocab_size=vocab_size)
 
         base_cnt = defaultdict(set)
         for i in range(1, len(train_text)):
