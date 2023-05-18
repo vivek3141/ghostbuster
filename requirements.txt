@@ -4,3 +4,4 @@ numpy
 tenacity
 openai
 torch
+tiktoken
