@@ -3,6 +3,10 @@ from collections import defaultdict
 
 
 class NGramModel:
+    """
+    An n-gram model, where alpha is the laplace smoothing parameter.
+    """
+
     def __init__(self, train_text, n=2, alpha=3e-3):
         self.n = n
         self.smoothing = alpha
@@ -23,6 +27,10 @@ class NGramModel:
 
 
 class DiscountBackoffModel(NGramModel):
+    """
+    An n-gram model with discounting and backoff. Delta is the discounting parameter.
+    """
+
     def __init__(self, train_text, lower_order_model, n=2, delta=0.9):
         super().__init__(train_text, n=n)
         self.lower_order_model = lower_order_model
@@ -45,6 +53,10 @@ class DiscountBackoffModel(NGramModel):
 
 
 class KneserNeyBaseModel(NGramModel):
+    """
+    A Kneser-Ney base model, where n=1.
+    """
+
     def __init__(self, train_text):
         super().__init__(train_text, n=1)
 
@@ -71,6 +83,10 @@ class KneserNeyBaseModel(NGramModel):
 
 
 class TrigramBackoff:
+    """
+    A trigram model with discounting and backoff. Uses a Kneser-Ney base model.
+    """
+
     def __init__(self, train_text, delta=0.9):
         self.base = KneserNeyBaseModel(train_text)
         self.bigram = DiscountBackoffModel(
