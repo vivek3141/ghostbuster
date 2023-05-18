@@ -75,3 +75,20 @@ def normalize(data, mu=None, sigma=None, ret_mu_sigma=False):
         return (data - mu) / std, mu, std
     else:
         return (data - mu) / std
+
+
+def score_ngram(file, model, tokenizer, strip_first=False):
+    """
+    Returns vector of ngram probabilities given document, model and tokenizer
+    """
+    scores = []
+
+    with open(file) as f:
+        doc = f.read().strip()
+        if strip_first:
+            doc = doc[doc.index("\n")+1:].strip()
+        doc = " ".join(doc.split()[:1000])
+        for i in ngrams([50256, 50256] + tokenizer(doc), 3):
+            scores.append(model.n_gram_probability(i))
+
+    return np.array(scores)
