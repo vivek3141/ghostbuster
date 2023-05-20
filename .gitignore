@@ -163,3 +163,5 @@ openai.config
 
 .wp_source
 .wp_target
+
+gptzero.ipynb

@@ -112,3 +112,33 @@ def convert_file_to_logprob_file(file_name, model):
     logprob_file_path = os.path.join(logprob_directory, logprob_file_name)
 
     return logprob_file_path
+
+
+def t_featurize(file):
+    davinci_file = convert_file_to_logprob_file(file, "davinci")
+    ada_file = convert_file_to_logprob_file(file, "ada")
+
+    X = []
+
+    davinci_logprobs = get_logprobs(davinci_file)
+    outliers = []
+    for logprob in davinci_logprobs:
+        if logprob > 10 and len(outliers) < 50:
+            outliers.append(logprob)
+
+    X.append(len(outliers))
+    outliers += [0] * (50 - len(outliers))
+    X.append(np.mean(outliers[:25]))
+    X.append(np.mean(outliers[25:]))
+
+    diffs = sorted(get_diff(davinci_file, ada_file), reverse=True)
+    diffs += [0] * (50 - min(50, len(diffs)))
+    X.append(np.mean(diffs[:25]))
+    X.append(np.mean(diffs[25:]))
+
+    token_len = sorted(get_token_len(davinci_file), reverse=True)
+    token_len += [0] * (50 - min(50, len(token_len)))
+    X.append(np.mean(token_len[:25]))
+    X.append(np.mean(token_len[25:]))
+
+    return X
