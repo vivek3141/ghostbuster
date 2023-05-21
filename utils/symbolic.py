@@ -109,15 +109,18 @@ def train_trigram(verbose=True, return_tokenizer=False):
 
     if verbose:
         print("\nTraining n-gram model...")
-    return TrigramBackoff(tokenized_corpus), tokenizer
+
+    if return_tokenizer:
+        return TrigramBackoff(tokenized_corpus), tokenizer
+    else:
+        return TrigramBackoff(tokenized_corpus)
 
 
-def generate_symbolic_data(generate_dataset, preprocess=lambda x: x,
-                           max_depth=2, output_file="symbolic_data", verbose=True):
-    """
-    Brute forces and generates symbolic data from a dataset of text files.
-    """
-    trigram, tokenizer = train_trigram(verbose=verbose, return_tokenizer=True)
+def get_all_logprobs(generate_dataset, preprocess=lambda x: x, verbose=True,
+                     trigram=None, tokenizer=None):
+    if trigram is None:
+        trigram, tokenizer = train_trigram(
+            verbose=verbose, return_tokenizer=True)
 
     davinci_logprobs, ada_logprobs, trigram_logprobs = {}, {}, {}
 
@@ -137,6 +140,17 @@ def generate_symbolic_data(generate_dataset, preprocess=lambda x: x,
             convert_file_to_logprob_file(file, "ada")
         )
         trigram_logprobs[file] = score_ngram(doc, trigram, tokenizer)
+
+    return davinci_logprobs, ada_logprobs, trigram_logprobs
+
+
+def generate_symbolic_data(generate_dataset, preprocess=lambda x: x,
+                           max_depth=2, output_file="symbolic_data", verbose=True):
+    """
+    Brute forces and generates symbolic data from a dataset of text files.
+    """
+    davinci_logprobs, ada_logprobs, trigram_logprobs = get_all_logprobs(
+        generate_dataset, preprocess=preprocess, verbose=verbose)
 
     vector_map = {
         "davinci-logprobs": lambda file: davinci_logprobs[file],
