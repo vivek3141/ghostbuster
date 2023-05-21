@@ -33,7 +33,8 @@ scalar_functions = {
     "s-l2": np.linalg.norm
 }
 
-vectors = ["davinci-logprobs", "ada-logprobs", "trigram-logprobs"]
+vectors = ["davinci-logprobs", "ada-logprobs",
+           "trigram-logprobs", "unigram-logprobs"]
 
 # Get vec_combinations
 vec_combinations = []
@@ -122,7 +123,8 @@ def get_all_logprobs(generate_dataset, preprocess=lambda x: x, verbose=True,
         trigram, tokenizer = train_trigram(
             verbose=verbose, return_tokenizer=True)
 
-    davinci_logprobs, ada_logprobs, trigram_logprobs = {}, {}, {}
+    davinci_logprobs, ada_logprobs = {}, {}
+    trigram_logprobs, unigram_logprobs = {}, {}
 
     if verbose:
         print("Loading logprobs into memory")
@@ -139,9 +141,10 @@ def get_all_logprobs(generate_dataset, preprocess=lambda x: x, verbose=True,
         ada_logprobs[file] = get_logprobs(
             convert_file_to_logprob_file(file, "ada")
         )
-        trigram_logprobs[file] = score_ngram(doc, trigram, tokenizer)
+        trigram_logprobs[file] = score_ngram(doc, trigram, tokenizer, n=3)
+        unigram_logprobs[file] = score_ngram(doc, trigram.base, tokenizer, n=1)
 
-    return davinci_logprobs, ada_logprobs, trigram_logprobs
+    return davinci_logprobs, ada_logprobs, trigram_logprobs, unigram_logprobs
 
 
 def generate_symbolic_data(generate_dataset, preprocess=lambda x: x,
@@ -149,13 +152,14 @@ def generate_symbolic_data(generate_dataset, preprocess=lambda x: x,
     """
     Brute forces and generates symbolic data from a dataset of text files.
     """
-    davinci_logprobs, ada_logprobs, trigram_logprobs = get_all_logprobs(
+    davinci_logprobs, ada_logprobs, trigram_logprobs, unigram_logprobs = get_all_logprobs(
         generate_dataset, preprocess=preprocess, verbose=verbose)
 
     vector_map = {
         "davinci-logprobs": lambda file: davinci_logprobs[file],
         "ada-logprobs": lambda file: ada_logprobs[file],
-        "trigram-logprobs": lambda file: trigram_logprobs[file]
+        "trigram-logprobs": lambda file: trigram_logprobs[file],
+        "unigram-logprobs": lambda file: unigram_logprobs[file]
     }
 
     all_funcs = backtrack_functions(max_depth=max_depth)

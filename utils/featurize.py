@@ -62,13 +62,13 @@ def convolve(X, window=100):
     return np.array(ret)
 
 
-def score_ngram(doc, model, tokenizer, strip_first=False):
+def score_ngram(doc, model, tokenizer, n=3, strip_first=False):
     """
     Returns vector of ngram probabilities given document, model and tokenizer
     """
     scores = []
     doc = " ".join(doc.split()[:1000])
-    for i in ngrams([50256, 50256] + tokenizer(doc), 3):
+    for i in ngrams((n-1) * [50256] + tokenizer(doc), n):
         scores.append(model.n_gram_probability(i))
 
     return np.array(scores)
