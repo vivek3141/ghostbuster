@@ -33,7 +33,7 @@ scalar_functions = {
     "s-l2": np.linalg.norm
 }
 
-vectors = {"davinci-logprobs", "ada-logprobs", "trigram-logprobs"}
+vectors = ["davinci-logprobs", "ada-logprobs", "trigram-logprobs"]
 
 # Get vec_combinations
 vec_combinations = []
