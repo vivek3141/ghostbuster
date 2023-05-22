@@ -73,18 +73,26 @@ def backtrack_functions(prev="", depth=0, max_depth=2):
     if prev != "":
         for func in scalar_functions:
             all_funcs.append(f"{prev} {func}")
+
+        for vec in vectors:
+            for func in vec_functions:
+                all_funcs += backtrack_functions(
+                    prev + f" {func} {vec}",
+                    depth + 1,
+                    max_depth
+                )
     else:
         for func in scalar_functions:
             for vec in vectors:
                 all_funcs.append(f"{vec} {func}")
 
-    for comb in vec_combinations:
-        if get_words(comb)[0] != prev_word:
-            all_funcs += backtrack_functions(
-                prev + " " * bool(prev) + comb,
-                depth + 1,
-                max_depth
-            )
+        for comb in vec_combinations:
+            if get_words(comb)[0] != prev_word:
+                all_funcs += backtrack_functions(
+                    comb,
+                    depth + 1,
+                    max_depth
+                )
 
     return all_funcs
 
