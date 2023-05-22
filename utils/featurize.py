@@ -110,6 +110,9 @@ def convert_file_to_logprob_file(file_name, model):
 
 
 def t_featurize(file):
+    """
+    Manually handcrafted features for classification.
+    """
     davinci_file = convert_file_to_logprob_file(file, "davinci")
     ada_file = convert_file_to_logprob_file(file, "ada")
 
