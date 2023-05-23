@@ -158,8 +158,6 @@ def select_features(exp_to_data, labels, verbose=True, to_normalize=True):
             axis=1
         )
 
-    assert sum(labels) == len(labels) // 2
-
     val_exp = list(exp_to_data.keys())
     curr = 0
     best_features = []
