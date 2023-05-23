@@ -8,8 +8,9 @@ def k_fold_score(X, labels, indices=None, k=8, precision=3):
     if indices is None:
         indices = np.arange(X.shape[0])
 
-    k = 8
-    k_split = random_split(indices, [len(indices) // k] * k)
+    splits = [len(indices) // k] * k
+    splits[-1] += len(indices) % k
+    k_split = random_split(indices, splits)
 
     score_sum = 0
     for i in range(k):

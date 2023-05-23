@@ -1,6 +1,8 @@
 import numpy as np
 import os
+import tqdm
 from nltk import ngrams
+from utils.score import k_fold_score
 
 
 def get_logprobs(file):
@@ -140,3 +142,50 @@ def t_featurize(file):
     X.append(np.mean(token_len[25:]))
 
     return X
+
+
+def select_features(exp_to_data, labels, verbose=True, to_normalize=True):
+    if to_normalize:
+        normalized_exp_to_data = {}
+        for key in exp_to_data:
+            normalized_exp_to_data[key] = normalize(exp_to_data[key])
+    else:
+        normalized_exp_to_data = exp_to_data
+
+    def get_data(*exp):
+        return np.concatenate(
+            [normalized_exp_to_data[e] for e in exp],
+            axis=1
+        )
+
+    assert sum(labels) == len(labels) // 2
+
+    val_exp = list(exp_to_data.keys())
+    curr = 0
+    best_features = []
+    i = 0
+
+    while val_exp:
+        best_score, best_exp = -1, ""
+
+        for exp in (tqdm.tqdm(val_exp) if verbose else val_exp):
+            score = k_fold_score(get_data(*best_features, exp), labels, k=5)
+
+            if score > best_score:
+                best_score = score
+                best_exp = exp
+
+        if verbose:
+            print(f"Iteration {i}, Current Score: {curr}, \
+                Best Feature: {best_exp}, New Score: {best_score}")
+
+        if best_score <= curr:
+            break
+        else:
+            best_features.append(best_exp)
+            val_exp.remove(best_exp)
+            curr = best_score
+
+        i += 1
+
+    return best_features
