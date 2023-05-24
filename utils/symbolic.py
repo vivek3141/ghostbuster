@@ -37,20 +37,18 @@ vectors = ["davinci-logprobs", "ada-logprobs",
            "trigram-logprobs", "unigram-logprobs"]
 
 # Get vec_combinations
-vec_combinations = []
-vector_names = list(vectors)
-
+vec_combinations = defaultdict(list)
 for vec1 in range(len(vectors)):
     for vec2 in range(vec1):
         for func in vec_functions:
             if func != "v-div":
-                vec_combinations.append(
-                    f"{vector_names[vec1]} {func} {vector_names[vec2]}")
+                vec_combinations[vectors[vec1]].append(
+                    f"{func} {vectors[vec2]}")
 
 for vec1 in vectors:
     for vec2 in vectors:
         if vec1 != vec2:
-            vec_combinations.append(f"{vec1} v-div {vec2}")
+            vec_combinations[vec1].append(f"v-div {vec2}")
 
 
 def get_words(exp):
@@ -60,41 +58,32 @@ def get_words(exp):
     return exp.split(" ")
 
 
-def backtrack_functions(prev="", depth=0, max_depth=2):
+def backtrack_functions(prev="", max_depth=2):
     """
     Backtrack all possible features.
     """
-    if depth >= max_depth:
-        return []
+    def helper(prev, depth):
+        if depth >= max_depth:
+            return []
 
-    all_funcs = []
-    prev_word = get_words(prev)[-1]
+        all_funcs = []
+        prev_word = get_words(prev)[-1]
 
-    if prev != "":
         for func in scalar_functions:
             all_funcs.append(f"{prev} {func}")
 
-        for vec in vectors:
-            for func in vec_functions:
-                all_funcs += backtrack_functions(
-                    prev + f" {func} {vec}",
-                    depth + 1,
-                    max_depth
-                )
-    else:
-        for func in scalar_functions:
-            for vec in vectors:
-                all_funcs.append(f"{vec} {func}")
+        for comb in vec_combinations[prev_word]:
+            all_funcs += helper(
+                f"{prev} {comb}",
+                depth + 1
+            )
 
-        for comb in vec_combinations:
-            if get_words(comb)[0] != prev_word:
-                all_funcs += backtrack_functions(
-                    comb,
-                    depth + 1,
-                    max_depth
-                )
+        return all_funcs
 
-    return all_funcs
+    ret = []
+    for vec in vectors:
+        ret += helper(vec, 0)
+    return ret
 
 
 def train_trigram(verbose=True, return_tokenizer=False):
