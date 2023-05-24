@@ -1,1 +1,5 @@
 *.txt linguist-vendored
+essay/data/* linguist-vendored
+reuter/data/* linguist-vendored
+writing_prompts/data/* linguist-vendored
+```
