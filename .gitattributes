@@ -1,4 +1,3 @@
-*.txt linguist-vendored
-essay/data/* linguist-vendored
-reuter/data/* linguist-vendored
-writing_prompts/data/* linguist-vendored
+essay/* linguist-vendored
+reuter/* linguist-vendored
+writing_prompts/* linguist-vendored
