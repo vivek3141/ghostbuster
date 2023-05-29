@@ -1,1 +1,4 @@
-*.txt linguist-vendored
+model/* linguist-vendored
+essay/* linguist-vendored
+reuter/* linguist-vendored
+writing_prompts/* linguist-vendored
