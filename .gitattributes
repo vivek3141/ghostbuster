@@ -1,4 +1,2 @@
-model/* linguist-vendored
-essay/* linguist-vendored
-reuter/* linguist-vendored
-writing_prompts/* linguist-vendored
+*.py linguist-detectable=true
+*.* linguist-detectable=false
