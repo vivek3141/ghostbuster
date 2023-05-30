@@ -1,2 +1,1 @@
-*.py linguist-detectable=true
-*.* linguist-detectable=false
+*.* linguist-language=Python
