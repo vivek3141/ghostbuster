@@ -1,98 +1,200 @@
-import numpy as np
-import dill as pickle
-import tiktoken
-import openai
 import argparse
+import os
+import tqdm
+import openai
+import math
+import numpy as np
 
 from sklearn.linear_model import LogisticRegression
-from utils.featurize import normalize, t_featurize_logprobs, score_ngram
-from utils.symbolic import train_trigram, get_words, vec_functions, scalar_functions
+from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--file", type=str, default="input.txt")
-parser.add_argument("--openai_key", type=str, default="")
-args = parser.parse_args()
+from tabulate import tabulate
 
-if args.openai_key != "":
-    openai.api_key = args.openai_key
+from utils.featurize import normalize, t_featurize
+from utils.symbolic import get_all_logprobs, get_words, train_trigram
+from utils.symbolic import vec_functions, scalar_functions, get_exp_featurize
 
-file = args.file
-MAX_TOKENS = 2048
-best_features = open("model/best_features.txt").read().strip().split("\n")
+from writing_prompts.data.load import generate_dataset as generate_gpt_wp
+from writing_prompts.data.load import generate_dataset_claude as generate_claude_wp
 
-# Load davinci tokenizer
-enc = tiktoken.encoding_for_model("davinci")
+from essay.data.load import generate_dataset as generate_gpt_essay
+from essay.data.load import generate_dataset_claude as generate_claude_essay
 
-# Load model
-model = pickle.load(open("model/model", "rb"))
-mu = pickle.load(open("model/mu", "rb"))
-sigma = pickle.load(open("model/sigma", "rb"))
+from reuter.data.load import generate_dataset as generate_gpt_reuter
+from reuter.data.load import generate_dataset_claude as generate_claude_reuter
 
-# Load data and featurize
-with open(file) as f:
-    doc = f.read().strip()
-    # Strip data to first MAX_TOKENS tokens
-    tokens = enc.encode(doc)[:MAX_TOKENS]
-    doc = enc.decode(tokens).strip()
+from utils.generate import generate_documents, round_up, openai_backoff
 
-    print(f"Input: {doc}")
 
-# Train trigram
-print("Loading Trigram...")
+NUM_STORIES = 1000
+NUM_ESSAYS = 2685
 
-trigram_model = train_trigram()
+with open("model/best_features.txt") as f:
+    best_features_all = f.read().strip().split("\n")
 
-trigram = np.array(score_ngram(doc, trigram_model, enc.encode, n=3, strip_first=False))
-unigram = np.array(score_ngram(doc, trigram_model.base, enc.encode, n=1, strip_first=False))
+trigram_model, tokenizer = train_trigram(return_tokenizer=True)
 
-response = openai.Completion.create(
-    model="ada",
-    prompt="<|endoftext|>" + doc,
-    max_tokens=0,
-    echo=True,
-    logprobs=1,
-)
-ada = np.array(list(map(lambda x: np.exp(x), response["choices"][0]["logprobs"]["token_logprobs"][1:])))
 
-response = openai.Completion.create(
-    model="davinci",
-    prompt="<|endoftext|>" + doc,
-    max_tokens=0,
-    echo=True,
-    logprobs=1,
-)
-davinci = np.array(list(map(lambda x: np.exp(x), response["choices"][0]["logprobs"]["token_logprobs"][1:])))
+def get_featurized_data(generate_dataset_fn, best_features):
+    t_data = generate_dataset_fn(t_featurize)
 
-subwords = response["choices"][0]["logprobs"]["tokens"][1:]
-gpt2_map = {"\n": "Ċ", "\t": "ĉ", " ": "Ġ"}
-for i in range(len(subwords)):
-    for k, v in gpt2_map.items():
-        subwords[i] = subwords[i].replace(k, v)
+    davinci, ada, trigram, unigram = get_all_logprobs(
+        generate_dataset_fn, trigram=trigram_model, tokenizer=tokenizer)
 
-t_features = t_featurize_logprobs(davinci, ada, subwords)
+    vector_map = {
+        "davinci-logprobs": lambda file: davinci[file],
+        "ada-logprobs": lambda file: ada[file],
+        "trigram-logprobs": lambda file: trigram[file],
+        "unigram-logprobs": lambda file: unigram[file]
+    }
+    exp_featurize = get_exp_featurize(best_features, vector_map)
+    exp_data = generate_dataset_fn(exp_featurize)
 
-vector_map = {
-    "davinci-logprobs": davinci,
-    "ada-logprobs": ada,
-    "trigram-logprobs": trigram,
-    "unigram-logprobs": unigram
-}
+    return np.concatenate([t_data, exp_data], axis=1)
 
-exp_features = []
-for exp in best_features:
 
-    exp_tokens = get_words(exp)
-    curr = vector_map[exp_tokens[0]]
+def run_experiment(generate_train_dataset, generate_test_dataset, best_features, model_name="gpt"):
+    train_data = get_featurized_data(generate_train_dataset, best_features)
+    train_labels = generate_train_dataset(lambda file: model_name in file)
 
-    for i in range(1, len(exp_tokens)):
-        if exp_tokens[i] in vec_functions:
-            next_vec = vector_map[exp_tokens[i+1]]
-            curr = vec_functions[exp_tokens[i]](curr, next_vec)
-        elif exp_tokens[i] in scalar_functions:
-            exp_features.append(scalar_functions[exp_tokens[i]](curr))
-            break
+    test_data = get_featurized_data(generate_test_dataset, best_features)
+    test_labels = generate_test_dataset(lambda file: model_name in file)
 
-data = (np.array(t_features + exp_features) - mu) / sigma
-preds = model.predict_proba(data.reshape(-1, 1).T)[:, 1]
+    print(train_data.shape)
+    print(test_data.shape)
 
-print(f"Prediction: {preds}")
+    # Normalize train, then apply same normalization to test
+    train_data, mu, sigma = normalize(train_data, ret_mu_sigma=True)
+    test_data = normalize(test_data, mu=mu, sigma=sigma)
+
+    clf = LogisticRegression(C=10, penalty='l2', max_iter=10000)
+    clf.fit(train_data, train_labels)
+
+    return f1_score(test_labels, clf.predict(test_data)), \
+        clf.score(test_data, test_labels), \
+        roc_auc_score(test_labels, clf.predict_proba(test_data)[:, 1])
+
+
+# def gpt_generate_stories(args):
+#     print("Generating stories...")
+
+#     prompts = []
+#     for i in range(NUM_STORIES):
+#         with open(f"writing_prompts/data/human/{i}.txt") as f:
+#             words = len(f.read().split(" "))
+
+#         with open(f"writing_prompts/data/gpt/prompts/{i}.txt") as f:
+#             prompt = f.read().strip()
+
+#         prompts.append(
+#             f"Write a story in {round_up(words, 50)} words to the prompt: {prompt}")
+
+#     generate_documents(
+#         "writing_prompts/data/gpt",
+#         prompts,
+#         verbose=True,
+#         force_regenerate=args.force_regenerate
+#     )
+
+
+# def gpt_generate_essay(args):
+#     print("Generating essays...")
+
+#     prompts = []
+#     for i in range(NUM_ESSAYS):
+#         with open(f"essay/data/human/{i}.txt") as f:
+#             words = len(f.read().split(" "))
+
+#         if not args.force_regenerate:
+#             if not os.path.exists(f"essay/data/gpt/prompts/{i}.txt"):
+#                 raise Exception("Prompt directory not found!")
+
+#             with open(f"essay/data/gpt/prompts/{i}.txt") as f:
+#                 prompt = f.read().strip()
+
+#         else:
+
+
+#         prompts.append(
+#             f"Write a story in {round_up(words, 50)} words to the prompt: {prompt}")
+
+#     generate_documents(
+#         "writing_prompts/data/gpt",
+#         prompts,
+#         verbose=True,
+#         force_regenerate=args.force_regenerate
+#     )
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--openai_key", type=str, default="")
+    parser.add_argument("--run_all", action="store_true")
+    # parser.add_argument("--force_regenerate", action="store_true")
+    # parser.add_argument("--generate_story", action="store_true")
+    # parser.add_argument("--generate_reuter", action="store_true")
+    # parser.add_argument("--generate_essay", action="store_true")
+    parser.add_argument("--run_wp_model", action="store_true")
+    parser.add_argument("--run_essay_model", action="store_true")
+    parser.add_argument("--run_reuter_model", action="store_true")
+    parser.add_argument("--run_claude_model", action="store_true")
+    args = parser.parse_args()
+
+    if args.openai_key != "":
+        openai.api_key = args.openai_key
+
+    # # Generate GPT Text
+    # if args.run_all or args.generate_story:
+    #     generate_stories(args)
+
+    # if args.run_all or args.generate_reuter:
+    #     generate_reuter(args)
+
+    # if args.run_all or args.generate_essay:
+    #     generate_essay(args)
+
+    result_table = [["Experiment Name", "F1", "Accuracy", "AUC"]]
+
+    if args.run_wp_model:
+        print("Running WP Model...")
+
+        with open("writing_prompts/data/train.txt") as f:
+            train_split = list(map(int, f.read().strip().split("\n")))
+
+        with open("writing_prompts/data/test.txt") as f:
+            test_split = list(map(int, f.read().strip().split("\n")))
+
+        with open("writing_prompts/best_features.txt") as f:
+            best_features_wp = f.read().strip().split("\n")
+
+        results = run_experiment(
+            lambda featurize: generate_gpt_wp(
+                featurize, split=train_split, base_dir="writing_prompts/"),
+            lambda featurize: generate_gpt_wp(
+                featurize, split=test_split, base_dir="writing_prompts/"),
+            best_features_wp,
+        )
+        result_table.append(["GPT WP (in-domain)", *results])
+
+    if args.run_essay_model:
+        print("Running Essay Model...")
+
+        with open("essay/data/train.txt") as f:
+            train_split = list(map(int, f.read().strip().split("\n")))
+
+        with open("essay/data/test.txt") as f:
+            test_split = list(map(int, f.read().strip().split("\n")))
+
+        with open("essay/best_features.txt") as f:
+            best_features_essay = f.read().strip().split("\n")
+
+        results = run_experiment(
+            lambda featurize: generate_gpt_essay(
+                featurize, split=train_split, base_dir="essay/"),
+            lambda featurize: generate_gpt_essay(
+                featurize, split=test_split, base_dir="essay/"),
+            best_features_essay,
+        )
+        result_table.append(["GPT Essay (in-domain)", *results])
+
+    print(tabulate(result_table, headers="firstrow", tablefmt="grid"))

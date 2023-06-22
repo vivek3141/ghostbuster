@@ -186,3 +186,21 @@ def generate_symbolic_data(generate_dataset, preprocess=lambda x: x,
         ).reshape(-1, 1)
 
     pickle.dump(exp_to_data, open(output_file, "wb"))
+
+
+def get_exp_featurize(best_features, vector_map):
+    def calc_features(file, exp):
+        exp_tokens = get_words(exp)
+        curr = vector_map[exp_tokens[0]](file)
+
+        for i in range(1, len(exp_tokens)):
+            if exp_tokens[i] in vec_functions:
+                next_vec = vector_map[exp_tokens[i+1]](file)
+                curr = vec_functions[exp_tokens[i]](curr, next_vec)
+            elif exp_tokens[i] in scalar_functions:
+                return scalar_functions[exp_tokens[i]](curr)
+
+    def exp_featurize(file):
+        return np.array([calc_features(file, exp) for exp in best_features])
+
+    return exp_featurize
