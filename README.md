@@ -30,3 +30,7 @@ To run the experiment files, create a file called `openai.config` in the main di
 ## Disclaimer
 
 We evaluate Ghostbuster on three datasets that represent a range of domains, but note that these datasets are not representative of all writing styles or topics and contain predominantly British and American English text. Thus, users wishing to apply Ghostbuster to real-world cases of potential off-limits usage of text generation (e.g., identifying ChatGPT-written student essays) should be wary that no model is infallible, and incorrect predictions by Ghostbuster are particularly likely when the text involved is shorter or in domains that are further from those examined in this paper. To avoid perpetuation of algorithmic harms due to these limitations, we discourage incorporation of Ghostbuster into any systems that automatically penalize students or other writers for alleged usage of text generation without human supervision.
+
+### Note
+
+Since pre-printing, we have altered the essay data to filter out de-anonymized examples. The filtered dataset contains 1444 human examples, and 1444 GPT examples.
