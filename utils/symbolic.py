@@ -126,7 +126,7 @@ def get_all_logprobs(generate_dataset, preprocess=lambda x: x, verbose=True,
     if verbose:
         print("Loading logprobs into memory")
 
-    file_names = generate_dataset(lambda file: file)
+    file_names = generate_dataset(lambda file: file, verbose=False)
     to_iter = tqdm.tqdm(file_names) if verbose else file_names
 
     for file in to_iter:
