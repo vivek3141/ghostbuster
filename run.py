@@ -13,16 +13,7 @@ from tabulate import tabulate
 from utils.featurize import normalize, t_featurize
 from utils.symbolic import get_all_logprobs, get_words, train_trigram
 from utils.symbolic import vec_functions, scalar_functions, get_exp_featurize
-
-from writing_prompts.data.load import generate_dataset as generate_gpt_wp
-from writing_prompts.data.load import generate_dataset_claude as generate_claude_wp
-
-from essay.data.load import generate_dataset as generate_gpt_essay
-from essay.data.load import generate_dataset_claude as generate_claude_essay
-
-from reuter.data.load import generate_dataset as generate_gpt_reuter
-from reuter.data.load import generate_dataset_claude as generate_claude_reuter
-
+from utils.load import get_generate_dataset
 from utils.generate import generate_documents, round_up, openai_backoff
 
 
@@ -34,6 +25,7 @@ with open("model/best_features.txt") as f:
 
 trigram_model, tokenizer = train_trigram(return_tokenizer=True)
 
+generate_dataset_essay = get_generate_dataset(base_dir="essay/data")
 
 def get_featurized_data(generate_dataset_fn, best_features):
     t_data = generate_dataset_fn(t_featurize)
