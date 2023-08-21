@@ -6,3 +6,4 @@ openai
 torch
 tiktoken
 flask
+tabulate

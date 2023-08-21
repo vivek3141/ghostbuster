@@ -1,28 +1,67 @@
+from dataclasses import dataclass
+
 import tqdm
 import numpy as np
 import os
 
+
 DIR_IGNORE = {"logprobs", "prompts", "headlines"}
 
-def get_generate_dataset(dataset_type="normal", 
-        base_dir=".", dir_splits=["human", "gpt"]):
-    assert len(dir_splits) == 2
 
-    def generate_dataset(featurize, split=None, verbose=False):
+@dataclass
+class Dataset:
+    type: str
+    path: str
+
+
+def get_generate_dataset_normal(path: str, verbose=False):
+    files = []
+    to_iter = tqdm.tqdm(os.listdir(path)) if verbose else os.listdir(path)
+
+    for file in to_iter:
+        if file in DIR_IGNORE:
+            continue
+        files.append(f"{path}/{file}")
+
+    return files
+
+
+def get_generate_dataset_author(path: str, author: str, verbose=False):
+    files = []
+
+    if author is None:
+        authors = sorted(os.listdir(path))
+    else:
+        authors = [author]
+
+    to_iter = tqdm.tqdm(authors) if verbose else authors
+
+    for author in to_iter:
+        for file in sorted(os.listdir(f"{path}/{author}")):
+            if file in DIR_IGNORE:
+                continue
+            files.append(f"{path}/{author}/{file}")
+
+    return files
+
+
+def get_generate_dataset(*datasets: Dataset):
+    def generate_dataset(featurize, split=None, verbose=False, author=None):
+        files = []
+        for dataset in datasets:
+            if dataset.type == "normal":
+                files += get_generate_dataset_normal(dataset.path, verbose=verbose)
+            elif dataset.type == "author":
+                files += get_generate_dataset_author(
+                    dataset.path, author=author, verbose=verbose
+                )
+
+        if split is not None:
+            files = np.array(files)[split]
+
         data = []
-        if split: split = set(split)
-        
-        if dataset_type == "normal":
-            left_iter = [(dir_splits[0], i) for i in os.listdir(f"{base_dir}/{dir_splits[0]}") if i not in DIR_IGNORE]
-            right_iter = [(dir_splits[1], i) for i in os.listdir(f"{base_dir}/{dir_splits[1]}") if i not in DIR_IGNORE]
-            to_iter = tqdm.tqdm(left_iter + right_iter) if verbose else left_iter + right_iter
-
-            for idx, (base, file) in enumerate(to_iter):
-                if split and idx not in split:
-                    continue
-                data.append(featurize(f"{base_dir}/{base}/{file}"))
-
+        for file in files:
+            data.append(featurize(file))
         return np.array(data)
 
     return generate_dataset
-
