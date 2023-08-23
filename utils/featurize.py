@@ -24,8 +24,7 @@ def get_tokens(file):
     Returns a list of all tokens from a given logprobs file
     """
     with open(file) as f:
-        tokens = list(map(lambda x: x.split(
-            " ")[0], f.read().strip().split("\n")))
+        tokens = list(map(lambda x: x.split(" ")[0], f.read().strip().split("\n")))
     return tokens
 
 
@@ -59,7 +58,7 @@ def convolve(X, window=100):
     """
     ret = []
     for i in range(len(X) - window):
-        ret.append(np.mean(X[i:i+window]))
+        ret.append(np.mean(X[i : i + window]))
     return np.array(ret)
 
 
@@ -70,7 +69,7 @@ def score_ngram(doc, model, tokenizer, n=3, strip_first=True):
     scores = []
     if strip_first:
         doc = " ".join(doc.split()[:1000])
-    for i in ngrams((n-1) * [50256] + tokenizer(doc), n):
+    for i in ngrams((n - 1) * [50256] + tokenizer(doc), n):
         scores.append(model.n_gram_probability(i))
 
     return np.array(scores)
@@ -151,7 +150,7 @@ def t_featurize(file):
     return t_featurize_logprobs(davinci_logprobs, ada_logprobs, tokens)
 
 
-def select_features(exp_to_data, labels, verbose=True, to_normalize=True):
+def select_features(exp_to_data, labels, verbose=True, to_normalize=True, indices=None):
     if to_normalize:
         normalized_exp_to_data = {}
         for key in exp_to_data:
@@ -160,10 +159,7 @@ def select_features(exp_to_data, labels, verbose=True, to_normalize=True):
         normalized_exp_to_data = exp_to_data
 
     def get_data(*exp):
-        return np.concatenate(
-            [normalized_exp_to_data[e] for e in exp],
-            axis=1
-        )
+        return np.concatenate([normalized_exp_to_data[e] for e in exp], axis=1)
 
     val_exp = list(exp_to_data.keys())
     curr = 0
@@ -173,16 +169,20 @@ def select_features(exp_to_data, labels, verbose=True, to_normalize=True):
     while val_exp:
         best_score, best_exp = -1, ""
 
-        for exp in (tqdm.tqdm(val_exp) if verbose else val_exp):
-            score = k_fold_score(get_data(*best_features, exp), labels, k=5)
+        for exp in tqdm.tqdm(val_exp) if verbose else val_exp:
+            score = k_fold_score(
+                get_data(*best_features, exp), labels, k=5, indices=indices
+            )
 
             if score > best_score:
                 best_score = score
                 best_exp = exp
 
         if verbose:
-            print(f"Iteration {i}, Current Score: {curr}, \
-                Best Feature: {best_exp}, New Score: {best_score}")
+            print(
+                f"Iteration {i}, Current Score: {curr}, \
+                Best Feature: {best_exp}, New Score: {best_score}"
+            )
 
         if best_score <= curr:
             break
