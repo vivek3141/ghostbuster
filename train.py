@@ -5,6 +5,7 @@ import dill as pickle
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
+from sklearn.calibration import CalibratedClassifierCV
 
 from tabulate import tabulate
 
@@ -123,7 +124,8 @@ if __name__ == "__main__":
     print(f"Best Features: {best_features}")
     print(f"Data Shape: {data.shape}")
 
-    model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+    base = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+    model = CalibratedClassifierCV(base, cv=5)
 
     if args.train_on_all_data:
         model.fit(data, labels)
