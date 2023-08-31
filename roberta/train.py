@@ -127,7 +127,6 @@ if __name__ == "__main__":
     labels = generate_dataset_fn(
         lambda file: 1 if any([m in file for m in ["gpt", "claude"]]) else 0
     )
-
     indices = np.arange(len(labels))
 
     np.random.shuffle(indices)
@@ -147,67 +146,51 @@ if __name__ == "__main__":
             with open(file) as f:
                 test_texts.append(f.read())
 
-        roberta_model = RobertaForSequenceClassification.from_pretrained(
-            "roberta-base", num_labels=2
-        ).to(device)
-
-        train_dataset = RobertaDataset(train_texts, labels[train])
-        train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
-
-        optimizer = torch.optim.AdamW(roberta_model.parameters(), lr=1e-5)
-        loss_fn = torch.nn.CrossEntropyLoss()
-
-        print("Fine-tuning roberta...")
-        roberta_model.train()
-
-        for batch in tqdm.tqdm(train_loader):
-            optimizer.zero_grad()
-            outputs = roberta_model(**batch)
-            loss = loss_fn(outputs.logits.to(device), batch["labels"].to(device))
-            loss.backward()
-            optimizer.step()
-
-        # Save Model
-        roberta_model.save_pretrained("model/ghostbuster_roberta_all")
+        train_roberta_model(
+            train_texts, labels[train], "models/ghostbuster_roberta_all"
+        )
 
     if args.train_wp:
-        roberta_model = RobertaForSequenceClassification.from_pretrained(
-            "roberta-base", num_labels=2
-        ).to(device)
-
         where = np.where(
             generate_dataset_fn(lambda file: 1 if "writing_prompts" in file else 0)
-        )[0]
-        indices = indices[where]
-
-        train = [i for i in train if i in indices]
-        test = [i for i in test if i in indices]
+        )
+        train = [i for i in train if i in where[0]]
 
         train_texts = []
         for file in files[train]:
             with open(file) as f:
                 train_texts.append(f.read())
+            assert "writing_prompts" in file
 
-        test_texts = []
-        for file in files[test]:
+        train_roberta_model(train_texts, labels[train], "models/ghostbuster_roberta_wp")
+        print("Saved model to models/ghostbuster_roberta_wp")
+
+    if args.train_reuter:
+        where = np.where(generate_dataset_fn(lambda file: 1 if "reuter" in file else 0))
+        train = [i for i in train if i in where[0]]
+
+        train_texts = []
+        for file in files[train]:
             with open(file) as f:
-                test_texts.append(f.read())
+                train_texts.append(f.read())
+            assert "reuter" in file
 
-        train_dataset = RobertaDataset(train_texts, labels[train])
-        train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
+        train_roberta_model(
+            train_texts, labels[train], "models/ghostbuster_roberta_reuter"
+        )
+        print("Saved model to models/ghostbuster_roberta_reuter")
 
-        optimizer = torch.optim.AdamW(roberta_model.parameters(), lr=1e-5)
-        loss_fn = torch.nn.CrossEntropyLoss()
+    if args.train_essay:
+        where = np.where(generate_dataset_fn(lambda file: 1 if "essay" in file else 0))
+        train = [i for i in train if i in where[0]]
 
-        print("Fine-tuning WP roberta...")
-        roberta_model.train()
+        train_texts = []
+        for file in files[train]:
+            with open(file) as f:
+                train_texts.append(f.read())
+            assert "essay" in file
 
-        for batch in tqdm.tqdm(train_loader):
-            optimizer.zero_grad()
-            outputs = roberta_model(**batch)
-            loss = loss_fn(outputs.logits.to(device), batch["labels"].to(device))
-            loss.backward()
-            optimizer.step()
-
-        # Save Model
-        roberta_model.save_pretrained("models/ghostbuster_roberta_wp")
+        train_roberta_model(
+            train_texts, labels[train], "models/ghostbuster_roberta_essay"
+        )
+        print("Saved model to models/ghostbuster_roberta_essay")
