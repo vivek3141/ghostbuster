@@ -112,6 +112,10 @@ if __name__ == "__main__":
 
     np.random.seed(args.seed)
 
+    data = [
+        ["Model Type", "Training Data", "Test Data", "F1", "Accuracy", "AUC"],
+    ]
+
     datasets = [
         *wp_dataset,
         *reuter_dataset_train,
@@ -133,27 +137,96 @@ if __name__ == "__main__":
         indices[math.floor(0.8 * len(indices)) :],
     )
 
-    where_gpt = np.where(
-        generate_dataset_fn(lambda file: 0 if "claude" in file else 1)
-    )[0]
-    indices = indices[where_gpt]
+    # Construct all indices
+    def get_indices(filter_fn):
+        where = np.where(filter_fn)[0]
+        indices = indices[where]
 
-    train = [i for i in train if i in indices]
-    test = [i for i in test if i in indices]
+        train = [i for i in train if i in indices]
+        test = [i for i in test if i in indices]
 
-    if args.roberta:
+        return train, test
+
+    # Get model indices
+    gpt_train, gpt_test = get_indices(lambda file: 1 if "gpt" in file else 0)
+    claude_train, claude_test = get_indices(lambda file: 1 if "claude" in file else 0)
+    human_train, human_test = get_indices(lambda file: 1 if "human" in file else 0)
+
+    # Get WP domain indices
+    gpt_wp_train, gpt_wp_test = get_indices(
+        lambda file: 1 if "writing_prompts" in file and "gpt" in file else 0
+    )
+    claude_wp_train, claude_wp_test = get_indices(
+        lambda file: 1 if "writing_prompts" in file and "claude" in file else 0
+    )
+    human_wp_train, human_wp_test = get_indices(
+        lambda file: 1 if "writing_prompts" in file and "human" in file else 0
+    )
+
+    # Get reuter domain indices
+    gpt_reuter_train, gpt_reuter_test = get_indices(
+        lambda file: 1 if "reuter" in file and "gpt" in file else 0
+    )
+    claude_reuter_train, claude_reuter_test = get_indices(
+        lambda file: 1 if "reuter" in file and "claude" in file else 0
+    )
+    human_reuter_train, human_reuter_test = get_indices(
+        lambda file: 1 if "reuter" in file and "human" in file else 0
+    )
+
+    # Get essay domain indices
+    gpt_essay_train, gpt_essay_test = get_indices(
+        lambda file: 1 if "essay" in file and "gpt" in file else 0
+    )
+    claude_essay_train, claude_essay_test = get_indices(
+        lambda file: 1 if "essay" in file and "claude" in file else 0
+    )
+    human_essay_train, human_essay_test = get_indices(
+        lambda file: 1 if "essay" in file and "human" in file else 0
+    )
+    
+    # Define the domains and models
+    domains_models = {
+        "gpt": ["gpt_wp", "gpt_reuter", "gpt_essay"],
+        "claude": ["claude_wp", "claude_reuter", "claude_essay"],
+        "human": ["human_wp", "human_reuter", "human_essay"]
+    }
+
+    # Initialize the dictionary to store the indices
+    indices_dict = {
+        "gpt_train": gpt_train,
+        "gpt_test": gpt_test,
+        "claude_train": claude_train,
+        "claude_test": claude_test,
+        "human_train": human_train,
+        "human_test": human_test,
+    }
+
+    # Populate the indices dictionary
+    for model, domains in domains_models.items():
+        for domain in domains:
+            train_key = f"{model}_{domain}_train"
+            test_key = f"{model}_{domain}_test"
+
+            train_indices, test_indices  = get_indices(lambda file: 1 if domain in file and model in file else 0)
+
+            indices_dict[train_key] = train_indices
+            indices_dict[test_key] = test_indices
+
+
+    def get_roberta_predictions(model, indices):
         roberta_model = RobertaForSequenceClassification.from_pretrained(
-            "roberta/models/ghostbuster_roberta_all", num_labels=2
+            model, num_labels=2
         )
         roberta_model.to(device)
 
-        test_labels = labels[test]
+        test_labels = labels[indices]
         test_predictions = []
 
         print("Computing Roberta predictions...")
         roberta_model.eval()
         with torch.no_grad():
-            for file in tqdm.tqdm(files[test]):
+            for file in tqdm.tqdm(files[indices]):
                 with open(file) as f:
                     text = f.read()
                 inputs = roberta_tokenizer(
@@ -167,6 +240,10 @@ if __name__ == "__main__":
                 outputs = roberta_model(**inputs)
                 test_predictions.append(outputs.logits.argmax(dim=1).item())
 
-        print("Roberta Test Accuracy:", accuracy_score(test_labels, test_predictions))
-        print("Roberta Test F1:", f1_score(test_labels, test_predictions))
-        print("Roberta Test AUC:", roc_auc_score(test_labels, test_predictions))
+        return (
+            accuracy_score(test_labels, test_predictions),
+            f1_score(test_labels, test_predictions),
+            roc_auc_score(test_labels, test_predictions),
+        )
+
+    if args.roberta:
