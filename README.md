@@ -14,9 +14,9 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-We provide the `run.py` script to run a given text document through ghostbuster. Usage:
+We provide the `classify.py` script to run a given text document through ghostbuster. Usage:
 ```
-python3 run.py --file INPUT_FILE_HERE --openai_key OPENAI_KEY
+python3 classify.py --file INPUT_FILE_HERE --openai_key OPENAI_KEY
 ```
 
 To run the experiment files, create a file called `openai.config` in the main directory with the following template:
