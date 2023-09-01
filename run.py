@@ -128,7 +128,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--ghostbuster_no_handcrafted", action="store_true")
     parser.add_argument("--ghostbuster_no_symbolic", action="store_true")
-    parser.add_argument("--ghostbuter_vary_training_data", action="store_true")
+    parser.add_argument("--ghostbuster_vary_training_data", action="store_true")
 
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--output_file", type=str, default="results.csv")
