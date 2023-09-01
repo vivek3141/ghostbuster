@@ -7,11 +7,10 @@ import torch
 import tqdm
 import itertools
 import csv
+import matplotlib.pyplot as plt
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
-
-from tabulate import tabulate
 
 from transformers import (
     RobertaTokenizer,
@@ -22,7 +21,7 @@ from utils.featurize import normalize, t_featurize
 from utils.symbolic import get_all_logprobs, get_exp_featurize
 from utils.load import get_generate_dataset, Dataset
 
-from torch.utils.data import Dataset as TorchDataset, DataLoader
+from torch.utils.data import Dataset as TorchDataset
 
 models = ["gpt", "claude"]
 domains = ["wp", "reuter", "essay"]
@@ -38,11 +37,10 @@ with open("results/best_features_one.txt") as f:
     best_features_one = f.read().strip().split("\n")
 
 with open("results/best_features_two.txt") as f:
-    best_features = f.read().strip().split("\n")
+    best_features_two = f.read().strip().split("\n")
 
 with open("results/best_features_three.txt") as f:
     best_features_three = f.read().strip().split("\n")
-
 
 with open("results/best_features_no_gpt.txt") as f:
     best_features_no_gpt = f.read().strip().split("\n")
@@ -122,10 +120,16 @@ def get_featurized_data(generate_dataset_fn, best_features):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--roberta", action="store_true")
+
     parser.add_argument("--ghostbuster_depth_one", action="store_true")
     parser.add_argument("--ghostbuster", action="store_true")
     parser.add_argument("--ghostbuster_depth_three", action="store_true")
     parser.add_argument("--ghostbuster_no_gpt", action="store_true")
+
+    parser.add_argument("--ghostbuster_no_handcrafted", action="store_true")
+    parser.add_argument("--ghostbuster_no_symbolic", action="store_true")
+    parser.add_argument("--ghostbuter_vary_training_data", action="store_true")
+
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--output_file", type=str, default="results.csv")
     args = parser.parse_args()
@@ -261,7 +265,7 @@ if __name__ == "__main__":
             roc_auc_score(labels[test], probs),
         )
 
-    def run_ghostbuster(best_features, model_name):
+    def run_experiment(best_features, model_name, train_fn):
         data = normalize(get_featurized_data(generate_dataset_fn, best_features))
 
         print(f"Running {model_name} Predictions...")
@@ -282,25 +286,97 @@ if __name__ == "__main__":
                     model_name,
                     f"{train_model}_{train_domain}",
                     f"{test_model}_{test_domain}",
-                    *train_ghostbuster(data, train_indices, test_indices),
+                    *train_fn(data, train_indices, test_indices),
                 ]
             )
 
     if args.ghostbuster_depth_one:
-        run_ghostbuster(best_features_one, "Ghostbuster (Depth One)")
+        run_experiment(best_features_one, "Ghostbuster (Depth One)", train_ghostbuster)
 
     if args.ghostbuster:
-        run_ghostbuster(best_features, "Ghostbuster (Depth Two)")
+        run_experiment(best_features_two, "Ghostbuster (Depth Two)", train_ghostbuster)
 
     if args.ghostbuster_depth_three:
-        run_ghostbuster(best_features_three, "Ghostbuster (Depth Three)")
+        run_experiment(
+            best_features_three, "Ghostbuster (Depth Three)", train_ghostbuster
+        )
 
     if args.ghostbuster_no_gpt:
-        run_ghostbuster(best_features_no_gpt, "Ghostbuster (N-Gram Only)")
+        run_experiment(
+            best_features_no_gpt, "Ghostbuster (N-Gram Only)", train_ghostbuster
+        )
 
-    # Write data to output csv file
-    with open(args.output_file, "w") as f:
-        writer = csv.writer(f)
-        writer.writerows(results_table)
+    if args.ghostbuster_no_handcrafted:
 
-    print(f"Saved results to {args.output_file}")
+        def train_ghostbuster_no_handcrafted(data, train, test):
+            model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+            model.fit(data[train, 7:], labels[train])
+
+            predictions = model.predict(data[test, 7:])
+            probs = model.predict_proba(data[test, 7:])[:, 1]
+
+            return (
+                accuracy_score(labels[test], predictions),
+                f1_score(labels[test], predictions),
+                roc_auc_score(labels[test], probs),
+            )
+
+        run_experiment(
+            best_features_three,
+            "Ghostbuster (Depth Three, No Handcrafted)",
+            train_ghostbuster_no_handcrafted,
+        )
+
+    if args.ghostbuster_no_symbolic:
+
+        def train_ghostbuster_no_symbolic(data, train, test):
+            model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+            model.fit(data[train, :7], labels[train])
+
+            predictions = model.predict(data[test, :7])
+            probs = model.predict_proba(data[test, :7])[:, 1]
+
+            return (
+                accuracy_score(labels[test], predictions),
+                f1_score(labels[test], predictions),
+                roc_auc_score(labels[test], probs),
+            )
+
+        run_experiment(
+            best_features_three,
+            "Ghostbuster (Depth Three, No Symbolic)",
+            train_ghostbuster_no_symbolic,
+        )
+
+    if args.ghostbuster_vary_training_data:
+        data = normalize(get_featurized_data(generate_dataset_fn, best_features_three))
+        training_sizes, scores = [], []
+
+        train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
+        test_indices = indices_dict["gpt_test"] + indices_dict["human_test"]
+
+        np.random.shuffle(train_indices)
+
+        for i in tqdm.tqdm(range(5, len(train_indices))):
+            training_sizes.append(i + 1)
+            scores.append(train_ghostbuster(data, train_indices[: i + 1], test_indices))
+
+        scores = np.array(scores)
+
+        plt.plot(training_sizes, scores[:, 0], label="Accuracy")
+        plt.plot(training_sizes, scores[:, 1], label="F1")
+        plt.plot(training_sizes, scores[:, 2], label="AUC")
+
+        plt.xlabel("Training Size (# of Documents)")
+        plt.ylabel("Score")
+
+        plt.legend()
+        plt.savefig("results/training_size.png")
+
+    if len(results_table) > 1:
+        # Write data to output csv file
+        with open(args.output_file, "w") as f:
+            writer = csv.writer(f)
+            writer.writerows(results_table)
+
+        print(f"Saved results to {args.output_file}")
