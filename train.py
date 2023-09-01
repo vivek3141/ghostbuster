@@ -15,7 +15,7 @@ from utils.symbolic import generate_symbolic_data
 from utils.load import get_generate_dataset, Dataset
 
 
-with open("results/best_features_two.txt") as f:
+with open("results/best_features_three.txt") as f:
     best_features = f.read().strip().split("\n")
 
 trigram_model, tokenizer = train_trigram(return_tokenizer=True)
@@ -89,7 +89,7 @@ if __name__ == "__main__":
 
     if args.generate_symbolic_data:
         generate_symbolic_data(
-            generate_dataset_fn, max_depth=3, output_file="symbolic_data", verbose=True
+            generate_dataset_fn, max_depth=4, output_file="symbolic_data_four", verbose=True
         )
 
     labels = generate_dataset_fn(
