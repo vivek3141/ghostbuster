@@ -15,7 +15,7 @@ from utils.symbolic import generate_symbolic_data
 from utils.load import get_generate_dataset, Dataset
 
 
-with open("best_features.txt") as f:
+with open("results/best_features_two.txt") as f:
     best_features = f.read().strip().split("\n")
 
 trigram_model, tokenizer = train_trigram(return_tokenizer=True)
@@ -67,6 +67,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--generate_symbolic_data", action="store_true")
     parser.add_argument("--perform_feature_selection", action="store_true")
+    parser.add_argument("--perform_feature_selection_one", action="store_true")
+    parser.add_argument("--perform_feature_selection_two", action="store_true")
+    parser.add_argument("--perform_feature_selection_no_gpt", action="store_true")
     parser.add_argument("--only_include_gpt", action="store_true")
     parser.add_argument("--train_on_all_data", action="store_true")
     parser.add_argument("--seed", type=int, default=0)
@@ -114,7 +117,55 @@ if __name__ == "__main__":
             exp_to_data, labels, verbose=True, to_normalize=True, indices=train
         )
 
-        with open("best_features.txt", "w") as f:
+        with open("results/best_features.txt", "w") as f:
+            for feat in best_features:
+                f.write(feat + "\n")
+
+    if args.perform_feature_selection_two:
+        old_exp_to_data = pickle.load(open("symbolic_data", "rb"))
+
+        exp_to_data = {}
+        for key in old_exp_to_data:
+            if len(key.split(" ")) <= 4:
+                exp_to_data[key] = old_exp_to_data[key]
+
+        best_features = select_features(
+            exp_to_data, labels, verbose=True, to_normalize=True, indices=train
+        )
+
+        with open("results/best_features_two.txt", "w") as f:
+            for feat in best_features:
+                f.write(feat + "\n")
+
+    if args.perform_feature_selection_one:
+        old_exp_to_data = pickle.load(open("symbolic_data", "rb"))
+
+        exp_to_data = {}
+        for key in old_exp_to_data:
+            if len(key.split(" ")) <= 2:
+                exp_to_data[key] = old_exp_to_data[key]
+
+        best_features = select_features(
+            exp_to_data, labels, verbose=True, to_normalize=True, indices=train
+        )
+
+        with open("results/best_features_one.txt", "w") as f:
+            for feat in best_features:
+                f.write(feat + "\n")
+
+    if args.perform_feature_selection_no_gpt:
+        old_exp_to_data = pickle.load(open("symbolic_data", "rb"))
+
+        exp_to_data = {}
+        for key in old_exp_to_data:
+            if "ada" not in key and "davinci" not in key:
+                exp_to_data[key] = old_exp_to_data[key]
+
+        best_features = select_features(
+            exp_to_data, labels, verbose=True, to_normalize=True, indices=train
+        )
+
+        with open("results/best_features_no_gpt.txt", "w") as f:
             for feat in best_features:
                 f.write(feat + "\n")
 
