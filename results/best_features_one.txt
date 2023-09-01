@@ -1,0 +1,8 @@
+davinci-logprobs s-avg
+davinci-logprobs s-var
+trigram-logprobs s-l2
+unigram-logprobs s-var
+unigram-logprobs s-avg
+davinci-logprobs s-min
+ada-logprobs s-var
+ada-logprobs s-avg-top-25
