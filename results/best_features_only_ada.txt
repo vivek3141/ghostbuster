@@ -1,0 +1,7 @@
+unigram-logprobs v-add trigram-logprobs v-> ada-logprobs s-avg
+ada-logprobs v-div unigram-logprobs s-l2
+unigram-logprobs v-> ada-logprobs s-avg-top-25
+unigram-logprobs s-avg-top-25
+ada-logprobs v-div unigram-logprobs v-mul ada-logprobs s-var
+ada-logprobs v-div trigram-logprobs v-sub ada-logprobs s-min
+trigram-logprobs v-add ada-logprobs s-avg-top-25

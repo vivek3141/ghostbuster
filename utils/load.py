@@ -50,16 +50,16 @@ def get_generate_dataset(*datasets: Dataset):
         files = []
         for dataset in datasets:
             if dataset.type == "normal":
-                files += get_generate_dataset_normal(dataset.path, verbose=verbose)
+                files += get_generate_dataset_normal(dataset.path)
             elif dataset.type == "author":
-                files += get_generate_dataset_author(
-                    dataset.path, author=author, verbose=verbose
-                )
+                files += get_generate_dataset_author(dataset.path, author=author)
 
         if split is not None:
             files = np.array(files)[split]
 
         data = []
+        files = tqdm.tqdm(files) if verbose else files
+
         for file in files:
             data.append(featurize(file))
         return np.array(data)
