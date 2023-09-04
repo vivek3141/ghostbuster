@@ -168,6 +168,7 @@ bard.config
 
 gptzero.ipynb
 symbolic_data
+symbolic_data_four
 
 input.txt
 roberta/models

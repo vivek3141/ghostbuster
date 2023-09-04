@@ -8,6 +8,7 @@ import tqdm
 import itertools
 import csv
 import matplotlib.pyplot as plt
+import os
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
@@ -33,21 +34,37 @@ else:
     print("Using CPU...")
     device = torch.device("cpu")
 
-with open("results/best_features_one.txt") as f:
-    best_features_one = f.read().strip().split("\n")
+best_features_map = {}
 
-with open("results/best_features_two.txt") as f:
-    best_features_two = f.read().strip().split("\n")
+for file in os.listdir("results"):
+    if file.startswith("best_features"):
+        with open(f"results/{file}") as f:
+            best_features_map[file[:-4]] = f.read().strip().split("\n")
 
-with open("results/best_features_three.txt") as f:
-    best_features_three = f.read().strip().split("\n")
+# with open("results/best_features_one.txt") as f:
+#     best_features_one = f.read().strip().split("\n")
 
-with open("results/best_features_no_gpt.txt") as f:
-    best_features_no_gpt = f.read().strip().split("\n")
+# with open("results/best_features_two.txt") as f:
+#     best_features_two = f.read().strip().split("\n")
+
+# with open("results/best_features_three.txt") as f:
+#     best_features_three = f.read().strip().split("\n")
+
+# with open("results/best_features_four.txt") as f:
+#     best_features_four = f.read().strip().split("\n")
+
+# with open("results/best_features_only_ada.txt") as f:
+#     best_features_only_ada = f.read().strip().split("\n")
+
+# with open("results/best_features_no_gpt.txt") as f:
+#     best_features_no_gpt = f.read().strip().split("\n")
 
 print("Loading trigram model...")
 trigram_model = pickle.load(open("trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL)
 tokenizer = tiktoken.encoding_for_model("davinci").encode
+
+print("Loading features...")
+exp_to_data = pickle.load(open("symbolic_data_four", "rb"))
 
 roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
@@ -98,6 +115,7 @@ class RobertaDataset(TorchDataset):
         }
 
 
+"""
 def get_featurized_data(generate_dataset_fn, best_features):
     t_data = generate_dataset_fn(t_featurize)
 
@@ -115,19 +133,24 @@ def get_featurized_data(generate_dataset_fn, best_features):
     exp_data = generate_dataset_fn(exp_featurize)
 
     return np.concatenate([t_data, exp_data], axis=1)
-
+"""
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--roberta", action="store_true")
 
-    parser.add_argument("--ghostbuster_depth_one", action="store_true")
     parser.add_argument("--ghostbuster", action="store_true")
-    parser.add_argument("--ghostbuster_depth_three", action="store_true")
-    parser.add_argument("--ghostbuster_no_gpt", action="store_true")
 
+    parser.add_argument("--ghostbuster_depth_one", action="store_true")
+    parser.add_argument("--ghostbuster_depth_two", action="store_true")
+    parser.add_argument("--ghostbuster_depth_three", action="store_true")
+    parser.add_argument("--ghostbuster_depth_four", action="store_true")
+
+    parser.add_argument("--ghostbuster_no_gpt", action="store_true")
     parser.add_argument("--ghostbuster_no_handcrafted", action="store_true")
     parser.add_argument("--ghostbuster_no_symbolic", action="store_true")
+    parser.add_argument("--ghostbuster_only_ada", action="store_true")
+
     parser.add_argument("--ghostbuster_vary_training_data", action="store_true")
 
     parser.add_argument("--seed", type=int, default=0)
@@ -151,6 +174,12 @@ if __name__ == "__main__":
         *essay_dataset,
     ]
     generate_dataset_fn = get_generate_dataset(*datasets)
+    t_data = generate_dataset_fn(t_featurize, verbose=True)
+
+    def get_featurized_data(best_features):
+        return np.concatenate(
+            [t_data] + [exp_to_data[i] for i in best_features], axis=1
+        )
 
     # Get a list of all files and the corresponding labels
     files = generate_dataset_fn(lambda x: x)
@@ -266,7 +295,7 @@ if __name__ == "__main__":
         )
 
     def run_experiment(best_features, model_name, train_fn):
-        data = normalize(get_featurized_data(generate_dataset_fn, best_features))
+        data = normalize(get_featurized_data(best_features))
 
         print(f"Running {model_name} Predictions...")
         for train_model, train_domain, test_model, test_domain in tqdm.tqdm(
@@ -290,23 +319,62 @@ if __name__ == "__main__":
                 ]
             )
 
-    if args.ghostbuster_depth_one:
-        run_experiment(best_features_one, "Ghostbuster (Depth One)", train_ghostbuster)
-
-    if args.ghostbuster:
-        run_experiment(best_features_two, "Ghostbuster (Depth Two)", train_ghostbuster)
-
-    if args.ghostbuster_depth_three:
+    if args.ghostbuster_depth_one or args.ghostbuster:
         run_experiment(
-            best_features_three, "Ghostbuster (Depth Three)", train_ghostbuster
+            best_features_map["best_features_one"],
+            "Ghostbuster (Depth One)",
+            train_ghostbuster,
         )
 
-    if args.ghostbuster_no_gpt:
+    if args.ghostbuster_depth_two or args.ghostbuster:
+        # run_experiment(best_features_two, "Ghostbuster (Depth Two)", train_ghostbuster)
         run_experiment(
-            best_features_no_gpt, "Ghostbuster (N-Gram Only)", train_ghostbuster
+            best_features_map["best_features_two"],
+            "Ghostbuster (Depth Two)",
+            train_ghostbuster,
         )
 
-    if args.ghostbuster_no_handcrafted:
+    if args.ghostbuster_depth_three or args.ghostbuster:
+        # run_experiment(
+        #     best_features_three, "Ghostbuster (Depth Three)", train_ghostbuster
+        # )
+        run_experiment(
+            best_features_map["best_features_three"],
+            "Ghostbuster (Depth Three)",
+            train_ghostbuster,
+        )
+
+    if args.ghostbuster_depth_four or args.ghostbuster:
+        # run_experiment(
+        #     best_features_four, "Ghostbuster (Depth Four)", train_ghostbuster
+        # )
+        run_experiment(
+            best_features_map["best_features_four"],
+            "Ghostbuster (Depth Four)",
+            train_ghostbuster,
+        )
+
+    if args.ghostbuster_no_gpt or args.ghostbuster:
+        # run_experiment(
+        #     best_features_no_gpt, "Ghostbuster (N-Gram Only)", train_ghostbuster
+        # )
+        run_experiment(
+            best_features_map["best_features_no_gpt"],
+            "Ghostbuster (N-Gram Only)",
+            train_ghostbuster,
+        )
+
+    if args.ghostbuster_only_ada or args.ghostbuster:
+        # run_experiment(
+        #     best_features_only_ada, "Ghostbuster (N-Gram and Ada)", train_ghostbuster
+        # )
+        run_experiment(
+            best_features_map["best_features_only_ada"],
+            "Ghostbuster (N-Gram and Ada)",
+            train_ghostbuster,
+        )
+
+    if args.ghostbuster_no_handcrafted or args.ghostbuster:
 
         def train_ghostbuster_no_handcrafted(data, train, test):
             model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
@@ -322,12 +390,12 @@ if __name__ == "__main__":
             )
 
         run_experiment(
-            best_features_three,
+            best_features_map["best_features_three"],
             "Ghostbuster (Depth Three, No Handcrafted)",
             train_ghostbuster_no_handcrafted,
         )
 
-    if args.ghostbuster_no_symbolic:
+    if args.ghostbuster_no_symbolic or args.ghostbuster:
 
         def train_ghostbuster_no_symbolic(data, train, test):
             model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
@@ -343,13 +411,13 @@ if __name__ == "__main__":
             )
 
         run_experiment(
-            best_features_three,
-            "Ghostbuster (Depth Three, No Symbolic)",
+            best_features_map["best_features_three"],
+            "Ghostbuster (No Symbolic)",
             train_ghostbuster_no_symbolic,
         )
 
     if args.ghostbuster_vary_training_data:
-        data = normalize(get_featurized_data(generate_dataset_fn, best_features_three))
+        data = normalize(get_featurized_data(best_features_map["best_features_three"]))
         training_sizes, scores = [], []
 
         train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
