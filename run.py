@@ -1,28 +1,30 @@
-import argparse
-import math
-import numpy as np
-import dill as pickle
-import tiktoken
-import torch
-import tqdm
-import itertools
+# Built-In Imports
 import csv
-import matplotlib.pyplot as plt
+import itertools
+import math
 import os
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
+# External Imports
+import argparse
+import dill as pickle
+import matplotlib.pyplot as plt
+import numpy as np
+import tiktoken
+import tqdm
 
-from transformers import (
-    RobertaTokenizer,
-    RobertaForSequenceClassification,
-)
-
-from utils.featurize import normalize, t_featurize
-from utils.symbolic import get_all_logprobs, get_exp_featurize
-from utils.load import get_generate_dataset, Dataset
+# Torch imports
+import torch
 
 from torch.utils.data import Dataset as TorchDataset
+from transformers import RobertaForSequenceClassification, RobertaTokenizer
+
+# Sklearn imports
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
+
+# Local Imports
+from utils.featurize import normalize, t_featurize
+from utils.load import Dataset, get_generate_dataset
 
 models = ["gpt", "claude"]
 domains = ["wp", "reuter", "essay"]
@@ -40,24 +42,6 @@ for file in os.listdir("results"):
     if file.startswith("best_features"):
         with open(f"results/{file}") as f:
             best_features_map[file[:-4]] = f.read().strip().split("\n")
-
-# with open("results/best_features_one.txt") as f:
-#     best_features_one = f.read().strip().split("\n")
-
-# with open("results/best_features_two.txt") as f:
-#     best_features_two = f.read().strip().split("\n")
-
-# with open("results/best_features_three.txt") as f:
-#     best_features_three = f.read().strip().split("\n")
-
-# with open("results/best_features_four.txt") as f:
-#     best_features_four = f.read().strip().split("\n")
-
-# with open("results/best_features_only_ada.txt") as f:
-#     best_features_only_ada = f.read().strip().split("\n")
-
-# with open("results/best_features_no_gpt.txt") as f:
-#     best_features_no_gpt = f.read().strip().split("\n")
 
 print("Loading trigram model...")
 trigram_model = pickle.load(open("trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL)
@@ -114,26 +98,6 @@ class RobertaDataset(TorchDataset):
             "labels": self.labels[idx],
         }
 
-
-"""
-def get_featurized_data(generate_dataset_fn, best_features):
-    t_data = generate_dataset_fn(t_featurize)
-
-    davinci, ada, trigram, unigram = get_all_logprobs(
-        generate_dataset_fn, trigram=trigram_model, tokenizer=tokenizer
-    )
-
-    vector_map = {
-        "davinci-logprobs": lambda file: davinci[file],
-        "ada-logprobs": lambda file: ada[file],
-        "trigram-logprobs": lambda file: trigram[file],
-        "unigram-logprobs": lambda file: unigram[file],
-    }
-    exp_featurize = get_exp_featurize(best_features, vector_map)
-    exp_data = generate_dataset_fn(exp_featurize)
-
-    return np.concatenate([t_data, exp_data], axis=1)
-"""
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
