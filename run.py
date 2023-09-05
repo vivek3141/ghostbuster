@@ -291,7 +291,6 @@ if __name__ == "__main__":
         )
 
     if args.ghostbuster_depth_two or args.ghostbuster:
-        # run_experiment(best_features_two, "Ghostbuster (Depth Two)", train_ghostbuster)
         run_experiment(
             best_features_map["best_features_two"],
             "Ghostbuster (Depth Two)",
@@ -299,9 +298,6 @@ if __name__ == "__main__":
         )
 
     if args.ghostbuster_depth_three or args.ghostbuster:
-        # run_experiment(
-        #     best_features_three, "Ghostbuster (Depth Three)", train_ghostbuster
-        # )
         run_experiment(
             best_features_map["best_features_three"],
             "Ghostbuster (Depth Three)",
@@ -309,9 +305,6 @@ if __name__ == "__main__":
         )
 
     if args.ghostbuster_depth_four or args.ghostbuster:
-        # run_experiment(
-        #     best_features_four, "Ghostbuster (Depth Four)", train_ghostbuster
-        # )
         run_experiment(
             best_features_map["best_features_four"],
             "Ghostbuster (Depth Four)",
@@ -319,9 +312,6 @@ if __name__ == "__main__":
         )
 
     if args.ghostbuster_no_gpt or args.ghostbuster:
-        # run_experiment(
-        #     best_features_no_gpt, "Ghostbuster (N-Gram Only)", train_ghostbuster
-        # )
         run_experiment(
             best_features_map["best_features_no_gpt"],
             "Ghostbuster (N-Gram Only)",
@@ -329,9 +319,6 @@ if __name__ == "__main__":
         )
 
     if args.ghostbuster_only_ada or args.ghostbuster:
-        # run_experiment(
-        #     best_features_only_ada, "Ghostbuster (N-Gram and Ada)", train_ghostbuster
-        # )
         run_experiment(
             best_features_map["best_features_only_ada"],
             "Ghostbuster (N-Gram and Ada)",
