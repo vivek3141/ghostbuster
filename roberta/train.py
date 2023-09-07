@@ -4,7 +4,7 @@ import numpy as np
 import dill as pickle
 import torch
 import tqdm
-
+import itertools
 
 from transformers import (
     RobertaTokenizer,
@@ -21,6 +21,9 @@ if torch.cuda.is_available():
 else:
     print("Using CPU...")
     device = torch.device("cpu")
+
+models = ["gpt", "claude"]
+domains = ["wp", "reuter", "essay"]
 
 roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
@@ -163,70 +166,58 @@ if __name__ == "__main__":
         indices[math.floor(0.8 * len(indices)) :],
     )
 
+    # Construct all indices
+    def get_indices(filter_fn):
+        where = np.where(generate_dataset_fn(filter_fn))[0]
+
+        curr_train = [i for i in train if i in where]
+        curr_test = [i for i in test if i in where]
+
+        return curr_train, curr_test
+
+    indices_dict = {}
+
+    for model in models + ["human"]:
+        train_indices, test_indices = get_indices(
+            lambda file: 1 if model in file else 0
+        )
+
+        indices_dict[f"{model}_train"] = train_indices
+        indices_dict[f"{model}_test"] = test_indices
+
+    for model in models + ["human"]:
+        for domain in domains:
+            train_key = f"{model}_{domain}_train"
+            test_key = f"{model}_{domain}_test"
+
+            if domain == "wp":
+                domain = "writing_prompts"
+
+            train_indices, test_indices = get_indices(
+                lambda file: 1 if domain in file and model in file else 0
+            )
+
+            indices_dict[train_key] = train_indices
+            indices_dict[test_key] = test_indices
+
     if args.train_all:
-        train_texts = []
-        for file in files[train]:
-            with open(file) as f:
-                train_texts.append(f.read())
+        for train_model, train_domain, test_model, test_domain in tqdm.tqdm(
+            list(itertools.product(models, domains, models, domains))
+        ):
+            print(f"Training on {train_model}_{train_domain}...")
 
-        test_texts = []
-        for file in files[test]:
-            with open(file) as f:
-                test_texts.append(f.read())
+            train_indices = (
+                indices_dict[f"{train_model}_{train_domain}_train"]
+                + indices_dict[f"human_{train_domain}_train"]
+            )
 
-        train_roberta_model(
-            train_texts, labels[train], "models/ghostbuster_roberta_all"
-        )
+            train_texts = []
+            for file in files[train_indices]:
+                with open(file) as f:
+                    train_texts.append(f.read())
 
-    if args.train_wp:
-        where_wp = np.where(
-            generate_dataset_fn(lambda file: 1 if "writing_prompts" in file else 0)
-        )
-        train_wp = [i for i in train if i in where_wp[0]]
-
-        train_texts_wp = []
-        for file in files[train_wp]:
-            with open(file) as f:
-                train_texts_wp.append(f.read())
-            assert "writing_prompts" in file
-
-        train_roberta_model(
-            train_texts, labels[train_wp], "models/ghostbuster_roberta_wp"
-        )
-        print("Saved model to models/ghostbuster_roberta_wp")
-
-    if args.train_reuter:
-        where_reuter = np.where(
-            generate_dataset_fn(lambda file: 1 if "reuter" in file else 0)
-        )
-        train_reuter = [i for i in train if i in where_reuter[0]]
-
-        train_texts_reuter = []
-        for file in files[train_reuter]:
-            with open(file) as f:
-                train_texts_reuter.append(f.read())
-            assert "reuter" in file
-
-        train_roberta_model(
-            train_texts_reuter,
-            labels[train_reuter],
-            "models/ghostbuster_roberta_reuter",
-        )
-        print("Saved model to models/ghostbuster_roberta_reuter")
-
-    if args.train_essay:
-        where_essay = np.where(
-            generate_dataset_fn(lambda file: 1 if "essay" in file else 0)
-        )
-        train_essay = [i for i in train if i in where_essay[0]]
-
-        train_texts_essay = []
-        for file in files[train_essay]:
-            with open(file) as f:
-                train_texts_essay.append(f.read())
-            assert "essay" in file
-
-        train_roberta_model(
-            train_texts_essay, labels[train_essay], "models/ghostbuster_roberta_essay"
-        )
-        print("Saved model to models/ghostbuster_roberta_essay")
+            train_roberta_model(
+                train_texts,
+                labels[train_indices],
+                f"models/roberta_{train_model}_{train_domain}",
+            )
