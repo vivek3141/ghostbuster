@@ -23,7 +23,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 
 # Local Imports
-from utils.featurize import normalize, t_featurize
+from utils.featurize import normalize, t_featurize, select_features
 from utils.load import Dataset, get_generate_dataset
 
 models = ["gpt", "claude"]
@@ -139,6 +139,7 @@ if __name__ == "__main__":
     ]
     generate_dataset_fn = get_generate_dataset(*datasets)
     t_data = generate_dataset_fn(t_featurize, verbose=True)
+    # pickle.dump(t_data, open("t_data", "wb"), pickle.HIGHEST_PROTOCOL)
 
     def get_featurized_data(best_features):
         return np.concatenate(
@@ -229,16 +230,16 @@ if __name__ == "__main__":
     if args.roberta:
         print("Running Roberta Predictions...")
 
-        for m_domain, model, domain in tqdm.tqdm(
-            list(itertools.product(domains, models, domains))
+        for t_model, t_domain, model, domain in tqdm.tqdm(
+            list(itertools.product(models, domains, models, domains))
         ):
             results_table.append(
                 [
                     "Roberta",
-                    m_domain,
+                    f"{t_model}_{t_domain}",
                     f"{model}_{domain}",
                     *get_roberta_predictions(
-                        f"roberta/models/ghostbuster_roberta_{m_domain}",
+                        f"roberta/models/roberta_{t_model}_{t_domain}",
                         indices_dict[f"{model}_{domain}_test"]
                         + indices_dict[f"human_{domain}_test"],
                     ),
@@ -368,29 +369,97 @@ if __name__ == "__main__":
         )
 
     if args.ghostbuster_vary_training_data:
-        data = normalize(get_featurized_data(best_features_map["best_features_three"]))
-        training_sizes, scores = [], []
+        exp_to_data_three = pickle.load(open("symbolic_data", "rb"))
 
         train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
         test_indices = indices_dict["gpt_test"] + indices_dict["human_test"]
-
         np.random.shuffle(train_indices)
 
-        for i in tqdm.tqdm(range(5, len(train_indices))):
-            training_sizes.append(i + 1)
-            scores.append(train_ghostbuster(data, train_indices[: i + 1], test_indices))
+        claude_test_indices = indices_dict["claude_test"] + indices_dict["human_test"]
+
+        scores = []
+        train_sizes = [int(125 * (2**i)) for i in range(7)] + [len(train_indices)]
+        print(train_sizes)
+
+        for size in tqdm.tqdm(train_sizes):
+            print(f"Now running size: {size}")
+
+            curr_train_indices = train_indices[:size]
+            curr_best_features = select_features(
+                exp_to_data_three,
+                labels,
+                verbose=True,
+                to_normalize=True,
+                indices=curr_train_indices,
+            )
+            data = normalize(get_featurized_data(curr_best_features))
+
+            curr_score_vec = []
+            print(data[curr_train_indices].shape)
+
+            model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+            model.fit(data[curr_train_indices], labels[curr_train_indices])
+
+            curr_score_vec.append(
+                f1_score(labels[test_indices], model.predict(data[test_indices]))
+            )
+
+            curr_score_vec.append(
+                f1_score(
+                    labels[claude_test_indices],
+                    model.predict(data[claude_test_indices]),
+                )
+            )
+
+            for test_domain in domains:
+                domain_train_indices = []
+
+                for train_domain in domains:
+                    if train_domain == test_domain:
+                        continue
+
+                    domain_train_indices += (
+                        indices_dict[f"gpt_{train_domain}_train"]
+                        + indices_dict[f"human_{train_domain}_train"]
+                    )
+
+                domain_train_indices = np.intersect1d(
+                    domain_train_indices, curr_train_indices
+                )
+
+                domain_test_indices = (
+                    indices_dict[f"gpt_{test_domain}_test"]
+                    + indices_dict[f"human_{test_domain}_test"]
+                )
+
+                model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+                model.fit(data[domain_train_indices], labels[domain_train_indices])
+
+                curr_score_vec.append(
+                    f1_score(
+                        labels[domain_test_indices],
+                        model.predict(data[domain_test_indices]),
+                    )
+                )
+            scores.append(curr_score_vec)
 
         scores = np.array(scores)
+        print(scores)
 
-        plt.plot(training_sizes, scores[:, 0], label="Accuracy")
-        plt.plot(training_sizes, scores[:, 1], label="F1")
-        plt.plot(training_sizes, scores[:, 2], label="AUC")
+        plt.plot(train_sizes, scores[:, 0], label="In-Domain")
+        plt.plot(train_sizes, scores[:, 1], label="Out-Domain (Claude)")
+        plt.plot(train_sizes, scores[:, 2], label="Out-Domain (WP)")
+        plt.plot(train_sizes, scores[:, 3], label="Out-Domain (Reuter)")
+        plt.plot(train_sizes, scores[:, 4], label="Out-Domain (Essay)")
 
         plt.xlabel("Training Size (# of Documents)")
-        plt.ylabel("Score")
+        plt.ylabel("F1 Score")
 
         plt.legend()
         plt.savefig("results/training_size.png")
+
+    if args.ghostbuster_vary_document_size:
+        pass
 
     if len(results_table) > 1:
         # Write data to output csv file
