@@ -361,7 +361,7 @@ if __name__ == "__main__":
 
     if args.ghostbuster_no_handcrafted or args.ghostbuster:
 
-        def train_ghostbuster_no_handcrafted(data, train, test):
+        def train_ghostbuster_no_handcrafted(data, train, test, domain):
             model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
             model.fit(data[train, 7:], labels[train])
 
@@ -382,7 +382,7 @@ if __name__ == "__main__":
 
     if args.ghostbuster_no_symbolic or args.ghostbuster:
 
-        def train_ghostbuster_no_symbolic(data, train, test):
+        def train_ghostbuster_no_symbolic(data, train, test, domain):
             model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
             model.fit(data[train, :7], labels[train])
 
