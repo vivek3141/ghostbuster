@@ -175,6 +175,13 @@ if __name__ == "__main__":
 
         return curr_train, curr_test
 
+    def get_texts(indices):
+        texts = []
+        for file in files[indices]:
+            with open(file) as f:
+                texts.append(f.read())
+        return texts
+
     indices_dict = {}
 
     for model in models + ["human"]:
@@ -201,23 +208,34 @@ if __name__ == "__main__":
             indices_dict[test_key] = test_indices
 
     if args.train_all:
-        for train_model, train_domain, test_model, test_domain in tqdm.tqdm(
-            list(itertools.product(models, domains, models, domains))
-        ):
-            print(f"Training on {train_model}_{train_domain}...")
-
-            train_indices = (
-                indices_dict[f"{train_model}_{train_domain}_train"]
-                + indices_dict[f"human_{train_domain}_train"]
+        train_indices = []
+        for domain in domains:
+            train_indices += (
+                indices_dict[f"gpt_{domain}_train"]
+                + indices_dict[f"human_{domain}_train"]
             )
 
-            train_texts = []
-            for file in files[train_indices]:
-                with open(file) as f:
-                    train_texts.append(f.read())
+        print("Training on GPT Data")
+        train_roberta_model(
+            get_texts(train_indices),
+            labels[train_indices],
+            f"models/roberta_gpt",
+        )
 
+        for test_domain in domains:
+            train_indices = []
+            for train_domain in domains:
+                if train_domain == test_domain:
+                    continue
+
+                train_indices += (
+                    indices_dict[f"gpt_{train_domain}_train"]
+                    + indices_dict[f"human_{train_domain}_train"]
+                )
+
+            print(f"Training on OOD {test_domain} Data")
             train_roberta_model(
-                train_texts,
+                get_texts(train_indices),
                 labels[train_indices],
-                f"models/roberta_{train_model}_{train_domain}",
+                f"models/roberta_{test_domain}",
             )

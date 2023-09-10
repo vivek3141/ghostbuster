@@ -24,6 +24,7 @@ from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 
 # Local Imports
 from utils.featurize import normalize, t_featurize, select_features
+from utils.symbolic import get_all_logprobs, get_exp_featurize
 from utils.load import Dataset, get_generate_dataset
 
 models = ["gpt", "claude"]
@@ -116,6 +117,7 @@ if __name__ == "__main__":
     parser.add_argument("--ghostbuster_only_ada", action="store_true")
 
     parser.add_argument("--ghostbuster_vary_training_data", action="store_true")
+    parser.add_argument("--ghostbuster_vary_document_size", action="store_true")
 
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--output_file", type=str, default="results.csv")
@@ -126,7 +128,7 @@ if __name__ == "__main__":
     # Results table, outputted to args.output_file.
     # Example Row: ["Ghostbuster (No GPT)", "WP", "gpt_wp", 0.5, 0.5, 0.5]
     results_table = [
-        ["Model Type", "Training Data", "Test Data", "Accuracy", "F1", "AUC"],
+        ["Model Type", "Experiment", "Accuracy", "F1", "AUC"],
     ]
 
     # Construct the generate_dataset_fn. This function takes in a featurize function,
@@ -196,18 +198,18 @@ if __name__ == "__main__":
             indices_dict[train_key] = train_indices
             indices_dict[test_key] = test_indices
 
-    def get_roberta_predictions(model, indices):
+    def get_roberta_predictions(data, train, test, domain):
         roberta_model = RobertaForSequenceClassification.from_pretrained(
-            model, num_labels=2
+            f"roberta/models/roberta_{domain}", num_labels=2
         )
         roberta_model.to(device)
 
-        test_labels = labels[indices]
+        test_labels = labels[test]
         test_predictions = []
 
         roberta_model.eval()
         with torch.no_grad():
-            for file in files[indices]:
+            for file in files[test]:
                 with open(file) as f:
                     text = f.read()
                 inputs = roberta_tokenizer(
@@ -227,26 +229,7 @@ if __name__ == "__main__":
             roc_auc_score(test_labels, test_predictions),
         )
 
-    if args.roberta:
-        print("Running Roberta Predictions...")
-
-        for t_model, t_domain, model, domain in tqdm.tqdm(
-            list(itertools.product(models, domains, models, domains))
-        ):
-            results_table.append(
-                [
-                    "Roberta",
-                    f"{t_model}_{t_domain}",
-                    f"{model}_{domain}",
-                    *get_roberta_predictions(
-                        f"roberta/models/roberta_{t_model}_{t_domain}",
-                        indices_dict[f"{model}_{domain}_test"]
-                        + indices_dict[f"human_{domain}_test"],
-                    ),
-                ]
-            )
-
-    def train_ghostbuster(data, train, test):
+    def train_ghostbuster(data, train, test, domain):
         model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
         model.fit(data[train], labels[train])
 
@@ -263,26 +246,76 @@ if __name__ == "__main__":
         data = normalize(get_featurized_data(best_features))
 
         print(f"Running {model_name} Predictions...")
-        for train_model, train_domain, test_model, test_domain in tqdm.tqdm(
-            list(itertools.product(models, domains, models, domains))
-        ):
-            train_indices = (
-                indices_dict[f"{train_model}_{train_domain}_train"]
-                + indices_dict[f"human_{train_domain}_train"]
+
+        train_indices, test_indices = [], []
+        for domain in domains:
+            train_indices += (
+                indices_dict[f"gpt_{domain}_train"]
+                + indices_dict[f"human_{domain}_train"]
             )
-            test_indices = (
-                indices_dict[f"{test_model}_{test_domain}_test"]
-                + indices_dict[f"human_{test_domain}_test"]
+            test_indices += (
+                indices_dict[f"gpt_{domain}_test"]
+                + indices_dict[f"human_{domain}_test"]
             )
+
+        results_table.append(
+            [
+                model_name,
+                "In-Domain",
+                *train_fn(data, train_indices, test_indices, "gpt"),
+            ]
+        )
+
+        for test_domain in domains:
+            train_indices = []
+            for train_domain in domains:
+                if train_domain == test_domain:
+                    continue
+
+                train_indices += (
+                    indices_dict[f"gpt_{train_domain}_train"]
+                    + indices_dict[f"human_{train_domain}_train"]
+                )
 
             results_table.append(
                 [
                     model_name,
-                    f"{train_model}_{train_domain}",
-                    f"{test_model}_{test_domain}",
-                    *train_fn(data, train_indices, test_indices),
+                    f"Out-Domain ({test_domain})",
+                    *train_fn(
+                        data,
+                        train_indices,
+                        indices_dict[f"gpt_{test_domain}_test"]
+                        + indices_dict[f"human_{test_domain}_test"],
+                        test_domain,
+                    ),
                 ]
             )
+
+        train_indices, test_indices = [], []
+        for domain in domains:
+            train_indices += (
+                indices_dict[f"gpt_{domain}_train"]
+                + indices_dict[f"human_{domain}_train"]
+            )
+            test_indices += (
+                indices_dict[f"claude_{domain}_test"]
+                + indices_dict[f"human_{domain}_test"]
+            )
+
+        results_table.append(
+            [
+                model_name,
+                "Out-Domain (Claude)",
+                *train_fn(data, train_indices, test_indices, "gpt"),
+            ]
+        )
+
+    if args.roberta:
+        run_experiment(
+            [],
+            "RoBERTa",
+            get_roberta_predictions,
+        )
 
     if args.ghostbuster_depth_one or args.ghostbuster:
         run_experiment(
@@ -459,7 +492,107 @@ if __name__ == "__main__":
         plt.savefig("results/training_size.png")
 
     if args.ghostbuster_vary_document_size:
-        pass
+        token_sizes = [10, 25, 50, 100, 200, 400, 800, 1600, 2049]
+        scores = []
+
+        train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
+        test_indices = indices_dict["gpt_test"] + indices_dict["human_test"]
+        claude_test_indices = indices_dict["claude_test"] + indices_dict["human_test"]
+
+        data = get_featurized_data(best_features_map["best_features_three"])
+
+        for num_tokens in tqdm.tqdm(token_sizes):
+            print(f"Now running size: {num_tokens}")
+
+            curr_t_data = generate_dataset_fn(
+                lambda file: t_featurize(file, num_tokens=num_tokens), verbose=True
+            )
+            davinci, ada, trigram, unigram = get_all_logprobs(
+                generate_dataset_fn,
+                trigram=trigram_model,
+                tokenizer=tokenizer,
+                num_tokens=num_tokens,
+            )
+
+            vector_map = {
+                "davinci-logprobs": lambda file: davinci[file],
+                "ada-logprobs": lambda file: ada[file],
+                "trigram-logprobs": lambda file: trigram[file],
+                "unigram-logprobs": lambda file: unigram[file],
+            }
+            exp_featurize = get_exp_featurize(
+                best_features_map["best_features_three"], vector_map
+            )
+            curr_exp_data = generate_dataset_fn(exp_featurize)
+            curr_data = np.concatenate([curr_t_data, curr_exp_data], axis=1)
+
+            curr_score_vec = []
+            print(data.shape)
+
+            model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+            model.fit(data[train_indices], labels[train_indices])
+
+            curr_score_vec.append(
+                f1_score(labels[test_indices], model.predict(curr_data[test_indices]))
+            )
+
+            curr_score_vec.append(
+                f1_score(
+                    labels[claude_test_indices],
+                    model.predict(curr_data[claude_test_indices]),
+                )
+            )
+
+            for test_domain in domains:
+                domain_train_indices = []
+
+                for train_domain in domains:
+                    if train_domain == test_domain:
+                        continue
+
+                    domain_train_indices += (
+                        indices_dict[f"gpt_{train_domain}_train"]
+                        + indices_dict[f"human_{train_domain}_train"]
+                    )
+
+                domain_train_indices = np.intersect1d(
+                    domain_train_indices, train_indices
+                )
+
+                domain_test_indices = (
+                    indices_dict[f"gpt_{test_domain}_test"]
+                    + indices_dict[f"human_{test_domain}_test"]
+                )
+
+                model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+                model.fit(data[domain_train_indices], labels[domain_train_indices])
+
+                curr_score_vec.append(
+                    f1_score(
+                        labels[domain_test_indices],
+                        model.predict(curr_data[domain_test_indices]),
+                    )
+                )
+
+            scores.append(curr_score_vec)
+
+            print(curr_score_vec)
+
+        scores = np.array(scores)
+        print(scores)
+
+        plt.plot(token_sizes, scores[:, 0], label="In-Domain")
+        plt.plot(token_sizes, scores[:, 1], label="Out-Domain (Claude)")
+        plt.plot(token_sizes, scores[:, 2], label="Out-Domain (WP)")
+        plt.plot(token_sizes, scores[:, 3], label="Out-Domain (Reuter)")
+        plt.plot(token_sizes, scores[:, 4], label="Out-Domain (Essay)")
+
+        plt.xlabel("Document Size (# of Tokens)")
+        plt.ylabel("F1 Score")
+
+        plt.legend()
+
+        plt.savefig("results/document_size.png")
 
     if len(results_table) > 1:
         # Write data to output csv file
