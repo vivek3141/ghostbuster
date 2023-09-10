@@ -115,7 +115,7 @@ def train_trigram(verbose=True, return_tokenizer=False):
 
 
 def get_all_logprobs(generate_dataset, preprocess=lambda x: x, verbose=True,
-                     trigram=None, tokenizer=None):
+                     trigram=None, tokenizer=None, num_tokens=2048):
     if trigram is None:
         trigram, tokenizer = train_trigram(
             verbose=verbose, return_tokenizer=True)
@@ -134,12 +134,12 @@ def get_all_logprobs(generate_dataset, preprocess=lambda x: x, verbose=True,
             doc = preprocess(f.read())
         davinci_logprobs[file] = get_logprobs(
             convert_file_to_logprob_file(file, "davinci")
-        )
+        )[:num_tokens]
         ada_logprobs[file] = get_logprobs(
             convert_file_to_logprob_file(file, "ada")
-        )
-        trigram_logprobs[file] = score_ngram(doc, trigram, tokenizer, n=3)
-        unigram_logprobs[file] = score_ngram(doc, trigram.base, tokenizer, n=1)
+        )[:num_tokens]
+        trigram_logprobs[file] = score_ngram(doc, trigram, tokenizer, n=3)[:num_tokens]
+        unigram_logprobs[file] = score_ngram(doc, trigram.base, tokenizer, n=1)[:num_tokens]
 
     return davinci_logprobs, ada_logprobs, trigram_logprobs, unigram_logprobs
 

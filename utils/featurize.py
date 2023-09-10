@@ -136,16 +136,16 @@ def t_featurize_logprobs(davinci_logprobs, ada_logprobs, tokens):
     return X
 
 
-def t_featurize(file):
+def t_featurize(file, num_tokens=2048):
     """
     Manually handcrafted features for classification.
     """
     davinci_file = convert_file_to_logprob_file(file, "davinci")
     ada_file = convert_file_to_logprob_file(file, "ada")
 
-    davinci_logprobs = get_logprobs(davinci_file)
-    ada_logprobs = get_logprobs(ada_file)
-    tokens = get_tokens(davinci_file)
+    davinci_logprobs = get_logprobs(davinci_file)[:num_tokens]
+    ada_logprobs = get_logprobs(ada_file)[:num_tokens]
+    tokens = get_tokens(davinci_file)[:num_tokens]
 
     return t_featurize_logprobs(davinci_logprobs, ada_logprobs, tokens)
 
