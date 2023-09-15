@@ -100,6 +100,19 @@ class RobertaDataset(TorchDataset):
         }
 
 
+def get_scores(labels, probabilities, calibrated=True):
+    if calibrated:
+        threshold = sorted(probabilities)[len(probabilities) // 2]
+    else:
+        threshold = 0.5
+    
+    return (
+        accuracy_score(labels, probabilities > threshold),
+        f1_score(labels, probabilities > threshold),
+        roc_auc_score(labels, probabilities),
+    )
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--roberta", action="store_true")
@@ -115,6 +128,7 @@ if __name__ == "__main__":
     parser.add_argument("--ghostbuster_no_handcrafted", action="store_true")
     parser.add_argument("--ghostbuster_no_symbolic", action="store_true")
     parser.add_argument("--ghostbuster_only_ada", action="store_true")
+    parser.add_argument("--ghostbuster_custom", action="store_true")
 
     parser.add_argument("--ghostbuster_vary_training_data", action="store_true")
     parser.add_argument("--ghostbuster_vary_document_size", action="store_true")
@@ -356,6 +370,13 @@ if __name__ == "__main__":
         run_experiment(
             best_features_map["best_features_only_ada"],
             "Ghostbuster (N-Gram and Ada)",
+            train_ghostbuster,
+        )
+
+    if args.ghostbuster_custom:
+        run_experiment(
+            best_features_map["best_features_custom"],
+            "Ghostbuster (Custom)",
             train_ghostbuster,
         )
 
