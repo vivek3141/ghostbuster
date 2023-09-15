@@ -173,3 +173,6 @@ symbolic_data_four
 input.txt
 roberta/models
 results.csv
+question.csv
+answer.csv
+playground.ipynb
