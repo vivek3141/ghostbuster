@@ -14,6 +14,7 @@ import tqdm
 
 # Torch imports
 import torch
+import torch.nn.functional as F
 
 from torch.utils.data import Dataset as TorchDataset
 from transformers import RobertaForSequenceClassification, RobertaTokenizer
@@ -50,6 +51,7 @@ tokenizer = tiktoken.encoding_for_model("davinci").encode
 
 print("Loading features...")
 exp_to_data = pickle.load(open("symbolic_data_four", "rb"))
+t_data = pickle.load(open("t_data", "rb"))
 
 roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
@@ -100,12 +102,15 @@ class RobertaDataset(TorchDataset):
         }
 
 
-def get_scores(labels, probabilities, calibrated=True):
+def get_scores(labels, probabilities, calibrated=False):
     if calibrated:
-        threshold = sorted(probabilities)[len(probabilities) // 2]
+        threshold = sorted(probabilities)[len(labels) - sum(labels) - 1]
     else:
         threshold = 0.5
-    
+
+    assert len(labels) == len(probabilities)
+    #assert sum(labels) == sum(probabilities > threshold)
+
     return (
         accuracy_score(labels, probabilities > threshold),
         f1_score(labels, probabilities > threshold),
@@ -116,6 +121,7 @@ def get_scores(labels, probabilities, calibrated=True):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--roberta", action="store_true")
+    parser.add_argument("--perplexity_only", action="store_true")
 
     parser.add_argument("--ghostbuster", action="store_true")
 
@@ -154,7 +160,7 @@ if __name__ == "__main__":
         *essay_dataset,
     ]
     generate_dataset_fn = get_generate_dataset(*datasets)
-    t_data = generate_dataset_fn(t_featurize, verbose=True)
+    # t_data = generate_dataset_fn(t_featurize, verbose=True)
     # pickle.dump(t_data, open("t_data", "wb"), pickle.HIGHEST_PROTOCOL)
 
     def get_featurized_data(best_features):
@@ -223,7 +229,7 @@ if __name__ == "__main__":
 
         roberta_model.eval()
         with torch.no_grad():
-            for file in files[test]:
+            for file in tqdm.tqdm(files[test]):
                 with open(file) as f:
                     text = f.read()
                 inputs = roberta_tokenizer(
@@ -235,26 +241,23 @@ if __name__ == "__main__":
                 )
                 inputs = {k: v.to(device) for k, v in inputs.items()}
                 outputs = roberta_model(**inputs)
-                test_predictions.append(outputs.logits.argmax(dim=1).item())
+                test_predictions.append(
+                    float(F.softmax(outputs.logits, dim=1)[0][1].item())
+                )
 
-        return (
-            accuracy_score(test_labels, test_predictions),
-            f1_score(test_labels, test_predictions),
-            roc_auc_score(test_labels, test_predictions),
-        )
+        return get_scores(np.array(test_labels), np.array(test_predictions))
 
     def train_ghostbuster(data, train, test, domain):
         model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
         model.fit(data[train], labels[train])
-
-        predictions = model.predict(data[test])
         probs = model.predict_proba(data[test])[:, 1]
+        return get_scores(labels[test], probs)
 
-        return (
-            accuracy_score(labels[test], predictions),
-            f1_score(labels[test], predictions),
-            roc_auc_score(labels[test], probs),
-        )
+    def train_perplexity(data, train, test, domain):
+        features = data[train][:, -1].reshape(-1, 1)
+        threshold = sorted(features)[len(features) - sum(labels[train]) - 1]
+        probs = (data[test][:, -1] > threshold).astype(float)
+        return get_scores(labels[test], probs)
 
     def run_experiment(best_features, model_name, train_fn):
         data = normalize(get_featurized_data(best_features))
@@ -324,6 +327,13 @@ if __name__ == "__main__":
             ]
         )
 
+    if args.perplexity_only:
+        run_experiment(
+            ["davinci-logprobs s-avg"],
+            "Perplexity-Only",
+            train_perplexity,
+        )
+
     if args.roberta:
         run_experiment(
             [],
@@ -385,15 +395,8 @@ if __name__ == "__main__":
         def train_ghostbuster_no_handcrafted(data, train, test, domain):
             model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
             model.fit(data[train, 7:], labels[train])
-
-            predictions = model.predict(data[test, 7:])
             probs = model.predict_proba(data[test, 7:])[:, 1]
-
-            return (
-                accuracy_score(labels[test], predictions),
-                f1_score(labels[test], predictions),
-                roc_auc_score(labels[test], probs),
-            )
+            return get_scores(labels[test], probs)
 
         run_experiment(
             best_features_map["best_features_three"],
@@ -406,15 +409,8 @@ if __name__ == "__main__":
         def train_ghostbuster_no_symbolic(data, train, test, domain):
             model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
             model.fit(data[train, :7], labels[train])
-
-            predictions = model.predict(data[test, :7])
             probs = model.predict_proba(data[test, :7])[:, 1]
-
-            return (
-                accuracy_score(labels[test], predictions),
-                f1_score(labels[test], predictions),
-                roc_auc_score(labels[test], probs),
-            )
+            return get_scores(labels[test], probs)
 
         run_experiment(
             best_features_map["best_features_three"],

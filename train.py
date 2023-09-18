@@ -94,8 +94,8 @@ if __name__ == "__main__":
     if args.generate_symbolic_data:
         generate_symbolic_data(
             generate_dataset_fn,
-            max_depth=4,
-            output_file="symbolic_data_four",
+            max_depth=3,
+            output_file="symbolic_data",
             verbose=True,
         )
 
