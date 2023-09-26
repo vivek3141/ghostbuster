@@ -1,0 +1,1 @@
+Explain the concept of test reliability and its relationship to random errors, and discuss the types of errors that can occur in testing.

@@ -1,0 +1,30 @@
+Introduction:
+The cyber attack on Sony Pictures Entertainment in 2014, allegedly orchestrated by North Korea, presented the company with a challenging predicament. This essay aims to evaluate Sony's response to the attack, particularly their decision to cancel the release of The Interview and shift to video-on-demand outlets. Additionally, the impact on the company, the film, and the public's perception of the situation will be analyzed. The government's role in this case will be evaluated, and alternative actions to prevent future cyber attacks on U.S. organizations will be suggested. Ultimately, this essay will assess whether Sony's response was appropriate and effective in addressing the issue at hand.
+Body:
+1. Sony Pictures Entertainment's decision to cancel the release of The Interview and switch to video-on-demand outlets:
+   a. Justification for the decision:
+      - The nature of the cyber attack, including confidential information leaks, threatened the company's reputation and the safety of their employees.
+      - The threat of violence at potential movie theater screenings raised serious security concerns.
+   b. Impact on company and film:
+      - Financial losses were incurred, including costs associated with the cyber attack itself and the cancellation of theatrical release.
+      - The film's reputation suffered, with many perceiving it as a political liability.
+   c. Impact on public perception:
+      - The decision raised concerns regarding artistic freedom and the power of censorship.
+      - Some viewed Sony's response as capitulation to cyber-terrorism, potentially emboldening other attackers.
+   
+2. Evaluation of the government's role:
+   a. Government's response to the attack:
+      - The U.S. government publicly attributed the attack to North Korea and retaliated in various ways.
+      - The reliance on public attribution without securing solid evidence caused skepticism.
+   b. Government's role in prevention:
+      - The government should prioritize cybersecurity legislation and policies, ensuring mandatory protection measures for organizations.
+      - Collaboration between government agencies and private industries can facilitate information sharing and assistance during cyber attacks.
+3. Alternative actions to prevent future cyber attacks on U.S. organizations:
+   a. Enhanced cybersecurity measures:
+      - Organizations should consistently update and strengthen their cybersecurity infrastructure.
+      - Employee training programs should be implemented to encourage responsible online behavior.
+   b. Improved international cooperation:
+      - Strengthening alliances and partnerships with other countries to collectively combat cyber threats.
+      - Establishing international laws and agreements to facilitate extradition and punishment of cyber criminals.
+Conclusion:
+Sony Pictures Entertainment's response to the 2014 cyber attack, especially their decision to cancel the release of The Interview and switch to video-on-demand outlets, was a difficult but ultimately pragmatic choice considering the circumstances. The impacts on the company, film, and public perception were not entirely favorable, but the decision aimed to prioritize employee safety and prevent further damage. The government's role in this case highlighted the need for improved cybersecurity legislation and international cooperation. Suggesting alternative actions such as enhanced cybersecurity measures and international collaboration can contribute to preventing future cyber attacks on U.S. organizations. Ultimately, while Sony's response may have been imperfect, it serves as a case study to inform organizations on balancing artistic freedom, security concerns, and reputational risks in the face of cyber attacks.

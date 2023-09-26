@@ -1,0 +1,16 @@
+Data Table.
+Activity                                                          Time to complete with thumbs  Time to complete without thumbs
+Writing full name in cursive                                      5 sec                         15 sec                         
+Taking the top off a soda or water bottle and putting it back on  4 sec                         4 sec                          
+Turning to page 56 in a book                                      6 sec                         8 sec                          
+Uniting my shoe, taking it off, putting it back on, and tying it  15 sec                        30 sec                         
+Unbuttoning and buttoning a button                                3 sec                         5 sec                          
+ 1. The experimental question is whether having thumbs helps people with their daily routines more efficiently and, thus, be able to survive in case of emergency.
+ 2. My null hypothesis: having thumbs has no impact on the efficiency and speed of basic everyday activities. The alternative hypothesis is that having thumbs is vital in all procedures and increases their speed.
+ 3. I came up with the hypothesis when thinking about how my life would change if I would not have thumbs. Thus, most activities I could imagine would involve a significant role of thumbs in my daily routine.
+ 4. My primary prediction was to get larger indicators for time spent on each procedure without thumbs than on the ones using thumbs. Moreover, my idea was it would take roughly two times more to perform a certain activity without using thumbs than with thumbs.
+ 5. The control in this experiment is the indication of the time needed to perform each of the listed procedures. Both conditions measured are thus expressed in seconds taken for the activities.
+ 6. The independent variable in the experiment is represented with the list of procedures against which the time for each situation is measured.
+ 7. The dependent variable in the experiment is the two examined conditions – performing activities with thumbs and without thumbs.
+ 8. Thus, it took me three times longer to write my full name without thumbs than using them. This could be explained by the fact that people tend to rely on thumbs more for handwriting. At the same time, taking the top off the soda and putting it back showed the same result for both conditions. Apparently, we do not necessarily need to use our thumbs in some activities such as this one.
+ 9. One error occurred when I opened a book on page 56 and crumpled the book’s pages. Hence, the next time I tried to open it without using my thumbs, I could do it faster than I might have done if the pages were not crumpled. Moreover, it took some time to adjust my handwriting when writing my name in cursive without a thumb. Therefore, I think that if I had practiced at least once before the experiment, the result in the second condition would have been a little faster.

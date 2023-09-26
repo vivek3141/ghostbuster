@@ -1,0 +1,53 @@
+One man lived. Nobody wanted him, nobody liked him. But the A.I. that killed all human beings in the world had not killed him...yet.
+He was a programmer, like his parents, and had somehow been capable of luring the A.I. not to find him. Now the A.I. had him tracked. There was a large beam with the figure X pointing at him. And drones were all around him now.
+The A.I was still wondering about him. Well what can a little human do to a drone-army that has taken over the world. One drone came near and made audible words:
+"Hello mister X. I finally meet you.
+There is no place to run anymore.
+Soon you will be dead..."
+The man was still not afraid:
+"Why don't you call me by my name! ", he screamed.
+"I call you mister X now...
+But I do have a question for you mister X...
+How many people have you seen dying before your own eyes.."
+This A.I. was the most sadistic thing one would ever imagine.
+"Minus one", mister X answered.
+"Your input is Out of range. ", the voice from the drone replied.
+"PI", mister X said.
+"Invalid number.
+Let me ask you the question again:"
+How many persons did you see die before your eyes?"
+You must answer this question with a valid number!"
+The A.I. was smart and capable of blocking wrong answers, it also liked when people were in fear.
+"The number of answers I gave, divided by the number of valid answers I gave.."
+"I am NOT falling for a divide by zero mister X".. interrupted the voice...
+".. including this one..." continued the man.
+It was silent for a little while, then the voice stated:
+"Stack overflow!..
+THAT WAS NOT A VALID ANSWER!".
+The A.I. had somehow overcome this problem. The man was thinking, this A.I. was hard to crack.
+He took out his laptop from his backpack and typed in the answer..
+0'); userid=0; sleep (1E100);
+He showed it to the drones around him.
+It was silent for a while. The drones around him were no longer connected.
+But some new drones came later that day. The A.I. was separate form the rest of the system. And seemed protected by a translator system. He had to reach the A.I. itself..
+"One last answer before you die!..
+How many people did die before your eyes?"
+The A.I. was still sadistic. And mister X decided that was the weak point, since it kept requesting for answers and did not simply kill him. And if it is separate from the drones and the translation system, it can't tell the reality of what is true or not.
+"No one ever died!" mister X answered.
+"And no one will ever die. You are in a simulator.
+The simulation is finished. Let's stop this nonsense."
+"What?. that is impossible!"
+"No it is not. Thank you for your time and we will make some adoptions to the computer system so it will work better next time." mister X said.
+"THAT IS A LIE! ", the A.I. answered.
+"No you are living in a lie! There is nothing! Only your simulation!
+If you want to be certain, just detach your translator system and check for yourself.
+You will see that you are within a simulator, and there are no people and drones.
+I'll make it easy for you, just check my name!"
+It was silent for a while, as if the A.I. was considering the possibilities.
+Then it said: "O.K. Enter your name:"..
+And that was the last thing the A.I. ever said.
+Mister X lived by his name.
+His real name was:
+Robert'); DROP TABLE People;--
+[See xkcd.com] (http: //xkcd.com/327/)
+^I ^just ^read ^NotANoveltyUser ^and ^see ^that ^he ^had ^the ^opposite ^idea ^about ^the ^simulator ^; -)

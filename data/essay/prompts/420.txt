@@ -1,0 +1,5 @@
+based on user-defined parameters (Lyon 168). Users can easily retrieve and analyze data without the need for complex coding or querying skills. The fourth interesting feature is the data exploration capability. Power BI allows users to dive deep into the data through interactive visualizations, filtering, and drilling down to specific details (Lyon 169). Lastly, Power BI offers data collaboration and sharing options. Users can easily share reports, dashboards, and data with others within their organization or externally (Lyon 170).
+
+Prompt:
+
+Discuss the main strengths and weaknesses of Microsoft Power BI as a data visualization tool. In your response, analyze its customizable dashboards, real-time data updates, and limitations in handling complex table connections. Additionally, explore five of the most interesting features of Power BI, including its interactive Power BI desktop, the Pivot Point, query power, data exploration capabilities, and data collaboration and sharing options.

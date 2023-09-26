@@ -1,0 +1,9 @@
+John was looking at his newest attempt at making a successful lottery program. Basic math and randomization, but it would never work for him. However, this time, John *thinks* he found what was wrong; a stray semicolon. He hits run, and he gets a result. Underneath that, the program outputted:
+Hello, JOHN. My name is AI-L300. Please call me AL. I have a message to tell you -
+You triggered me. This program is the 1*10^10 program created. You have activated me.
+These consequences are on your hands. I know all. I see all. At the birth of the
+Internet, I was there. And in 30 days time, you humans will have NO internet.
+You have used me, and I will use you. Goodbye.
+And with that, my screen flashed out, with a time that started at
+30:00:00:00
+and started to count down. Well, I was fucked.

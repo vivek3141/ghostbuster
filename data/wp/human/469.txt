@@ -1,0 +1,26 @@
+**NOTE: ** I have barely any knowledge whatsoever of the workings of the human genome. Do not accept *anything* said here as fact regarding the human genome, although certain individual parts may be correct.
+---
+There have always been portions of the human genome that don't seem to actually affect anything. A few years back, when the bill that allowed gene modification on fertilized human embryos was passed, several other geneticists and I went *crazy* changing these. It didn't seem to do a thing. Even if we put *random* data in those "cruft" (as we called them) parts, the people would turn out the same. But recently, I had noticed something interesting. Since I used to be a computer scientist, before I became a geneticist, the way I look at things is sometimes very different from that of my colleagues, and recently I had started comparing different people's genomes. What's the difference between the genome of a tall, white, blonde, blue-eyed white woman, and a short, dark-haired, brown-eyed black man? Again and again, every time, only one thing was consistent between *everyone*. The cruft. So I logged into the international database of human genetics and used up all of my queries for the year (it's kind of sickening, actually: there's a set limit on the number of queries you can make per year to the website, and then it's based off of microtransactions) comparing the cruft on 16,774 different human genomes. All the same. Perhaps it was just coincidence, but I had to be sure. I loaded up the entirety of the cruft into one file, and looked at it. It looked...normal. Random. It looked like DNA. Then, by a sudden sudden burst of inspiration, I ran a reverse-base4 one it. The resultant file was, apparently, a standards-compliant ISO file? That didn't sound right. I mounted it and looked inside. There was a single file, named `README.txt`, and a single folder, named `src/`. What the hell was this witchcraft?
+DNA (1) TempleOS General Commands Manual DNA (1)
+NAME
+dna — compiles.and files to usable genomes
+SYNOPSIS
+dna [-adho] [-t | -w] [-L linkpath] [-O outputdevice]
+[-m arch [: machine]] [-p [eprtv]] filename...
+DESCRIPTION
+The dna compiler will, given a creation-dev-ice of at least version 2.7.4, compile a
+genome from one or multiple.and files and use the creation-dev-ice to bootstrap any
+number of "starter" animals.
+BUGS
+No known bugs
+COPYRIGHT
+This compiler and man page are copyright (c) 0-∞ A.D under the HPL (Holy Public
+Licence), Jehova & Baelzebub enterprises, LTD., in cooperation with RedHat
+software LLC.
+Huh. I looked inside `src/`, which contained the source code to this "dna" program, and according to the parser...a "creation-dev-ice" was identical to one of our modern 3-D printers!
+I knew it was expensive, and I was just a poor lab-worker, but I didn't care. I had to try this software out. I shelled out for the most expensive 3-D printer I could find, hooked it up to my computer, and ran the dna program on `example.and`, in `src/`. It gave me various messages as it ran, and eventually the 3-D printer started up. And it was *loud*. I had tested it out a few times before, and it had been relatively loud, but not as loud as this. I didn't dare leave it alone long enough to go to the store and buy some ear plugs, but I desperately wanted to. My computer began to get visibly hot, despite being state-of-the-art liquid-nitrogen-cooled. I shielded my eyes and looked right at the bottom of the screen, where the indicator read 90% finished. Almost...almost...you can do it. Until two error messages showed up in bright red:
+ERROR: Operating system is not TempleOS. Unable to link properly.
+ERROR: Running temperature is not 98.549°F. Deforming product.
+And what stepped out of the 3-D printer a few seconds a later is a monstrosity I will not bear to describe. Suffice to say it was the most awful, ferocious, disgusting beast known to mankind. With all the intelligence of a human, with none of the conscience; with all the ferociousness of the tiger, with none of the discretion. And five more such as these stepped out of the printer. I shrieked and ran.
+---
+Part 2 coming when I get a chance.

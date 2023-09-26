@@ -1,0 +1,1 @@
+Lifespan is determined by a word count. You're given millions of words, but once you run out you're dead. You are a mob hitman known as "The Interrogator, who specializes in "making people talk". You come across a mark that has one word left.

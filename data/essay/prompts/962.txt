@@ -1,0 +1,1 @@
+Discuss the different capabilities and uses of three popular digital forensics tools: Autopsy, Arsenal Recon, and Cellebrite UFED. Compare their features, availability, and cost, and explain why each tool is valuable for conducting digital forensic investigations.

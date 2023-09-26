@@ -1,0 +1,29 @@
+It is important to note that brain tissue is among the most complex and intricate structures of the human body, which has a highly limited capacity for healing and regeneration. The topic of the proposed research is to assess how neural stem cells replace and differentiate into neurons and other cells of the brain in order to use them for therapeutic purposes. N eural stems cells must be used as a therapeutic measure to slow or halt the aging process due to their rejuvenation and differentiation capabilities.
+Organization Plan
+ 1. Introduction.
+ 2. Literature Review.
+ 3. Brain Aging.
+ 4. Neural Stem Cell Differentiation.
+ 5. Differentiation Regulation.
+ 6. Therapeutic Approaches.
+ 7. Discussion.
+ 8. Conclusion.
+Literature Review
+Part 1
+The preliminary research suggests that there is a complex system of regulatory steps that involve GABA signaling. There is an array of signaling molecules involved in the ventricular-subventricular zone (V-SVZ) neurogenesis, such as Sonic hedgehog, fibroblast growth factor 2, glutamate, and others. The subgranular zone (SGZ) is another important germinal region of the adult human brain, and the mechanisms of regulations are comparatively different between V-SVZ and SGZ.
+Part 2
+For example, a key source of the proposal states that “V-SVZ NSCs are regulated by local signals from their immediate neighbors, as well as by neurotransmitters and factors that are secreted by distant neurons, the choroid plexus, and vasculature” (Obernier & Alvarez-Buylla, 2019, p. 1). In other words, distantly located cells secrete a wide range of signaling molecules to regulate the neural stem cell generation, differentiation, and regeneration processes.
+Schedule for the Completion of Tasks
+Completed research                04/03/2022  Not completed yet
+Complete rough draft              06/03/2022  Not completed yet
+Edit and proofread the draft      07/03/2022  Not completed yet
+Take draft to the Writing Center  08/03/2022  Not completed yet
+
+Galiakberova, A. A., & Dashinimaev, E. B. (2020). Neural stem cells and methods for their generation from induced pluripotent stem cells in vitro . Frontiers in Cell and Developmental Biology, 8 , 1-20.
+Lazutkin, A., Podgorny, O., & Enikolopov, G. (2019). Modes of division and differentiation of neural stem cells . Behavioural Brain Research, 374 , 1-9.
+Navarro Negredo, P., Yeo, R. W., & Brunet, A. (2020). Aging and rejuvenation of neural stem cells and their niches . Cell Stem Cell, 27 (2), 202-223.
+Obernier, K., & Alvarez-Buylla, A. (2019). Neural stem cells: Origin, heterogeneity and regulation in the adult mammalian brain . Development, 146 (4), 1-15.
+Petrik, D., Jorgensen, S., Eftychidis, V., & Siebzehnrubl, F. A. (2022). Singular adult neural stem cells do not exist . Cells, 11 (722), 1-22.
+Tang, Y., Yu, P., & Cheng, L. (2017). Current progress in the derivation and therapeutic application of neural stem cells . Cell Death and Disease, 8 (10), 1-12.
+Urbán, N., Blomfield, I. M., & Guillemot, F. (2019). Quiescence of adult mammalian neural stem cells: A highly regulated rest . Neuron, 104 (5), 834–848.
+Zhao, X., & Moore, D. L. (2018). Neural stem cells: Developmental mechanisms and disease modeling . Cell and Tissue Research, 371 (1), 1–6.

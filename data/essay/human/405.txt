@@ -1,0 +1,31 @@
+Introduction
+The heater and the pump supplying oil are made to use electricity mainly from a generator without the operation of any auxiliary boiler when it is not in operation for a long time. The procedure is meant to maintain the temperature of the oil in the service tank used. The auxiliary boiler is mainly operated by the fuel oil getting burnt. Thus steam is generated, which is worked on generating a heating coil to maintain the temperature of the oil service tank. A heater is meant to heat the oil, which is always stored in the oil service tank; this provides heat for the maintenance of the temperature of the oil from going down. There is the pump for supplying oil with the main function of enhancing the circulation of oil from the tank passing through a heater and back to the oil tank again; the temperature of the oil is thus maintained.
+The types of control actions to be used in an HFO service tank
+There should be regular and thorough checkups on the level of water. The brake should be made sure it is in a release position during the operation of the system. The heater valve should be made sure that it is open at all times during the system’s operation; there is efficient temperature distribution when this is done. Additionally, regular checkups should be done on the feed pumps, checking on the operations and any factors that might hinder their desired performance standards. The temperature should always be increased at all incidences when it lowers down. At times, it would be great to maintain a particular degree of efficiency in the system’s performance. The oil level in the gear case should always be regularly checked, especially before stirring the purifier.
+Safety and operating features that might be used in the system
+The tank lid should be slightly sealed to ensure no spillages that might put the system at risk of going into flames; human lives might also be put at risk. The container used for storing oil should be of great adequate strength and structural adequacy in ensuring there is no leak or burst due to much exposure into the system; it might also lead to pollution. The installation of a high-speed purifier to eradicate contaminants and any pollution from the lube oil; makes sure the purification is maintained in all instances.
+Then install a friction clutch, especially on the shaft horizontally, to assist in safeguarding the electric motor from any damage since the assembly of the complete purifier might be too heavy for taking full loading by the motor without any heating from the start. The steam inlet should always remain shut and regularly the slugging done to the system to prevent any blockage to the purifier. Whenever there is a need to store the oil drums upright, then it preferred to use the sheltered kind; in a bid to avoid contamination.
+The following have been shown on the response curve: the controller output change, the dead time, the time constant, the process value change.
+ 1. The process change in degrees Celsius =5 degrees Celsius
+ 2. The controller measured voltage span=0.35
+ 3. The process open-loop gain=15
+ 4. The time lag=5
+ 5. The time constant=15
+ 6. Calculation for K= T/L*G= change in the value output/ the magnitude of set input=15/20= 0.75
+The calculations for the terms of P, P+I, P+I+D for P in the gain is the K = 0.75
+For P+I, the value of gain is 0.9K=0.9*0.75=0.675 and the value of the action integral time is 3.3L = 3.3* 6=19.8
+For P+I+D, the value of gain is 1.2K= 1.2* 0.75=0.9, the value for the action integral time is 2L=2*6=12
+The value of derivative action time is 0.5L =0.5* 6=3
+Discussion based on dead time, overshoot, undershoot, rise time, settling time, and offset
+  * The settling time on the response curve is when the curve does not undergo any change. The curve has got a settling time. The error should be below two percent.
+  * The curve rises in and then rings down to the condition of steady-state.
+  * The overshoot describes how the system has exceeded the initially expected value. In the response curve, it has been minimized.
+  * There is no undershoot recorded; it is the opposite phenomenon of overshoot.
+  * There is no offset in the response curve, where the controlled variable’s deviation from the set point.
+  * There is dead time in the response curve where there is a delay in the case of controller output signal issued and when the measured variable of the process is recorded.
+Reasons why the closed loops methods are preferred to open loops for controller tuning
+  * In the closed loops process, the unstable processes can finally be stabilized efficiently, which is not the case in open loops.
+  * In closed looping, there is automation for the corrections to the disturbances of the process, which is not the case in open looping.
+  * In a closed looping, the processes with great accuracy are mainly kept on the set points, which is not the case in open loops.
+  * In the closed-loop, the measurements are feasible compared to the open loops.
+  * You can easily predict the process in a closed-loop compared to the open-loop processes, which are not easily predicted.
