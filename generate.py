@@ -323,6 +323,9 @@ if __name__ == "__main__":
             prompts = get_essay_prompts(words, prompt)
 
             for type, prompt in zip(prompt_types, prompts):
+                if os.path.exists(f"data/essay/{type}/{idx}.txt"):
+                    continue
+
                 response = openai_backoff(
                     model="gpt-3.5-turbo",
                     messages=[
@@ -392,19 +395,27 @@ if __name__ == "__main__":
                 for i in range(1, 20):
                     with open(f"data/reuter/{type}/{author}/{i}.txt", "r") as f:
                         doc = f.read().strip()
-                    
-                    if not os.path.exists(f"data/reuter/{type}/{author}/logprobs/{i}-davinci.txt"):
+
+                    if not os.path.exists(
+                        f"data/reuter/{type}/{author}/logprobs/{i}-davinci.txt"
+                    ):
                         write_logprobs(
-                            doc, f"data/reuter/{type}/{author}/logprobs/{i}-davinci.txt", "davinci"
+                            doc,
+                            f"data/reuter/{type}/{author}/logprobs/{i}-davinci.txt",
+                            "davinci",
                         )
-                    if not os.path.exists(f"data/reuter/{type}/{author}/logprobs/{i}-ada.txt"):
+                    if not os.path.exists(
+                        f"data/reuter/{type}/{author}/logprobs/{i}-ada.txt"
+                    ):
                         write_logprobs(
-                            doc, f"data/reuter/{type}/{author}/logprobs/{i}-ada.txt", "ada"
+                            doc,
+                            f"data/reuter/{type}/{author}/logprobs/{i}-ada.txt",
+                            "ada",
                         )
 
         print("Generating Essay logprobs...")
 
-        for idx in range(1, 1001):
+        for idx in tqdm.tqdm(range(1, 1001)):
             if not os.path.exists(f"data/essay/human/logprobs"):
                 os.makedirs(f"data/essay/human/logprobs")
 
@@ -432,4 +443,6 @@ if __name__ == "__main__":
                     )
 
                 if not os.path.exists(f"data/essay/{type}/logprobs/{idx}-ada.txt"):
-                    write_logprobs(doc, f"data/essay/{type}/logprobs/{idx}-ada.txt", "ada")
+                    write_logprobs(
+                        doc, f"data/essay/{type}/logprobs/{idx}-ada.txt", "ada"
+                    )
