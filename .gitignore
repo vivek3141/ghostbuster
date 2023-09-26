@@ -163,8 +163,8 @@ openai.config
 anthropic.config
 bard.config
 
-.wp_source
-.wp_target
+*.wp_source
+*.wp_target
 
 gptzero.ipynb
 symbolic_data
@@ -177,3 +177,7 @@ question.csv
 answer.csv
 playground.ipynb
 t_data
+
+data/wp/raw
+data/reuter/raw
+data/essay/raw

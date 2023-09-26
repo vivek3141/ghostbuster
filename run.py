@@ -22,6 +22,8 @@ from transformers import RobertaForSequenceClassification, RobertaTokenizer
 # Sklearn imports
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
+from sklearn.model_selection import GridSearchCV
+from sklearn.svm import SVC
 
 # Local Imports
 from utils.featurize import normalize, t_featurize, select_features
@@ -109,7 +111,7 @@ def get_scores(labels, probabilities, calibrated=False):
         threshold = 0.5
 
     assert len(labels) == len(probabilities)
-    #assert sum(labels) == sum(probabilities > threshold)
+    # assert sum(labels) == sum(probabilities > threshold)
 
     return (
         accuracy_score(labels, probabilities > threshold),
@@ -138,6 +140,8 @@ if __name__ == "__main__":
 
     parser.add_argument("--ghostbuster_vary_training_data", action="store_true")
     parser.add_argument("--ghostbuster_vary_document_size", action="store_true")
+
+    parser.add_argument("--hyperparameter_search", action="store_true")
 
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--output_file", type=str, default="results.csv")
@@ -610,6 +614,33 @@ if __name__ == "__main__":
         plt.legend()
 
         plt.savefig("results/document_size.png")
+
+    if args.hyperparameter_search:
+        data = normalize(get_featurized_data(best_features_map["best_features_three"]))
+
+        param_grid = {
+            "C": [0.1, 1, 10],
+            "kernel": ["linear", "rbf", "poly"],
+            "gamma": [0.1, 1, "scale", "auto"],
+        }
+
+        model = SVC()
+        grid_search = GridSearchCV(
+            model, param_grid=param_grid, scoring="roc_auc", cv=5, verbose=1
+        )
+
+        grid_search.fit(data[train], labels[train])
+        print(grid_search.best_params_)
+
+        model = SVC(
+            C=grid_search.best_params_["C"],
+            kernel=grid_search.best_params_["kernel"],
+            gamma=grid_search.best_params_["gamma"],
+        )
+        model.fit(data[train], labels[train])
+
+        probs = model.predict_proba(data[test])[:, 1]
+        print(get_scores(labels[test], probs))
 
     if len(results_table) > 1:
         # Write data to output csv file

@@ -1,1 +1,2 @@
 *.txt linguist-detectable=false
+data/* lingusit-detectable=false
