@@ -1,15 +1,20 @@
 import openai
 import json
+import tiktoken
+
+tokenizer = tiktoken.encoding_for_model("davinci")
 
 
 def write_logprobs(text, file, model):
     """
     Run text under model and write logprobs to file, separated by newline.
     """
-    doc = "<|endoftext|>" + text
+    tokens = tokenizer.encode(text)
+    doc = tokenizer.decode(tokens[:2047])
+
     response = openai.Completion.create(
         model=model,
-        prompt=(" ".join(doc.split()[:1000])).strip(),
+        prompt="<|endoftext|>" + doc,
         max_tokens=0,
         echo=True,
         logprobs=1,
