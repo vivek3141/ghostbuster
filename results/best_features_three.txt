@@ -1,10 +1,8 @@
-trigram-logprobs v-div ada-logprobs v-> davinci-logprobs s-avg
-trigram-logprobs v-> ada-logprobs v-sub davinci-logprobs s-var
-unigram-logprobs v-add ada-logprobs v-> davinci-logprobs s-var
-unigram-logprobs v-sub ada-logprobs v-add davinci-logprobs s-avg-top-25
-unigram-logprobs s-avg-top-25
-ada-logprobs v-mul davinci-logprobs v-div ada-logprobs s-l2
-unigram-logprobs v-add ada-logprobs v-> davinci-logprobs s-avg
-trigram-logprobs v-> davinci-logprobs s-avg-top-25
-davinci-logprobs s-var
-unigram-logprobs v-div ada-logprobs v-> davinci-logprobs s-avg
+unigram-logprobs v-add trigram-logprobs v-> davinci-logprobs s-avg
+unigram-logprobs v-> ada-logprobs v-sub davinci-logprobs s-var
+ada-logprobs v-sub davinci-logprobs v-div ada-logprobs s-avg-top-25
+ada-logprobs v-< davinci-logprobs v-div unigram-logprobs s-var
+unigram-logprobs v-add ada-logprobs v-sub davinci-logprobs s-avg
+davinci-logprobs v-div unigram-logprobs v-mul davinci-logprobs s-max
+davinci-logprobs v-div unigram-logprobs v-div davinci-logprobs s-avg
+davinci-logprobs v-div trigram-logprobs s-min

@@ -1,8 +1,9 @@
 unigram-logprobs s-var
-unigram-logprobs s-l2
-unigram-logprobs v-sub trigram-logprobs s-avg-top-25
 trigram-logprobs v-div unigram-logprobs v-sub trigram-logprobs s-min
-trigram-logprobs v-div unigram-logprobs s-max
 trigram-logprobs v-div unigram-logprobs v-div trigram-logprobs s-min
-unigram-logprobs s-avg-top-25
-trigram-logprobs v-div unigram-logprobs v-div trigram-logprobs s-l2
+unigram-logprobs v-> trigram-logprobs s-avg
+unigram-logprobs v-< trigram-logprobs v-div unigram-logprobs s-avg
+unigram-logprobs v-mul trigram-logprobs s-avg-top-25
+unigram-logprobs v-mul trigram-logprobs s-l2
+trigram-logprobs s-l2
+trigram-logprobs v-div unigram-logprobs v-sub trigram-logprobs s-l2

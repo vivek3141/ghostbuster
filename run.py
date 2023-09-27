@@ -52,8 +52,8 @@ trigram_model = pickle.load(open("trigram_model.pkl", "rb"), pickle.HIGHEST_PROT
 tokenizer = tiktoken.encoding_for_model("davinci").encode
 
 print("Loading features...")
-# exp_to_data = pickle.load(open("symbolic_data_four", "rb"))
-# t_data = pickle.load(open("t_data", "rb"))
+exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
+t_data = pickle.load(open("t_data", "rb"))
 
 roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
@@ -70,11 +70,6 @@ reuter_dataset = [
 essay_dataset = [
     Dataset("normal", "data/essay/human"),
     Dataset("normal", "data/essay/gpt"),
-]
-
-claude_dataset = [
-    Dataset("normal", "data/wp/claude"),
-    
 ]
 
 class RobertaDataset(TorchDataset):
@@ -110,9 +105,9 @@ def get_scores(labels, probabilities, calibrated=False):
     # assert sum(labels) == sum(probabilities > threshold)
 
     return (
-        accuracy_score(labels, probabilities > threshold),
-        f1_score(labels, probabilities > threshold),
-        roc_auc_score(labels, probabilities),
+        round(accuracy_score(labels, probabilities > threshold), 3),
+        round(f1_score(labels, probabilities > threshold), 3),
+        round(roc_auc_score(labels, probabilities), 3),
     )
 
 
@@ -364,7 +359,7 @@ if __name__ == "__main__":
             train_ghostbuster,
         )
 
-    if args.ghostbuster_depth_four or args.ghostbuster:
+    if False and (args.ghostbuster_depth_four or args.ghostbuster):
         run_experiment(
             best_features_map["best_features_four"],
             "Ghostbuster (Depth Four)",
