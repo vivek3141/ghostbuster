@@ -28,26 +28,18 @@ domains = ["wp", "reuter", "essay"]
 roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
 wp_dataset = [
-    Dataset("normal", "../writing_prompts/data/human"),
-    Dataset("normal", "../writing_prompts/data/gpt"),
-    Dataset("normal", "../writing_prompts/data/claude"),
+    Dataset("normal", "../data/wp/human"),
+    Dataset("normal", "../data/wp/gpt"),
 ]
 
-reuter_dataset_train = [
-    Dataset("author", "../reuter/data/human/train"),
-    Dataset("author", "../reuter/data/gpt/train"),
-    Dataset("author", "../reuter/data/claude/train"),
-]
-reuter_dataset_test = [
-    Dataset("author", "../reuter/data/human/test"),
-    Dataset("author", "../reuter/data/gpt/test"),
-    Dataset("author", "../reuter/data/claude/test"),
+reuter_dataset = [
+    Dataset("author", "../data/reuter/human"),
+    Dataset("author", "../data/reuter/gpt"),
 ]
 
 essay_dataset = [
-    Dataset("normal", "../essay/data/human"),
-    Dataset("normal", "../essay/data/gpt"),
-    Dataset("normal", "../essay/data/claude"),
+    Dataset("normal", "../data/essay/human"),
+    Dataset("normal", "../data/essay/gpt"),
 ]
 
 
@@ -139,17 +131,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--train_all", action="store_true")
-    parser.add_argument("--train_wp", action="store_true")
-    parser.add_argument("--train_reuter", action="store_true")
-    parser.add_argument("--train_essay", action="store_true")
     args = parser.parse_args()
 
     np.random.seed(args.seed)
 
     datasets = [
         *wp_dataset,
-        *reuter_dataset_train,
-        *reuter_dataset_test,
+        *reuter_dataset,
         *essay_dataset,
     ]
     generate_dataset_fn = get_generate_dataset(*datasets)
@@ -160,11 +148,13 @@ if __name__ == "__main__":
     )
     indices = np.arange(len(labels))
 
+    # [4320 2006 5689 ... 4256 5807 4875] [5378 5980 5395 ... 1653 2607 2732]
     np.random.shuffle(indices)
     train, test = (
         indices[: math.floor(0.8 * len(indices))],
         indices[math.floor(0.8 * len(indices)) :],
     )
+    print("Train/Test Split:", train, test)
 
     # Construct all indices
     def get_indices(filter_fn):

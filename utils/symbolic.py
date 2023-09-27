@@ -115,7 +115,7 @@ def train_trigram(verbose=True, return_tokenizer=False):
 
 
 def get_all_logprobs(generate_dataset, preprocess=lambda x: x, verbose=True,
-                     trigram=None, tokenizer=None, num_tokens=2048):
+                     trigram=None, tokenizer=None, num_tokens=2047):
     if trigram is None:
         trigram, tokenizer = train_trigram(
             verbose=verbose, return_tokenizer=True)

@@ -254,7 +254,7 @@ if __name__ == "__main__":
 
             idx += 1
 
-            if "table of contents" in essay.lower():
+            if "table of contents" in essay.lower() or "[" in essay.lower():
                 continue
 
             essay = essay.replace("\n\n", "\n")
@@ -274,9 +274,12 @@ if __name__ == "__main__":
                         ]
                     ]
                 ):
-                    continue
+                    break
                 doc.append(line)
             doc = "\n".join(doc)
+
+            if len(doc.split(" ")) < 100:
+                continue
 
             with open(f"data/essay/human/{num_documents + 1}.txt", "w") as f:
                 f.write(doc.strip())
@@ -351,37 +354,37 @@ if __name__ == "__main__":
                     f.write(reply)
 
     if args.logprobs:
-        # print("Generating WP logprobs...")
+        print("Generating WP logprobs...")
 
-        # for idx in tqdm.tqdm(range(1, 1001)):
-        #     if not os.path.exists(f"data/wp/human/logprobs"):
-        #         os.makedirs(f"data/wp/human/logprobs")
+        for idx in tqdm.tqdm(range(1, 1001)):
+            if not os.path.exists(f"data/wp/human/logprobs"):
+                os.makedirs(f"data/wp/human/logprobs")
 
-        #     with open(f"data/wp/human/{idx}.txt", "r") as f:
-        #         doc = f.read().strip()
+            with open(f"data/wp/human/{idx}.txt", "r") as f:
+                doc = f.read().strip()
 
-        #     if not os.path.exists(f"data/wp/human/logprobs/{idx}-davinci.txt"):
-        #         write_logprobs(
-        #             doc, f"data/wp/human/logprobs/{idx}-davinci.txt", "davinci"
-        #         )
+            if not os.path.exists(f"data/wp/human/logprobs/{idx}-davinci.txt"):
+                write_logprobs(
+                    doc, f"data/wp/human/logprobs/{idx}-davinci.txt", "davinci"
+                )
 
-        #     if not os.path.exists(f"data/wp/human/logprobs/{idx}-ada.txt"):
-        #         write_logprobs(doc, f"data/wp/human/logprobs/{idx}-ada.txt", "ada")
+            if not os.path.exists(f"data/wp/human/logprobs/{idx}-ada.txt"):
+                write_logprobs(doc, f"data/wp/human/logprobs/{idx}-ada.txt", "ada")
 
-        #     for type in prompt_types:
-        #         if not os.path.exists(f"data/wp/{type}/logprobs"):
-        #             os.makedirs(f"data/wp/{type}/logprobs")
+            for type in prompt_types:
+                if not os.path.exists(f"data/wp/{type}/logprobs"):
+                    os.makedirs(f"data/wp/{type}/logprobs")
 
-        #         with open(f"data/wp/{type}/{idx}.txt", "r") as f:
-        #             doc = f.read().strip()
+                with open(f"data/wp/{type}/{idx}.txt", "r") as f:
+                    doc = f.read().strip()
 
-        #         if not os.path.exists(f"data/wp/{type}/logprobs/{idx}-davinci.txt"):
-        #             write_logprobs(
-        #                 doc, f"data/wp/{type}/logprobs/{idx}-davinci.txt", "davinci"
-        #             )
+                if not os.path.exists(f"data/wp/{type}/logprobs/{idx}-davinci.txt"):
+                    write_logprobs(
+                        doc, f"data/wp/{type}/logprobs/{idx}-davinci.txt", "davinci"
+                    )
 
-        #         if not os.path.exists(f"data/wp/{type}/logprobs/{idx}-ada.txt"):
-        #             write_logprobs(doc, f"data/wp/{type}/logprobs/{idx}-ada.txt", "ada")
+                if not os.path.exists(f"data/wp/{type}/logprobs/{idx}-ada.txt"):
+                    write_logprobs(doc, f"data/wp/{type}/logprobs/{idx}-ada.txt", "ada")
 
         print("Generating Reuters logprobs...")
 
@@ -392,7 +395,7 @@ if __name__ == "__main__":
                 if not os.path.exists(f"data/reuter/{type}/{author}/logprobs"):
                     os.makedirs(f"data/reuter/{type}/{author}/logprobs")
 
-                for i in range(1, 20):
+                for i in range(1, 21):
                     with open(f"data/reuter/{type}/{author}/{i}.txt", "r") as f:
                         doc = f.read().strip()
 

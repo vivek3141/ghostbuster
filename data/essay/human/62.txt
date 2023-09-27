@@ -1,6 +1,39 @@
-Android Studio is developed for Android to accelerate one’s application development. This helps one to build the highest-quality applications for each Android gadget. The following are some of the significant characteristics found in Android Studio for building Android applications. Android Studio, as per the Intellij IDEA, offers the fastest turnaround on an app developer’s coding and operational workflow. Further, its Apply Changes characteristic allows an app developer to change resources and push code to a running app without restarting the app. This flexibility assists one to control how much of the application is restarted when one wants to install and test small, incremental modifications while preserving the gadget’s existing state. It also has a code editor feature that assists one to work faster, write better code, and be productive by providing improved code completion, code analysis, and refactoring (Horton, 2021). Android Studio will offer recommendations in the dropdown list as one type.
-Furthermore, the Android Studio has an Android Emulator feature that installs and initiates one’s apps faster than the actual gadget. It also permits one to prototype and test an application on different Android gadgets configurations such as tablets, smartphones, Android wearable, and Android Television gadgets. One may also kindle a range of hardware characteristics like network latency, GPS location, and multi-touch input and motion sensors. At each stage, Android Studio assists Android app developers in ensuring they create the best code through sample apps and code templates. Android Studio also offers a robust static analysis structure and comprises more than 365 different lintelligence checks across one’s entire app. It also has many quick fixes that assist one to resolve issues in different categories like security, performance, and accuracy. Android Studio offers a range of testing tools and frameworks to help one in testing the app (Horton, 2021). Android Studio also creates a unified environment where an app developer may build apps for Android tablets, wearable devices, Android Auto, and Android Televisions.
-The Android Studio project building is separated into two files, Java and XML, because these enable one to develop apps using both the two files. The Android app development framework supports one to develop applications using XML and Java. Java and XML files each perform a different role in Android App development. Any app developed, typically has the following behavior, layout, and resources. Java file in Android Studio is employed because of App’s behavior when one wants the app to do something. Java file will provide an android app with an independent environment to do something. For example, Android Software Development Kit (SDK) has included several standard Java libraries (Boduch & Derks, 2020). Java libraries offer functionalities for mathematic functions, data structure, networking functions, and graphics implantation.
-Further, an XML file in the Android Studio enables one to create a layout and resources. When one wants an app to appear in a certain way then XML file becomes of great use in Android Studio project building. When resources such as files and libraries are sometimes required then, XML becomes helpful. XML offers a permanent, robust, verifiable, and non-proprietary file format for both off and on the website to distribute and store data and text (Boduch & Derks, 2020). The use of XML in Android Studio is to create layout files as it permits each tag to be closed and preserves white space as opposed to using HTML.
-Boduch, A., & Derks, R. (2020). React and react native: A complete hands-on guide to modern web and mobile development with React.js (3 rd ed.). Packt Publishing.
-Horton, J. (2021). Android programming for beginners: Build in-depth, full-featured Android apps starting from zero programming experience (3 rd ed.). Packt Publishing.
+Drug Class
+Artemisinin class drugs.
+Description
+Artesunate is an antimalarial drug for injection, artemisinin derivative, and is used to treat malaria in patients of various ages. The effective action of Artesunate is supported by its advantage of a hydrophilic group (Khanal, 2021). Artesunate is a first-line treatment followed by an entire course of malaria treatment.
+Mechanism of Action
+Artesunate metabolized into dihydroartemisinin (DHA), which contains the endoperoxide bridge responsible for combating Plasmodium falciparum, a parasite that causes malaria. DHA reacts with heme resulting in free radicals, which inhibit proteins and nucleic acid synthesis.
+Drug Administration and Dosage
+Artesunate is supplied as a white powder for further dilution with sterile diluent and production of a colorless solution. Recommended doses of Artesunate are 2.4 mg per kg of body weight for adults and children are heavier than 20 kilograms, and 3 mg per kg for children less than 20 kilograms (Kitabi et al., 2021). The drug is administered intravenously at 0, 12, 24 hours, and after that – daily.
+Drug Interactions
+The drugs ritonavir, nevirapine, or UDP-Glucuronosyltransferase (UGT) inducers may reduce the antimalarial effects of Artesunate (FDA, 2020). UGT Inhibitors can enhance the side effects of Artesunate drug action. These aspects need to be monitored with the simultaneous use of Artesunate injections and mentioned drugs.
+Potential Side Effects/Adverse Effects/Toxicities
+According to FDA (2020), clinical trials of Artesunate drug have identified potential side effects and adverse reactions:
+  * hemoglobinuria;
+  * acute renal failure requiring dialysis;
+  * jaundice;
+  * anemia;
+  * thrombocytopenia;
+  * lymphopenia;
+  * neutropenia;
+  * pneumonia;
+  * diarrhea;
+  * elevated creatinine;
+  * pulmonary edema;
+  * pyrexia;
+  * abdominal pain;
+  * vomiting;
+  * dizziness;
+  * headache;
+  * cough.
+Lab Effects/Interference
+Clinical studies tested the efficacy and safety of the Artesunate drug. Two studies found that compared to another broadly used antimalaria drug – quinine, Artesunate reduces mortality rate and the risk of hypoglycemia (Khanal, 2021). Another study expanded the understanding of drug action by proving less risk for patients to have coma and convulsions. A clinical trial comparing Artesunate with artemether also showed less mortality rate and faster recovery with Artesunate.
+Special Considerations
+In the case of a sensitive reaction to a drug, such as dyspnea or rash, it is necessary to consider the possibility of treatment with another drug. After Artesunate treatment, patient follow-up monitoring is needed to identify possible hemolytic anemia. Clinical trials have not identified threats to the mother and fetus during pregnancy, as opposed to the severe risks of delayed malaria treatment.
+Nursing management
+The healthcare practitioners first assess the needs or possible treatment of severe malaria by Artesunate drug. The preparation of the solution from the powder must be carried out using the diluent supplied. The nurse should take 11 ml of diluent with a needle to add to the powder and swirl until all the powder is completely dissolved. The drug is recommended to be administered as a slow bolus during 1-2 minutes. It is recommended to store the medication at room temperature, not freeze, not heat, and avoid light ingress. Health care providers must not use the medicine after the expiration date.
+Patient Assessment
+Artesunate is for malaria patients only after a confirmed diagnosis. The patient assessment goes through a physical examination and evaluation of symptoms, as well as a laboratory test. A specialist may prescribe a microscopic blood test to detect parasites or an antigen test. Additional tests may be needed to detect side effects and take measures to mitigate them.
+Patient Education
+Patients with malaria who are prescribed Artesunate should be aware of its mode of administration and duration of treatment. Patients should discuss with the medical provider such considerations as the presence or absence of allergies, kidney disease, pregnancy, and the current use of any drugs. Patient education should also include knowledge of potential side effects and reactions and cases that need to be reported. If there is an allergic reaction, it is worth considering alternative treatments and stopping the Artesunate use.

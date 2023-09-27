@@ -1,36 +1,9 @@
-Introduction
-The detailed investigation of clinical cases is a critical necessity for a health care system interested in improving the quality of life of the population and improving public health. It should be understood, however, that as far as the patient is concerned, their diagnosis is not always obvious, as it is often associated with subjective experiences of their own deteriorating health, feelings of stigma, and any possibility of inaccurate clinical tests. It is true that laboratory tests are a scientifically reasonable practice to refine the diagnosis as much as possible, but the possibility of human or instrumental error is never ruled out. Therefore, a comprehensive approach to clarifying the diagnosis, using a synthesis of scientifically based and subjective aspects of the course of the disease. This paper consistently evaluates an example of such a comprehensive approach, describing a case study of HIV infection.
-Background Information
-Although it is not a societal issue, especially in light of COVID-19, humanity is exposed to several pandemics on a daily basis. One of these pandemics is HIV, as a huge number of individuals are exposed to this infection: according to statistical studies, the number of HIV-positive patients will exceed 37.7 million globally by 2020 (UNAIDS, 2021). People from every continent are exposed to the disease, which gives it pandemic status. HIV itself is an infection caused by the human immunodeficiency virus – during this disease, a pathogen from the class of retroviruses affects the patient’s immune T and B lymphocytes, resulting in lowered immunity. It is true that HIV has never been the cause of a person’s death, but instead, death occurs due to critical immune suppression and the development of opportunistic diseases.
-Purpose
-The purpose of this study is to determine a comprehensive approach to diagnosing HIV in a hypothetical patient.
-Question
-Can HIV infection in a suspected patient really be detected comprehensively?
-Hypotheses
- 1. HIV infection can be detected by obtaining laboratory tests alone.
- 2. The use of the comprehensive method increases the reliability of the diagnostic results.
-Procedure
-Equipment Used
-  * History questionnaire.
-  * Rapid ELISA test kit.
-  * PCR test kit.
-  * Sanitary kit for physiological and clinical examination.
-Procedures
- 1. A hypothetical patient comes to see a general practitioner and talks about his or her concerns. The physician (after signing informed consent and consent for medical services) asks a series of clarifying questions to narrow down diagnostic options. The end point is to determine a possible (but not exact) diagnosis and referral to the following stages of diagnosis.
- 2. The lab technician sterilizes the site for the blood sample, administers an injection, and draws a few milliliters of blood for analysis. The puncture site is treated with a disinfectant.
- 3. The blood sample taken in the second step is used for PCR testing. In addition, the man gives a semen sample for PCR testing.
-Results
-This laboratory work explores three types of HIV testing. The first step uses a patient questionnaire, an example of which is shown in Figure 1 below. It is an extensive questionnaire that is completed by a general practitioner to clarify the diagnosis. In addition, the results of the ELISA test are given; Figure 2 shows that the diagnosis of HIV by ELISA is implemented visually with a control for which it is known for sure that HIV is not there. Finally, Figure 3 shows the results of the PCR test for HIV and demonstrates that the value obtained is significantly higher than the norm.
-Figure 1. Example of a patient questionnaire for HIV pre-screening and history taking (WHO, n.d.).
-Figure 2. Example of ELISA results for HIV infection (HIV ELISA, n.d.).
-Figure 3. Example of a PCR assay result for HIV (POZ, n.d.).
-Discussion
-Support the Hypothesis
-This laboratory work examined the possibility of diagnosing HIV infection in a hypothetical patient. The diagnosis was investigated using three variants of the test, a questionnaire, and conversation with the therapist, ELISA testing, and PCR testing. A summary of these results demonstrates confirmation of both hypotheses, as indeed, HIV was diagnosed using two different tests. In the paper above, the results of these three procedures were given; for two of them, it was shown that HIV infection was diagnosed.
-Explanation and Conclusion
-Bagheri, R., Rabbani, B., Mahdieh, N., Khanahmad, H., Abachi, M., & Asgari, S. (2018). PCR-ELISA: A diagnostic assay for identifying Iranian HIV seropositives. Molecular Genetics, Microbiology and Virology , (3), 36-39.
-HIV ELISA: Introduction, principle, procedure, result interpretation and clinical significance . (n.d.).
-Medina-De la Garza, C. E., de los Ángeles Castro-Corona, M., & Salinas-Carmona, M. C. (2021). Near misdiagnosis of acute HIV-infection with ELISA-Western Blot scheme: Time for mindset change . IDCases, 25 , 1-10.
-POZ. (n.d.). Understanding your lab work (blood tests) . POZ.
-UNAIDS. (2021). Global HIV & AIDS statistics — Fact sheet . UNAIDS.
-WHO. (n.d.). Snap questionnaire . WHO. Web.
+This fact might be surprising, however, the survey conducted by the Pew Research Centre (2021) reveals that from 2015 onwards the number of people using cell phones is gradually increasing. More precisely, in 2015 cell phones were used by 95 percent of respondents and in 2021 this number increased by 2 percent (Pew Research Centre, 2021). Undoubtedly, the growth is not drastic, but still, it exists. What is even more curious, only 85 percent of respondents use smartphones (Pew Research Centre, 2021). Therefore, it is a mistake to assume that cell phones are leftovers from a long time ago. Instead, people still need them, and the company is capable of presenting a cellphone of good quality and reasonable price.
+Cell phones are commonly used in companies as a means of communication between employees. The problem is that since the beginning of the COVID-19 pandemic in 2020, many organizations transfer a significant share of employees to remote work. People who work from home are more likely to use personal smartphones and messengers to communicate with colleagues. From another point of view, the situation is gradually going back to normal and the shift of employees to remote work could be considered a temporary threat to our idea.
+To make the product more competitive, it is necessary to focus on its technical characteristics. Since 2019, American companies have widely introduced 5G smartphones (Gallagher & DeVine, 2019). 5G devices transmit signals 10 times faster in comparison with 4G ones. Therefore, it is necessary to incorporate this 5G technology into our new cellphone.
+To check whether there will be demand for our newly developed cell phones, we should survey potential consumers. The questionnaire will contain characteristics of the companys and competitors cell phones. The respondents are required to choose between the proposed options.
+The company targets both organizations and individual consumers. One of the most effective ways to reach this audience is to employ paid advertising in media (Silva et al., 2020). This method would help to increase the traffic on MMs website and, hence, promote the cellphone. One example of paid advertising is advertisings on websites and in search engines. As for social media, the company should prefer putting ads on Facebook and Twitter, because Instagram and YouTube are less popular among the target audience who are working adults and business owners.
+One of the components of business analysis is to determine the objectives of the company. The critical goal of our company is to develop a cellphone with better technical characteristics and a more affordable price to be competitive in the market of communication devices
+Another component of business analysis refers to determining the stakeholder of a business. The stakeholders of MM are consumers of the cellphone, mobile network operators, MMs employees, and the search engine through which the new product is advertised. Other important stakeholders are the partners and vendors who produce components of cell phones.
+First of all, the company is known for producing devices of high quality. In the case of the new cellphone, it strives to maximize the quality and minimize price as much as possible. The company, in contrast to other giants in this sphere such as Apple or Samsung, does not want to drive up the price just because of its brand. The target consumers of MM are males and females older than 30 years who live in the US and earn no less than $60,000 per year. The largest share of the target audience is the owners of small, medium, and large businesses.
+The primary reason for this is that a consumer might find it more comfortable to use a smartphone instead of a cellphone. For this reason, the purpose of the advertising campaign is to explain to the audience the advantages of cell phones and persuade it to use cell phones in the workplace.

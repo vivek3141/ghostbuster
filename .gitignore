@@ -181,3 +181,7 @@ t_data
 data/wp/raw
 data/reuter/raw
 data/essay/raw
+
+roberta/models_old
+symbolic_data*
+t_data*
