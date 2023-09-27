@@ -52,34 +52,30 @@ trigram_model = pickle.load(open("trigram_model.pkl", "rb"), pickle.HIGHEST_PROT
 tokenizer = tiktoken.encoding_for_model("davinci").encode
 
 print("Loading features...")
-exp_to_data = pickle.load(open("symbolic_data_four", "rb"))
-t_data = pickle.load(open("t_data", "rb"))
+# exp_to_data = pickle.load(open("symbolic_data_four", "rb"))
+# t_data = pickle.load(open("t_data", "rb"))
 
 roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
 wp_dataset = [
-    Dataset("normal", "writing_prompts/data/human"),
-    Dataset("normal", "writing_prompts/data/gpt"),
-    Dataset("normal", "writing_prompts/data/claude"),
+    Dataset("normal", "data/wp/human"),
+    Dataset("normal", "data/wp/gpt"),
 ]
 
-reuter_dataset_train = [
-    Dataset("author", "reuter/data/human/train"),
-    Dataset("author", "reuter/data/gpt/train"),
-    Dataset("author", "reuter/data/claude/train"),
-]
-reuter_dataset_test = [
-    Dataset("author", "reuter/data/human/test"),
-    Dataset("author", "reuter/data/gpt/test"),
-    Dataset("author", "reuter/data/claude/test"),
+reuter_dataset = [
+    Dataset("author", "data/reuter/human"),
+    Dataset("author", "data/reuter/gpt"),
 ]
 
 essay_dataset = [
-    Dataset("normal", "essay/data/human"),
-    Dataset("normal", "essay/data/gpt"),
-    Dataset("normal", "essay/data/claude"),
+    Dataset("normal", "data/essay/human"),
+    Dataset("normal", "data/essay/gpt"),
 ]
 
+claude_dataset = [
+    Dataset("normal", "data/wp/claude"),
+    
+]
 
 class RobertaDataset(TorchDataset):
     def __init__(self, texts, labels):
@@ -122,6 +118,9 @@ def get_scores(labels, probabilities, calibrated=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+
+    parser.add_argument("--claude", action="store_true")
+    
     parser.add_argument("--roberta", action="store_true")
     parser.add_argument("--perplexity_only", action="store_true")
 
@@ -159,8 +158,7 @@ if __name__ == "__main__":
     # which is a mapping from a file location (str) to a desired feature vector.
     datasets = [
         *wp_dataset,
-        *reuter_dataset_train,
-        *reuter_dataset_test,
+        *reuter_dataset,
         *essay_dataset,
     ]
     generate_dataset_fn = get_generate_dataset(*datasets)
@@ -188,6 +186,9 @@ if __name__ == "__main__":
         indices[math.floor(0.8 * len(indices)) :],
     )
 
+    # [4320 2006 5689 ... 4256 5807 4875] [5378 5980 5395 ... 1653 2607 2732] 
+    print("Train/Test Split:", train, test)
+
     # Construct all indices
     def get_indices(filter_fn):
         where = np.where(generate_dataset_fn(filter_fn))[0]
@@ -211,9 +212,6 @@ if __name__ == "__main__":
         for domain in domains:
             train_key = f"{model}_{domain}_train"
             test_key = f"{model}_{domain}_test"
-
-            if domain == "wp":
-                domain = "writing_prompts"
 
             train_indices, test_indices = get_indices(
                 lambda file: 1 if domain in file and model in file else 0
@@ -312,24 +310,24 @@ if __name__ == "__main__":
                 ]
             )
 
-        train_indices, test_indices = [], []
-        for domain in domains:
-            train_indices += (
-                indices_dict[f"gpt_{domain}_train"]
-                + indices_dict[f"human_{domain}_train"]
-            )
-            test_indices += (
-                indices_dict[f"claude_{domain}_test"]
-                + indices_dict[f"human_{domain}_test"]
-            )
+        # train_indices, test_indices = [], []
+        # for domain in domains:
+        #     train_indices += (
+        #         indices_dict[f"gpt_{domain}_train"]
+        #         + indices_dict[f"human_{domain}_train"]
+        #     )
+        #     test_indices += (
+        #         indices_dict[f"claude_{domain}_test"]
+        #         + indices_dict[f"human_{domain}_test"]
+        #     )
 
-        results_table.append(
-            [
-                model_name,
-                "Out-Domain (Claude)",
-                *train_fn(data, train_indices, test_indices, "gpt"),
-            ]
-        )
+        # results_table.append(
+        #     [
+        #         model_name,
+        #         "Out-Domain (Claude)",
+        #         *train_fn(data, train_indices, test_indices, "gpt"),
+        #     ]
+        # )
 
     if args.perplexity_only:
         run_experiment(

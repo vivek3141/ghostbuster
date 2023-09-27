@@ -1,6 +1,7 @@
 import argparse
 import math
 import numpy as np
+import tiktoken
 import dill as pickle
 
 from sklearn.linear_model import LogisticRegression
@@ -18,29 +19,23 @@ from utils.load import get_generate_dataset, Dataset
 with open("results/best_features_four.txt") as f:
     best_features = f.read().strip().split("\n")
 
-trigram_model, tokenizer = train_trigram(return_tokenizer=True)
+print("Loading trigram model...")
+trigram_model = pickle.load(open("trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL)
+tokenizer = tiktoken.encoding_for_model("davinci").encode
 
 wp_dataset = [
-    Dataset("normal", "writing_prompts/data/human"),
-    Dataset("normal", "writing_prompts/data/gpt"),
-    Dataset("normal", "writing_prompts/data/claude"),
+    Dataset("normal", "data/wp/human"),
+    Dataset("normal", "data/wp/gpt"),
 ]
 
-reuter_dataset_train = [
-    Dataset("author", "reuter/data/human/train"),
-    Dataset("author", "reuter/data/gpt/train"),
-    Dataset("author", "reuter/data/claude/train"),
-]
-reuter_dataset_test = [
-    Dataset("author", "reuter/data/human/test"),
-    Dataset("author", "reuter/data/gpt/test"),
-    Dataset("author", "reuter/data/claude/test"),
+reuter_dataset = [
+    Dataset("author", "data/reuter/human"),
+    Dataset("author", "data/reuter/gpt"),
 ]
 
 essay_dataset = [
-    Dataset("normal", "essay/data/human"),
-    Dataset("normal", "essay/data/gpt"),
-    Dataset("normal", "essay/data/claude"),
+    Dataset("normal", "data/essay/human"),
+    Dataset("normal", "data/essay/gpt"),
 ]
 
 
@@ -85,8 +80,7 @@ if __name__ == "__main__":
 
     datasets = [
         *wp_dataset,
-        *reuter_dataset_train,
-        *reuter_dataset_test,
+        *reuter_dataset,
         *essay_dataset,
     ]
     generate_dataset_fn = get_generate_dataset(*datasets)
@@ -115,6 +109,7 @@ if __name__ == "__main__":
         indices[: math.floor(0.8 * len(indices))],
         indices[math.floor(0.8 * len(indices)) :],
     )
+    print("Train/Test Split", train, test)
     print("Train Size:", len(train), "Valid Size:", len(test))
     print(f"Positive Labels: {sum(labels[indices])}, Total Labels: {len(indices)}")
 
