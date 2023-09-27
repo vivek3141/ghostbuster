@@ -61,6 +61,7 @@ def get_featurized_data(generate_dataset_fn, best_features):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--generate_symbolic_data", action="store_true")
+    parser.add_argument("--generate_symbolic_data_four", action="store_true")
 
     parser.add_argument("--perform_feature_selection", action="store_true")
     parser.add_argument("--perform_feature_selection_one", action="store_true")
@@ -89,7 +90,15 @@ if __name__ == "__main__":
         generate_symbolic_data(
             generate_dataset_fn,
             max_depth=3,
-            output_file="symbolic_data",
+            output_file="symbolic_data_gpt",
+            verbose=True,
+        )
+
+    if args.generate_symbolic_data_four:
+        generate_symbolic_data(
+            generate_dataset_fn,
+            max_depth=4,
+            output_file="symbolic_data_gpt_four",
             verbose=True,
         )
 
@@ -114,17 +123,17 @@ if __name__ == "__main__":
     print(f"Positive Labels: {sum(labels[indices])}, Total Labels: {len(indices)}")
 
     if args.perform_feature_selection:
-        exp_to_data = pickle.load(open("symbolic_data", "rb"))
+        exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
         best_features = select_features(
             exp_to_data, labels, verbose=True, to_normalize=True, indices=train
         )
 
-        with open("results/best_features.txt", "w") as f:
+        with open("results/best_features_three.txt", "w") as f:
             for feat in best_features:
                 f.write(feat + "\n")
 
     if args.perform_feature_selection_two:
-        old_exp_to_data = pickle.load(open("symbolic_data", "rb"))
+        old_exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
 
         exp_to_data = {}
         for key in old_exp_to_data:
@@ -140,7 +149,7 @@ if __name__ == "__main__":
                 f.write(feat + "\n")
 
     if args.perform_feature_selection_one:
-        old_exp_to_data = pickle.load(open("symbolic_data", "rb"))
+        old_exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
 
         exp_to_data = {}
         for key in old_exp_to_data:
@@ -156,7 +165,7 @@ if __name__ == "__main__":
                 f.write(feat + "\n")
 
     if args.perform_feature_selection_four:
-        exp_to_data = pickle.load(open("symbolic_data_four", "rb"))
+        exp_to_data = pickle.load(open("symbolic_data_gpt_four", "rb"))
 
         best_features = select_features(
             exp_to_data, labels, verbose=True, to_normalize=True, indices=train
@@ -167,7 +176,7 @@ if __name__ == "__main__":
                 f.write(feat + "\n")
 
     if args.perform_feature_selection_no_gpt:
-        old_exp_to_data = pickle.load(open("symbolic_data", "rb"))
+        old_exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
 
         exp_to_data = {}
         for key in old_exp_to_data:
@@ -183,7 +192,7 @@ if __name__ == "__main__":
                 f.write(feat + "\n")
 
     if args.perform_feature_selection_only_ada:
-        old_exp_to_data = pickle.load(open("symbolic_data", "rb"))
+        old_exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
 
         exp_to_data = {}
         for key in old_exp_to_data:
