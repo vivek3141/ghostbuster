@@ -238,6 +238,51 @@ if __name__ == "__main__":
                     with open(f"data/reuter/human/{author}/{n+1}.txt", "w") as f:
                         f.write(doc.strip())
 
+    if args.reuter_gpt:
+        print("Generating GPT Reuters documents...")
+
+        authors = os.listdir("data/reuter/human")
+        for author in tqdm.tqdm(authors):
+            for idx in range(1, 21):
+                with open(f"data/reuter/human/{author}/{idx}.txt", "r") as f:
+                    words = round_to_100(len(f.read().split(" ")))
+
+                with open(f"data/reuter/gpt/{author}/headlines/{idx}.txt", "r") as f:
+                    headline = f.read().strip()
+
+                prompts = get_reuter_prompts(words, headline)
+
+                for type, prompt in zip(prompt_types, prompts):
+                    if not os.path.exists(f"data/reuter/{type}/{author}"):
+                        os.makedirs(f"data/reuter/{type}/{author}")
+
+                    if os.path.exists(f"data/reuter/{type}/{author}/{idx}.txt"):
+                        continue
+
+                    response = openai_backoff(
+                        model="gpt-3.5-turbo",
+                        messages=[
+                            {
+                                "role": "user",
+                                "content": prompt,
+                            }
+                        ],
+                    )
+
+                    reply = response["choices"][0]["message"]["content"].strip()
+                    reply = reply.replace("\n\n", "\n")
+
+                    lines = reply.split("\n")
+                    if any([i in lines[0].lower() for i in ["sure", "certainly"]]):
+                        reply = "\n".join(lines[1:])
+
+                    lines = reply.split("\n")
+                    if any([i in lines[0].lower() for i in ["title"]]):
+                        reply = "\n".join(lines[1:])
+
+                    with open(f"data/reuter/{type}/{author}/{idx}.txt", "w") as f:
+                        f.write(reply)
+
     if args.essay_human or args.essay_gpt:
         essay_dataset = load_dataset("qwedsacf/ivypanda-essays")
 
@@ -278,7 +323,7 @@ if __name__ == "__main__":
                 doc.append(line)
             doc = "\n".join(doc)
 
-            if len(doc.split(" ")) < 100:
+            if len(doc.split(" ")) < 200:
                 continue
 
             with open(f"data/essay/human/{num_documents + 1}.txt", "w") as f:
@@ -389,7 +434,7 @@ if __name__ == "__main__":
         print("Generating Reuters logprobs...")
 
         authors = os.listdir("data/reuter/human")
-        for type in ["human", "gpt"]:
+        for type in ["human"] + prompt_types:
             print(f"Generating {type} logprobs...")
             for author in tqdm.tqdm(authors):
                 if not os.path.exists(f"data/reuter/{type}/{author}/logprobs"):

@@ -1,29 +1,30 @@
 Introduction
-Groups are common in almost every aspect of human life. They can be formal or informal and are found at home, school, or the workplace. Groups feature people with shared responsibility and objectives. Collaboration is vital as the workload is spread among the members. Communication, sacrifice, and tolerance must be in plenty, given that different personalities are involved. Group leadership is an essential skill that determines the group’s success by creating a relaxed atmosphere, keeping the group focused on the goal, and mitigating conflicts.
-Type of Group: Workplace
-I work in the sales department as a supervisor managing 20 members. Our role is centered on pushing sales and making more profits for the company. As a group leader, I have the responsibility of ensuring that our objectives are aligned with the overall company objectives. Unfortunately, my group is laden with some behavioral challenges such as time management and resistance to direction, which affect performance negatively.
-Encountered Problems
-Missed Targets
-Some team members have been missing the weekly sales targets, and most of the culprits show no signs of improvement. At first, the issue was with three of them, but the problem has escalated and now affects almost half of the team. Because of this, the overall team performance has been compromised. As the leader, I need to address this to inspire everyone back to their winning moods.
-Poor Time Management
-Part of the reason why the team is underperforming is poor time management. The work policy stipulates that all staff should report to work at 9:00 A.M and leave at 5:00 P.M. However, some of the staff in my group do not always observe time. Reporting late takes away some hours that could otherwise have been used to generate more sales and thus boost performance.
-Resistance to Direction
-As the group leader, I am responsible for developing strategies that I expect everyone to follow. While some members always cooperate in supporting me in the role, some have fashioned themselves as a resistance faction. The group often rejects most of my ideas during meetings and tries to pull the rest toward their position. This has hampered progress as we spend too much time on unproductive arguments and counterarguments.
-Low Motivation
-My team’s motivation has been on a downward trajectory for the last two months, which is a worrying trend. The low motivation forms the foundation for all the other challenges currently affecting members’ performance. This is a grave concern, given that performance is dependent on motivation as a significant factor. A preliminary investigation shows that my members are not satisfied with the current working conditions.
-The solution to the Problems
-The identified problems are all behavioral and could be solved through some approaches proposed by behaviorism psychologists such as Ivan Pavlov and B.F Skinner. Human behavior is subject to change based on modifying factors such as motivation. Positive behavior should be reinforced to flourish, while negative behavior should be discouraged to diminish. As a group leader, I would approach the problems from a behavioral angle employing such techniques as classical conditioning, positive reinforcement, behavior shaping, behavior modeling, reinforcement schedules, and punishment where applicable.
-Classical Conditioning
-Developed by Ian Pavlov, classical conditioning suggests that learning happens through a conditioned action triggered by a combination of unconditioned and neutral stimuli (Rehman et al., 2022). I would introduce weekly rewards attached to sales performance. The move is likely to make the members associate the rewards with their roles every time they meet the set target; they get rewarded. This will be effective in solving the problem of missed targets.
-Positive Reinforcement
-Positive reinforcement involves taking actions such as using rewards to promote good behavior and inspire a long-term positive character (Itri et al., 2019). The approach will apply to solving the problem of time management affecting my group’s current affecting members. I will recognize and commend members who report to their duties on time to inspire a repeated action that would ultimately become a sustained behavior.
-Behavior Shaping
-Behavior shaping is a deliberate process aimed at modifying one’s character. Shaping my group members’ behavior could help check their resistance to my ideas. The process starts with changing their perspectives on how they perceive me as their leader. I should incorporate their suggestions rather than make unilateral decisions. By adopting a more approachable and collaborative behavior, my team members will reduce their negative perceptions of me and thus help neutralize resistance.
-Behavior Modeling
-Behavior modeling inspires character change by watching others do it and imitating their actions. The technique will be instrumental in solving the problem of missed targets. Most of the members who post low sales accuse me of being out of touch with reality. To solve this, I will join them to demonstrate and share my experience, which I believe can influence the performance of members.
-Reinforcement/Schedules of Reinforcement
-The technique will be applicable in solving the low motivation problem. Introducing scheduled rewards is vital in inspiring members. Regular outing events after every quarter would help improve team cohesiveness, thus boosting overall enthusiasm. In addition, cash and other rewards used in regular intervals can help keep the group focused. Therefore, I would use scheduled reinforcements to inspire and sustain member motivation.
-Punishment
-Punishment is characterized by reprimands that can show cause and withdrawal of one’s benefits. While this technique might produce desired results in solving the identified problems in my group, it is not effective. Any form of punishment is likely to escalate the current issues leading to more disgruntled members. The technique as a behavioral deterrent only increases fear among the members rather than leading to desirable behavior.
-Conclusion
-In conclusion, group leaders should work towards building effective and responsive teams. Competent leaders should identify problems affecting their groups and take preventive and curative measures. The science of behaviorism suggests some techniques that can be used to modify behavior. Classical conditional, behavior shaping, behavior modeling, and reinforcement are effective inspiring and sustaining positive behavior. While some organizations utilize punishment, this technique should be avoided as it only creates fear. Overall, group leaders have a responsibility of keeping members cohesive and focused on the shared objectives.
+The detailed investigation of clinical cases is a critical necessity for a health care system interested in improving the quality of life of the population and improving public health. It should be understood, however, that as far as the patient is concerned, their diagnosis is not always obvious, as it is often associated with subjective experiences of their own deteriorating health, feelings of stigma, and any possibility of inaccurate clinical tests. It is true that laboratory tests are a scientifically reasonable practice to refine the diagnosis as much as possible, but the possibility of human or instrumental error is never ruled out. Therefore, a comprehensive approach to clarifying the diagnosis, using a synthesis of scientifically based and subjective aspects of the course of the disease. This paper consistently evaluates an example of such a comprehensive approach, describing a case study of HIV infection.
+Background Information
+Although it is not a societal issue, especially in light of COVID-19, humanity is exposed to several pandemics on a daily basis. One of these pandemics is HIV, as a huge number of individuals are exposed to this infection: according to statistical studies, the number of HIV-positive patients will exceed 37.7 million globally by 2020 (UNAIDS, 2021). People from every continent are exposed to the disease, which gives it pandemic status. HIV itself is an infection caused by the human immunodeficiency virus – during this disease, a pathogen from the class of retroviruses affects the patient’s immune T and B lymphocytes, resulting in lowered immunity. It is true that HIV has never been the cause of a person’s death, but instead, death occurs due to critical immune suppression and the development of opportunistic diseases.
+Purpose
+The purpose of this study is to determine a comprehensive approach to diagnosing HIV in a hypothetical patient.
+Question
+Can HIV infection in a suspected patient really be detected comprehensively?
+Hypotheses
+ 1. HIV infection can be detected by obtaining laboratory tests alone.
+ 2. The use of the comprehensive method increases the reliability of the diagnostic results.
+Procedure
+Equipment Used
+  * History questionnaire.
+  * Rapid ELISA test kit.
+  * PCR test kit.
+  * Sanitary kit for physiological and clinical examination.
+Procedures
+ 1. A hypothetical patient comes to see a general practitioner and talks about his or her concerns. The physician (after signing informed consent and consent for medical services) asks a series of clarifying questions to narrow down diagnostic options. The end point is to determine a possible (but not exact) diagnosis and referral to the following stages of diagnosis.
+ 2. The lab technician sterilizes the site for the blood sample, administers an injection, and draws a few milliliters of blood for analysis. The puncture site is treated with a disinfectant.
+ 3. The blood sample taken in the second step is used for PCR testing. In addition, the man gives a semen sample for PCR testing.
+Results
+This laboratory work explores three types of HIV testing. The first step uses a patient questionnaire, an example of which is shown in Figure 1 below. It is an extensive questionnaire that is completed by a general practitioner to clarify the diagnosis. In addition, the results of the ELISA test are given; Figure 2 shows that the diagnosis of HIV by ELISA is implemented visually with a control for which it is known for sure that HIV is not there. Finally, Figure 3 shows the results of the PCR test for HIV and demonstrates that the value obtained is significantly higher than the norm.
+Figure 1. Example of a patient questionnaire for HIV pre-screening and history taking (WHO, n.d.).
+Figure 2. Example of ELISA results for HIV infection (HIV ELISA, n.d.).
+Figure 3. Example of a PCR assay result for HIV (POZ, n.d.).
+Discussion
+Support the Hypothesis
+This laboratory work examined the possibility of diagnosing HIV infection in a hypothetical patient. The diagnosis was investigated using three variants of the test, a questionnaire, and conversation with the therapist, ELISA testing, and PCR testing. A summary of these results demonstrates confirmation of both hypotheses, as indeed, HIV was diagnosed using two different tests. In the paper above, the results of these three procedures were given; for two of them, it was shown that HIV infection was diagnosed.
+Explanation and Conclusion
