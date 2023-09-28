@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from torch.utils.data import random_split
 
 
-def k_fold_score(X, labels, indices=None, k=8, precision=3):
+def k_fold_score(X, labels, indices=None, k=8, precision=10):
     if indices is None:
         indices = np.arange(X.shape[0])
 

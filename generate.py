@@ -416,7 +416,7 @@ if __name__ == "__main__":
             if not os.path.exists(f"data/wp/human/logprobs/{idx}-ada.txt"):
                 write_logprobs(doc, f"data/wp/human/logprobs/{idx}-ada.txt", "ada")
 
-            for type in prompt_types:
+            for type in prompt_types + ["claude"]:
                 if not os.path.exists(f"data/wp/{type}/logprobs"):
                     os.makedirs(f"data/wp/{type}/logprobs")
 
@@ -434,7 +434,7 @@ if __name__ == "__main__":
         print("Generating Reuters logprobs...")
 
         authors = os.listdir("data/reuter/human")
-        for type in ["human"] + prompt_types:
+        for type in ["human", "claude"] + prompt_types:
             print(f"Generating {type} logprobs...")
             for author in tqdm.tqdm(authors):
                 if not os.path.exists(f"data/reuter/{type}/{author}/logprobs"):
@@ -478,7 +478,7 @@ if __name__ == "__main__":
             if not os.path.exists(f"data/essay/human/logprobs/{idx}-ada.txt"):
                 write_logprobs(doc, f"data/essay/human/logprobs/{idx}-ada.txt", "ada")
 
-            for type in prompt_types:
+            for type in prompt_types + ["claude"]:
                 if not os.path.exists(f"data/essay/{type}/logprobs"):
                     os.makedirs(f"data/essay/{type}/logprobs")
 

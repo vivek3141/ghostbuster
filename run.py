@@ -23,15 +23,15 @@ from transformers import RobertaForSequenceClassification, RobertaTokenizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 from sklearn.model_selection import GridSearchCV
-from sklearn.svm import SVC
 
 # Local Imports
 from utils.featurize import normalize, t_featurize, select_features
 from utils.symbolic import get_all_logprobs, get_exp_featurize
 from utils.load import Dataset, get_generate_dataset
 
-models = ["gpt", "claude"]
+models = ["gpt"]
 domains = ["wp", "reuter", "essay"]
+eval_domains = ["claude"]
 
 if torch.cuda.is_available():
     print("Using CUDA...")
@@ -55,22 +55,27 @@ print("Loading features...")
 exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
 t_data = pickle.load(open("t_data", "rb"))
 
+print("Loading eval data...")
+exp_to_data_eval = pickle.load(open("symbolic_data_eval", "rb"))
+t_data_eval = pickle.load(open("t_data_eval", "rb"))
+
 roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
-wp_dataset = [
+datasets = [
     Dataset("normal", "data/wp/human"),
     Dataset("normal", "data/wp/gpt"),
-]
-
-reuter_dataset = [
     Dataset("author", "data/reuter/human"),
     Dataset("author", "data/reuter/gpt"),
-]
-
-essay_dataset = [
     Dataset("normal", "data/essay/human"),
     Dataset("normal", "data/essay/gpt"),
 ]
+
+eval_dataset = [
+    Dataset("normal", "data/wp/claude"),
+    Dataset("author", "data/reuter/claude"),
+    Dataset("normal", "data/essay/claude"),
+]
+
 
 class RobertaDataset(TorchDataset):
     def __init__(self, texts, labels):
@@ -95,19 +100,19 @@ class RobertaDataset(TorchDataset):
         }
 
 
-def get_scores(labels, probabilities, calibrated=False):
+def get_scores(labels, probabilities, calibrated=False, precision=6):
     if calibrated:
         threshold = sorted(probabilities)[len(labels) - sum(labels) - 1]
+        print(threshold)
     else:
         threshold = 0.5
 
     assert len(labels) == len(probabilities)
-    # assert sum(labels) == sum(probabilities > threshold)
 
     return (
-        round(accuracy_score(labels, probabilities > threshold), 3),
-        round(f1_score(labels, probabilities > threshold), 3),
-        round(roc_auc_score(labels, probabilities), 3),
+        round(accuracy_score(labels, probabilities > threshold), precision),
+        round(f1_score(labels, probabilities > threshold), precision),
+        round(roc_auc_score(labels, probabilities), precision),
     )
 
 
@@ -115,7 +120,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--claude", action="store_true")
-    
+
     parser.add_argument("--roberta", action="store_true")
     parser.add_argument("--perplexity_only", action="store_true")
 
@@ -142,6 +147,18 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     np.random.seed(args.seed)
+    # Construct the test/train split. Seed of 0 ensures seriality across
+    # all files performing the same split.
+    indices = np.arange(6000)
+    np.random.shuffle(indices)
+
+    train, test = (
+        indices[: math.floor(0.8 * len(indices))],
+        indices[math.floor(0.8 * len(indices)) :],
+    )
+
+    # [4320 2006 5689 ... 4256 5807 4875] [5378 5980 5395 ... 1653 2607 2732]
+    print("Train/Test Split:", train, test)
 
     # Results table, outputted to args.output_file.
     # Example Row: ["Ghostbuster (No GPT)", "WP", "gpt_wp", 0.5, 0.5, 0.5]
@@ -151,42 +168,30 @@ if __name__ == "__main__":
 
     # Construct the generate_dataset_fn. This function takes in a featurize function,
     # which is a mapping from a file location (str) to a desired feature vector.
-    datasets = [
-        *wp_dataset,
-        *reuter_dataset,
-        *essay_dataset,
-    ]
-    generate_dataset_fn = get_generate_dataset(*datasets)
+
+    generate_dataset_fn_gpt = get_generate_dataset(*datasets)
+    generate_dataset_fn_eval = get_generate_dataset(*eval_dataset)
+
+    # t_data_eval = generate_dataset_fn_eval(t_featurize, verbose=True)
+    # pickle.dump(t_data_eval, open("t_data_eval", "wb"), pickle.HIGHEST_PROTOCOL)
+
+    generate_dataset_fn = get_generate_dataset(*datasets, *eval_dataset)
+
     # t_data = generate_dataset_fn(t_featurize, verbose=True)
     # pickle.dump(t_data, open("t_data", "wb"), pickle.HIGHEST_PROTOCOL)
 
     def get_featurized_data(best_features):
-        return np.concatenate(
+        gpt_data = np.concatenate(
             [t_data] + [exp_to_data[i] for i in best_features], axis=1
         )
-
-    # Get a list of all files and the corresponding labels
-    files = generate_dataset_fn(lambda x: x)
-    labels = generate_dataset_fn(
-        lambda file: 1 if any([m in file for m in ["gpt", "claude"]]) else 0
-    )
-
-    # Construct the test/train split. Seed of 0 ensures seriality across
-    # all files performing the same split.
-    indices = np.arange(len(labels))
-    np.random.shuffle(indices)
-
-    train, test = (
-        indices[: math.floor(0.8 * len(indices))],
-        indices[math.floor(0.8 * len(indices)) :],
-    )
-
-    # [4320 2006 5689 ... 4256 5807 4875] [5378 5980 5395 ... 1653 2607 2732] 
-    print("Train/Test Split:", train, test)
+        eval_data = np.concatenate(
+            [t_data_eval] + [exp_to_data_eval[i] for i in best_features], axis=1
+        )
+        return np.concatenate([gpt_data, eval_data], axis=0)
 
     # Construct all indices
     def get_indices(filter_fn):
-        where = np.where(generate_dataset_fn(filter_fn))[0]
+        where = np.where(generate_dataset_fn_gpt(filter_fn))[0]
 
         curr_train = [i for i in train if i in where]
         curr_test = [i for i in test if i in where]
@@ -197,7 +202,7 @@ if __name__ == "__main__":
 
     for model in models + ["human"]:
         train_indices, test_indices = get_indices(
-            lambda file: 1 if model in file else 0
+            lambda file: 1 if model in file else 0,
         )
 
         indices_dict[f"{model}_train"] = train_indices
@@ -209,11 +214,22 @@ if __name__ == "__main__":
             test_key = f"{model}_{domain}_test"
 
             train_indices, test_indices = get_indices(
-                lambda file: 1 if domain in file and model in file else 0
+                lambda file: 1 if domain in file and model in file else 0,
             )
 
             indices_dict[train_key] = train_indices
             indices_dict[test_key] = test_indices
+
+    for key in eval_domains:
+        where = np.where(generate_dataset_fn(lambda file: 1 if key in file else 0))[0]
+        assert len(where) == 3000
+
+        indices_dict[f"{key}_test"] = where
+
+    files = generate_dataset_fn(lambda x: x)
+    labels = generate_dataset_fn(
+        lambda file: 1 if any([m in file for m in ["gpt", "claude"]]) else 0
+    )
 
     def get_roberta_predictions(data, train, test, domain):
         roberta_model = RobertaForSequenceClassification.from_pretrained(
@@ -245,9 +261,10 @@ if __name__ == "__main__":
         return get_scores(np.array(test_labels), np.array(test_predictions))
 
     def train_ghostbuster(data, train, test, domain):
-        model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+        model = LogisticRegression()
         model.fit(data[train], labels[train])
         probs = model.predict_proba(data[test])[:, 1]
+
         return get_scores(labels[test], probs)
 
     def train_perplexity(data, train, test, domain):
@@ -305,24 +322,22 @@ if __name__ == "__main__":
                 ]
             )
 
-        # train_indices, test_indices = [], []
-        # for domain in domains:
-        #     train_indices += (
-        #         indices_dict[f"gpt_{domain}_train"]
-        #         + indices_dict[f"human_{domain}_train"]
-        #     )
-        #     test_indices += (
-        #         indices_dict[f"claude_{domain}_test"]
-        #         + indices_dict[f"human_{domain}_test"]
-        #     )
+        train_indices, test_indices = [], []
+        for domain in domains:
+            train_indices += (
+                indices_dict[f"gpt_{domain}_train"]
+                + indices_dict[f"human_{domain}_train"]
+            )
+            test_indices += indices_dict[f"human_{domain}_test"]
+        test_indices += list(indices_dict["claude_test"])
 
-        # results_table.append(
-        #     [
-        #         model_name,
-        #         "Out-Domain (Claude)",
-        #         *train_fn(data, train_indices, test_indices, "gpt"),
-        #     ]
-        # )
+        results_table.append(
+            [
+                model_name,
+                "Out-Domain (Claude)",
+                *train_fn(data, train_indices, test_indices, "gpt"),
+            ]
+        )
 
     if args.perplexity_only:
         run_experiment(
@@ -390,10 +405,8 @@ if __name__ == "__main__":
     if args.ghostbuster_no_handcrafted or args.ghostbuster:
 
         def train_ghostbuster_no_handcrafted(data, train, test, domain):
-            model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
-            model.fit(data[train, 7:], labels[train])
-            probs = model.predict_proba(data[test, 7:])[:, 1]
-            return get_scores(labels[test], probs)
+            data = data[:, 7:]
+            return train_ghostbuster(data, train, test, domain)
 
         run_experiment(
             best_features_map["best_features_three"],
@@ -404,10 +417,8 @@ if __name__ == "__main__":
     if args.ghostbuster_no_symbolic or args.ghostbuster:
 
         def train_ghostbuster_no_symbolic(data, train, test, domain):
-            model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
-            model.fit(data[train, :7], labels[train])
-            probs = model.predict_proba(data[test, :7])[:, 1]
-            return get_scores(labels[test], probs)
+            data = data[:, :7]
+            return train_ghostbuster(data, train, test, domain)
 
         run_experiment(
             best_features_map["best_features_three"],
@@ -491,7 +502,7 @@ if __name__ == "__main__":
             scores.append(curr_score_vec)
 
         scores = np.array(scores)
-        print(scores)
+        np.save("results/training_size.npy", scores)
 
         plt.plot(train_sizes, scores[:, 0], label="In-Domain")
         plt.plot(train_sizes, scores[:, 1], label="Out-Domain (Claude)")
@@ -593,7 +604,7 @@ if __name__ == "__main__":
             print(curr_score_vec)
 
         scores = np.array(scores)
-        print(scores)
+        np.save("results/document_size.npy", scores)
 
         plt.plot(token_sizes, scores[:, 0], label="In-Domain")
         plt.plot(token_sizes, scores[:, 1], label="Out-Domain (Claude)")
@@ -612,12 +623,26 @@ if __name__ == "__main__":
         data = normalize(get_featurized_data(best_features_map["best_features_three"]))
 
         param_grid = {
-            "C": [0.1, 1, 10],
-            "kernel": ["linear", "rbf", "poly"],
-            "gamma": [0.1, 1, "scale", "auto"],
+            "C": [
+                0.01,
+                0.1,
+                0.125,
+                0.25,
+                0.375,
+                0.5,
+                0.675,
+                0.75,
+                0.875,
+                1,
+                2,
+                4,
+                8,
+                10,
+            ],
+            "penalty": ["l1", "l2", "elasticnet", None],
         }
 
-        model = SVC()
+        model = LogisticRegression()
         grid_search = GridSearchCV(
             model, param_grid=param_grid, scoring="roc_auc", cv=5, verbose=1
         )
@@ -625,10 +650,9 @@ if __name__ == "__main__":
         grid_search.fit(data[train], labels[train])
         print(grid_search.best_params_)
 
-        model = SVC(
+        model = LogisticRegression(
             C=grid_search.best_params_["C"],
-            kernel=grid_search.best_params_["kernel"],
-            gamma=grid_search.best_params_["gamma"],
+            penalty=grid_search.best_params_["penalty"],
         )
         model.fit(data[train], labels[train])
 
