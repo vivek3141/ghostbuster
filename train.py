@@ -38,6 +38,12 @@ essay_dataset = [
     Dataset("normal", "data/essay/gpt"),
 ]
 
+eval_dataset = [
+    Dataset("normal", "data/wp/claude"),
+    Dataset("author", "data/reuter/claude"),
+    Dataset("normal", "data/essay/claude"),
+]
+
 
 def get_featurized_data(generate_dataset_fn, best_features):
     t_data = generate_dataset_fn(t_featurize)
@@ -62,6 +68,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--generate_symbolic_data", action="store_true")
     parser.add_argument("--generate_symbolic_data_four", action="store_true")
+    parser.add_argument("--generate_symbolic_data_eval", action="store_true")
 
     parser.add_argument("--perform_feature_selection", action="store_true")
     parser.add_argument("--perform_feature_selection_one", action="store_true")
@@ -91,6 +98,15 @@ if __name__ == "__main__":
             generate_dataset_fn,
             max_depth=3,
             output_file="symbolic_data_gpt",
+            verbose=True,
+        )
+
+    if args.generate_symbolic_data_eval:
+        generate_dataset_fn_eval = get_generate_dataset(*eval_dataset)
+        generate_symbolic_data(
+            generate_dataset_fn_eval,
+            max_depth=3,
+            output_file="symbolic_data_gpt_eval",
             verbose=True,
         )
 
