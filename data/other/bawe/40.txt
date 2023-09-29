@@ -1,0 +1,28 @@
+In this report, a torque sensor was designed. It was a shaft-type cantilever, which was clamped to a frame at one end, with the other end left free to be twisted under a torque. This torque was applied via a thin steel bar attached to the free end of the shaft, and a force applied to the other end of the steel bar. The shaft was a hollow one, made of steel with the dimensions as follows: length L = 200mm; outside diameter d 0 = 20mm and the internal diameter d i = 17mm.
+Once this test-rig was set up, it had been proposed that the rig was instrumented so that an automatic measurement of the torsion could be given.
+Diagrams of the test rig were shown below.
+To give this automatic read out of the torsion, it was decided that a torque cell should be implemented. A torque cell was a transducer and transducers were devices used for the measurement of a physical quantity by electrical means, i.e. used to convert non-electrical measurands into electrical quantities. They were used because this method often assisted subsequent operations on the data. In this case, the torque cell was converted an applied torque into an electrical output signal.
+A torque cell contained a mechanical element- the circular shaft, and a sensor- strain gauges. Firstly the type of strain gauges was chosen. In fact there were two types of gauges, metal or semiconductor. The metal gauges were in the form of a flat coil of wire or etched metal foil and the semiconductor gauges were a strip of semiconductor material in-between two connection leads. The element was wafer-like and had an insulating backing material so that it could be stuck like a postage stamp onto surfaces, using a suitable adhesive. Strain gauges worked on the principal that:
+where
+So when the element was stretched, its length increased, its cross-sectional area decreased, and there was also a change in its resistivity. The result was that the resistance of the element changes.
+Generally, the semiconductor strain gauges were made from silicon and they had a much higher gauge factors than the metal ones which made them much more sensitive than the metal ones (Gauge factors were between 100 - 175 or -100 to -140 depending on whether the silicon was doped with 'P' or 'N' type material, compared with gauge factors of 2 for the metal ones), but it didn't mean that they were automatically better than the metal ones though. The strain gauges based on semiconductor materials were rather more expensive, more difficult to apply and had greater sensitivity to temperature changes than the metal ones. The greater sensitivity to temperature changes meant that the relative change in resistance is now non-linear and therefore more complicated.
+Due to these negative points, the metal foil strain gauges were chosen.
+Four active strain gauges are used in order to obtain maximum possible bridge output voltages, to provide temperature compensation, and to make the sensor/transducer insensitive to forces and moments other than the one being measured. These are mounted on two perpendicular 45 helices that are diametrically opposite to one another. Gauges 1 and 3, are mounted on the right hand helix, and sense a positive strain (tension), and gauges 2 and 4, mounted on the left-hand helix, sense a negative strain (compression). The two 45 helices define the principal stress and strain directions for a circular shaft subject to pure torsion. This set-up described can be seen in the following diagram
+The torque, T transmitted by a shaft is related to the maximum shear stress, produced on the shaft surface by the equation:
+where J is the polar second moment of area of the shaft section and r the radius of the shaft. For a hollow circular shaft J = (d 0
+4 - d i
+4)/2, where d 0 is the outside diameter of the shaft and d i is the internal diameter of the shaft. Thus the maximum shear stress is:
+The above set-up of the strain gauges therefore would be able to sense, and thus provide us with the information of the shearing stresses on the shaft.
+It can be seen from the above diagram how the strain gauges will be set up. We already know that when strain gauges are put under a strain that their resistance changes. Thus, we need a circuit that will convert a change in resistance into an output voltage. A circuit commonly used for this purpose is a Wheatstone bridge circuit. (Shown below)
+As can be seen from the diagram previous, the output voltage, V 0 of the bridge can be determined by treating the top and bottom parts of the bridge as individual voltage dividers. Thus,
+The output voltage V 0 of the bridge is:
+Where R 1 = gauge 1 etc.
+The above equation indicates that the initial output voltage, V 0 = 0 if
+This means that the bridge is balanced. The ability to do this makes it considerably easier to measure small changes in voltage output, V 0.
+We are using a circuit with four active bridges. Providing that they are correctly connected into the bridge, so that one opposite pair (e.g. R 1, R 2) are in tension and the other opposite pair (e.g. R 3, R 4) are in compression; then the sensitivity is four times that of a single element gauge. This bridge also compensates for changes in gauge resistance due to temperature. For metal gauges the effect of temperature is to multiply each gauge resistance by the factor 1 + T; which cancels out in the above voltage equation, as those gauges in tension will have their resistance increased by a temperature change and those in compression will have theirs decreased.
+As;
+and;
+Also:
+Where G = Gauge factor, or strain sensitivity and = strain
+then;
+This shows that there is a linear variation between the output and the variation of resistance of the strain gauges.

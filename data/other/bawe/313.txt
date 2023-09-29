@@ -1,0 +1,34 @@
+Solution 4.1 Silicon is not used as piezoelectric material because in order to translate deformation into an electrical signal using piezoelectric effects we need a thin film material. In addition silicon is cubic and covalent rather than ionic and non-centro symmetric. Hence piezoelectric materials such as crystalline quartz which have charge asymmetry and hence the anisotropic characteristics are used as piezoelectric materials.
+The problems that may arise from their application in real sensors are as follows
+Piezoelectrics are not good dielectrics. In fact piezoelectric materials are leaky. In other words charge placed on a pair of electrodes gradually leaks away. Hence there is a time constant for the retention of a voltage on the piezoelectric after the application of a force. This time constant depends on the capacitance of the element, and the leakage resistance. As a result they cannot be used to measure static quantities such as weight.
+Materials such as PZT ceramics have sensitivity that is at least two magnitudes higher than single crystal materials. However their high sensitivity goes hand in hand with lack of long term stability. Hence their application is restricted to less precise measurements.
+Attenuation level is not desirable in piezoelectric materials.
+Pressure Sensor: It uses resonant mechanical structures as a strain gauge to sense deflection in a pressure sensitive diaphragm. The deflection in the diaphragm can be measured using piezoresistive strain gauges located in appropriate regions of maximum strain.
+Challenges with resonant pressure sensors:
+The fabrication of resonator on top of pressure sensing structure
+To incorporate vibration excitement circuitry and detection mechanism in silicon resonators
+The removal of gas damping effects by vacuum encapsulation
+Strong temperature dependence
+Piezocoefficient depends on the doping level
+Force sensor: They operate on the principle that when a force is applied the resistance of the silicon implanted piezoresistor increases due to flexing of the resistor. The change in resistance is directly proportional to the force applied.
+The limitations of force sensors are:
+Requires environmental robustness
+Mechanical interfacing is difficult
+It requires a high bandwidth because of rapidly changing signals
+Gauge factor changes with strain
+High temperature dependence though can be removed by using pairs of strain gauges.
+Microgyrometers: It used to measure the change in orientation of an object. It works on the principle that there is transfer of energy from one resonator to another because of Coriolis force.
+The limitations of microgyrometers are
+The bandwidth is very narrow
+There are no MEMS bearing so friction force is high
+Solution 5.1 The parameters necessary for the design of SH-Saw device are as follows:
+The fabrication process
+Mask preparation- the IDT structures are written on a positive resist material deposited with a thin a layer of chromium. The resist is then developed and the chromium is etched leaving behind the required IDT structures.
+Wafer preparation- this is an important step which involves the cleaning of the quartz wafer. This is done to obtain good adhesion and a uniform coating of the metallic film used in the making of IDT's.
+Metallisation-In this step a thin layer of metal is deposited, usually aluminium from which the IDT structures are formed.
+Photolithography- this is conducted in a clean room environment. This is done to orient IDT structures correctly with respect to the substrate in order to generate the required waves.
+Etching-It involves initial cleaning of the metallised wafers, followed by the deposition of the positive resist. A contact mask aligner is then used to align the positive resist. Chemical wet etching is then performed to remove the unwanted aluminium.
+Wafer dicing- In this step the wafers are finally cut into small, individual chips. Before cutting the wafer a positive photoresist is deposited to improve photoresist adherence to the wafer.
+Sample cleaning-the sample is cleaned thoroughly.
+Transducer mounting and electrical testing.
+Finally a robotic transporter is used to move the SAW-IDT wafers to the load-lock chamber from where they are removed.

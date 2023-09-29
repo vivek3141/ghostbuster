@@ -13,6 +13,8 @@ from tenacity import (
 )
 from utils.generate import generate_documents
 from utils.write_logprobs import write_logprobs
+from utils.symbolic import convert_file_to_logprob_file
+from utils.load import Dataset, get_generate_dataset
 
 prompt_types = ["gpt", "gpt_prompt1", "gpt_prompt2", "gpt_writing", "gpt_semantic"]
 html_replacements = [
@@ -72,6 +74,22 @@ def get_essay_prompts(words, prompts):
     ]
 
 
+def generate_logprobs(generate_dataset_fn):
+    files = generate_dataset_fn(lambda f: f)
+
+    for file in tqdm.tqdm(files):
+        with open(file, "r") as f:
+            doc = f.read().strip()
+
+        davinci_file = convert_file_to_logprob_file(file, "davinci")
+        if not os.path.exists(davinci_file):
+            write_logprobs(doc, davinci_file, "davinci")
+
+        ada_file = convert_file_to_logprob_file(file, "ada")
+        if not os.path.exists(ada_file):
+            write_logprobs(doc, ada_file, "ada")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--wp_prompts", action="store_true")
@@ -86,6 +104,7 @@ if __name__ == "__main__":
     parser.add_argument("--essay_gpt", action="store_true")
 
     parser.add_argument("--logprobs", action="store_true")
+    parser.add_argument("--logprob_other", action="store_true")
 
     args = parser.parse_args()
 
@@ -494,3 +513,12 @@ if __name__ == "__main__":
                     write_logprobs(
                         doc, f"data/essay/{type}/logprobs/{idx}-ada.txt", "ada"
                     )
+
+    if args.logprob_other:
+        other_datasets = [
+            Dataset("normal", "data/other/ets"),
+            Dataset("normal", "data/other/lang8"),
+            Dataset("normal", "data/other/pelic"),
+        ]
+
+        generate_logprobs(get_generate_dataset(*other_datasets))

@@ -1,0 +1,64 @@
+The deflection of beams depends on the loading, the dimensions and material of the beam and the method of support. The principal types of beam to be considered are cantilevered beams where the ends are rigidly built into walls which restrain the ends to be horizontal but free from longitudinal tension, and simply-support beams in which rotation of the ends is unrestrained. As previously stated the cantilevered beams, for theoretical purposes, are deemed encastre, where in reality they are in fact cantilevered to a hollow circular shaft which will have certain torsion, hence angle of twist. This will be incorporated to calculate the total displacement of the beam when a load is applied.
+In this report I will construct mathematical models to predict the displacement of the different beam set-ups, and compare predictions to experimental data obtained through laboratory work. The goal of mathematical modeling is to represent natural processes by mathematical equations, to analyse the mathematical equations, and then to use the mathematical model to better understand and predict the natural process. This comparison will enable me to conclude on how accurate the mathematical models are at predicting practical results. I will also take into account and analyze errors in experimental work.
+To calculate the displacement of the simply support beam, the formula required is...
+The Young's modulus and second moment of cross sectional area need to be calculated.
+For the Young's modulus for carbon steel, a general figure can be used for theoretical purposes obtained from the data book...
+The second moment of cross-sectional area can be calculated using the formula...
+Where ,
+.
+Now the initial equation can be updated to allow for an output when the required variables are input.
+Now data can be input to predict the displacement at position x of the beam. This can be compared to experimental data to analyze the mathematical model.
+Using excel data is automatically input into the acquired formula giving data which can be compared to the experimental data.
+The results have only been predicted to 2 decimal places. It would be inappropriate for any higher levels of accuracy; the original results were recorded to the same accuracy because this was the highest level possible, with the given restrictions inclusive of human error. The error bounds estimated for x and b (+/- 2mm) has no effect on the end result and so can be ignored.
+The predicted results actually do show quite an accurate representation of the experiment. The majority of the results lay within 0.1mm of each other. It also seems that the error becomes greater as the load increases. When the load is at 20N the results are mostly just under 0.2mm error. In general we can say that the results all lay within 10% of each other.
+The graphs in appendix1 demonstrate this data in more detail, and make detailed analysis easier to achieve. From these graphs it is very clear how close the model really is to the experimental data. It is clear from the graphs that the actual results are always fractionally greater than the predicted results. The graphs also demonstrate that the displacement is proportional to the force applied in all cases.
+The discrepancies could be due to any or all of the following...
+Non uniform beam. This is quite likely, the beam had visible dents.
+Load errors. The weight were old, hence may not have been exactly as stated
+Lay of beam. The beam may not have been totally perpendicular to the supports.
+Young's modulus. The Young's modulus estimate was taken from the data book, and is unlikely to be the actual modulus of the carbon steel used.
+These errors are impossible to estimate, hence are variables in the experiment.
+200mm +/- 0.5mm
+233mm +/- 1.0mm
+These were measured with a rule. The error bounds are due to human error
+16.105mm +/- 0.001
+20.000mm +/- 0.001
+These were measured with digital calipers. The error bounds account for instrumental inaccuracies
+Equating these measurements to the theory formulae...
+Certain assumptions have been made do reduce the complexity of the mathematical model. It is assumed that...
+The materials are all linear with constant properties throughout.
+The materials do not deform plastically at any stage, hence obey Hooke's law.
+The cantilevered shaft will deflect an equal amount to if it was encastre.
+These assumptions will limit the models accuracy.
+This is the theory for a cantilever with a load W, distance b from a, as shown in the diagram.
+The required formula for calculating the displacement is
+The Young's modulus for the rod is the same as the simply-support beam.
+I can be calculated the same way also...
+Therefore the mathematical model is...
+The same method can be used to calculate the displacement of the pipe. This time the formula for I is shown in the torsion of pipe section under the letter K...
+The Young's modulus for materials that deform plastically is called the tensile modulus, and from the data book it is stated that for vinyl polymers this will lay between 2.4 and 4.1. This is a very rough estimate and due to the fact that the actual material the pipe is made from is an unknown, we can say that E = 3 +/- 1, or 3 +/- 30%.
+Therefore the equation for the vertical deflection of the pipe is
+This can now be used for prediction and comparison.
+These are the formulae for the torsion of the pipe supporting the cantilever. Note that both these formulae and the bending formulae only apply while the materials still follow Hooke's Law. As soon as the material goes beyond the limit of proportionality, these equations no longer apply.
+Hooke's Law states that:
+The extension of a sample material is proportional to the stretching force
+F = ke
+Where k represents the stiffness of the sample in N/m
+G is the modulus of rigidity. It can be calculated using tensile modulus and an estimate for poisson's ratio. I will use 0.3 as an estimate of this ratio, this is about an average value for a plastic, with error bounds +/- 0.05, therefore 0.3 +/- 20%
+K can be calculated using the radii of the pipe...
+Now the equation reads...
+The torsion can be calculated from the formula
+Where F is the load applied to the cantilevered shaft and a1 is the distance from the centre of the pipe.
+To find the actual cantilever displacement this causes, trigonometry must be implemented. As it is only small angles of deflection, a simplified formula is used
+This can now be put with the bending equations to predict the total displacement of the cantilevered shaft.
+Note that...
+Again excel was used to generate the predicted data
+Predicted result given to 2 decimal places again for an appropriate level of accuracy.
+As stated in the calculation of the mathematical models, both the poisson ratio and the tensile modulus are subject to large inaccuracies. By cross referencing the values of error, clearly an error range needs to be identified for the predicted deflections. An error of about 30% should be acceptable. Adopting this to the results...
+As you can see about 50% of the results lay within the tolerances. Most discrepancies occur when the load is applied to a short length of pipe or rod (100mm as apposed to 200mm). It also can be seen, in particularly from the graphs, the actual results are a lot closer to the lower bounds than to the higher. In fact looking at graphs B2 and B3 the experimental results are actually very close to the lower bound indeed. What this suggests is an error in estimate for young's modulus or poisons ration, the properties of the material, which would lead to these systematic errors. From graph B4 it is clear that the whole range of results for this set is less than the lower bound, hence not within the error bound estimated. This is again probably due to incorrect estimates. It could also be partially account for by human error, as the displacements become smaller, readings will be harder to take, hence a greater error.
+Both models predicted experimental data to a reasonable level of accuracy. However the model constructed for the simply support beam was of a much higher level of accuracy, also it did not require the range of errors the cantilevered shaft model did, this was due to an estimate of Young's modulus that was of a reasonable accuracy. Looking at the two different materials used, it can be said that the behavior of steel is much easier to predict; it obeys Hooke's Law to a greater degree than a plastic (hence the name plastic). The only problem with the carbon steel was the crude method used to measure the deflection, a large source of error, but nothing in comparison to the 30% error of Young's modulus for vinyl polymers.
+From this report these conclusions can be drawn...
+The mathematical model for the simply support provides data to a good level of accuracy (about 10%)
+The model for the cantilevered shaft, although provided a reasonable estimate for long shafts, was on the whole inaccurate.
+The errors in predicting the behavior or a plastic are far greater than errors in predicting metal behavior.
+It can now be said that for structures made from plastics, sufficient bounds should be incorporated to allow for the large unpredictability, whereas for carbon steel bounds need not be so great.

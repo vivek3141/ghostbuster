@@ -1,0 +1,22 @@
+I used Jaeger's method to determine the surface tension of distilled water. During Jaeger's method, water is slowly passed into a large container, displacing the air in the container. A bubble of air is formed in the liquid at the end of the capillary tube, and as air pressure increases it grows in size. The pressure in the manometer reaches a maximum, and immediately after this point the bubble breaks away. The maximum pressure head is read, and so is the depth of the capillary tube in the distilled water. The radius at the end of the capillary tube was measured using a travelling microscope, and in this particular experiment the radius was found to be 0.25mm, or 0.00025m. The density of the liquid and the density of the manometer were both found to be 1000 kgm -3.
+I took readings of the maximum manometer pressure head when the capillary tubing was at 5 different depths. I found the surface tension of the liquid at each depth, and used the 5 values to calculate the average surface tension.
+To calculate the surface tension I used the following equation:
+Where:
+is the surface tension of the liquid (Nm -1)
+h 1 is the depth of immersion of the capillary tubing (m)
+h 2 is the maximum manometer pressure head (m)
+p 1 is the density of liquid (kgm -3)
+p 2 is the density of the manometer fluid (kgm -3)
+r is the radius of the capillary tubing (m)
+For example:
+I used the Cambridge tension balance to find the surface tension of the following substances:
+I then used the Cambridge tension balance to decide whether the following components are surface active:
+The Cambridge tension balance consists of a linked torson wire and suspended platinum loop. A tensioning device is situated at each end of the torson wire, one of which is attached to a calibrated scale. The force required to tear the ring from the liquid surface is determined. This is calibrated directly in terms of surface tension (dynes cm -1) and is read from the scale. This process uses Du Nouy's method.
+I used the conversion factor 1 dyne cm -1 = 10 -3 Nm -1 to determine the surface tension in S.I. units.
+For example:
+We took two readings for each substance, and used the second as it was more accurate.
+Despite literature values differing to my results, I do think that my part in this experiment was successful. There was a general trend that the literature values were lower than mine, which is probably because of the apparatus used.
+In surface-active components, a tension is produced at the interface because of an imbalance in the intermolecular forces.
+Sodium chloride is inactive in water because the surface tension of water is not changed with the addition of sodium chloride.
+Sugar is inactive in water because there is only a small change in the surface tension of water with the addition of sugar.
+Detergent is active in water because the surface tension changed significantly with the addition of the detergent.

@@ -1,0 +1,500 @@
+This essay begins by investigating quaternions. The emphasis is on their relations to rotations in four dimensions. It then progresses to a more general overview of division algebras with the aim of investigating proofs by Hurwitz and Frobenius. It then explores the Cayley-Dickson construction and a brief foray into the octonions and SO(8). It closes with a brief account of the Freudenthal square, a relationship between the normed division algebras and the exceptional Lie algebras.
+Acknowledgements: Thanks to Tim Honeywill, Professor David Mond and Geraint Williams for advice, guidance and inspiration and above all to Dr. Allan Muir for without his skill, wisdom and patience this essay would not have been possible.
+and  are both normed division algebras. An algebra is a vector space with a multiplication and left and right distributivity. A division algebra is an algebra A such that if ab = 0 then a = 0 or b = 0 for . A normed division algebra is an algebra with the additional property that A is a normed vector space with  where  is the norm of the elements and . "This implies that A is a division algebra and that ." [B2002]
+That  is a division algebra is easily seen. We have
+so
+and  is a normed algebra. We also see that  generates SO(2), the groups of rotations in two-dimensional space. When , the map  is an isometry. We see that when ,  is a rotation. This follows from
+.
+Theorem 1. The group SO(2) consists of all multiplications 
+
+ by complex units.
+Proof:
+The matrix of the rotation is . We can see that det R = 1 so
+.
+This essay will explore other such algebras and investigate hypercomplex numbers. We will also research some applications to geometry, uses in rotations, construction of hyperdimensional objects and some interesting algebras.
+2 Dual, Double and
+Take a number of the form a + bi for . Let us find a rule satisfying
+for ,
+and such that the distributive law is satisfied. We require that . Then . We can see that this multiplication  is both commutative and associative. Then we can write .
+There are three cases to consider KS89 , the first being . Then  and . This means that a + bi can be written as  with , the complex numbers.
+The second case is . Then we set . So a + bi may be written as  with . These are the double numbers.
+The third case is . We have , we may write a + bi as  and  These are the dual numbers.
+The story of William Rowan Hamilton and his discovery of quaternions is familiar to all [H2004]. His 'Eureka!' moment and subsequent etching of the relation
+into the stone of the Brougham bridge is part of mathematical legend.
+Quaternions become familiar during some elementary course in the algebra of rings. However, it was probably discussed as a brief example of a division ring with only a brief mention as regards to rotation.  is a beautiful object to consider and some of its applications to rotations in three and four dimensional Euclidean space are equally beautiful, if not more so.
+Hamilton was interested by how  was linked to 2-dimensional Euclidean geometry. He was desperate to find an algebra serving the same purpose for 3-dimensions. He later wrote that his son, William Edwin, would ask at breakfast: "Well, Papa, can you multiply triplets". His answer was always: "No, I can only add and subtract them" [H2004, H2000].
+William Edwin was referring to Hamilton's attempts to construct an algebra with elements of the form z = a + bi + cj where . Addition is a simple matter but, as Hamilton discovered, multiplication proves to be a much more complicated issue. We need a rule satisfying
+,
+and such that the distributive law is satisfied. Let us use
+.
+This is easily seen to satisfy the above requirements. We also notice that the multiplication rule is commutative and associative. The problem arises when we come to division. Take  and we see that this equation has no solution. It can be shown that for ever multiplication rule satisfying the above conditions, there exist z 1
+,z2 such that z1x = z2 has no solution.
+Hamilton's own block was caused by (a + bi + cj)2. He was considering triplets with i2 = j2 = - 1 and expected to have (a + bi + cj)2 = a2 - b2 - c2 + 2abi + 2acj + 2bcij. The problem lay in the fact that Hamilton required , to form a division algebra. We see
+.
+leading Hamilton to consider the, somewhat absurd, requirement that ij = 0. Then he realised that (a + bi + cj)2 = a2 - b2 - c2+2abi+2acj+bc(ij+ji) and that he could then write k = ji = - ij with k linearly independent of i and j. This was quite a breakthrough, since anticommutativity was not often considered at this time. Then came the inspiration while walking alongside the Royal Canal and quaternions were born.
+We recall that a quaternion is an element (a, b, c, d) of . The quaternion is usually expressed, with respect to a basis {1, i,j, k}, in the familiar form a + bi + cj + dk. We may multiply a pair of quaternion expressions using the distributive law and employing the basic relations:
+.
+So we see that for two quaternions a = a1+a2i + a3j + a4k and b = b1 + b2i + b3j + b4k we have
+.
+The algebra formed by this operation of quaternion multiplication is commonly denoted as .
+Example 1. Take the quaternion 
+. We may write this as 
+. It is easily seen that 
+
+in the same way that 
+
+can be written 
+ and .
+For each quaternion q = a + bi + cj + dk there exists a conjugate quaternion  and . It is also true that  which is strictly positive for all quaternions except the zero quaternion. This means that a norm  may be defined and hence an inverse  for all q = 0. We see that  implying Lagrange's four-square theorem, every positive integer is the sum of four squares, through Euler's four-square identity
+.
+Theorem 2. H is a non-commutative, associative division algebra.
+Proof:
+When we show that  is a ring, we need only investigate distributivity and associativity.. Multiplicative associativity can be easily shown:
+We can show distributivity since
+and right distributivity is shown similarly. Now, for  let us have xy = 0, then . One of the norms must be zero, without loss of generality say . The norm is zero when the components of x are zero, hence x = 0. Then, since this proves that  is an integral domain, it is simple to show that there is a muliplicative inverse and thus prove the theorem. So we now have that the quaternions  are a non-commutative, associative division algebra.
+As an alternative proof, let  be the real algebra that has the basis 1,i,j,k under the usual relations. Then, with some work, we can see that this defines an associative algebra structure on the real algebra . We consider the real linear automophism  given by . We see . We define  so that . Then . So  is an associative division algebra.
+There are many other useful representations of this algebra, most commonly used and useful forms are the following.
+1. A quaternion q = a + bi + cj + dk may be considered as a formal sum of the scalar element a and the element x = bi + cj + dk of . Multiplication of two quaternions of this form
+takes a form expressible in terms of the dot and cross products of 3-dimensional vector algebra:
+2. Let us denote the imaginary element of  as I. This is so as to avoid confusion with the quaternion basis element, i. The matrices , ,  satisfy the same relations as i,j, k. We can also introduce the unit matrix element, , for the first quaternion basis element we find . This has the form  for
+We note that the associativity of quaternions now follows automatically from that of matrices.
+An interesting thought here is to consider the quaternion group group . We see , with  if we say j = ik. We then have a representation  with  being the group of invertible 2x2 matrices with entries in  - with  with .  is a representation since  so  is a homomorphism. Furthermore,  where  is the group generated by A,B since it is obvious that there is a bijection  and hence isomorphism [JL2004].
+3. We now fix the quaternion q = a + bi + cj + dk and then consider the function , left multiplication by q, that is given by . We note that the composition of functions such as this is given by . Then we deduce  and we note that this depends essentially upon the associativity of quaternion multiplication; this point is worth remarking on, because the higher-dimensional algebra of octonions is not associative so the same procedure cannot be carried through. We discuss this in detail later on.
+Since Lq is a linear operation on  we can get a matrix representation for it, and hence for q, by examining how it acts upon the standard basis {1, i,j, k}. This yields
+Obviously this can be written in the form
+with Ai being standard 4x4 matrices which again behave algebraically like the quaternion basis. Note, one can similarly define a linear map  by  but to get a similar application of associativity one needs to work with representation by transposed matrices.
+There are many intriguing relationships to be explored between these different representations and are worth exploring simply for entertainment and interest's sake. An interesting fact is noted below.
+A Lie group is a set G which has both group structure and k-manifold structure for , with both the maps  defined by  and  given by  being differentiable. That is, G is a subset  which is diffeomorphic to  and is associative, closed, has multiplicative inverse and identity, Now,
+Theorem 3. H is a Lie group.
+Proof:
+H is diffeomorphic to . Hence  is a 4-manifold since we can see  is bijective and  and  are differentiable. It is easily seen that  has group structure under addition as well as multiplication. Then the condition that there exists a map  is satisfied.
+Let us suppose that q is an unit quaternion, defined as a quaternion of norm 1, so that we have . Let x be a quaternion of the form bi + cj + dk such that . We can treat it as an ordinary element of , since its norm is the usual Euclidean norm. Then, we have  and .
+The map  preserves lengths. We can see that it then follows that this linear map will define a rotation of 3-dimensional Euclidean space. A homomorphism is defined from the multiplicative structure of  to the group special orthogonal group SO(3) of rotations in Euclidean three-space. This means that the multiplication of quaternions is mapped to the composition of rotations.
+Theorem 4. The map
+
+ is onto.
+Proof:
+All elements of SO(3) are determined by both a unit vector , in , considered as the axis of the rotation and an angle  considered as the angle of rotation around . Note: There exists a slight ambiguity here since a rotation through  about the axis  gives the same result as a rotation through  about the axis .
+We shall now consider the quaternion Our goal will be to show that it will map to this rotation.
+Consider
+It is obvious that n commutes with both the terms of q so we can re-write the
+product as , since q is a unit quaternion. Thus  is invariant under the rotation induced from q and it follows that it is the axis of that rotation.
+Let us consider an unit vector  and let this vector be perpendicular to , so . Using the scalar-vector notation which has been discussed previously, we see
+.
+Then
+.
+This gives  and .
+So is in the positive sense of the rotation from  to .
+Any rotation may be captured by a unit quaternion mapping of the form , so we can now observe that this mapping is actually 2:1 since we know that  gives the same rotation. So we see that this can be used to to resolve the ambiguity noted above.
+We may pursue this a bit further by taking note of the fact that for unit quaternions, the 2x2 complex representation discussed in a previous section is a unitary matrix .
+So we have  since  and furthermore . The set of unit quaternions forms a group under multiplication which is isomorphic to the special unitary group in two dimensions, SU(2). In general, SU(n) denotes the group of complex, n x n unitary matrices with determinant 1.
+After his discovery, Hamilton dedicated his life to quaternions and their application to geometry. Many universities used quaternions for work in , as naturally as vectors and scalars are the standard method in the present day. There were quite a few battles fought between the 'vectorists' and the 'quaternionists', although vectors were finally accepted as the standard. Indeed, many mathematicians and physicists were particularly vicious about quaternions. Kelvin himself opined, "Though beautifully ingenious, the quaternions have been an unmixed evil to those who have touched them in any way". Faced with opposition by luminaries such as Kelvin, it is not surprising that vectors were victorious over quaternions. It must be noted, however, that vectors are much simpler to use, although their use is quite mechanical and not as much fun as the quaternions.
+The development in the understanding of linear algebra, means that many of the amusing properties of quaternions can equally and sometimes more profitably seen as a special case of a matrix group. This is in fact a great pity since quaternions are beautiful objects, worthy of study although they are not regarded as highly as they have been in the past.
+The above theorem relating quaternions to three-dimensional rotations may simply be regarded as a group homomorphism . Simply put, it is a representation of the group SU(2) by real 3x3 matrices. The mapping was shown earlier to be 2:1 so the inverse map cannot be regarded as a representation of SO(3) by complex 2x2 matrices. However, it is a kind of double-valued representation, if we allow ourselves to be a bit lax regarding the double-valued nature of the inverse mapping. Namely, it is what is known as a spinor representation. It is possible to put an equivalence relation on SU(2) such that  are equivalent. Then the inverse map may be treated as a one-one map from SO(3) to the set of equivalence classes. For , the double cover of SO(n) is Spin(n) [H2003, CS2003].
+What are spinors? Spinors are two-component complex column vectors. They were discovered by Elie Cartan and re-invented by Pauli and Dirac to describe spin, a fundamental property of the elementary particles. An n-dimensional spinor of a certain type is an element of the vector space on which a real Lie group called the spinor group Spin(p,q) acts [C81].
+Spinors first became prominent with the advent of quantum mechanics. This happened when Dirac realised that a spinor representation of an electron's state was required for the correct relativistic equations for describing the electron. In quantum theory the double-valuedness is not a big obstacle as in classical physics since the observable properties of a system are expressed through quadratic expressions of the wave function, removing the  factor. They are still used today within particle physics where bosons and fermions require either tensor or spinor descriptions. They are also used within research on loop quantum gravity, the main rival of M-theory as a budding GUT.
+Here follows a fantastic diversion for the next two sections. As we know, there are five regular or 'Platonic' solids. Namely these are the tetrahedron, cube, octahedron, icosahedron and the dodecahedron. Now an unit quaternion can represent a rotation in 3-dimensional Euclidean space. The rotation groups of these solids are useful in other areas of mathematics but here we ask how does this relate to quaternion rotations?
+First consider a regular tetrahedron ABCD in which the vertices are arranged so that by looking inwards from the vertex D towards the mid-point of the opposite face, the order of the vertices ABC in that face is clockwise. Such a direction will be referred to as an outward-pointing normal to the tetrahedron. We can achieve any even permutation of {A, B, C, D} by a rotation, so that the group of rotations is A4, with . There are three distinct types of group elements.
+First are the rotations which fix a single vertex. For example, we find a rotation leaving D fixed and cyclically permuting (ABC) by rotating about the outward pointing normal to the face ABC through . Let us call this rotation D1. D1 2 is a rotation through  about the same normal. We call this rotation D2. A1, A2, B1, B2, C1, C2 are similarly defined. We now define the second type of rotation through  about the line perpendicular to the two edges AB, CD. We shall denote this rotation AB, the permutation (AB)(CD). Rotations AC and AD are similarly defined. The third type of rotation is the identity Id. The cubes of the first type and the squares of the second type are equal to Id.
+We only need two examples to generate these rotations. Let us choose D1 and A2. Denote these by a, b and the other permutations may be calculated as:
+, ,
+, ,
+, , .
+The presentation of the group is .
+Let us describe the tetrahedron in coordinate form. Opposite edges are at right angles so we can arrange AB parallel to the y-axis and symmetrically placed with respect to the x - z-plane but below the x - y-plane. We then write  and . We arrange CD parallel to the x-axis, symmetrically placed with respect to the y - z-plane and above the x - y-plane. Then  and . Letting the edges be of the same length and the position vectors be unit vectors we have
+Using the quaternion formula for a rotation we have
+and
+. The quaternion representations of the remaining rotations may be calculated from the presentation given above.
+We consider quaternions corresponding to elements of A4, together with their negatives. We can take these quaternions as 24 distinct points in four dimensions. They are unit quaternions and so lie on the surface of the unit 4-sphere . These points are taken as vertices of a hypersolid and form a polyhedron by joining each vertex to its nearest neighbours.
+We may define distance on the surface of a sphere in terms of angles separating vectors to those points from the centre of the sphere. A quaternion analogue for the cosine rule is needed. We consider a triangle which is defined by two quaternions q, q' and their difference q - q'.
+.
+Comparing this with the cosine rule
+gives
+We start with a quaternion and calculate the cosine of the angle with all other quaternions. We see the largest cosine not equal to 1 is  and . So we set up a network, G, with 24 vertices and an edge for each pair of vertices whose angle cosine is .
+Every vertex has 8 neighbours. Take Id,A1. The common neighbours to these two vertices are -B2, -C2, -D2. Exploring in this way while examining angles between edges, we find the smallest hypersurface polyhedron to be an octahedron. The hypersurface must be built from regular three-dimensional solids of which there are only five types, so most are easy to eliminate making the work a lot simpler. The six vertices
+, ,
+form a typical octahedron the bracketed pairs here being opposite, non-connected vertices of the octahedron.
+To complete the task we find the centre of the octahedron as the mean of any of these opposite pairs. We then normalise it to unit length so that it lies on S3 and use this as a projection centre for stereographic projection of the vertices onto . Joining pairs of points by line segments according to the adjacency information contained in the network G gives a three-dimensional projection of the four-dimensional regular solid. This three-dimensional projection may be displayed on a Maple worksheet as displayed. This beautiful object is called the 24-Cell [S2001].
+We regard SO(4) as the group of rotations for four-dimensional Euclidean space. This would include rotations such as those of the 24-Cell. We may consider some quaternion pairs as rotations in four-dimensional Euclidean space.
+Take two unit quaternions .The double-valuedness also happens with SO(4) so the quaternion pair  obviously gives the same map as the pair  and  give the same projective map. There exists a relationship between SO(4) and SO(3) x SO(3). More accurately, there is an isomorphism between the projective groups  since the projective map  is given by  [CS2003].
+Take a rotation . We know that , .
+Theorem 5. Eigenvalues of orthogonal matrices have unit modulus.
+Proof:
+Let  be an eigenvalue which corresponds to a certain eigenvector x. Take the complex transpose so that  for . We know that A is real so . Then
+.
+Since x is an eigenvector it is nonzero and as such .
+Since the eigenvalues of A have unit modulus by (5) we can write them as  We take the corresponding eigenvectors to be  and so we may choose a new real basis for  to be
+We will take these vectors to be an orthonormal set. We see that
+We also see
+With respect to the orthonormal basis {e1, e2, e3, e4} the matrix form is now
+We may interpret this as a product of commuting rotations, R1() in the (e1,e2)-plane and R2(
+) in the (e3, e 4)-plane.
+Take any unit quaternions r, s. Then we may regard the mapping  as a rotation. Let us consider the case . Then we get the rotation  discussed in the previous section. Similarly, for  we get . Finally, the rotation A is given by  with respect to the orthonormal basis {e1, e2, e3, e4}.
+We will discover an expression for the quaternions r, s without considering a change of basis. Let us consider the quaternions corresponding to a rotation through  in any plane. We suppose that a non-zero quaternion q is fixed under the mapping , with r, s being unit quaternions. We split the quaternions into scalar and vector parts by writing
+.
+Then  is equivalent to  - or to
+.
+So we see
+.
+The scalar and vector parts of this equation may be considered as:
+with
+, 
+
+.
+We then (scalar) multiply equation (2) by x and (1) gives
+. Hence  = 0 or a = c. So equations (1), (2) become
+, .
+Let the orthonormal quaternions q1, q2 span a two-space, and suppose it is invariant. Then:
+So from (3a), (3b)
+(5)
+for some .
+To both sides of (4a) we take the scalar product by x2 to get B  (x1 x x2) so B takes the form . Substitute back into (4a), (4b) and use (5) to find
+.
+Then
+(6)
+Thus b2 = d2 = 
+
+2. The quaternions we need are
+,
+and  since they are unit quaternions.
+The rotation clearly occurs in the orthogonal two-space with q1,q2 held fixed, The orthogonality conditions
+,
+or
+,
+are satisfied by all q in this space. We are thus able to move  past the qis in any expression. In particular,
+Then
+.
+The angle between q and q1 is then given by
+.
+Thus
+,
+and then
+(7)
+To find the quaternion expression for the rotation A, an orthogonal 4x4 matrix, we first determine its eigenvalue structure in terms of ,  and the basis {e1, e2, e3, e4).
+Then rotation R1(), discussed above, will have quaternion expression
+(8)
+given by an application of the results in the previous section. Similarly, R2(
+) will be found to have quaternion expression
+(9)
+Then the quaternion pair (r, s) representing the four-dimensional Euclidean rotation A is obtained by r = r 1
+r2 and s = s1s2.
+As we stated earlier, there exists a relationship between SO(4) and SO(3) x SO(3). So any rotation in four dimensions can be written as q' = rqs where r,q,q',s are quaternions and r = a + bi + cj + dk, s = w + xi + yj + zk are unit quaternions. As previously, let  be a rotation. Then we can write . Quaternion multiplication is associative, so if we write R for the matrix representation of right multiplication by r and S for the matrix representation of left multiplication by s, then rqs = RS since  and  so A(q) = rqs = R(S(q)). So A = RS.
+The bigger problem is to demonstrate that this construction gives every orthogonal matrix. This is the problem of actually finding r and s when you're given an orthogonal matrix.
+We can write
+and
+.
+These are easily seen to be isometric with the origin as a fixed point so they are rotations in  about the origin.
+We see
+.
+From RS we can find a .
+Writing
+we see that  with
+Theorem 6. Every 44 orthogonal matrix is given by the construction involving the matrix multiplication of the representation of left and right quaternion multiplication.
+Proof:
+It is easily seen that the sum of the elements of T is equal to  and the complementary minors of T are zero. For 2-by-2 complementary minors ,  of A, an orthogonal 4-by-4 matrix, we have  or  depending on  by Jacobi's Minor Theorem, proved in [GR2000]. Then T has at least one non-zero entry so its column are linearly dependent and the rank of T is 1. So there exist a, b, c, d, w, x, y, z such that  and T takes the required form. So each matrix of a 4D rotation is composed of matrices R and S representing left and right multiplication by the quaternion pairs (r, s) or (-r, - s).
+Problem solved! If we look carefully through the above work, we can easily see how the quaternion pair (r, s) form an orthogonal matrix.
+Example 2. Take the simple example of 
+
+ and 
+
+. If we want the rotation 
+
+ then we find the matrices R, S and find 
+
+. Then 
+
+ with 
+
+ and 
+.
+We are rotating vectors in four dimensions so let us have co-ordinate axes 1, i, j, k with O the origin. Let . Then we can see that  is a rotation by  about the origin in the 1i plane and  about the origin in the jk plane, whereas  is a rotation of  about the origin in the 1i-plane and  about the origin in the jk plane.
+is a rotation by  about the origin in the 1i plane, R1(). The
+matrix
+of rotation A from Section 1 is given by the matrix representations of r = r 1
+r2 and = s1 s2 where  giving the rotation . Thus we conclude our brief exploration of the link between quaternions and rotations.
+Consider an expression of the form
+where all the  are arbitrary reals. Addition  is simple so consider multiplication.
+We write
+where  are real and uniquely determined by choice of , . There are n 2 choices of ,  and n + 1 choices of , so n 2(n + 1) such numbers in total.
+We have  as the result of applying the distributive law. We obtain
+by rewriting  as  and replacing this by
+A system, with addition and multiplication, as defined above is known as an hy-percomplex number system of dimension n + 1 [KS89]. The expressions are called hypercomplex numbers. The complex numbers, dual numbers, double numbers and quaternions are all examples of hypercomplex numbers.
+In all hypercomplex number systems it is always true that
+and
+for real a, b and distributivity holds.
+A normed division algebra is a division algebra with a norm , as defined in the introduction. The familiar hypercomplex number systems are all normed division algebras, although this is not necessarily true for all such systems. We will now show that R, C, H and O are the only normed division algebras. Consider the composition law, 
+. First we note that the inner product  and . This is easily seen since
+by . Also,  since
+[CS2003].
+For conjugation, 
+ we have  and . This is easily seen since, by the previous paragraph,
+.
+We have  since the previous result gives
+.
+Then it becomes apparent that  since
+.
+We let S be a subalgebra of n-dimensions, containing 1 and i, an unit vector orthogonal to S. Then  and (i,a). We now evaluate composition, conjugation and the inner product on the Dickson double algebra, S + iS. We have (a+ib, c+id) = (a,c)+ (b, d) since (a, id) = 0, (ib, c) = 0, . Then
+so . Lastly,
+so .
+Letting D = C + iC, which is a normed division algebra when  for . Expanding gives
+.
+So D is a normed division algebra when , or equivalently, when C is an associative normed division algebra [CS2003, KS89].
+19
+We have C = B + i'B. B must also be an associative normed division algebra with i'bc = i'cb, in other words B must be commutative as we will now see. For  we have
+.
+Letting B = A + i"A we can show that A is a commutative, associative normed division algebra with trivial conjugation, . Suppose  and we see that since  so . Then
+.
+So we can write the following, due to Hurwitz:
+Theorem 7. R, C, H and O are the only normed division algebras.
+Proof:
+The real numbers R are commutative, associative and have trivial conjugation. The complex numbers C is a commutative, associative algebra. The quaternions H is an associative normed division algebra. The octonions O is non-associative so its Dickson double algebra is not a normed division algebra.
+It is important to remember that a normed division algebra is not necessarily a division ring, or any kind of ring. The fundamental properties of rings include associativity under multiplication. The octonions O is a normed division algebra which is non-associate. Therefore, it is not a ring.
+The next two theorems, due to Fronebius, are of great interest to us. It enhances the link between the normed division algebras and division algebras in general.
+Theorem 8. Every associative division algebra is isomorphic to one of R, C or H.
+Proof:
+Let A be an associative division algebra. Let  and consider xa = a. Multiplying on the left by b, we have b(ea) = ba = (be)a so be = b and A has an identity. Elements ce form a subalgebra R which is isomorphic to R.
+If R is not all of A then it contains a subalgebra C which is isomorphic to C So if 
+
+ and e are linearly independent, the set of elements C of the form e + 
+a forms a subalgebra isomorphic to C This is proved by showing that a satisfies a quadratic equation with negative discriminant. If we say dim A = n, we have that the system of n + 1 vectors, , is linearly dependent and that, for some m, a is a root of the mth degree equation
+.
+The general mth-degree polynomial can be written
+,
+as a product of linear and irreducible quadratic polynomials. We may replace x with a and since P(a) = 0, we have Pi(a) = 0, for some i, because A is a division algebra. We see that a cannot satisfy a linear equation since e and a are linearly independent. Therefore, a satisfies an irreducible quadratic equation - its discriminant is negative.
+If C is not all of A, then it contains a subalgebra Q which is isomorphic to H. So, if 
+
+ do not belong in the same subalgebra C then the set Q of elements of the form 
+
+ forms a subalgebra isomorphic to H. In C we choose an element b such that , and in a subalgebra C we choose b' fulfilling the same condition. b, b' are scalar multiples of a, a! so Q, with elements , and Q', with elements , coincide. Let c = b and c = kb + k'b'. Then, unless k' = 0, the set of these elements Q" coincides with Q' and Q. We assume that bb' + b'b = ke for real k and b2 ,b'2 = - 1 since this is easily proved. We choose d = kb + 2b' so c 2 = (k2 - 4)e. So k2 - 4 < 0.
+Let  and we see . We also have
+.
+Then . So , ,  and to show that Q" is a subalgebra we need only evaluate the following products. We have , ,  and . Thus, any product is a linear combination of the elements so Q" is a subalgebra. It is isomorphic to H by the following.
+We must show that e,c,c, cc forms a basis of Q". Since c and c belong to distinct complex subalgebras they are linearly independent, so we need only show the same for cc. To prove, we suppose cc = c + c + e. Multiplying on the left by c gives . Rearranging, and then taking the difference of the two expressions gives . But it is impossible to find a real  which avoids a contradiction. So the elements form a basis. We have Q" = H since we can see the multiplication rules we examined above give the multiplication table of H.
+If Q is not all of A, we must show that A is not a division algebra. Take c not in Q and  where , the imaginary unit of C. Now,
+,,
+so  and . Then we see that  so . But ix = c is not solvable for . So we have a contradiction [KS89].
+More generally we have a proof that A is a normed algebra, which implies the result we are looking for by Hurwitz's theorem.
+Theorem 9. Every alternative division algebra is isomorphic to one of R, C,H or O.
+Proof:
+The ideas upon which the previous proof was based also hold for an alternative division algebra. The first thing we realise is that this theorem can be stated as follows: Every alernative division algebra is isomorphic to a normed division algebra. Then the rest follow by Hurwitz. So we need to define an inner product such that A must be normed, such that .
+We define a conjugation operation on A. If  and e, the identity, are linearly dependent then . If a and e are linearly independent, then  is a subalgebra of A. C also contains , the conjugate of . Let also , the quaternion subalgebra, and take a to be the conjugate in the quaternion algebra.
+We see , ,  and  where k is real. Then  and . Then  since if not, a is a multiple of 1. This lets us deduce
+and .
+The conjugate of ab is  so .
+We define an inner product  on A. The properties of inner product  if a = 0, (a, b) = (b, a), (a, kb) = k(a, b) and (a, b + c) = (a, b) + (a, c) are obviously implied by the deductions we have made. We see  since  for a=0. Then  and it follows that  so that A must be normed. The result follows by Hurwitz.
+We now explore another way to classify associative division algebras that is, perhaps, not so direct. The Brauer group arose out of an attempt to classify division rings.
+To get started we need a few definitions and redefinitions.
+A ring A is known as an F-algebra if it , the center of A and it is a finite dimensional vector space over F. A simple F-algebra is an F-algebra A over a field F such that A is simple and so has no nontrivial ideals. We now redefine the associative division algebra. An F-algebra A is known as a division algebra if the units of A are the quotient ring A/{0} [S99].
+As we know, the opposite ring 
+ to an ring R has the same additive group structure as R but has a new multiplication . If A is an algebra over F, then so is . An R-module is a set that has multiplication and addition operations, forming an abelian group under addition and satisfying
+and
+for  a ring with identity and . An R-module is simple if it has no nontrivial submodule. M n(A) denotes the algebra of n x n matrices over the algebra A. We have that M n(D) is a simple algebra for a division algebra D over F. Lastly, an Artinian ring A satisfies the descending chain condition so that if  is the set of all ideals in A such that  then  such that for .
+Theorem 10. Let A be a simple F-algebra. For some division algebra D and some positive integer n, there is an isomorphism from A to Mn(D).
+Proof:
+Let M be a simple A-module. A-module structure is given by the ring homomor-phism . This is injective because A is simple so its kernel must be A or {0}, and is not A since a homomorphism has .
+By Schur's Lemma, a name familiar from representation theory for another different lemma, we have  a division algebra. Then  by the Double Centralizer Theorem and  is isomorphic to a matrix algebra over .
+Note: The Double Centralizer Theorem states that for an Artinian ring A with center F and a subalgebra  over F the following holds.  is simple, , if , then  and if B is central simple over F, so is  and . For a proof see [H78].
+Theorem 11 (Schur's Lemma). If S is a simple R-module then 
+
+ is a division algebra.
+Proof:
+The proof is quite simple. Since  is a ring, we show that every nonzero endomorphism  is invertible.  is a submodule of S and if  then  so  since S is simple.  is a submodule of S and  if  again because S is simple. So  is an automorphism of S, and is thus invertible in .
+An F-algebra A is central simple if it is simple and . It is easily shown that an F-algebra is central simple if and only if it is isomorphic to M n(D) for a division algebra D over a field F.
+Theorem 12. An F-algebra is central simple if and only if it is isomorphic to Mn(D) for a division algebra D with center F.
+Proof:
+A is simple so, as we have just shown, it is isomorphic to some Mn(D) for a division algebra D over field F. Mn(D) has the set of dIn as center, for . Conversely, Mn(D) is central simple because matrix algebras are simple.
+We briefly define the tensor product. Take three A-modules say R, S, T and a bilinear mapping . We construct an A-module P and a bilinear mapping  with the property that to any bilinear mapping  there corresponds an unique homomorphism  such that . Such a module P is called a tensor product of R and S, denoted . We note that  and if D is a division F-algebra then .
+Theorem 13. The tensor product of two central simple F-algebras is another central simple F-algebra.
+Proof:
+We first show that  is simple. Suppose that I is a nonzero ideal of this tensor product and let  and  for  linearly independent over F. We choose  to have few nonzero . Assume  and if  then .
+A is simple so the ideal Iai generated by a1 is A. Then we have . So we can find , , which is a sum of tensors with the same number of nonzero  as z. For ,  but  since  has fewer nonzero  than z.  since the  are linearly independent over F. Then  and hence in F. Letting ,  and  implies . Then  and so . So, by definition,  is simple.
+It remains to show that  is central. We identify F with , so that it is clear that  since  involves two F-algebras. Then  is an F-algebra. Let  with  linearly independent. Then  for . Then . Write  and, since , for ,  implying . So for  and so . Therefore,  is central over F.
+Then  is central simple.
+The last theorem, and the one following, are needed to define an operation on a particular group:
+Theorem 14. If A is a central simple F-algebra, so is 
+
+ its opposite and 
+.
+Proof:
+From the definition of the center of a ring Z(A) we see that the center of  is just the center of A, . Then  is central over F where A is central over F. We also see that  is a simple algebra if A is simple since the right ideals in A map injectively to the left ideals in , and vice versa.
+We define a map . This map is obviously a homomorphism, since it respect addition a multiplication in the given tensor product. Since  is simple and a nonzero map, it is injective. It is surjective since  and  have the same dimension over F. So we have an isomorphism to .
+We say that A,B are similar 
+, where both A and B are central simple F-algebras, if  such that M m(A) = M n(B). This is easily seen to be an equivalence relation, satisfying symmetry, reflexivity and transistivity. We let [A] denote the equivalence class of A, a central simple algebra. We denote , the set of such equivalence classes.
+The Brauer group of a field F, Br(F), is an abelian group defined as follows. It is the set Br(F) under the operation 
+. Br(F) is closed under the operation as we have seen.. We have , so  so the identity is [F]. We have  because . Then Br(F) is an abelian group since the tensor product is both associative and commutative.
+Theorem 15. We can show that there is a bijection between the elements of Br(F) and the division algebras D with center F, mapping D to the element represented by Mn(D).
+Proof:
+We have
+so all representatives of a certain element of Br(F) have the same basic division algebra D. Then  so it is easily seen that Mn(D) and Mm(D) represent the same element.
+So we have proved that there is a bijective correspondence between the division algebras D over F and the elements of Br(F) [S99].
+Example 3. We do not progress deeply into this subject matter so our example is very simple. Take Br(R) the only division algebras over R are R itself and H. So we can see that Br(R) = Z/2Z.
+There is a huge number of Brauer groups, of course, since we can have F = C,F = Q and all other fields. It is possible also to calculate Brauer groups for commutative rings and there is more application throughout Galois cohomology, although this is far beyond the scope we wish to discuss.
+Before we get around to Cayley-Dickson construction, we need a couple of definitions. Recall the definition of an algebra and a division algebra is an algebra with multiplicative identity and multiplicative inverse. We see that ax = b and ya = b are uniquely solvable so if ab = 0 and , b = 0 [B2002].
+The associator is a trilinear map on an algebra A, 
+, given by [a, b, c] = (ab)c - a(bc). An algebra is power-associative, 
+, if the subalgebra generated by one element is associative so [a, a, a] = 0. An algebra is alternative, (aa)b = a(ab),(ba)a = b(aa), if the subalgebra generated by two elements is associative, when [a, a, b] = 0. If the subalgebra generated by three elements is associative [a,b,c] = 0, then A is associative.
+Cayley-Dickson construction is a process by which we may create -hypercomplex numbers. These new hypercomplex numbers are constructed from -hypercomplex numbers. This is done by the process of defining the multiplication rule for the -dimensional hypercomplex numbers in terms of the four -dimensional hypercomplex numbers.
+If we let h1, h2 be two -dimensional hypercomplex numbers and write each h1, h2 as an ordered pair of -dimensional hypercomplex numbers, A, B, C and D,
+,
+then the Cayley-Dickson process defines the multiplication of h1 and h2 by
+,
+where D* is a conjugate of D and c is a field parameter. Let us try to create some of the algebras we have already met.
+Consider this with Cayley-Dickson multiplication rule for (a; b) and (c; d), with . We have (a;b)(c;d) = (ac - bd;ad + bc) with , since . Take the complex numbers a + bi and c + di where , and . Then (a + bi)(c + di) = (ac - bd) + (ad + bc)i. This shows that (ac - bd; 0), (0; ad + bc) correspond to (ac - bd), (ad + bc)i respectively.
+Let us write . We need to introduce , another imaginary unit, with  and . Consider the Cayley-Dickson multiplication of two quaternions defined as ordered pairs of complex numbers, (a; b), (c; d), with . We have
+.
+Take two quaternions, each in terms of two complex numbers, ,  where . Then . Compare this with the above. We see that there is a term consisting of . This is a new imaginary number .
+Similarly, let . We define the octonions,  as the ordered pairs , . Multiplication of U and V is given thus:
+.
+, , ,  are the new elements introduced by applying the Cayley-Dickson process.
+So, we begin to wonder, why are there no other division algebras? Indeed, why can't we have an infinite chain of algebras, each constructed by applying the Cayley-Dickson process to the previous algebra? As we have noted earlier, R is a commutative division algebra with trivial conjugation. C is also commutative but trivial conjugation is lost. For quaternions, we lose commutativity and associativity is lost for the octonions. As we go on, our algebras lose properties.
+Let us define a c-algebra as an algebra with conjugation,  such that c(c(A)) = A and c(ab) = c(b)c(a). The c-algebra is real if a = c(a), and nicely normed if  and  for . If A is nicely normed,
+[B2002]. If A is nicely normed, . If A is also alternative it is a normed
+division algebra. This is seen by
+.
+Applying the Cayley-Dickson construction to the c-algebra A, gives A'. (a, b) are the elemtents of A', as shown earlier. This leads us to the conclusion that A' is never real, A is real if and only if A' is commutative, A is commutative and associative if and only if A' is associative, A is associative and nicely normed if and only if A' is alternative and nicely normed and A is nicely normed if and only if A' is nicely normed.
+A' is never real: The elements of A' are  so  so A' is not real.
+A is real if and only if A' is commutative: Let A be real so a = c(a) and ab = c(ab) = c(b)c(a) = ba. Then
+so A' is commutative. Conversely, let A' be commutative. Then
+.
+So dc(b) = bc(d) so a = c(a) and A is real.
+A is commutative and associative if and only if A' is associative: Let A be commutative and associative so ab = ba and (ab)c = a(bc). Then
+while
+.
+We can see that these are equal since A is commutative and associative, so A' is associative.
+A is associative and nicely normed if and only if A' is alternative and nicely normed: A is associative and nicely normed so ,  and . Then
+,
+and
+.
+Similar for (c,d)[(a,b)(a,b)]. So A' is alternative and nicely normed. Converse is simple.
+That A is nicely normed if and only if A' is nicely normed is a simple proof. So we see that we can only construct a small number of division algebras by applying the Cayley-Dickson process [B2002].
+The octonions were first discovered in late 1844 by John Graves, shortly after quaternions came to light. He expounded his new "octaves" to his college friend, Hamilton. Unfortunately, Arthur Cayley discovered octonions in 1845 and beat Graves to publication: they became known as "Cayley Numbers". The octonions are another hypercomplex number system; as shown it is a non-associative, normed division algebra. From the Cayley-Dickson process we know it is an alternative, nicely-normed c-algebra. The multiplication table for O takes the form displayed.
+The octonions are given the form
+[H2004, H2000].
+There are a few interesting facts about octonions, which we will investigate below. Despite this, they are largely ignored - even more so than the quaternions. There are many reasons for this, including the fact that Cayley was more concerned with the link between quaternions and hyperelliptic functions; that Cayley numbers were a mathematical oddity that arose from his research with no practical application. The quaternions form SU(2), a double cover of SO(3) as well as the link to SO(4). However, O is both useful and beautiful; and much of the rest of the essay is devoted to exploring how [CS2003].
+Since associativity fails, it is sensible to investigate the multiplication operators before we proceed. We define three maps, , , 
+. Tx is well-defined as the product of Rx and Lx in either order since (Lx)(Rx)y = (Lx)yx = x(yx) = (Tx)y = (xy)x = (Rx)xy = (Rx)(Lx)y. We see that  since the inner product  implies  and . This is known as the first Moufang law [CS2003]. We recall that a reflection in a vector x is expressed as . Given our previous study we see,.
+An inverse loop is a set with element 1, binary operation xy and inverse satisfying
+,
+,
+.
+We see that  and  are equivalent so xyz = 1. An isotopy is a triplet of invertible maps preserving the relation. So  mean  and (a,b,c) mean that xyz = 1 implies . These notations can be considered equivalent.
+A monotopy is defined to be one of the three invertible maps in an isotopy. If xy = z implies  then c is a monotopy. We see that c is a monotopy if and only if there are elements  and , companions, such that . This is since  so  and  so . We see that .
+Now we shall prove that multiplications by unit octonions generate SO(8) in the same way that the complex numbers and quaternions generate SO(2) and SO(4) respectively. First, it is easily seen that if x(ry) = (xr)y for octonions x,y we have r is real so that the octonions are strongly non-associative.
+We may then prove that if ,  is a pair of companions for c, then any other pair has the form  for real n. Let  for all x, y, and set . If we let ,  we have . Putting ,  and then , , we have  for all x, y showing that n is real.
+Theorem 16. If 
+, then 
+
+such that 
+
+ is an isotopy.
+Proof:
+We may write . We have . We see that  and  are bimultiplications by unit octonions since the first was found earlier to be  and the second is . c is the product of 2n unit bimultiplications. So  [CS2003].
+We have seen earlier that a and b are unique up to scalar multiplication. - 1 keeps a and b in SO(8) so 
+. (a, b, c) is an orthogonal isotopy if . The group of such isotopies is a 2:1 cover of SO(8), the spin group Spin(8). The spin group has an outer automorphism known as a triality automorphism such that . It is clearly an automorphism and we see that it is an outer automorphism, so not a conjugation.
+It is simple that PSO(8) has a triality automorphism since if  we define 
+. ([a], [b], [c]) arising from the orthogonal isotopies (a,b,c) is isomorphic to PSO(8) with triality . Triality takes  for every unit octonion x. Then SO(8) is generated by the left, or right, multiplications of octonion units. This is a result of applying triality to the fact that SO(8) is generated by the bimultiplications. We also see there is a 2:1 map from both triples (a, b, c) and (-a, -b, c) to c. This is then a representation of Spin(8), the double-cover of SO(8). The triples (a,b,c) for which c fixes 1 form Spin(7), the double-cover of SO(7).
+If we apply the Cayley-Dickson process to octonions and then repeat this continuously we find a chain of c-algebras with dimension 16, 32, 64,..., 2n. It is important to remember that these hypercomplex number systems are not division algebras. The 16-dimensional c-algebra is known as the algebra of sedenions from sexdecim [B2002].
+This algebra is non-commutative, non-associative, non-alternative and is not a normed division algebra. So it is possible for ,  but ab = 0. It is power associative  so [a, a, a] = 0, the subalgebra generated by one element is associative.
+Each element can be represented as
+or by applying the Cayley-Dickson process. Take two octonions a, b and the sedenion s 1 = (a; b). The multiplication of sedenions is given by .
+The multiplication of the two sedenion elements ,  is given by  for . Summation is over the permutations of the sedenion cycle, .  is given by  if  is an even permutation,  if  is an odd permutation, and  otherwise, Lastly,  if  and  otherwise.
+We now explore very briefly a relationship between division algebras and Lie alge-bras. The Freudenthal-Tits Magic Square is an array of algebras. The entries of the array are the result of the Jordan algebras of 3  3 Hermitian matrices.over R,C,H,O tensored with R,C,H and O. We can construct a commutative but nonassociative product a  b = 1
+2(ab + ba). Any algebra which satisfies the identity a (b a 2) = (a b) a 2 is known as an Jordan algebra, which are power-associative.
+We can extend this to a Freudenthal rectangle, a 45 array, by including the Jordan algebra R.
+The entries are all Lie algebras formed by the operation  defined by Tits. This operation is for  and  is the space of imaginary elements of A, which are orthogonal to 1. Recall that for a ring R its derivation Der(R) is a mapping  such that  and  [D94, B2002].
+Remember that a Lie algebra is an algebra g over a field F if its multiplication  satisfies  and the Jacobi identity . A semisimple Lie algebra is a Lie algebra formed of the direct sums of simple Lie algebras. The classical complex simple Lie algebras are , ,  corresponding to Lie groups , , . A semisimple Lie algebra is a Lie algebra formed of the direct sums of simple Lie algebras. It is also given by the following theorem [V74, H2003, B89].
+Theorem 17. A complex Lie algebra is semisimple iff it is isomorphic to the com-plexification of the Lie algebra of a connected, compact matrix Lie group
+So we know that  has complexification  and is the Lie algebra compact, simply-connected matrix Lie group .  is the complexification of  the Lie algebra of the compact, simply-connected Spin(n). Lastly,  is the complexification of , the Lie algebra of the symplectic group Sp(n).
+A root system is a finite real vector space with an inner product , together with a finite collection R of vectors in E satisfying:
+The elements of R are roots and the dimension of E is called the rank of the root system.
+Theorem 18. Every irreducible root system is isomorphic to one of:
+The algebras formed by the operation defined by Tits, above, are the exceptional Lie algebras and a few corresponding to he classical root systems, see [V74, H2003, B89].
+Thus concludes our brief foray into the world of normed division algebras. An interesting fact to close here is that quaternion representations of rotation groups may be fundamental to the underlying structure of our universe. The standard model insists on an infinite Euclidean space created by inflation. The plasma that filled space shortly after the big bang fluctuates in density, causing temperature fluctuation in the Cosmic Microwave Background radiation. The standard model predicts these fluctuations, but on larger scales they are not detected.
+Consider the 4-manifold S3 and finite universe S3/ 
+with  a group of isometries. There are a few explanations for the missing fluctuations but the simplest is that a spherical universe will not support large scale fluctuations, analogous to the way an unit circle will only support wavelengths . The observable evidence is inconclusive with  so although the universe is indicated to be spherical, there is no conclusive evidence. To recognise a spherical universe we must find which spaces are possible.
+The operation is similar to our construction of the 24-Cell. We find that the possible symmetry groups are the cyclic group , binary dihedral , binary tetrahedral  of order 24, binary octahedral  of order 48 and binary icosahedral  of order 120. The corresponding spaces S 3/ are among the likeliest construction of our universe [W2004].
+We quickly tour the area of Lie groups and algebras in greater detail. The collection of classical Lie groups is made up of the general and special linear group, orthogonal groups, the unitary groups and the symplectic groups. They are all examples of matrix Lie groups, a subgroup G of  such that if any sequence  converges to A then  or .
+Theorem 19. Every matrix Lie group G is a Lie group.
+The proof is given in most good Lie theory texts.
+Example 4. i) 
+
+ and 
+
+ are (matrix) Lie groups. The matrix Lie group is a group G such that G is a closed subgroup of 
+. 
+is a subgroup of itself, and if (An) is a sequence in 
+
+and 
+
+ then 
+
+ or it is not invertible by definition. If 
+
+ and 
+
+ then 
+
+ are all real. So 
+
+or A is not invertible.
+ii) Many of the subgroups of 
+
+are (matrix) Lie groups, including the special linear, symplectic (special) orthogonal and (special) unitary groups. This can be shown by using methods similar to above.
+iii) , , , . Of course, O is not a Lie group since associativity fails.
+iv) Take 
+. We define the group product by 
+
+. Associativity is easily checked, with 
+
+. G has an identity and an inverse for each element. The product is smooth as is the inverse element map, hence G is a Lie group.
+A matrix Lie group is compact if all convergent sequences  converge to an  and there exists a c such that  for all ,  and .
+Example 5. U(n) is a compact group since 
+
+ and 
+
+is preserved under limits. If A is unitary, the column vectors are orthonormal. Then 
+.
+ii) 
+
+ is not compact. For 
+
+, if 
+
+ we do not always have 
+.
+Similar idea for the other classical Lie groups.
+A matrix Lie group G is connected if for  there exists a continuous path  in G with  and . We say G is simply connected if every loop in G can be shrunk continuously to a point in G, as well as G being connected.
+Now a Lie algebra of a Lie group G is given as .
+Theorem 20. Let 
+
+be smooth and for each 
+ for ,  is surjective then  is a manifold. Then .
+Proof:
+We are familiar enough with differential topology to recall that . Now, we let  be a chart on X around x. The map  is constant since . So . Then . But  is injective. We also have . But  is surjective so .
+This gives a neat way to calculate the Lie algebra of a given Lie group since we see that .
+Example 6. We have that 
+
+is a Lie group. It is simple to see that this has group and manifold structure, and that 
+
+ given by 
+
+ is diffeomorphic. Amazingly enough, H is the corresponding Lie algebra. We remember that the Lie algebra of G a Lie group is the tangent space to G at the identity, 
+
+. In this case, 
+
+for 
+. As we know, this is equivalent to 
+
+ for 
+
+ with 
+. Then we see 
+.
+The matrix exponential is defined by . The Lie algebra of a matrix Lie group G, for X an n x n matrix, is given by . The classical Lie groups have their own Lie algebras; we have already stated which are the classical Lie algebras and which Lie groups they correspond to. It can be shown that the Lie algebra of a matrix Lie group is a real Lie algebra. Think of the more abstract definition of a Lie algebra, in terms of Lie brackets. If V is a finite-dimensional real vector space, then Vc the space of linear combinations  for  is its complexification.
+Theorem 21. Let g be a finite-dimensional real Lie algebra. The bracket operation on g can be extended uniquely to gc, its complexification as a real vector space, making gc into a complex Lie algebra, the complexification of g.
+Proof:
+We see that  is real bilinear and that it is skew-symmetric. Since the operation is skew-symmetric, it is complex linear in both factors. So we verify  to show bilinearity. We see
+. (10)
+The Jacobi identity hold for . It holds for  since the LHS of the identity is linear in x for fixed y, z. The identity then holds for  and . The same argument is made for y and z.
+Uniqueness is obvious since the bilinear bracket operation must be .
+The classical Lie algebras are classified by Theorem 17. Then the classical root systems , , ,  are assigned to , , ,  respectively [V74, H2003, B89].

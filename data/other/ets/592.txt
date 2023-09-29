@@ -1,0 +1,12 @@
+The given statement is
+ "It is better to have broad knowledge of many academic subjects than to specialize in one specific subject".
+ 
+ I disagree with the above statement because, having broad knowledge of many academic subjects seems to be alright when in childhood, but this seems to be complex and cumbersome as we grow older and older. 
+ 
+ Firstly, if we have broad knowledge of many academic subjects than to specialize in one specific subject, it becomes difficult to identify our main domain properly. For an example, consider a high school student. If he needs to have a broad knowledge of many subjects even after his high school, apart from his personal interest which he shows at a particular subject, the decision-making strategy of perceiving higher studies becomes troublesome.
+ 
+ Secondly, if we have broad knowledge of many academic subjects, the frequency at which we do get update about these subjects greatly matters. We need to have a greater frequency of updation in all areas, which is not a simpler task. For an example, consider a student studying Computer Sciences. The other academic subjects include some main aspects from Electronics, Electricals, Communications and like wise. The frequency at which he gets updated in his core subject(Computer Sciences) slows down if he needs to have broad knowledge of other academic subjects.
+ 
+ Thirdly, having broad knowledge of other academic subjects do helps, but not at a considerable rate. Considering the example illustrated in the above(second) aspect, the student could hardly get bugs in other areas which he integrates with his core subject. In recent days, debugging mechanisms are in plethora and it can be said that a person need not have a broad knowledge of other academic subjects.
+ 
+ Considering the above reasons, I conclude that I disagree with the given statement.

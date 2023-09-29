@@ -1,0 +1,2 @@
+Today, we had VERY long meeting... It took over 2 hours, and it was so boring that many of us slept : - P After that, I tried to fix bug on my software. The software had worked well until I upgraded the version of the library used in my software.
+I googled 3 or 4 hours and finally I could fix the bug!! It seems that there is no Japanese Information about the bug, so If I can have time, I write an article about that. That's why my eyes are very sore : (

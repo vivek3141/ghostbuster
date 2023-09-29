@@ -1,0 +1,110 @@
+Recent years have seen much criticism and calls for upheaval of the system of regulation of the legal profession in England and Wales [1]. The recent Clementi Report [2] and the following government response suggest that these calls are being answered. Yet surely there is more to this than pandering to public opinion? The question of reforming the regulatory system of the legal profession must require a careful analysis of the current system and a comparative understanding of the alternatives on offer.
+The weight of criticism of the legal profession is rooted in the concept of 'self-regulation.' In an age of accountability, the idea of a 'closed-shop' of self-regulating professionals seems perverse. It may be argued, however, that the legal profession is not self-regulating at all. Taken literally, self-regulation suggests coterminous groups of regulators and regulated, whereas in fact the Law Society and Bar Council regulate all solicitors and barristers whether or not they are subscribing members. This pedantic approach is not the only argument for a reclassification of the legal profession's regulatory system. Most of the regulatory powers of the governing bodies have been entrusted to the by Parliament. Due to the constitutional doctrine of parliamentary sovereignty, these powers may be altered or removed at any time. Therefore, the professions have delegated, secondary powers rather than an overriding right to self-regulate. In fact, Parliament has at times chosen to modify the powers of the regulatory bodies: the Solicitors Act 1974 [3] gives the High Court a disciplinary jurisdiction co-existent and equal to the powers of the professional bodies. As this power is rarely exercised, it may be viewed as a superficial, formal capacity rather than a substantive power; however, it is in theory another limitation to a fully-fledged self-regulating legal profession. More recently, the Courts and Legal Services Act 1990 and the Access to Justice Act 1999 introduced
+further external interference with the exercise of professional regulation: for example, the Lord Chancellor must approve new Law Society Regulations [4]. When an external authority has an ultimate power of veto as well as the ability to unilaterally make rules and regulations, can it truly be said that this is mere supervision?
+In addition to external state involvement distorting an ordinary understanding of the term 'self-regulating', it should be noted that for some time there has been a substantial independent lay element in the regulatory bodies of the professions. Perhaps a more accurate description would be 'co-regulatory' or 'profession-led regulation'? [5]
+On the other hand, Hulburt [6] emphasises that 'self-regulation' is not a precise term. Its flexibility means that it can be and is relevant to the current regulatory system of the legal profession in England and Wales. Hulburt is keen, however, to underline the difference between 'self-regulation,' which he accepts that the legal profession approximates to, and 'self-governance,' which would suggest that they are somehow above the law [7]. Clearly there are a number of external safeguards in place which ensure that the legal profession is subject to the rule of law.
+Self-regulation is mistrusted because there are suspicions as to the guiding motivation of the legal profession in its insistence on maintaining regulatory power. The problem lies in the fact that it is difficult to see how the Law Society and Bar Council can effectively act as both representatives and regulators of the profession [8]. There is an obvious conflict of interests in what may be seen as a Trade Union also being responsible for regulation and discipline.
+Hulburt [9] presents 3 critical models which provide a useful framework for a consideration of the diverse and conflicting academic views on the motivations behind self-regulation.
+The 'Honour Model' [10]: Professionals are driven by a desire for status in society. This model explains the conflict between self-regulation and representation of the profession, as the regulatory body may be more inclined to protect the incompetent [11] than to threaten the reputation of the entire legal community by exposing poor standards. Abel also notes that when the Incorporated Law Society was established in 1825, one of its professed goals was to improve the economic welfare and social status of solicitors [12]. The previous regulator, the Supreme Court, was composed of former barristers, who would be likely to be less sympathetic to solicitors [13].
+Under this model, status outranks money. Self-regulation allows the legal profession to deal with complaints quietly, even if it means making substantial financial settlements.
+The 'Honour' or 'Status' model relates to regulation of qualification and entry to the profession as well as complaints and discipline. It this enables the legal profession to create a monopoly over expertise, a monopoly which both creates status and sustains it through the assertion that only fellow professionals have the necessary knowledge to regulate one another.
+Useful as this model is, however, it places too much emphasis on one factor, and is overshadowed by another, equally cynical but more complete, version.
+The Sociological Model [14]: In the Sally Irvine Lecture [15], Janet Paraskeva commented on G.B. Shaw's condemnation of the professions as 'a conspiracy against the laity.' Abel is the contemporary proponent of this viewpoint, portraying self-regulation as a 'profession project' [16], a conspiracy driven by self-interest to pursue wealth, status and power.
+The problem with this model is that it does appear more than a little extreme and sensationalist.
+The Professionalism Model is no less extreme and unrealistic. The legal profession traditionally presented its self-regulation as directed to setting the highest standards for the protection of the public interest [17]. This view has also been espoused by the Benson Royal Commission [18] and the courts [19]. Referring to a 'spirit of professionalism' [20] 'a recognition of duties that transcend the personal interests of the professional' [21], and 'a social contract based on the public interest' [22], this would appear to be the stance taken by Hulburt. Although not a popular persuasion at the moment, this may not be entirely unexpected from a writer who was awarded funding by an Inns of Court Fellowship for a book which was published with the help of the Law Society.
+However, even Hulburt concludes that the professionalism model is too idealistic. He presents an alternative fourth model, which recognises and combines motivating factors from each of the other schools of thought [23]. Albeit a little inconsistent with his introductory statement [24], this viewpoint is to be preferred as it recognises that lawyer are only human - no better, no worse - they sometimes act for selfish reasons, sometimes for altruistic reasons, and sometimes for a combination of complex reasons.
+Whatever the motivations behind it, it is also important to consider the practical effects of our system of regulation.
+The dominant impetus behind official investigation into the regulation of the legal profession is statistical: the sheer volume of complaints from dissatisfied clients suggests that self-interest may be hindering the performance of regulatory functions [25]. Moreover, Consumers' Associations see these statistics as but 'the tip of the iceberg', as the very nature of self-regulation is such that it discourages clients from complaining, both because they feel that the complaint would be in vain and because of the natural difficulties in having to complain directly to one's former lawyers [26]. Nick Stance, of the Consumers' Association Which? , is of the opinion that self-regulation is hindering the important social function played by complaints in highlighting problems and potential reforms [27].
+Self-regulation may not be such a problem when consumers are powerful, for example in large public or private entities, as they have a greater market power behind them [28], however, as the Benson Commission noted, for weaker consumers with less knowledge and experience of legal advisors, the market is an ineffective regulator [29].
+In the age of human rights, self-regulation raises important questions relating to the right to a fair and impartial hearing by an independent tribunal [30]. Yet perhaps this risk is overcome by having an independent element of lay involvement in the regulatory system [31].
+Without needing to make any excuses for it, self-regulating does offer many direct advantages to society. In particular, the Marre Committee [32] highlighted the value of the active involvement of practitioners with first-hand experience in the profession. As well as this industry knowledge, the professional bodies also have a wealth of experience gained over the past century. This expertise is relevant to other dimensions of regulation than just discipline and complaints-handling. For example, the professional bodies certainly play a valuable role in setting standards of education and training [33]. The Committee secondly pointed to what may well prove to be the greatest obstacle to any reformed regulatory system: a self-regulatory system has the advantage of generating acceptance of the rules through a sense of ownership [34] as well as the 'cultural pressure' of professionalism [35]. It is suggested that in the U.S., where the profession is regulated by the state, the high level of non-compliance with rules is often due to a feeling amongst lawyers that the prohibited acts are not really unethical [36]. Without their own self-regulation, English lawyers may similarly develop a culture of resistance to external regulation, merely complying with minimum standards rather than striving for best practice. Clementi recognises this danger and addresses it in recommending close involvement of lawyers as well as maintaining the existing front-line system of regulation [37]. Will this be enough?
+Similarly, self-regulation may serve to instil in lawyers a sense of professional responsibility [38]. It is for this reason that self-regulation is one of the identifying characteristics of a profession [39]. After all, if the public cannot trust the legal profession to regulate itself then how can it be trusted to provide the service for which for which it exists? The legal profession argues that the Law Society and Bar Council must be regarded as professional bodies rather than Trade Unions [40].
+Perhaps the root of the problem is that lawyers are being inappropriately compared to other occupations and professions? In its response to the Clementi Report, the Legal Services Consultative Panel [41] raised this issue. It might be suggested that Sir David, a non-lawyer economist, missed this point. Most notably, in the law, the need for independence and the rule of law should always be the priority [42]. Professor Arthurs argues that there are many liberal democracies which manage without a self-regulating profession, but surely it does not follow that just because a society can function without a safeguard that it would not be better with it [43].
+Evidently there are positive aspects to self-regulation, yet even the Marre Committee, which Abel suggests was established by the Law Society in order to 'buy time' [44], advised the profession of the need to reform from within before it is imposed from without [45].
+To introduce its own initiatives within the parameters of the existing system may seem to be the best way to reform whilst maintaining those positive aspects of self-regulation [46]. In the current climate, the profession is keen to emphasise its efforts and intentions to do so [47]. Recent changes have included lay involvement, a Practice Standards Unit, a Consumer Complaints Service, an Investigation and Enforcement Team, and a Director of Consumer Complaints. Most notably, even as Clementi was making his Report, the Law Society was already splitting its representative and regulatory functions [48].
+Yet the profession's track-record on self-reform is as shaky as its track-record on self-regulation. Changes are as minimal as possible [49] and usually appear reactionary, based on public outrage or warnings from oversight bodies such as the Legal Services Ombudsman. The Law Society and Bar Council demonstrate an inherent conservatism in their calls for 'evolution rather than revolution' [50]. A sociological approach [51] might attribute this to the self-interest of the profession. Whatever the reason, the profession's own efforts appear too little, too late [52].
+Although there is not scope for a discussion of this here, there may be criticisms of the motives [53] and effects [54] of an externally regulated system, yet change has long been inevitable. It is for this reason that Clementi was concerned with how rather than whether to reform the regulation of the legal profession [55].
+Clementi's proposed B+ Model for change is not as radical as it might have been. He recognised the need to build on the advantages of what is already in place [56]. Given that the legal profession was not entirely self-regulatory in the first place [57], the proposals may be viewed as a tidying-up of the so-called 'regulatory maze' rather than the 'end of the historic right to self-regulation' [58].
+Yet, however dramatic the changes on the front-line, the very act of legislative intervention is in itself important. On the whole it would seem that the profession is not really above the law and that self-regulation is not really a conspiracy which works against the public interest, but perception is everything [59]. In its report, 'The Rule of Lawyers' [60], the Fabian Society emphasised the need for justice to be seen to be done.
+The Benson Royal Commission concluded that much of the public criticism of the self-regulation of the legal profession was 'ill-founded or exaggerated' [61]. However, as engendering trust is a key aim of a regulatory system, the Commission was wrong to underestimate a problem which could be attributed to the 'temper of our time.' Pandering to public opinion may be the reasonable thing to do.
+In the 25 years since the Royal Commission Report, society's ideologies have moved even further from the age of deference in which self-regulation thrived. Thatcherism questioned the 'closed-shop' of anti-competitive practices; New Labour denounces privilege; and all the time the influence of consumerism pervades. Current reform may not address all of the underlying causes of poor legal service [62], yet it responds to the demands of the critical consumer. Whether it will go far enough to satisfy these demands and, at the same time, how far it can incorporate some of the positive features of a self-regulatory system is yet to be seen. A suitable balance needs to be found.
+1
+2 Clementi Report - Review of the Regulatory Framework For Legal Services in England and Wales, Final Report,
+December 2004
+3 s.50 Solicitors Act 1974 (still in force)
+4 s.47 Access to Justice Act 1999
+5 Paraskeva, J. (Chief Executive, Law Society), 'The Sally Irvine Lecture: Profession-led regulation in the 21 st century'
+6 Hulburt, W.H., The Self Regulation of the Legal Profession in Canada and in England and Wales (2000), Law
+Society of Alberta, Alberta Law Reform Institute, at p1
+7 ibid
+8 e.g. Abel, R.L., The Legal Profession in England and Wales (1988), Blackwell, at p30, p245, p248
+9 op cit n6 at pp130-140
+10 see e.g. Michael Burrage (1996) cited in Hulburt, W.H., The Self Regulation of the Legal Profession in Canada and
+in England and Wales (2000), Law Society of Alberta, Alberta Law Reform Institute
+11 Goode (1967) cited in Abel, R.L., The Legal Profession in England and Wales (1988), Blackwell, at p30
+12 op cit n8 at p242
+13 ibid at p248
+14 see generally Abel, R., 'Between Market and State: The Legal Profession in Turmoil,' MLR Vol 52, May 1989 No.
+3, pp285-325
+15 op cit n5
+16 op cit n6 at p64
+17 The Royal Commission on Legal Services, Final Report Vol1 Ch1-28 (Cmnd 7648), Chairman: Sir Henry Benson,
+Law Society Statement at 25.21 (p341)
+18 ibid at p29 and p341
+19 e.g. Lord Diplock in Swain v Law Society [1981] 3 All ER 797 at 830
+20 op cit n6 at p125
+21 ibid at p126
+22 ibid at p65
+23 ibid at p140
+24 ibid, Preface piii: where Hulburt strongly espouses the Professionalism/public-interest model.
+25 op cit n8 at p29 - Weber (1954: 202-3)
+26 op cit n1
+27 Stance, N. (Director of Campaigns and Communications, Which? ), Office of the Legal Service Complaints
+Commissioner launch speech, 28 October 2004
+28 op cit n8 at p29 - Johnson (1972: 69)
+29 op cit n17 at p352
+30 Lothian, A., 'Human Rights for Lawyers' ()
+31 op cit n5
+32 Committee on the Future of the Legal Profession (1988)
+33 Ames, J., 'Fighting a worthwhile battle,' Law Society Gazette, 14 August 2003, Vol 100 No 31 p9; Irwin, S., 'The
+Clementi Review: Law Society v Bar Council,' The Lawyer, January 19 2004
+34 op cit n5; Bar Council - Response to Clementi Review (June 2004)
+35 Moorhead, R., 'Self regulation and the market for legal services'
+(); Boon, A.; Levin, J., 'The Ethics and Conduct of Lawyers
+in the United Kingdom'
+36 Maru, O., Research on the Legal Profession (1972), American Bar Foundation, Chicago
+37 Clementi Report - Review of the Regulatory Framework For Legal Services in England and Wales, Final Report,
+December 2004, at p65
+38 op cit n6 at p175
+39 op cit n8 at p29
+40 'Regulator or union - the choice is yours,' The Lawyer, 27 August 1996
+41 June 2004
+42 see Bar Council - Response to Clementi Review (June 2004); Moorhead, R., 'Self regulation and the market for
+legal services' ()
+43 Arthurs, H.W., 'The Dead Parrot: Does Professional Self-Regulation Exhibit Vital Signs?' (1995) Alta. L.Rev.800,
+cited in Hulburt at p169
+44 op cit n14 at 325
+45 at 4.23
+46 op cit n6 at p180: 'If self-regulation appears weak it should be revitalised not removed.'
+47 'Analysis: Complaint feint,' The Lawyer, October 25 2004; Paraskeva, J.; Mill, D.; Goldsmith, J., 'Pot calling the
+kettle?' Law Society Gazette, 27 May 2004, Vol 101 No 21 p18; op cit n5
+48 Lumley, J., 'Regulation: Waiting for the man,' Legal Week Student, October 2004
+()
+49 op cit n8 at p255 on the Coopers & Lybrand Report (1985) after the Glanville Davis Affair
+50 op cit n5; Irwin, S., 'The Clementi Review: Law Society v Bar Council,' The Lawyer, January 19 2004
+51 see above at p3
+52 see 'Analysis: Complaint feint,' The Lawyer, October 25 2004
+53 Moorhead, R., 'Self regulation and the market for legal services'
+()
+54 ibid; Bar Council - Response to Clementi Review (June 2004); 'OSS failure shames the legal profession,' The
+Lawyer, 15 February 1999: 'Self-regulation is vastly preferable to the government playing legal nanny and charging
+the profession sky-high rates for the service.'
+55 Sutton, C., 'A "special offer" the public must refuse,' New Law Journal, 1 August 2003 - NLJ 153.7091(1185)
+56 op cit n37 at p36
+57 see above at pp1-2
+58 see New Law Journal News 'Clementi Outlines a New Regulatory Structure' NLJ 154.7157(1878), December 2004
+59 op cit n37 at p28; 'Feature: The soft option,' The Lawyer, July 12 2004
+60 Fabian Society (1998), in Hulburt at p181
+61 at p33
+62 see Consumer Association - Consultation on Clementi Review (March 2004): problems are operational and cultural
+as well as structural.

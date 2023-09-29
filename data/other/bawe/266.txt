@@ -1,0 +1,94 @@
+A study into the various approaches available in Intelligent Systems Engineering has been carried out. The context for this piece of work, as well as describing the theoretical aspects and simulation results, has been that of the XNOR problem. It was found that Expert Systems, Genetic Algorithms and Fuzzy Logic would be acceptable approaches to this problem. The report highlights key points and includes an appendix with some new programs that were created.
+This report aims to describe the principles and relative merits of some Intelligent Systems Engineering approaches. The approaches to be discussed are Expert Systems, Unsupervised Learning, Supervised Learning, Genetic Algorithms, Fuzzy Logic and Neuro-Fuzzy.
+Besides looking at some of the theoretical aspects and most of the simulation results for these approaches an attempt will also be made.
+Context: solution to XNOR problem. This has been chosen since it is a simple problem that given the 15 pages suggested page limit of this report will not require multiple graphs. For fuzzy problems the idea is taken further by having multiple input gates and the input values been in the range -2 to +2 instead of fixed at -1 to represent logic low and +1 to represent logic high. Here is the XNOR gate:
+This can be represented in a matrix as:
+Expert systems attempt to make knowledge based decisions often using if...then type rules. They should only be used for applications that cannot be easily or cheaply solved by existing software or human intelligence. They work from large knowledge bases that contain data selected to help the expert system perform its function. In essence, a rule-based expert system, uses a combination of it's 'if...then' rules to make decisions. Other ways to implement expert systems are Frame-based, Procedure-oriented, Object-oriented, Logic-based and Access-oriented. An example of the rule-based type is found in the file in 'exsys.m', here are its contents:
+The 'strcmp' function [strcmp(string1, string2)] returns 1 if string1 and string2 are the same, returns 0 otherwise. As can be seen this is using the confidence factor (TCF) to provide a representation of how sure of the use of the piece of knowledge used at each step will result in the correct output. As more rules are used the confidence therefore decreases. The output is shown below:
+This could of course be decided by human intelligence, however, the main goal of expert systems is to provide human-like answers but much more quickly. This approach to intelligent systems cannot or should not be used for mathematical or logical problems such as the XOR problem. It can be used for types of problems that some of the other approaches cannot, such as assisting supervisors and managers with situation assessment and long-term planning.
+The problem with expert systems is that they take an increasingly exponential number of man-years to develop depending on the complexity of the knowledge-base. This is due to the methods available for knowledge input and the way knowledge is extracted from data and interpreted. This particular example program also has another flaw in that it can give contradictory results given particular input data. This is because some outputs can be given more than once if certain conditions arise. To improve this particular expert system it would therefore be necessary to modify the rules to make sure that it can under no circumstances contradict itself.
+This approach is concerned with the use of neurons to learn to generate a correct output from an input. The neuron is first trained on lots of data which modifies its weights and then tested on similar data to produce the correct result, that is for the input data to be clustered or grouped together. The program 'uhlr.m' demonstrates this:
+For an n
+
+m matrix of input data,
+so there is 3 input vectors x, , , .
+The transfer function for the neuron looks like this:
+Thresholding is at zero, so the input has to exceed 0 for the neuron to fire. This is implemented in the program through the use of 'sgn' or 'hardlims' within the 'hebbu( )' function.
+Define  [Equation 1]
+The change in weights is:
+[Equation 2]
+Weights increase if yx is positive
+Weights decrease otherwise
+Assumptions:
+Learning rate, , is 1
+No prior knowledge about the grouping (no target is defined), the neuron needs to learn it so we can test it.
+The maths showing the production of the outputs for the three vectors has been shown in Assignment 2 and will therefore not be repeated here. Also see Lecture 5 notes for details on the step-by-step maths.
+For x
+1:  For x
+2:
+For x
+3:
+So the results show that the unsupervised learning has found that x
+1 and x
+2 belong to one class (they both have an output of 1) and x
+3 (has an output of -1) to another.
+To see if the result is justified would require a plot of the input data to be made and the clustering of the data vectors assessed by inspection. Since it is not possible to visualize 4-D data, I have created the program 'uhlr4Dto2D.m' (a copy of this can be found in the appendix). This plots the 4-D data in two 2-D graphs shown in Figure 7. The black dashed lines indicate possible separation lines and show that indeed it is possible to classify x
+1 and x
+2 into one class and x
+3 in a separate second class.
+Supervised learning uses target vectors to define what the output should be for the given inputs so that the neural network can learn and modify its weight values so that the input is always mapped to the correct output.
+Target = t or a vector, ti
+Output = y = t, or in vectors, yi = ti
+The change in weight
+Therefore new weight
+As for the unsupervised learning, the thresholding is at zero so the input has to exceed 0 for the neuron to fire, hence using combinations of positive and negative inputs allows the neurons to fire or not fire and so create the learning network. This is implemented in the program through the use of sgn or hardlims within the hebbu( ) function.
+The program 'shlr.m' uses the same input data as for, that is values for x
+1, x
+2, x
+3,  ( = 1) and w. But now there is the vector t;
+For x
+1:
+For x
+1:
+For x
+2:
+For x
+1:
+For x
+2:
+When the program is simulated these theoretical calculations are shown to be correct:
+So it only required 1 weight change (w
+1 
+
+w
+2) as opposed to the unsupervised Hebbian learning rule which changed the weight 3 times. The supervised Hebbian learning rule can be used when there are targets, but the unsupervised Hebbian learning rule may also be used to locate other patterns in the data that would not be found with a supervised learning since it is trying to match its outputs to the target.
+Genetic algorithms can be used to solve problems that would otherwise require an exhaustive approach to solution finding. This can have substantial benefits in terms of savings in both time and cost. In 'optsq.m' the function to be optimised using a simple genetic algorithm is defined as x
+2. The four stages are: Reproduction, Mating, Crossover and Mutation. The population is a random 5 bit binary number. These represent a population of chromosomes that are to be improved, that is maximised, so ideally they will all be set to the highest value as a result of the genetic algorithm.
+As the program runs it shows the result at each stage of reproduction, mating and crossover. Mutation is rare and shows up as a difference in the population before and after reproduction.
+The first population is 1, 20, 11 and 26.
+Basic Fuzzy Set Operators are demonstrated in 'bfso.m' uses the fuzzy subsets F1={A/0.5 B/0.7 C/0.3 D/0.1} and F2={A/0.1 B/0.9 C/0.5 D/0.7 E/0.9} to demonstrate some Basic Fuzzy Subset Operators. These are:
+Note how possibility is different to probability. This is why the fuzzy subsets add up to greater than 1, if they were probabilities then they would have to add to 1. This is essentially how fuzzy logic works by allowing overlap of the fuzzy subsets. The product of fuzzy subsets are added and pairs of elements from F1 and F2 form new elements. The minimum of the memberships of the two elements is the new elements membership. For example (D, E)/0.1 comes from D/0.1 in F1 and E/0.9 in F2 because D has the lower possibility of 0.1 compared to E's possibility of 0.9.
+Fuzzy Associative Memories are demonstrated in 'finf.m' which defines normalised (across the row of numbers) vectors. To implement the AND and OR functions the min and max operators are used to build the Fuzzy Associative Memory (FAM).
+It would not be possible to use this type of fuzzy logic for the XNOR problem since it only uses the min and max operators which are of no help.
+'Flc.m' demonstrates Fuzzy Logic Control. This shows a good demonstration of how the fuzzy subsets can be shown graphically as in Figure 15. The output is an automatic grouping of the input data, the 4-D data seen throughout much of the examples. The membership functions are chosen by the program in such a way that given the input data it will be able to use a combination of the fuzzy subsets and if-then statements to produce classification outputs.
+So the system classifies the input vectors successfully when compared to for example Figure 7 which shows the likely clustering of this set of input data. This is forward chaining or Modus Ponens where the consequences are discovered from the causes (the output from the input), otherwise it will be backward chaining or Modus Tollens (search for causes to give outputs).
+In Figure 15 the vertical lines in the plot of y1 represent the first co-ordinate of each of the three vectors. Looking at the first vector:
+We can see the first two co-ordinates shown as the long dashed lines in the plots of y1 and y2 and that both of these belong to the fuzzy subsets 'High' (shown by their position within the membership functions. Hence, looking at the three rules used we can see that it is correct for the first output to be a 1 since only rule 1 has been activated.
+For the second vector:
+The first two co-ordinates have been shown as the dotted (or short-dashed) line in the plots for y1 and y2. - 0.5 belongs to the 'Low' fuzzy subset of y1 and 1.0 belongs to the 'High' (and possibly 'Medium'???) fuzzy subset of y2. Therefore rule 3 has been activated and the output is correctly shown as high, or a 1.
+For the third vector:
+First two co-ordinates shown as dot-dash lines in plots of y1 and y2. - 1.0 belongs to the 'Low' fuzzy subset of y1 and 0.0 belongs to the 'Low' fuzzy subset of y2
+Unfortunately this type of Fuzzy Logic is also unsuitable for solving the XNOR problem since the rules used are to determine classification which just wont work for XNOR input data.
+The Fuzzy Propagation Algorithm (FPA) uses fuzzified data as input to a neural network. The 3 applications to be studied in this section are Neuro-Fuzzy AND, NOT and OR.
+'nfn.m' implements the Neuro-Fuzzy NOT function. It defines the signal to complement, x = 0.25, and defines the signal and weight vectors p = [x 1] and w = [-1 1] respectively. It then executes 'fpa.m' which implements the FPA for any signal and weight. It works by first sorting the inputs using the Matlab function 'sort'. The differences are computed by subtracting each value in the signal vector from the following one. The weights are summed cumulatively by adding them from 1 to n, starting with the last one. The weights are thresholded before the output is created.
+The signals were already in ascending order, [ 0.25 1 ], so they were not re-ordered. The difference calculation only affects the second value, 1.0 - 0.25 = 0.75 = complement of input. The new weights are found (-1 + 1 = 0 and 1 stays as it is) and thresholding does nothing here since they are already 0 and 1.
+Output = weighted sum of differences = (0*0.25) + (1*0.75) = 0.75 = the complement of the input. Hence it is performing the NOT function correctly.
+Neuro-Fuzzy OR is implemented in 'nfo.m' which is similar to 'nfn.m' except the signal to be 'OR-ed' is of course different, p = [1 .25 0], and the weight vectors are simply a row of 1's.
+This time the inputs are re-ordered from [ 1 0.25 0 ] to [ 0 0.25 1 ]. Again, the difference calculation does not affect the first value, the other differences are computed as 0.25 - 0 = 0.25 and 1 - 0.25 = 0.75. So we have [ 0 0.25 0.75 ] as the differences. The weights are added cumulatively as before
+( 1 + 1 + 1 = 3, 1 + 1 = 2 and 1 on the end stays the same) and thresholded to [ 1 1 1 ] as the final weight vectors. The output is again the sum of the differences multiplied by their respective weights:
+Output = (1*0) + (1*0.25) + (1*0.75) = 1 = last value in re-ordered inputs = largest/maximum value of input. Hence it is performing the OR function correctly.
+'nfa.m' implements the Neuro-Fuzzy AND function and again is similar to the OR program with the signal to be 'AND-ed' the same, p = [1 .25 0], but now the weight vectors are all 1/n where n is the number inputs in this case 3 so the vector of weights is [ 0.333 0.333 0.333 ].
+This inputs are re-ordered exactly the same as in the OR program. Hence the differences are also the same. The weights are added cumulatively ( 0.333 + 0.333 + 0.333 = 1, 0.333 + 0.333 = 0.667 and 0.333 on the end stays the same as in the original weight vector). These are thresholded (set to 1 if greater than or equal to 1, otherwise set to 0) to [ 1 0 0 ] as the final weight vectors. The output is again the sum of the differences multiplied by their respective weights: Output = (1*0) + (0*0.25) + (0*0.75) = 0. So the output is the first difference = the first entry in the inputs = the smallest input value. Hence it is performing the AND function correctly, since at least one of the inputs is 'low'.
+Maybe look at assignment in context that you are making a proposal to your boss to help him/her make a decision about which of these alternatives to employ to solve a particular problem; for example in the context of your project. So we wish to identify the key factors that are important in a solution based on each of these alternatives in the context of the problem. For example is the problem likely to benefit from learning. If so which type? What are the input/output requirements? Etc. Illustrate, where possible, this with an attempt to implement the selected ISE approach using relevant data; simulated or otherwise.
+There are advantages and disadvantages of using each approach to Intelligent Systems depending on the intended application. It turns out that Expert Systems are best for representing expert knowledge and knowledge representation. Neural networks such as the supervised and unsupervised examples studied are best for learning, nonlinear and fault tolerant applications. This is because the 'knowledge' that the neural network retains as it learns is spread across the whole network so that an unusual input to one part of it should not affect its ability to provide the correct output. Genetic algorithms are also good for nonlinear problems and have fault tolerance like neural networks. They are best of all though, for fast optimisation. Fuzzy logic is good for anything apart from learning and optimisation. The fact that it was not possible to implement an XNOR solution using fuzzy logic is probably due to not knowing what modifications would be required to the existing programs rather than it not been possible.
+For the XNOR problem it was found that only expert systems could solve it. The neural nets suffered because it was a non-linearly separable problem. The genetic algorithm could easily be modified using the MLP approach and would totally work for the XNOR problem, this ties in with one of the things they should be good at, that is, solving non-linear problems. The fuzzy approach to the XNOR problem suffered mostly due to a lack of MATLAB programming ability and no clue how to change the programs to simulate an XNOR problem.

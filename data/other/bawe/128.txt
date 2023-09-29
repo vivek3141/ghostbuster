@@ -1,0 +1,17 @@
+Stem and Leaf Plot to show log 10(area).
+Truncation of the values of the square roots has been used.
+Stem in 1's, Leaf contains the truncated 1 decimal place of the log value.
+The stem and leaf plot shows bimodality.
+Even though the sample countries only begin with the letter 'C' it does not mean that they are not independent identically distributed. The countries with beginning with the letter 'C' are still as independent of each other as any other countries. In addition there is no reason why the sample countries would not all follow the same distribution.
+I would consider the normal distribution to be a reasonable distribution to use because you would expect some countries to have a massive area while others would have a very little one. There would be many countries in the middle. However, our sample shows bimodality of the areas which maybe suggests that a normal distribution is not suitable.
+Values are different therefore as an approximation of  take (
+LQ+ 
+UQ)/2 = 2.25 (to 2 d.p)
+Therefore, Pr(Y>6) = 0.2296
+Therefore 3 rd estimate of P = 22.96% (this is considerably higher than the previous estimates)
+The best way to reduce the data would be to number each column inch from 1- 150 and then generate 15 random numbers. Take the countries from each numbered column inch that matches your generated random numbers. This is now a random sample representative of all the countries in the world. The method used in (a) would be the most appropriate as we do not know whether the data fits a normal distribution. However, we could use hypothesis testing to see if the data did fit the normal.
+The "friend" uses an out of date atlas from 1987 as the data source. A more recent atlas should be used as changes such as the reunification of Germany have happened since 1987.
+The sample is not random. It only includes countries beginning with the letter 'C'. It is not representative of the areas of countries in the world and therefore it is a very dubious method to base our assumptions on it. For instance we assume that the proportion of countries with area of at least 100,000 sq km in the sample is representative of the world.
+The sample size is very small compared with the amount of countries in the world; therefore it may not be representative. A larger sample size would reduce sample variation.
+The definition of the random variable Y is the log 10(area) of a 'state chosen at random'. The sample includes only countries not individual states.
+In part c the calculation of the standard deviation from our lower and upper quartiles produces quite different results. Perhaps this suggests that Y does not follow a normal distribution as the property +0.6745 does not hold and therefore the use of the normal to calculate P is not the best method as used in b and c.

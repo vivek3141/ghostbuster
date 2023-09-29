@@ -1,0 +1,4 @@
+Translate the following pseudo-code into a 'C' program and test the program by executing it for the following inputs: n = 3, 21, 25, 27. Check if there is an input for which the program doesn't halt.
+Output values for each of the inputs for the above program:
+The problem with this particular implementation is that it does not check validity of input and so does NOT halt when input other than integers are used.
+As long as input is an INTEGER, the program will halt.

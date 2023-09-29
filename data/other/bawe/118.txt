@@ -1,0 +1,37 @@
+Drop in patient's blood pressure (mm Hg). Stem unit 10's, leaf unit 1's, spilt (. 5-9, *0-4)
+Drop in patient's blood pressure (mm Hg). Stem unit 10's, leaf unit 1's, spilt (. =5-9, * =0-4)
+The effects of drug A are more spread out (larger range and inter-quartile range) when first drug administered then Drug B but on average (mean and median) Drug A has better performance on this group.
+Drug A after Drug B:
+Less spread out (inter-quartile range has over halved)
+Mean and median slightly lower
+One person (patient 19) is slightly apart form rest of group meaning other factors may affect blood pressure
+Insufficient data to say whether order important (need to more data about people to see if range has change because of order or something else)
+Drug B after Drug A:
+Average less
+Spread similar
+Negative value meaning it has made the patients condition worse then no drug
+Suggests that the order of the drug has effect and drug B after drug A has a negative effect.
+How large and diverse is the population, 22 is a small sample and a larger sample would give more data on which to evaluate the drugs and the importance of the order given.
+Initial blood pressure needed to see if drop is proportional to blood pressure and if how much of a hytensive someone is, is a factor
+Age and other biological data are necessary to see if drugs effectiveness varies with these.
+What is mm Hg, and how much does it vary naturally (control group)
+They may be other factors involved in blood pressure of patients, like stress, diet illness.
+How was test carried out, under controlled conditions?
+Was the test carried out by drug company or independently as this may have a effect on the data.
+Were the people selected at random from the population, or was it people who applied or from 1 doctors list; as such it may be that if all from 1 area then it may not be representative of the population
+Average ration of Men to tonnage in a steam ship is 1 crew per 75 tonnages. Average ration of Men to tonnage in a sail ship is 1 crew per 27 tonnages.
+Steam ships have a much larger ratio of tonnage per crew then sail ships; they are also much larger carrying more tonnage and crew.
+From graph fig 1.2 equation of best fit line is 0.0062*tonnage + 9.48 = crew size
+Using tonnage=5000 in this equation gives 40 crew needed.
+I would expect Ships 1,2,3,17 and 18 all to be sail ships because they have a small tonnage and low ration of crew per tonnage, which from the data is normally from sail ships.
+Need information on ship technology of the time, are there dual power ships (sail and steam) or ships powered by other means, which could be the power of those not given.
+Details about where the ships are headed would be useful as a ship to Australia may need more crew then a ship to France and seas the ships are crossing may change crew per tonnage ratio.
+How was the sample collect, is it random, or just taken for all ships in 1 dock in which case not likely to representative of population as sail and steam ships may be kept in different docks.
+Not many sail ships given more needed to form a opinion about them; 25 ships is not a very big proportion of all the British merchant ships in 1907.
+Would the Registrar of General Shipping have complete crew list or just senior positions?
+The majority of cities rainfall is between 1-5 inches and sunshine between 4-10 hours. There are 5 outliers, 4 due to excessive rainfall and 1 due to sunshine.
+Bangkok, Hong Kong, Tokyo and Miami all experience excessive rainfall; this may be due to their geographical positions meaning that September is monsoon or hurricane season causing the extra rainfall.
+Mallorca has lots more sunshine hours then elsewhere may due to its position meaning it gets few clouds in September.
+Need geographical position of all cities along with their regional climates how this effects them.
+Some cities from southern hemisphere so they have the opposite season to the northern hemisphere
+How was the data collected, is it an average of many years or just for 2000, is it average over month and is it 1 part of city or average of whole city.

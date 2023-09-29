@@ -1,0 +1,3 @@
+I was thinking about create proxy that is difficult. but today, I wrote it. like pice of cake. ex. access" URL", normaly, I can not access this foo. html.
+but use that code, I can access that URL. That mechanism is, When I accsess" URL", proxy responce" URL". because, my next step is" XSS Ajax".
+normaly, Ajax can not cross site. but, but use this mechanism, perhaps, I can do it.

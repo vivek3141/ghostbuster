@@ -1,0 +1,156 @@
+Before considering the substantive arguments for judicial review, there are a number of procedural issues to address. The Exclusivity Principle [1] requires that claims for judicial review be brought by judicial review procedure [2] rather than ordinary civil procedure. Although the special judicial review procedure has been criticised [3], and the Exclusivity Principle diluted [4], it is still considered an abuse of process to avoid the procedural protections afforded to public bodies under judicial review [5].
+Firstly, is the school disciplinary panel susceptible to review? Only 'public bodies' can be judicially reviewed. Statutory powers are presumptively public [6]. A state school is a classic governmental body with statutory source [7] and public functions. The decisions are suitable for judicial review as they adversely affect the individuals concerned [8].
+Secondly, permission to apply for judicial review requires:
+Standing: in order to avoid the courts becoming lobby grounds, judicial review is restricted to
+those with a 'sufficient interest' [9] in challenging the decision. The decision must affect the applicant's rights or interests [10] As being excluded from school directly affects the applicants, this requirement is met. Given their age, it may be more realistic to consider the standing of their parents. Parents would be 'surrogate' representatives [11], an uncontroversial means of protecting the rights of those who cannot easily access the forum of judicial review.
+The applicants would also satisfy the stricter 'victim' test for review under the Human Rights Act [12]. Following Holub [13], their parents would also have standing to challenge the school under the Human Rights Act.
+No undue delay: In addition to the much-criticised [14] 3 month time limit for judicial review
+applications [15], applicants are faced with the added difficulty that any perceived 'undue delay' in bringing the action may lead to the claim being struck out even if it is made within 3 months [16]. This uncertainty means that the only clear advice that can be given to the applicants is to ensure that they apply as soon as possible.
+Arguable case: The merits of the case are considered at the permission stage as well as during the
+substantive hearing. Although justified to filter out frivolous claims [17], this can lead to a fusion of questions of standing with issues of merits [18], which might more appropriately be considered at a later stage. Again the discretionary nature of judicial decision-making makes it difficult to predict whether the applicants would be adjudged as having arguable cases, however, these are allegations of serious administrative errors based on well-structured grounds of review.
+The question of an arguable case is also central to an application for interim relief [19]. This may be appropriate to the students, given that they would suffer a lack of schooling during the course of proceedings. The damage which may be caused in the interim is particularly significant to Y, who is approaching her GCSEs.
+If the applicants overcome these procedural hurdles, their substantive arguments will be tested. From the start the court will take into account the remedy being sought, as this is relevant to the balancing of public and private interests which is central to judicial review. As the decisions in this case are easily reversible, the prerogative quashing order may be appropriate. Alternatively, they could seek a mandatory order of readmission [20], or, if X and Z have already found a new school, they may simply desire a declaration of unlawfulness.
+On automatic expulsion for a second positive test for cannabis, X argues:
+That it was unfair for the panel not to consider a medical report suggesting that the drug may have
+remained in his system since the first test.
+This raises issues of illegality and irrationality as well as procedural impropriety. In relation to procedural impropriety, 'fairness' is often used synonymously with 'natural justice' [21] when the decisions are made in an everyday administrative context such as this. The term is flexible [22]. In a broad sense it requires a balancing of the individual interests at stake, the benefits to be gained by following the correct procedure and the costs of complying.
+The protection applies to decision-making which affects the rights and interests of individuals [23], therefore the panel's power to expel X, impacting on a very important interest [24], is subject to these rules. It remains to be considered whether the rules of fairness have been breached. In refusing to consider the medical report, it is arguable that X was denied a fair hearing. A duty to provide a hearing applies whenever an individual may suffer detriment as a result of a decision [25], and is most stringently applied where the sanction imposed would deprive a person of his livelihood [26] - a close analogy can be drawn with expulsion from school, which has long-term effects on education and career.
+As the requirements of a fair hearing vary according to the circumstances [27], an oral hearing and strict rules of evidence may not apply [28] For reasons of time and cost, judicial review procedure places limits on the exploration of disputed factual matters. Therefore, X's broad entitlement to a hearing may not extend as far as the right to introduce the medical report.
+On the other hand, given that the school's policy specifically provides for a hearing, this may engender a legitimate expectation of a protection going beyond the minimal requirement [29]. The statement of policy is clear [30], it is promised to only a few people [31], and compliance with it would not place too onerous a burden on the panel [32]. There may be grey areas in the doctrine of legitimate expectations [33], however, in general procedural expectations such as this one are most likely to be upheld.
+The panel may, of course, argue that they did not fail to consider the medical report; rather, due to its apparent inconclusiveness, they simply decided not to attach such weight to it as to consider it in any detail. For the court to review the panel's discretionary judgment of the report would be to risk infringing the fundamental constitutional principle that 'judicial review is concerned with the decision-making process not the decision.' [34] X needs to take care to steer his action away from merits review, framing it in terms of natural justice [35] or error of law for wrongfully excluding evidence [36]. There is no room for judicial review to admit new evidence [37].
+Finally, the panel may contend that consideration of the report would have made no difference. Case law suggests that this is not an excuse [38], as the reviewing court is not is a position to work out whether hearing the evidence would have made any difference [39]; however, as remedies are discretionary, the court may refuse to grant one if the result would have been the same regardless of the breach of natural justice [40].
+That the policy of automatic expulsion for a second positive test is irrational/ disproportionate.
+This is effectively asking the court to substitute its own view on the merits the policy for that of the school, something which they are reluctant to do both due to a lack of institutional competence to deal with polycentric issues [41] and concerns at the constitutional impropriety of interfering with political decision-making [42]. However, reviewing courts will show limited deference to a subordinate decision, such as that of the school. [43]. That the policy-maker in this case lacks direct democratic accountability further diminishes the degree of deference owed by the court [44].
+Administrative law increasingly considers substantive as well as procedural issues [45]. In relation to irrationality, the Wednesbury [46] unreasonableness test comes close to a merits review. The traditional Wednesbury test [47] was set so high that it would be of little assistance to X. The school could provide a rational justification for the policy, for example sending out a strict message of no-tolerance on drugs. Yet aside from the more stringent proportionality test [48], irrationality has evolved since Wednesbury: ex parte Smith [49] emphasises the need for a stricter standard of review when individual rights are concerned [50]. X's right to attend school is an important one; therefore the panel may find it difficult to justify a policy which automatically disregards this.
+In a human rights context, proportionality rather than Wednesbury unreasonableness is the applicable test [51]. As a public body, the state school must act compatibly with Convention rights [52]. X's right to education [53] is presumptively protected. Proportionality considers whether the means used to achieve a legitimate goal infringe the individual's rights more than is necessary [54]. As in this case, clashing protective rights must be balanced against each other. Arguably it would be difficult to protect other pupils by a lesser measure, however, proportionality jurisprudence does not look favourably on blanket policies [55].
+Even if it is not deemed irrational, X may object to the policy under the overlapping ground of illegality. It is unlawful for an authority to fetter its discretion, which is the result of a rigid policy [56] which allows no exceptions [57] and precludes the decision-maker from taking relevant considerations into account [58]. On a second positive test, the school's policy of automatic expulsion is absolutely rigid, allowing for no exceptions to the sanction.
+Suspended for a term after a positive test for cannabis, Y alleges that the panel was biased because:
+Y had previously made a complaint about the behaviour of one of the teachers. Y can argue that
+this teacher would not provide her with a fair and impartial hearing.
+There is no need to show actual victimisation [59]; appearance of bias is enough [60]. Porter v Magill [61] requires the reviewing court to consider whether, having regard to relevant circumstances, the fair-minded and impartial observer would consider that there was a 'real possibility' of bias. We would need to know more about the circumstances of the complaint and Y's relationship with this teacher. For example, how long ago was the complaint made? How serious a complaint was it? The fact that the complaint was dismissed is not necessarily relevant as the very fact that Y complained may be perceived as giving rise to animosity on the part of the teacher. Personal animosity may result in disqualification for bias [62], however, the courts are less strict in their approach to non-financial connections [63]. It has been held that mere personal prejudice arising from a previous dispute is not enough to set aside a decision for bias [64], therefore Y would have to show that the animosity resulting from the complaint was particularly strong [65].
+Y could argue that having a panel of teachers is prima facie unfair [66]. It may raise questions of personal and institutional bias as well as the problem of the same person playing the role of policy-maker, prosecutor and adjudicator [67].
+One panel member is a well-known anti-drugs campaigner. This raises issues of
+predetermination [68] and having an interest in the outcome. Again, Porter v Magill applies [69]: would an independent observer would perceive bias? The Pinochet case [70] provides an analogy, however, judges are not precluded from sitting on cases unless they have an active role in a body closely allied to the proceedings. The anti-drugs group would no doubt disapprove of Y's conduct, and the fact that the teacher is a well-known campaigner indicates that he plays an active role in the group, however, there is no evidence that this group was involved in Y's hearing or that they promote a policy of exclusion of students with drug problems. Pinochet may therefore be distinguished [71].
+A third panel member fell asleep during the hearing. Procedural unfairness would arise even if the
+teacher only appeared to be asleep [72] or was simply not paying attention [73]. This breaches the right to be heard [74]. It is linked to the issue of bias and keeping an open mind.
+Finally, it should be noted that a finding of bias on the part of just one panel member will usually invalidate the whole panel, as it cannot be known how this member would have influenced the others [75]. This means that there is a strong chance of the decision being overturned. Furthermore, the courts are receptive to procedural arguments as there is less risk of them overstepping their constitutional role of supervising rather than making policy.
+Y could, however, object to the panel's decision on more substantive grounds. The decision to suspend her for a whole term may be irrational/disproportionate. Given the seriousness of the impact on Y so close to her GCSEs, and the fact that cannabis is not a serious drug, we might question whether a fair balance was struck. We would need to know more about Y's circumstances, for example whether she was a dealer. However, if the panel failed to take relevant considerations into account or attached unreasonable weight to irrelevant considerations, this is an unlawful abuse of discretion [76]. It is in circumstances such as this that a duty to give reasons [77] would be helpful.
+Z objects to being given the maximum sanction of expulsion for a first positive test. This engages the overlapping grounds of irrationality and illegality. In terms of irrationality, cocaine is a serious drug, but was expulsion a reasonable, proportionate response? The panel's rigid commitment to the policy guidance may have caused them to attach disproportionate weight to the single factor of the seriousness of the drug [78].
+Z frames his action in illegality, arguing that the panel's decision was based on irrelevant considerations [79] and improper purposes [80]. The courts are now quite activist in relation to abuse of discretionary powers [81], however, the onus of proof is on the applicant, and, without the giving of reasons, this could be a difficult task.
+Even if Z can show that the panel took his grades into account, this is not necessarily an irrelevant consideration. Although not mentioned in the policy guidance, the school may consider that Z's poor grades are a result of his drug problem. A reviewing court would be reluctant to substitute its own view on the merits of this consideration.
+In relation to Z's second argument, bad faith is difficult to prove [82]. If it can be shown that dismissing Z was merely a sham [83] in order to close down the course, or even that this was a material influence [84], then such fraudulent bad faith [85] makes the decision unlawful. However, the tenuous and speculative nature of this allegation makes it difficult to prove [86].
+Although the safety of other students is a weighty interest, depending on his other circumstances, Z may have a better chance if he grounds his action in irrationality/proportionality [87].
+If an appeal process is available, an application for judicial review will usually, although not always [88], only be granted if this avenue has been exhausted [89].
+If there is an appeal, lower standards may be expected of the original decision-maker [90]. Procedural defects may be considered 'cured' by an appeal [91]. In Y's case, a hearing before an impartial Local Authority board may 'cure' any initial bias. In X's case, a full rehearing may be necessary in order for the procedure as a whole to be considered fair. For Z, the Local Authority may present the same problem of financial bias.
+In all 3 cases, the existence of an appeal presents a powerful argument to impose a duty to give reasons for the decisions [92] as it would be difficult to frame an effective appeal without reasons.
+Due to the discretionary nature of judicial review remedies a predictable outcome cannot be guaranteed. A quashing order may not be granted if the panel would have come to the same decision even if it had acted properly [93]. The court may also take extraneous factors such as the applicant's behaviour into account. It may consider the applicant to have waived his right to a remedy [94]: this may be of relevance to Y if she knew of the alleged bias at the time of her hearing but only objected when the decision went against her [95]. A source of both flexibility and uncertainty, public law remedies capture the essence of judicial review as a whole.
+1 O'Reilly v Mackman [1983] 2 AC 237
+2 CPR Rules Part 54.8
+3 see Oliver, D., 'Public Law Procedures and Remedies: do we need them?' [2002] PL 91
+4 Roy v Kensington & Chelsea & Westminster Family Practitioner Committee [1992] 1 AC 624
+5 e.g. Carter Commercial Developments v Bedford Borough Council [2001] EWCH Admin 669
+6 R (on the application of A) v Partnerships in Care Ltd [2002] EWCH 529; Craig, P.P., 'Public Law and Control over Private
+Power' in Taggart (ed), The Province of Administrative Law determined (1997), Oxford: Hart Publishing
+7 Education Acts
+8 see CCSU v Minister for Civil Service [1985] 1 AC 374 per Lord Diplock
+9 Supreme Court Act 1981 s.31(3)
+10 op cit n8
+11 Cane, P., 'Standing up for the Public' [1995] PL 276
+12 e.g. Open Door Counselling and Dublin Well Woman and Others v Ireland 18 BMLR 1
+13 Holub v Secretary of State for the Home Department [2001] 1 WLR 1359
+14 c.f. McEldowney, J.F., Public Law (3 rd end, 2002), Sweet & Maxwell, Ch18
+15 CPR Rule 54.5(1)
+16 e.g. R v Dairy Produce Quota Tribunal ex parte Caswell [1989] 1 WLR 1089
+17 op cit n3
+18 R v IRC ex parte National Federation of Self-Employed and Small Businesses Ltd [1982] AC 617
+19 American Cyanamid Co. v Ethicon Ltd [1975] AC 396
+20 Chief Constable of North Wales Police v Evans [1982] 1 WLR 1155
+21 Lloyd v McMahon [1987] AC 625
+22 see Lord Reid in Ridge v Baldwin [1964] AC 40
+23 see De Smith, S.A.; Brazier, M., Constitutional and Administrative Law (8 th edn, 1998), Penguin; Re Pergamon Press
+[1971] Ch.388
+24 Schmidt v Home Secretary [1969] 2 Ch. 149
+25 Board of Education v Rice [1911] AC 179
+26 Russell v Duke of Norfolk [1949] 1 All ER 109
+27 Hartley, T.C.; Griffith, J.A.G., Government and Law (2 nd edn, 1981), Weidenfeld and Nicolson Ltd at p339
+28 R v Deputy Industrial Injuries Commissioner ex parte Moore [1965] 1 QB 456
+29 Re HK (An Infant) [1967] 2 QB 617; op cit n8
+30 R v IRC ex parte MFK Underwriting Agencies Ltd [1990] 1 All ER 91; R v Secretary of State for the Home Department ex
+parte Hargreaves [1997] 1 All ER 397
+31 R v North East Devon Health Authority ex parte Coughlan [2000] 3 All ER 850
+32 ibid; Sales and Steyn, 'Legitimate Expectations in English Public Law' [2004] PL 564
+33 Sales and Steyn, 'Legitimate Expectations in English Public Law' [2004] PL 564
+34 op cit n22 per Lord Evershed
+35 see e.g. R v Criminal Injuries Compensation Board ex parte A [1999] 2 AC 330 per Lord Slynn
+36 R v Industrial Injuries Commissioner ex parte Ward [1965] 2 QB 112
+37 Gorlov v Institute of Chartered Accountants [2002] EWHC 2202; ex parte E [2004] EWCA Civ 49
+38 op cit n22
+39 Galligan, 'Procedural Fairness' in Birks, P., The Frontiers of Liability (Vol 1, 1994), Oxford University Press;
+Annamunthodo v Oilfields Workers' Trade Union [1961] AC 945
+40 Glynn v Keele University [1971] 1 WLR 487; R v Broadcasting Complaints Commission ex parte Owen [1985] QB 1153
+41 see Iolis Law Courseware Consortium (2004 edn): Judicial Review
+42 Supperstone and Goudie (eds), Judicial Review (2 nd edn, 1997), Butterworths
+43 See Laws LJ in International Transport Roth GmbH v Home Secretary [2002] 3 WLR 345
+44 Hunt, M., 'Sovereignty's Blight: why public law needs a concept of due deference' in Bamforth, N.; Leyland, P., (eds.)
+Public Law in a Multi-Layered Constitution (2003), Hart Publishing
+45 Jowell, J.; Oliver, D., The Changing Constitution (5 th edn, 2004), Oxford
+46 Associated Provincial Picture Houses Ltd v Wednesbury Corporation [1948] 1 KB 223
+47 ibid, per Lord Greene: whether a decision was 'so unreasonable that no reasonable decision - maker could ever have
+come to it.'
+48 see e.g. R(Daly) v Home Secretary [2001] 2 AC 532
+49 R v Ministry of Defence ex parte Smith [1996] QB 517
+50 e.g. R v Secretary of State for the Home Department ex parte Brind [1991] 1 AC 696
+51 op cit n48; Elliott, M., 'Human Rights Act 1998 and the Standard of Substantive Review' (2001) Cambridge Law Journal,
+vol. 60, no. 2
+52 Human Rights Act 1998 s.6
+53 Article 2, Protocol I, European Convention on Human Rights
+54 De Freitas v Permanent Secretary, Ministry of Agriculture [1999] 1 AC 69
+55 op cit n48
+56 R v Harrow LBC ex parte Carter [1992] 26 HLR 32; R(P & Q) v Home Secretary [2001] 1 WLR 2002; R v Secretary of
+State for the Environment ex parte Brent LBC [1982] QB 593; see generally Bradley, A.; Ewing, K., Constitutional and
+Administrative Law (13 th edn, 2003), Longman
+57 R v Torquay Licensing Justices ex parte Brockman [1951] 2 KB 784; Cumings v Birkenhead Corporation [1972] Ch 12;
+British Oxygen Co. Ltd v Board of Trade [1971] AC 610
+58 R v Secretary of State for the Home Department ex parteVenables [1997] 3 All ER 97; Stringer v Minister of Housing and
+Local Government [1970] 1 WLR 1281
+59 R v Gough [1993] AC 646
+60 R v Sussex Justices ex parte McCarthy [1924] 1 KB 256
+61 [2001] UKHL 67
+62 Locabail (UK) Ltd v Bayfield Properties Ltd and another [2000] 2 WLR 870
+63 op cit n27 p344; Metropolitan Properties Co (F.G.C.) Ltd v Lannon [1969] 1 QB 577
+64 MacClean v Workers' Union [1929] 1 Ch 602
+65 R v Handley (1921) 61 DLR 656 cited in Wade, H.W.R.; Forsyth, C.F., Administrative Law (9 th edn, 2004), Oxford
+66 Hannam v Bradford Corporation [1970] 1 WLR 937
+67 R v Lee ex parte Shaw (1882) 9 QBD 394
+68 Georgiou v London Borough of Enfield and others [2004] EWHC 799
+69 see above at p6
+70 R v Bow Street Magistrates ex parte Pinochet Ugarte [2000] 1 AC 119
+71 See similarly R v Milledge (1879) All ER Rep 745
+72 Re Najam QBD 13 th October 1998
+73 R v Worcester Justices ex parte Daniels QBD 31 st December 1996
+74 see above at p3
+75 op cit n27 at p346
+76 R v ILEA ex parte Westminster City Council [1986] 1 WLR 28
+77 R v Secretary of State for the Home Department ex parte Doody [1994] 1 AC 531
+78 see R v Secretary of State for the Home Department ex parte Simms [1999] 3 All ER 400
+79 Roberts v Hopwood Poplar BC [1925] AC 578
+80 AG v Fulham Corporation [1921] 1 Ch 440
+81 e.g. Padfield v Minister of Agriculture, Fisheries and Food [1968] AC 997
+82 op cit n23
+83 Asher v Secretary of State for the Environment [1974] Ch 208
+84 op cit n75; R v Greenwich LBC ex part Lovelace [1991] 3 All ER 511; op cit n27 at p351
+85 Hanson v Radcliffe Urban Council [1922] 2 Ch 490
+86 R v McKenzie [1892] 2 QB 519
+87 e.g. R v Crown Court at St Albans ex parte Cinnamond [1981] QB 480; see above at p5
+88 op cit n27 at p368
+89 R(Sivasubramaniam) v Wandsworth County Court [2003] 1 WLR 475; R v Chief Constable of Merseyside Police ex parte
+Calveley [1986] QB 424
+90 see De Smith, Woolf & Jowell, Principles of Judicial Review (1999), Sweet & Maxwell at p155; Bradley, A.; Ewing, K.,
+Constitutional and Administrative Law (13 th edn, 2003), Longman at p720; Wiseman v Borneman [1971] AC 297; St James
+and St John, Clerkenwell Vestry v Freary [1891] 3 Ch 527
+91 Calvin v Carr [1980] AC 574
+92 Craig, P.P., 'The Common Law, Reasons and Administrative Justice' (1997); Minister of National Revenue v Wrights'
+Canadian Ropes Ltd [1947] AC 109; R v Ministry of Defence ex parte Murray The Times 17 th December 1997
+93 see above at n40
+94 op cit n27 at p368
+95 R v Nailsworth Licensing Justices ex parte Bird [1953] 1 WLR 1046; op cit n62

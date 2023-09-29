@@ -1,0 +1,23 @@
+The aim of this experiment is to determine the total acidity (% acetic acid) in 3 samples of vinegar in order to find out if they come up to quality standards (at least 4% m/V acetic acid).
+25ml pipettes were used in place of 20ml pipettes.
+Potassium hydrogen phthalate is a primary standard. I.e. you can make it up to exact molarity. Sodium hydroxide is not. It takes up CO2 from the air and changes with time.
+25ml of 0.05M phthalate should react with 25ml of 0.05M NaOH, but our titre was 25.9ml = 0.0259 dm
+i.e. our NaOH is weaker.
+Total acidity of vinegar as % of acetic acid (m/V)
+i.e.
+Vinegar 1
+55.65ml of 0.048M NaOH was used.
+of CH3COOH in 25ml sample
+But this was a diluted sample (25ml made up to 100ml) i.e. x4
+Therefore %w/w in initial vinegar sample
+Vinegar 2
+28.45ml of 0.048M NaOH was used
+Vinegar 3
+60.65ml of 0.048M NaOH was used
+There is a large difference in acidity between the weakest and strongest samples of vinegar (25.34%). When tested for pH both samples 1 and 2 were moderately acidic. However, only vinegar 3 would meet the legal standard for vinegar, as they should contain at least 4% acetic acid. However most vinegars contain between 2% and 8% acetic acid, so sample 3 was particularly acidic as was also shown by the pH test result. Sample 3 was also the only vinegar to give a positive result when tested with barium chloride, showing that it contained sulphate ions. Due to its strong acidity I doubt that sample 3 would be classed as legal vinegar for consumption.
+All of the vinegars tested negative with silver nitrate, showing that they contain no chloride ions.
+One source of error in the experiment would have been from the ability to accurately determine the exact endpoint of the titration as it occurs very precisely but the experiment allows room for human judgement and interpretation as to when the colour remains. Therefore, it is likely that the titre result will have an error of  0.2ml. The apparatus also induces error; the dilution method using standard flask has an error of  0.5 ml, the volumetric pipette has an error of  0.2ml, (which must be multiplied by 2 since it is used twice) and the burette has an error of  0.2 ml.
+So the final titre would yield an error of:
+These results would impact the values calculated for total acidity. The larger the titre volume, the smaller the error in the final reading.
+Using a relatively large amount of indicator could also have affected the results by diluting the vinegar sample or affecting the intensity of the colour change and the ability to judge the endpoint. If the vinegar were more strongly coloured the end-point could be determined by using a more brightly coloured indicator, a more dilute sample of vinegar or by using a pH probe in the solution.
+.

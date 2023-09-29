@@ -1,0 +1,15 @@
+I've rounded up the percentage with a formula not in order to present it without decimals (this is achieved by changing the format of the cell), but because of the conditional formatting of the cell (based on the comparison with the acceptable percentage gross margin, which would likely be input in B1 without decimals).
+In case 5, compared to the other given alternatives, I assumed a medium-low print run, a price at medium level, and low production costs. I varied the trade discount a little, and changed how the royalties are calculated by basing them on net receipts.
+This alternative requires the smallest investment in production costs (12.500), and is at least as profitable, in relative terms, as the others (meeting the required level of gross margin as % of net sales revenue).
+The expected royalties are average and should satisfy the author.
+In addition, break-even is achieved at a mere 6.250 copies sold - or 25% of copies produced.
+Altogether, the publishing house might not make the most amount of money in this case, but will limit risk.
+I think case 5 would be the best choice for two reasons.
+Firstly, it limits risk in launching a product targeted for a segment which is difficult to
+reach: you must tailor products (and communication) for students so that they are appealing ("cool") without being patronising; and
+predict: young people are very sensitive to trends (good opportunity), building but also forgetting them unexpectedly and fast.
+Secondly, case 5 describes a type of book that would match the target market well.
+Price. A rounded-up price of 5 would have a good impact psychologically, because it sounds like the straightforward deals of pubs and clubs; also, the promotional message could use the slang "fiver".
+I wouldn't set the price any higher: students' purchasing power varies widely, depending on their interests, but few will spend on books and even fewer care about cooking (in fact best-selling competitors suggest meals prepared with ingredients such as tinned vegetables, and requiring only basic utensils).
+Production quality. Although there is a favourable trend for cook books (usually printed in colour, on high-quality paper, and hardbound - thus quite expensive to produce), to target students the product should be a "low-profile" book, with extensive and appropriate content (about a hundred easy recipes, and tips for the totally inexperienced) but also an approachable format (colourful paperback, explanatory line drawings instead of images of the perfect - unattainable - final result).
+Sales estimates. The slight increase in trade discount is to reward booksellers who display the students' cookbook in the most obvious spot of the store: the book will be bought either by students or for them as a gift, so probably on an impulse, without much browsing. The 25.000 estimate is extremely optimistic (the best-selling competitor reaches 15.000), and on-campus attention-grabbing promotion is essential for breaking even.

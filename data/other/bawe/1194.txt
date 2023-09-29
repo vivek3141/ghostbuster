@@ -1,0 +1,14 @@
+To create an application which gives the user the ability to open and display an image, and to change the background colour of the form. See the practical sheet for more information.
+Firstly, I created the close button, and the label containing my name. I then added the code that changed the form's background colour to the event FormClick.
+I wasn't sure of the syntax for this, so I firstly attempted to turn the form's background black on the FormClick. I firstly tried the line form1.backcolor:= 0, but that wasn't recognised. By scrolling through the properties of the form object, I found 'color', and using that was successful.
+I then wanted to alter this so that it would load a random colour, rather than always black. I decided that the best way to do this was to create a colour with random RGB values, each between 0 and 255. I quickly found that random(num) gave a random number between 0 and the integer num, so I used the line:
+I tried this; and clicking on the form changed the form's background to an apparently random colour. I soon realised, however, that as the user repeatedly clicks, it goes through the same list of colours every time the project ran. I added the procedure 'Randomize' to initialise the random number generator.
+I then realised that a better way to do this would be for the user to choose a colour themselves, from a selection. To do this, I added a colour dialog box and replaced the code in the FormClick event to:
+Which I then tested.
+The procedure to open an image was easier. I used the Open Picture Dialogue object and an image box, and added the code:
+into the click event of the button with caption 'Press to Change'. I used an example in Delphi to help to supply me with the basic concept.
+'Backcolor' is not the correct property for a form's background colour. Used 'Color' instead.
+Needed to initialise the random number generator before getting truly random numbers from the 'Random' function. Used 'Randomize'.
+Here follows the list of tests that were implemented during and after the code writing process. For this reason, some of them refer code that was removed or altered for the final application.
+The requirements for the project were met. The application can open and display images and change it's background colour. One shortcoming I can identify is the fact that the project does not identify jpeg or gif files as images, due to the filter in the open picture dialogue. Perhaps if I were to start over, I might try to find a way to use a normal open dialogue with a filter to load the image.
+An error handler would also be a good addition, which could give a clearer error message in the event of the user trying to open a file that was not expected. Another extension to the project could be that clicking on the image object also changes the background colour of the form, as when a small image is loaded, it is difficult to see the boundary between the form and the image box.

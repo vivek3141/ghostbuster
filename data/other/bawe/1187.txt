@@ -1,0 +1,38 @@
+The game that we have decided upon is a waterfall model based game. The board will be split into five levels, each of which will get progressively higher, and riskier than the one below. Unlike in the waterfall model, the later stages - i.e. testing and maintenance will be located 'physically' above the earlier levels. The aim is to progress through the earlier levels, completing tasks, improving your development team and making important choices about the development process, until eventually, you reach the release - the maintenance level. He who has amassed the greatest number of points then wins the game. The points came from a range of things which are calculated when you finish - the amount of cash you have, the quality of your development team and the speed with which you completed the game. Competition comes in from other development houses, seeking to gather the best programmers for their own projects, rushing to get out competing software and fighting tooth and nail for stakeholder's money.
+In total there will be eleven different types of tile upon the board, three types of card - programmer, chance and backup, up to six player pieces, six sets of coloured pins, one die and many wads of cash. Following this is a brief description of each of these that need explaining, their purpose in the game, alongside any necessary details and available images.
+One player should be elected as "manager", who will henceforth be in charge of dealing out cash and programmer cards. When you start the game you must select a company piece from the bag and slid the company's marker into your holder - this is now your playing piece. Each company comes with its own speciality which will have relevance throughout the game (read more under specialities). The manager should then deal each player a selection of five random programmer cards, X amount of cash and 20 coloured pegs.
+All playing pieces should then be placed on the start square, located on the first level. The dice should then be rolled by each player, and then who ever has the highest role starts the game. Each player takes their turn to roll the dice, progressing around the board in a clockwise direction. Their next action depends on which square they land on - unless the consequences of that square is that they should not move during the next turn, then they should pass the die on and wait till their next turn. To win the game you must complete the final task. Your score should then be calculated based on; amount of cash, number of programmers, programmer specialities and speed of development (in relation to other players).
+Two alternate ways of winning/playing the game are the "last man standing" and "poker" rules. The last man standing rules work by making it so you cannot go down a level and eliminating the last player to reach each level. This way only one player is actually able to reach the top and automatically wins. The poker rules are a modification on the last man standing rules, whereby, someone that got kicked out earlier in the game could still beat the person who got to the top - if they had more points than them. This would only work on the basis that the risk occurred by going up each level increased greatly.
+I feel that we are well justified in developing this game on the grounds that we have covered many different facets of software engineering. In the most obvious sense we have gone for a waterfall model based design, but within that there is much more. It will be possible to have the iteration between levels of the waterfall, which was added to the model later on, due to the ability to choose to move up and down between levels.
+On each level there will be things to do with software engineering practises relevant to that stage, coming through in the form of tasks and choice squares. For instance, an example of a choice square for the design level would be whether to use a structured design methodology, which may require you to complete all the optional tasks, or use a RAD methodology which might require greater programmer skill but less tasks needing doing.
+Because there will be things such as chance cards which might pop up and make life a lot easier if you had made a certain choice or performed a certain task, players will get a better concept of whether they like taking that kind of risk in real projects. We will be trying to set the game up so this facet of play really does come through.
+On top of all that we have also tried to take a side-swipe at the business and management side of software engineering in the form of having the programming teams, trading of workers, resource management etc. By having competing teams, some maybe racing to get there first, others maybe taking it slow and steady, building up cash supplies and taking on every optional task, we hope to highlight that there is not right or wrong way to go about software engineering but only possible ways.
+The game started off as a monopoly based game, where tasks would be bought and everything done in very much a monopoly style way.
+We discovered that many people were going about a similar style project and decided to be more ambitious and original
+Considered changing it into a form of drinking game where you drink when you land on someone else's "property"
+Were told not to make a drinking game
+We decided tasks should require actually doing something, instead of just being brought. The original idea that arose was using questions.
+We decided against questions, as there weren't that many you could really ask.
+The idea of having pseudo-random tasks being performed came up, along with the idea of having choices.
+We decided that we wouldn't have money in the game as it would unnecessarily complicate things and there wasn't much point for it.
+Programmer cards were brought up as a way to add some element of having to prepare for harder tasks.
+The idea of a 3D board came up
+Backup cards were originally suggested but with little purpose but got accepted in
+Reaching the centre first was decided as the method of winning the game
+Having programmer specialities was decided on as a way to enhance competitiveness between players
+Decision to create lots of new tiles as the game was quite dull only having tasks and choices
+Trade squares were added as a way to formalize buying/selling cards
+Backup cards were phased out as pointless
+Cash came back, as we needed to buy/sell programmer cards, pay for tasks and choices etc - it now had a purpose
+Chance cards were brought in as a way to add random fun
+Two alternative methods of winning, being the last man standing and poker rules were suggested
+It was decided that last man standing and poker rules would be best of kept as alternate rules and that winning should instead be based on calculating points
+A combo of Crash Bug squares was thought up as a way to add penalties to the game
+Crash and Bug squares were separated to make each square less complicated
+Backup cards were brought back in as a solution to crash cards
+Tax squares were thought up as a way to dispose of cash
+Up/Down squares were formalized as the way to move between levels
+Minor rules filled out when rule book was written
+The number of tiles on each level and the layout of the board was decided
+Decision to make 3D models to test out board textures made
+The idea of a 3D triangular board was brought up, and voted against due to the large amount of work already gone into square board, and the waste of material that would result from use of the triangle [see Square v Triangle]

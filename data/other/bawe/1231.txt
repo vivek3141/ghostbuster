@@ -1,0 +1,18 @@
+See attached photo.
+The Rf value for each protein band according to:
+Are as follows;
+The graph below shows a standard curve that plots the log of the molecular weight of each standard protein against the Rf value for that protein.
+The values on this graph do not fall in a straight line. However, it it is possible to recognise the relationship between the log molecular weight and Rf values. The larger the molecular weight, the less of a distance the protein bands will travel, the smaller the molecular weight, further a distance the bands will travel. This would always be represented as negative correlation.
+In both unknown proteins 1 and 2, there was one protein band observed in each.
+By looking at the intensity of each protein band, it is possible to provide an estimate for the quantity of protein in the unknowns.
+Each band of the standard protein appears to be 1mm, which is equal to 10g of protein.
+The protein band for the unknown protein 1 appears to be 3mm, therefore approximately equal to 30 g of protein.
+The protein band for the unknown protein band 2 appears to be 1mm, therefore approximately equal to 10 g of protein.
+A reducing agent such as 2-mercapthoethanol or dithiothreitol is often included in SDS-PAGE in order to totally unfold proteins and detach subunits to ensure a separation based exclusively on molecular weight. Therefore, in the absence of a reducing agent, the proteins remain folded and still engaged in noncovalent inter and intra molecular protein interactions, resulting in difficulty when passing through a gel of defined pore size, due to greater levels of friction.
+See attached photo.
+Triose-phosphate isomerase (TIM), is an enzyme that catalyzes the reversible interconvertion of triose phosphates isomers dihydroxyacetone phosphate and D-glyceraldehyde 3-phosphate.TIM plays an important role in glycolysis and is essential for efficient energy production.
+Lactate dehydrogenase (LDH) is an enzyme present in a wide variety of organisms, including plants and animals. It catalyses the interconversion of pyruvate and lactate with interconversion of NADH and NAD+. It is occasionally called Hydroxybutyrate Dehydrogenase (HBD), as it can also catalyze the oxidation of hydroxybutyrate.
+Ovalbumin is the common name for the cytoplasm within an egg. Its primary purpose is to protect the egg yolk and also to provide additional nutrition for the growth of the embryo, as it is rich in proteins and is of high nutritional value.
+Pyruvate kinase is an enzyme involved in glycolysis. It catalyzes the transfer of a phosphoryl group from phosphoenolpyruvate to ADP, yielding a pyruvate molecule. This process requires magnesium ion. This produces one molecule of ATP from the ADP.
+Fructose-6-phosphate kinase is involved in glycolysis, an energy-conversion pathway in many organisms. It is involved in the formation of fructose, and is phosphorylated by ATP to fructose 1,6- bisphosphate. This reaction is catalysed by phosphofructokinase (PFK), an enzyme that plays a central role in the integration of much of metabolism.
+Beta-galactosidase is an essential enzyme in the human body. Deficiencies in the protein result can result in galactosialidosis or Morquio B syndrome. It is a hydrolase enzyme that catalyzes the hydrolysis of beta-galactosides into monosaccharides.

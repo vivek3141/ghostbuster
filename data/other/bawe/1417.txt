@@ -1,0 +1,30 @@
+To make up n approximately 0.1M potassium hydrogenphthalate solution
+accurately and use it to standardise the approximately 0.1M solution of sodium hydroxide
+provided in the laboratory. Through doing this I will:
+When carrying out a titration, a solution of unknown strength is titrated against a standard solution that has a known concentration. The standard solution e.g. sodium hydroxide, is usually obtained from the laboratory and its concentration (molarity) is given on a label. To make this solution solid sodium hydroxide pellets have been weighed out and dissolved in a known volume of water. However the pellets are very hygroscopic (water absorbing) and this process occurs during weighing so that the exact amount of NaOH used is unknown. The final solution is also frequently contaminated with carbon dioxide which reacts to form sodium carbonate. Sodium hydroxide is therefore not a primary standard.
+A primary standard is a stable, non-hygroscopic, pure solid material which can be weighed out accurately and dissolved in water to give a solution of accurately known concentration. A useful primary standard acid is potassium hydrogenphthalate, a monoprotic acid derived from the diprotic phthalic acid. It has a fairly high molar mass (reducing weighing error) but a low solubility in water (<0.5M at 25 oC).
+Potassium hydrogenphthalate:
+The following reaction occurs when sodium hydroxide is added to potassium hydrogenphthalate:
+Accurately weigh out between 1.8 and 2.2g of solid potassium hydrogenphthalate into a tared weighing boat. Transfer the solid to a 100cm 3 granulated flask, washing off any powder on the boat into the flask. Dissolve the solid in about 80cm 3 of distilled water. When the solute has dissolved completely (this may require shaking of the flask), make up to the mark with distilled water.
+Transfer some of the 0.1M sodium hydroxide solution provided in the lab to a 50cm 3 burette. Pipette 25cm 3 of the potassium hydrogenphthalate solution into a 250cm 3 conical flask. Add two drops of phenolphthalein indicator to the flask, (this changes from colourless to pink at a pH of 9) and with a white tile under the flask carry out one rough and two accurate titrations. Swirl the flask regularly during the titrations and place a piece of paper behind the burette to accurately read the meniscus.
+Mass of potassium hydrogenphthalate weighed: 1.8320g
+(a) Moles of potassium hydrogenphthalate used:
+One mole of potassium hydrogenphthalate reacts with one mole of sodium hydroxide. Therefore 2.2427 x 10 -3 moles of potassium hydrogenphthalate reacted with 2.2427 x 10 -3 moles of sodium hydroxide.
+Average of the two accurate titrations = 25.2750cm 3.
+So 25.2750cm 3 of the sodium hydroxide solution contained 2.2427 x 10 -3 moles of sodium hydroxide.
+Concentration of sodium hydroxide solution:
+(b) An estimation of the percentage uncertainty in my answer:
+Weighing uncertainty:  0.00005g = 0.00273%
+Volumetric flask uncertainty:  0.05ml = 0.05%
+Pipette filling uncertainty:  0.006ml = 0.024%
+Burette reading uncertainties:  0.05ml = 0.19782% x 2readings = 0.39565%
+End point detection uncertainty:  0.05ml = 0.19782%
+B-grade glassware uncertainties:0.2% x 3(volumetric flask, pipette, burette) = 0.6%
+= 
+ each uncertainty 2
+(c) The concentration of the sodium hydroxide solution can only be given to three significant figures because this was the lowest precision of all the raw data (the burette readings).
+(d) Calculation from section 1.6:
+A titration of a solution of H 2SO 4 (in flask) against a 0.1079M solution of NaOH (in burette) is carried out. It requires 26.43cm 3 of NaOH to reach the end point of the titration with 25.00cm 3 of H 2SO 4.
+We want to find the concentration of the H 2SO 4 solution.
+One mole of H 2SO 4 reacts with two moles of NaOH. So the amount of H 2SO 4 in the flask was:
+This was contained in 25.00cm 3.

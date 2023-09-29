@@ -1,0 +1,12 @@
+This paper serves as a project report for an assignment into image compression. The task was to compress 256-pixel square greyscale images, with lossless techniques or not, into a smaller file. I achieved the aim using a combination of run length encoding, reducing the number of greys in the image, and applying the Huffman technique. This report documents this process, and contains the results.
+The brief was to take a 256-pixel square greyscale image, for example Fig. 1, and compress them as much as possible without loosing too much information about the face.
+I will split the method into the three different compression techniques. They are applied in the order they are given during compression, and, obviously, in reverse for decompression.
+For the results of each technique, I shall test them on a single image. Obviously, exact compression ratios vary image to image, so I shall give a set of compression ratios for different images in the Overall Compression section.
+For the purposes of examining the techniques individually, it is necessary to give their results individually. This, however, causes a problem as the compression achieved by each of the techniques is dependent on the compression that has already been achieved. I will try to break it down as much as possible, however.
+I shall compare my typical compression ratio with those of other techniques. First, I will (quite unfairly) compare it to lossless techniques.
+If one were to put an original image next to an image that has been compressed then decompressed under my technique, the only difference that would be noticeable would be the stepped gradient in the background, as opposed to the gradual gradient of the original.
+As has been discussed before, the background is not of huge concern, so therefore the compressed images are valid.
+The compression ratio of between 7 and 13% is very good, and a computing time of between 0.1 and 0.2 seconds for both compression and decompression is negligible.
+The compression ratio is respectable, relative to the well-used standard techniques. It is obviously not as good as the JPEG standards, but that is far more complex than mine.
+I have no statistics to this effect, but I would guess my technique to be faster than some of the others that achieve better compression ratios.
+As 1 : 13 is a good rate of compression without losing psychovisually important information of the face, and as the compression time is very small, I therefore deem the project to be a success.

@@ -1,0 +1,10 @@
+This is a compiler; implemented in C++, which compiles C code into C compatible three-address code.
+It takes as a parameter the filename of a source file, and outputs both to the screen and to the file "output.txt". If the code compiled successfully, the compiler will return a 0, otherwise it will return a 1.
+The compiler's scope currently is the declaration of integer variables with user specified names, the functions in() and out(), and any assignment to a variable of an expression containing variables and/or positive and/or negative integers connected with (, ), +, -, *, /, ++, +=, -- and/or -=. White space, including new lines and tabs, is stripped.
+From this, it generates C three-address code using temporary variables, which is then put recursively through 8 levels of optimisation.
+Both outputs of this (screen and file) are separated back out with new lines to make it easier for the user to read.
+The code is split up into source files, each with a header. The header contains global variables, definitions and function prototypes. The comments explaining the purpose of each of these are located in the header file, not in the source code.
+P.T.O
+Here, briefly, are the important points in the flow of control through the program:
+I tested the program many hundreds of times throughout the coding to test every new piece of code. Therefore by the end of the code writing process I was able to be fairly sure that the compiler worked. I still ran 15 tests of the compiler both with and without optimisation to verify that the compiler does indeed work. All of these tests were successful. Some of the results follow.
+Please see separate attachment.

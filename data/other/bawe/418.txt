@@ -1,0 +1,97 @@
+Samples of copper and copper doped with 6% tin were heated using an oil bath and the effect on their electrical resistance was recorded. The values of the temperature coefficients of resistivity for the two samples were found to be K A = 5.25x10 -11
+mK -1 
+ 2.82x10 -12 
+mK -1 and K B = 1.18x10 -10
+mK -1 
+ 6.68x10 -12 
+mK -1. By measuring the resistance of the germanium source at different temperatures its band gap was found to be E g = 0.725eV  0.0595eV.
+The Drude model predicts that in a metal we have:
+(1)
+Where N is the number of valence electrons per unit volume, Z is the number of valence electrons per atom, is the N A Avogadro number i.e. the number of atoms per mol, 
+m the mass density of the metal and m e the atomic weight of metal.
+Also, we know that
+(2)
+And
+(3)
+Where J is the current density, <v> is the average velocity of electrons,  the collision time and  is the conductivity.
+Substituting (3) into (2) we get:
+(4)
+The electrical resistivity of a material defines how well the material opposes the flow of electric current. If one can define electrical conductivity as being a measure of how well particles with electric charge can carry electricity within a material, one can be said to be the reciprocal of the other.
+(5)
+Where conductivity  is defined as is defined as the ratio of the current density J to the electric field strength E:
+(6)
+Therefore from rearranging substituting equation (4) into (6) we find:
+(7)
+The collision time can be defined as
+(8)
+Where  is the mean free path between collisions and v the mean speed
+Substituting (8) into (7) one finds:
+(9)
+Mobility  is the velocity v per unit electric field E.
+(10)
+And therefore one can write from substituting (10) into (9)
+(11)
+Substituting this back into equation (5)
+(12)
+For a metal N is large and approximately constant. So the way in which conductivity varies with temperature depends on the variation of the mobility with temperature. And this in turn depends on v and .
+One can proceed this far with classical theory (the Drude model) and it predicts Ohm's Law and Joule Heating satisfactorily. However, it does not predict the correct variation of resistivity with temperature and for that one has to turn to quantum mechanics.
+Resistance arises because of electron scattering in the material. The theory accounts for three types of scattering:
+The theory predicts that 1.and 2. will be independent of temperature and therefore give a constant term in the expression for resistivity. So we can write:
+(13)
+Where 
+0 = resistivity due to impurities and defects, and 
+ph = resistivity due to phonons.
+A phonon is defined as the quantum of acoustic or vibrational energy that is considered a discrete particle and is used especially in mathematical models to calculate thermal and vibrational properties of solids. Work by Einstein and Debye and futher work by Block and Gruneisen [1] led to expressions for the electrical resistivity as a function of temerature. It predicts at high temperatures the thermal contribution to the resistivity will depend linearly on T, but that at lower temperatures the resistivity will vary much more rapidly with temperature. So the simple expression:
+(14)
+(Where k is the temperature coefficient of resistivity) is valid at high temperatures but cannot be assumed to be correct down to T=0K.
+So if graphs are plotted of resistivity vs temperature for the metals their values of k can be found.
+In semiconductors the behaviour of the conductivity is dominated by the presence of the band gap. Regions of allowed energies are known as 'energy bands' and are often separated by "forbidden bands". These happen in metals as well as semiconductors but are much more important in semiconductors because:
+The Fermi energy (that is the maximum energy of the electrons at absolute zero) falls between two bands and
+The gap between those bands is small enough that, at temperatures above absolute zero, there is a finite possibility of electrons being excited from the band just below the Fermi level (the valence band) to the band above (the conduction band)
+At low temperatures semiconductors have practically no conduction electrons and are insulators. However, in semiconductors there are states for conduction electrons at energies not much higher than the energy of the highest occupied states. Although energy gaps are usually considerably bigger than thermal energies at room temperature, thermal excitation maintains an appreciable population of conduction electrons. The density of conduction electrons, and hence the conductivity is determined by the Boltzmann factor exp(-E g / 2kT) [2] which increases as the temperature increases. This arises from statistical mechanics [3]
+If some electrons are excited into the conduction band then electron conduction can occur. In the valence band there are now positively charged holes. If a potential difference is applied to the semiconductor these can also move - in the opposite direction to the electrons. So there are now two contributions to the conductivity and we can write (by analogy with equation (11))
+(15)
+Where  = number density of holes and the motilities of holes and electrons are now different. For an intrinsic semiconductor N = p.
+As with the metal the conductivity does depend on the mobility but this only varies slowly with temperature compared to the variation in N and . They vary according to
+(16)
+This is a very rapid variation with T so the dominant effect on the conductivity is the increase in n and  as the temperature increases. The mobility, as in a metal, decreases with increasing temperature, but this effect is small, so the overall effect is an increase in conductivity and decrease in resistivity as the temperature is increased - the opposite from metals.
+If we assume that the variation in n and  is dominant then we can write
+(17)
+and hence
+(18)
+or
+(19)
+Where 
+0 is a constant. Taking logs then lead to a graph from which the value of E g can be found for the sample of germanium used
+(20)
+(21)
+(22)
+Graph of ln  vs 1 / Temperature would then yield a straight line with gradient equal to E g / 2k.
+There are alternative ways to measure the band gap in semiconductors. One uses the principle of using infra red light to raise electrons to higher bands. Some the light is absorbed by the semiconductor, while light without enough energy to raise electrons to the next band will pass through the semiconductor. [4]
+The circuit for measuring samples A and B, the nominally pure copper wire and the copper that has been doped with 6% tin respectively was set up as in figure 2. The power supply was set up in constant current mode to give a current of approximately 1A (the exact value was determined from the voltage drop across the standard resistance). The current was passed through the samples via the terminals labelled I and the potential drop across each sample appears across the correspondingly terminals labelled A or B. The effects of thermally generated emfs at the various junctions were eliminated by averaging the potential drops obtained with the current passing in the opposite directions. The current flowing is obtained by measuring the voltage drop across a standard resistor connected in series with the samples.
+First measurements were taken at room temperature. The holder was then immersed in the oil bath and allowed to equilibrate. The voltage drops across samples A and B were measured for the current in both directions and the drop across the resistor was also recorded. The resistance of the thermistor, sample C (made of intrinsic germanium) was also found using the resistance setting of the digital meter.
+While heating the samples, after switching on the oil bath measurements were taken every 20K up to 453K. Special attention was paid to making certain that the required temperatures were not overshot as the oil bath was well insulated and it took a long time to cool down. Also the oil bath was stirred to ensure the temperature would stabilise quicker. However, the equipment was very temperamental and this was hard to achieve. At the required temperatures, the potential drops across A and B and the thermistor's resistance were measured as before. The voltage drop across the standard resistance was checked occasionally to ensure the current remained constant.
+To eliminate errors from lead resistances the sample resistances are measuring using a 4-contact method as shown in figure 3. The current is supplied via one set of leads and the voltage measured using another set. The technique eliminates the voltage drop across the leads.
+The resistance of the semiconductor varies rapidly with temperature. It was, therefore connected separately from the other samples and its resistance was measured directly using a digital resistance meter set to measure resistance. The four point method cannot be used here but the resistance of the leads can be considered insignificant.
+After the high temperature readings were taken the oil bath and heater were turned off and removed. The holder was then immersed in liquid nitrogen and left for several minutes to equilibrate before recording the potential drops as before.
+Figure 4 shows a graph of  against T for sample A on which are plotted the 10 experimental points resulting from temperature measurements. The gradient of this graph is k and a least squares straight line fitting procedure applied to these points yields a value:
+From Figure 5 one finds for sample B:
+Figure 6 shows a graph of ln against 1 / Temperature for sample C. The gradient of this graph is E g / 2k and a least squares straight line fitting procedure applied to these point yields a value:
+The theory shown in the introduction predicts that plots of resistivity against temperature for the copper and copper doped with 6% tin should be straight lines with gradients equal to their temperature coefficient of resistivity. Both graphs do produce good approximations of straight lines, with the line passing through more than 2/3 of the error bars in each case. For semiconductors and sample C, the germanium source, theory showed that a graph of ln  against 1 / Temperature should produce a graph with a straight line of gradient equal to E g / 2k. Although observing a straight linear relationship, the strength of the correlation is not so great and the line only passes through 4 of the 9 error bars.
+The error bars shown on the graphs produced are visible and quite large. This suggests that the precision of the results could be limited, especially since most of the error was contributed to by making certain the measurements were taken at the right temperature and this was largely a fault of the heating equipment and the way the heat was transferred to the oil bath.
+The uncertainties in the measured values of K and E g arise solely from the error in the gradients of the best fit straight lines, and this in turn depends on the scatter in the experimental points which results from the errors in measuring the temperature and resistivity (a function of the resistance, length and area of the samples). A consideration of the magnitudes of the quantities involved shows that the errors in the points depend mainly on the error in the resistivity. Although the individual parameter that was most difficult to measure with the most precision was the temperature.
+If one compares the results obtained to known values:
+The percentage error in the values can then be found
+% error in K A = (6.18x10 -11 - 5.25x10 -11) / 5.25x10 -11 x 100%
+% error in K A = 17.7%
+% error in E g = (0.725 - 0.670) / 0.670 x 100%
+% error in E g = 8.2%
+The values found and the corresponding values for when the experiment was conducted elsewhere were close. However, the value for K A was outside experimental uncertainties. It could therefore be said that the systematic errors contributed greatly in this part of the experiment. No accepted value for sample B could be found but it is important to note that the value found is higher than that for sample A, which would be expected as it is an alloy of copper and tin rather than pure copper, which would decrease its conductivity.
+All the random errors in the experiment have been accounted for by the least square calculation that was performed on the origin software.
+The experimental values for K and E g need to be corrected for systematic errors. One likely source of this is the fact that the temperature of the samples is measured as the temperature of the oil bath on the assumption that the two are in thermal equilibrium. Although when taking readings a large amount of time was left between measurements there still could have been a temperature difference. As the temperatures were stepped up temperatures being measured were likely to be lower than the actual values. This would have caused the lines of best fit to be shifted down below their true positions on the scatters for samples A and B. As more readings are taken the difference between the measured and the true temperature increases thus making the gradient of the graph greater and increasing the values of K that were found.
+Another likely source of a systematic error, as mentioned in the introduction, for sample C is the fact that the energy band gap of semiconductors tends to decrease as the temperature is increased. This behaviour can be better understood if one considers that the inter-atomic spacing increases when the amplitude of the atomic vibrations increases due to the increased thermal energy.[7] This is going on figure 6 to cause the gradient to increase making the value of E g found to be too low.
+The main way to improve the accuracy of the results would be to use a method that would make it easier to change the temperature. The use of a fluid which could better transfer the energy to the samples would accomplish this. Also, if more time were available one could perform multiple measurements and then find averaged values.
+It was shown that the values for the temperature coefficients for resistivity were similar to known accepted values. For copper an increase in temperature of 1K would increase the resistivity by 5.25x10 -11
+m while that for the copper-tin alloy was higher at 1.18x10 -10
+m, meaning its resistance was more dependent on its temperature. Values for the interecepts of the two graphs could have been found with the resistivity axis, which one would expect to give the resistivty at 0K. However, the linear relationship that exists at high temperatures breaks down at lower temperatures due to quantum mechanical effects, making the result not very meaningful.
+One could extend the experiment further, by analysing what would happen with doped semiconductors. Theory suggests when a semiconductor is doped, a small amount of an element with one more or less electron in the valence shell is added to the semiconductor. This creates additional allowed energy levels in the band gap of the semiconductor.
