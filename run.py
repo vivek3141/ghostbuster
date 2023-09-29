@@ -90,6 +90,8 @@ eval_dataset = [
     Dataset("normal", "data/essay/gpt_semantic"),
 ]
 
+other_dataset = []
+
 
 class RobertaDataset(TorchDataset):
     def __init__(self, texts, labels):
@@ -122,6 +124,13 @@ def get_scores(labels, probabilities, calibrated=False, precision=6):
 
     assert len(labels) == len(probabilities)
 
+    if sum(labels) == 0:
+        return (
+            round(accuracy_score(labels, probabilities > threshold), precision),
+            round(f1_score(labels, probabilities > threshold), precision),
+            -1,
+        )
+
     return (
         round(accuracy_score(labels, probabilities > threshold), precision),
         round(f1_score(labels, probabilities > threshold), precision),
@@ -149,6 +158,7 @@ if __name__ == "__main__":
     parser.add_argument("--ghostbuster_no_symbolic", action="store_true")
     parser.add_argument("--ghostbuster_only_ada", action="store_true")
     parser.add_argument("--ghostbuster_custom", action="store_true")
+    parser.add_argument("--ghostbuster_other_eval", action="store_true")
 
     parser.add_argument("--ghostbuster_vary_training_data", action="store_true")
     parser.add_argument("--ghostbuster_vary_document_size", action="store_true")
@@ -248,6 +258,8 @@ if __name__ == "__main__":
     )
 
     def get_roberta_predictions(data, train, test, domain):
+        print(f"Loading model roberta/models/roberta_{domain}...")
+
         roberta_model = RobertaForSequenceClassification.from_pretrained(
             f"roberta/models/roberta_{domain}", num_labels=2
         )
@@ -316,8 +328,7 @@ if __name__ == "__main__":
                     f"In-Domain ({domain})",
                     *train_fn(
                         data,
-                        indices_dict[f"gpt_{domain}_train"]
-                        + indices_dict[f"human_{domain}_train"],
+                        indices_dict[f"gpt_train"] + indices_dict[f"human_train"],
                         indices_dict[f"gpt_{domain}_test"]
                         + indices_dict[f"human_{domain}_test"],
                         domain,
@@ -467,6 +478,215 @@ if __name__ == "__main__":
             best_features_map["best_features_three"],
             "Ghostbuster (No Symbolic)",
             train_ghostbuster_no_symbolic,
+        )
+
+    if args.ghostbuster_other_eval:
+        data, mu, sigma = normalize(
+            get_featurized_data(best_features_map["best_features_three"]),
+            ret_mu_sigma=True,
+        )
+        model = LogisticRegression()
+        model.fit(
+            data[indices_dict["gpt_train"] + indices_dict["human_train"]],
+            labels[indices_dict["gpt_train"] + indices_dict["human_train"]],
+        )
+
+        # Get roberta results on ets
+        roberta_model = RobertaForSequenceClassification.from_pretrained(
+            f"roberta/models/roberta_gpt", num_labels=2
+        )
+        roberta_model.to(device)
+
+        print(
+            get_scores(
+                labels[indices_dict["gpt_test"] + indices_dict["human_test"]],
+                model.predict_proba(
+                    data[indices_dict["gpt_test"] + indices_dict["human_test"]]
+                )[:, 1],
+            )
+        )
+
+        other_datasets = [
+            # Dataset("normal", "data/other/ets"),
+            Dataset("normal", "data/other/lang8"),
+            Dataset("normal", "data/other/pelic"),
+            Dataset("normal", "data/other/gptzero/gpt"),
+            Dataset("normal", "data/other/gptzero/human"),
+        ]
+
+        def evaluate_on_dataset(
+            model,
+            best_features,
+            curr_labels,
+            generate_dataset_fn,
+            dataset_name,
+            train=False,
+        ):
+            t_data = generate_dataset_fn(t_featurize, verbose=True)
+
+            davinci, ada, trigram, unigram = get_all_logprobs(
+                generate_dataset_fn,
+                trigram=trigram_model,
+                tokenizer=tokenizer,
+            )
+            vector_map = {
+                "davinci-logprobs": lambda file: davinci[file],
+                "ada-logprobs": lambda file: ada[file],
+                "trigram-logprobs": lambda file: trigram[file],
+                "unigram-logprobs": lambda file: unigram[file],
+            }
+            exp_featurize = get_exp_featurize(best_features, vector_map)
+            exp_data = generate_dataset_fn(exp_featurize)
+
+            curr_data = normalize(
+                np.concatenate([t_data, exp_data], axis=1), mu=mu, sigma=sigma
+            )
+
+            if train:
+                indices = np.arange(len(curr_data))
+                np.random.shuffle(indices)
+
+                train_indices = indices[: math.floor(0.8 * len(indices))]
+                test_indices = indices[math.floor(0.8 * len(indices)) :]
+
+                curr_train_data = np.concatenate(
+                    [
+                        curr_data[train_indices],
+                        data[indices_dict["gpt_train"] + indices_dict["human_train"]],
+                    ],
+                    axis=0,
+                )
+                curr_train_labels = np.concatenate(
+                    [
+                        curr_labels[train_indices],
+                        labels[indices_dict["gpt_train"] + indices_dict["human_train"]],
+                    ],
+                    axis=0,
+                )
+
+                model.fit(curr_train_data, curr_train_labels)
+
+                probs = model.predict_proba(curr_data[test_indices])[:, 1]
+                results_table.append(
+                    [
+                        "Ghostbuster",
+                        f"In-Domain ({dataset_name})",
+                        *get_scores(curr_labels[test_indices], probs),
+                    ]
+                )
+            else:
+                probs = model.predict_proba(curr_data)[:, 1]
+                results_table.append(
+                    [
+                        "Ghostbuster",
+                        f"Out-Domain ({dataset_name})",
+                        *get_scores(curr_labels, probs),
+                    ]
+                )
+
+        for dataset in ["lang8"]:
+            gen_fn = get_generate_dataset(Dataset("normal", f"data/other/{dataset}"))
+            curr_labels = gen_fn(lambda _: 0)
+
+            evaluate_on_dataset(
+                model,
+                best_features_map["best_features_three"],
+                curr_labels,
+                gen_fn,
+                dataset,
+            )
+
+            # Evaluate roberta
+            roberta_test = RobertaDataset(
+                gen_fn(lambda file: open(file).read()),
+                gen_fn(lambda _: 0),
+            )
+
+            roberta_test_loader = torch.utils.data.DataLoader(
+                roberta_test, batch_size=1, shuffle=False
+            )
+
+            roberta_model.eval()
+
+            roberta_probs = []
+            with torch.no_grad():
+                for batch in tqdm.tqdm(roberta_test_loader):
+                    inputs = {k: v.to(device) for k, v in batch.items()}
+                    outputs = roberta_model(**inputs)
+                    roberta_probs.append(
+                        float(F.softmax(outputs.logits, dim=1)[0][1].item())
+                    )
+            
+            results_table.append(
+                [
+                    "RoBERTa",
+                    f"Out-Domain ({dataset})",
+                    *get_scores(
+                        gen_fn(lambda _: 0), np.array(roberta_probs), calibrated=True
+                    ),
+                ]
+            )
+
+        gpt_zero = get_generate_dataset(
+            Dataset("normal", f"data/other/gptzero/human"),
+            Dataset("normal", f"data/other/gptzero/gpt"),
+        )
+        curr_labels = np.array([0] * 50 + [1] * 50)
+
+        evaluate_on_dataset(
+            model,
+            best_features_map["best_features_three"],
+            curr_labels,
+            gpt_zero,
+            "gptzero",
+        )
+
+        gen_ets = get_generate_dataset(Dataset("normal", f"data/other/ets"))
+        curr_labels = gen_ets(lambda _: 0)
+
+        evaluate_on_dataset(
+            model,
+            best_features_map["best_features_three"],
+            curr_labels,
+            gen_ets,
+            "ets",
+        )
+
+        evaluate_on_dataset(
+            model,
+            best_features_map["best_features_three"],
+            curr_labels,
+            gen_ets,
+            "ets",
+            train=True,
+        )
+
+        roberta_test = RobertaDataset(
+            gen_ets(lambda file: open(file).read()),
+            gen_ets(lambda _: 0),
+        )
+        roberta_test_loader = torch.utils.data.DataLoader(
+            roberta_test, batch_size=1, shuffle=False
+        )
+
+        roberta_model.eval()
+        roberta_probs = []
+        with torch.no_grad():
+            for batch in tqdm.tqdm(roberta_test_loader):
+                inputs = {k: v.to(device) for k, v in batch.items()}
+                outputs = roberta_model(**inputs)
+                roberta_probs.append(
+                    float(F.softmax(outputs.logits, dim=1)[0][1].item())
+                )
+
+        results_table.append(
+            [
+                "RoBERTa",
+                f"Out-Domain (ets)",
+                *get_scores(
+                    gen_ets(lambda _: 0), np.array(roberta_probs), calibrated=True
+                ),
+            ]
         )
 
     if args.ghostbuster_vary_training_data:
