@@ -185,3 +185,7 @@ data/essay/raw
 roberta/models_old
 symbolic_data*
 t_data*
+
+gpt_zero.ipynb
+detect_gpt.ipynb
+zero_shot.ipynb
