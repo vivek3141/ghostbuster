@@ -519,6 +519,8 @@ if __name__ == "__main__":
             Dataset("normal", "data/other/ets"),
             Dataset("normal", "data/other/lang8"),
             Dataset("normal", "data/other/pelic"),
+            Dataset("normal", "data/other/gptzero/gpt"),
+            Dataset("normal", "data/other/gptzero/human"),
         ]
 
         generate_logprobs(get_generate_dataset(*other_datasets))

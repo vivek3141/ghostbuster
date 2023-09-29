@@ -1,13 +1,7 @@
 Model Type,Experiment,Accuracy,F1,AUC
-Perplexity-Only,In-Domain,0.809167,0.815174,0.808952
-Perplexity-Only,Out-Domain (wp),0.664935,0.490119,0.654104
-Perplexity-Only,Out-Domain (reuter),0.629187,0.718693,0.629187
-Perplexity-Only,Out-Domain (essay),0.926952,0.933638,0.924217
-Perplexity-Only,Out-Domain (claude),0.761613,0.841326,0.770263
-Perplexity-Only,Out-Domain (gpt_prompt1),0.752712,0.83442,0.76493
-Perplexity-Only,Out-Domain (gpt_prompt2),0.732962,0.8188,0.753097
-Perplexity-Only,Out-Domain (gpt_writing),0.794715,0.866304,0.790097
-Perplexity-Only,Out-Domain (gpt_semantic),0.831989,0.893173,0.81243
+Ghostbuster (Depth One),In-Domain (wp),0.903896,0.895775,0.964608
+Ghostbuster (Depth One),In-Domain (reuter),0.9689,0.968974,0.992331
+Ghostbuster (Depth One),In-Domain (essay),0.934509,0.939252,0.974484
 Ghostbuster (Depth One),In-Domain,0.936667,0.936772,0.979032
 Ghostbuster (Depth One),Out-Domain (wp),0.836364,0.813056,0.926055
 Ghostbuster (Depth One),Out-Domain (reuter),0.935407,0.937063,0.983769
@@ -17,6 +11,9 @@ Ghostbuster (Depth One),Out-Domain (gpt_prompt1),0.908762,0.942857,0.975045
 Ghostbuster (Depth One),Out-Domain (gpt_prompt2),0.910431,0.943961,0.974575
 Ghostbuster (Depth One),Out-Domain (gpt_writing),0.899305,0.936558,0.972838
 Ghostbuster (Depth One),Out-Domain (gpt_semantic),0.958275,0.974654,0.985868
+Ghostbuster (Depth Two),In-Domain (wp),0.981818,0.98103,0.997541
+Ghostbuster (Depth Two),In-Domain (reuter),0.980861,0.980769,0.997871
+Ghostbuster (Depth Two),In-Domain (essay),0.987406,0.988235,0.999924
 Ghostbuster (Depth Two),In-Domain,0.983333,0.983471,0.997694
 Ghostbuster (Depth Two),Out-Domain (wp),0.955844,0.952381,0.995461
 Ghostbuster (Depth Two),Out-Domain (reuter),0.95933,0.958838,0.991644
@@ -26,6 +23,9 @@ Ghostbuster (Depth Two),Out-Domain (gpt_prompt1),0.991099,0.994656,0.999174
 Ghostbuster (Depth Two),Out-Domain (gpt_prompt2),0.991099,0.994656,0.999431
 Ghostbuster (Depth Two),Out-Domain (gpt_writing),0.99388,0.996332,0.999353
 Ghostbuster (Depth Two),Out-Domain (gpt_semantic),0.994159,0.996499,0.9994
+Ghostbuster (Depth Three),In-Domain (wp),0.98961,0.98913,0.999108
+Ghostbuster (Depth Three),In-Domain (reuter),0.988038,0.98801,0.998855
+Ghostbuster (Depth Three),In-Domain (essay),0.992443,0.992908,0.999822
 Ghostbuster (Depth Three),In-Domain,0.99,0.990066,0.998942
 Ghostbuster (Depth Three),Out-Domain (wp),0.953247,0.949153,0.996407
 Ghostbuster (Depth Three),Out-Domain (reuter),0.978469,0.978622,0.996474
@@ -35,6 +35,16 @@ Ghostbuster (Depth Three),Out-Domain (gpt_prompt1),0.989152,0.993468,0.998737
 Ghostbuster (Depth Three),Out-Domain (gpt_prompt2),0.992768,0.995655,0.999135
 Ghostbuster (Depth Three),Out-Domain (gpt_writing),0.994715,0.996829,0.998888
 Ghostbuster (Depth Three),Out-Domain (gpt_semantic),0.995828,0.997498,0.999452
+Ghostbuster (Depth Four),In-Domain (wp),0.979221,0.978378,0.996731
+Ghostbuster (Depth Four),In-Domain (reuter),0.980861,0.980861,0.998626
+Ghostbuster (Depth Four),In-Domain (essay),0.987406,0.988235,0.997606
+Ghostbuster (Depth Four),In-Domain,0.9825,0.982688,0.996741
+Ghostbuster (Depth Four),Out-Domain (wp),0.961039,0.958217,0.994272
+Ghostbuster (Depth Four),Out-Domain (reuter),0.964115,0.9642,0.993681
+Ghostbuster (Depth Four),Out-Domain (essay),0.97733,0.979021,0.997377
+Ghostbuster (N-Gram Only),In-Domain (wp),0.924675,0.921833,0.97193
+Ghostbuster (N-Gram Only),In-Domain (reuter),0.839713,0.828645,0.91454
+Ghostbuster (N-Gram Only),In-Domain (essay),0.879093,0.895652,0.979781
 Ghostbuster (N-Gram Only),In-Domain,0.88,0.88216,0.94893
 Ghostbuster (N-Gram Only),Out-Domain (wp),0.818182,0.785276,0.919328
 Ghostbuster (N-Gram Only),Out-Domain (reuter),0.73445,0.700809,0.806735
@@ -44,6 +54,9 @@ Ghostbuster (N-Gram Only),Out-Domain (gpt_prompt1),0.90904,0.943901,0.963673
 Ghostbuster (N-Gram Only),Out-Domain (gpt_prompt2),0.901252,0.938804,0.958407
 Ghostbuster (N-Gram Only),Out-Domain (gpt_writing),0.901252,0.938804,0.959402
 Ghostbuster (N-Gram Only),Out-Domain (gpt_semantic),0.90904,0.943901,0.961151
+Ghostbuster (N-Gram and Ada),In-Domain (wp),0.98961,0.989247,0.999027
+Ghostbuster (N-Gram and Ada),In-Domain (reuter),0.988038,0.98801,0.998947
+Ghostbuster (N-Gram and Ada),In-Domain (essay),0.984887,0.985915,0.998854
 Ghostbuster (N-Gram and Ada),In-Domain,0.9875,0.987654,0.998267
 Ghostbuster (N-Gram and Ada),Out-Domain (wp),0.914286,0.902655,0.996218
 Ghostbuster (N-Gram and Ada),Out-Domain (reuter),0.973684,0.973747,0.995948
@@ -53,6 +66,9 @@ Ghostbuster (N-Gram and Ada),Out-Domain (gpt_prompt1),0.984145,0.990441,0.997964
 Ghostbuster (N-Gram and Ada),Out-Domain (gpt_prompt2),0.983866,0.990272,0.998183
 Ghostbuster (N-Gram and Ada),Out-Domain (gpt_writing),0.989986,0.993984,0.998328
 Ghostbuster (N-Gram and Ada),Out-Domain (gpt_semantic),0.989708,0.993816,0.998736
+"Ghostbuster (Depth Three, No Handcrafted)",In-Domain (wp),0.98961,0.98913,0.998406
+"Ghostbuster (Depth Three, No Handcrafted)",In-Domain (reuter),0.985646,0.985646,0.998581
+"Ghostbuster (Depth Three, No Handcrafted)",In-Domain (essay),0.992443,0.992908,0.999924
 "Ghostbuster (Depth Three, No Handcrafted)",In-Domain,0.989167,0.989247,0.998692
 "Ghostbuster (Depth Three, No Handcrafted)",Out-Domain (wp),0.94026,0.934097,0.995218
 "Ghostbuster (Depth Three, No Handcrafted)",Out-Domain (reuter),0.978469,0.97852,0.996108
@@ -62,6 +78,9 @@ Ghostbuster (N-Gram and Ada),Out-Domain (gpt_semantic),0.989708,0.993816,0.99873
 "Ghostbuster (Depth Three, No Handcrafted)",Out-Domain (gpt_prompt2),0.991655,0.994985,0.999216
 "Ghostbuster (Depth Three, No Handcrafted)",Out-Domain (gpt_writing),0.99388,0.996327,0.999087
 "Ghostbuster (Depth Three, No Handcrafted)",Out-Domain (gpt_semantic),0.994437,0.996662,0.99959
+Ghostbuster (No Symbolic),In-Domain (wp),0.766234,0.782609,0.877722
+Ghostbuster (No Symbolic),In-Domain (reuter),0.808612,0.796954,0.889288
+Ghostbuster (No Symbolic),In-Domain (essay),0.833753,0.836634,0.931933
 Ghostbuster (No Symbolic),In-Domain,0.803333,0.805281,0.896296
 Ghostbuster (No Symbolic),Out-Domain (wp),0.742857,0.772414,0.869725
 Ghostbuster (No Symbolic),Out-Domain (reuter),0.767943,0.758105,0.851377
