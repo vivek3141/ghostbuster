@@ -31,7 +31,7 @@ from utils.load import Dataset, get_generate_dataset
 
 models = ["gpt"]
 domains = ["wp", "reuter", "essay"]
-eval_domains = ["claude"]
+eval_domains = ["claude", "gpt_prompt1", "gpt_prompt2", "gpt_writing", "gpt_semantic"]
 
 if torch.cuda.is_available():
     print("Using CUDA...")
@@ -48,11 +48,13 @@ for file in os.listdir("results"):
             best_features_map[file[:-4]] = f.read().strip().split("\n")
 
 print("Loading trigram model...")
-trigram_model = pickle.load(open("trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL)
+trigram_model = pickle.load(
+    open("model/trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL
+)
 tokenizer = tiktoken.encoding_for_model("davinci").encode
 
 print("Loading features...")
-exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
+exp_to_data = pickle.load(open("symbolic_data_gpt_four", "rb"))
 t_data = pickle.load(open("t_data", "rb"))
 
 print("Loading eval data...")
@@ -74,6 +76,18 @@ eval_dataset = [
     Dataset("normal", "data/wp/claude"),
     Dataset("author", "data/reuter/claude"),
     Dataset("normal", "data/essay/claude"),
+    Dataset("normal", "data/wp/gpt_prompt1"),
+    Dataset("author", "data/reuter/gpt_prompt1"),
+    Dataset("normal", "data/essay/gpt_prompt1"),
+    Dataset("normal", "data/wp/gpt_prompt2"),
+    Dataset("author", "data/reuter/gpt_prompt2"),
+    Dataset("normal", "data/essay/gpt_prompt2"),
+    Dataset("normal", "data/wp/gpt_writing"),
+    Dataset("author", "data/reuter/gpt_writing"),
+    Dataset("normal", "data/essay/gpt_writing"),
+    Dataset("normal", "data/wp/gpt_semantic"),
+    Dataset("author", "data/reuter/gpt_semantic"),
+    Dataset("normal", "data/essay/gpt_semantic"),
 ]
 
 
@@ -103,7 +117,6 @@ class RobertaDataset(TorchDataset):
 def get_scores(labels, probabilities, calibrated=False, precision=6):
     if calibrated:
         threshold = sorted(probabilities)[len(labels) - sum(labels) - 1]
-        print(threshold)
     else:
         threshold = 0.5
 
@@ -180,10 +193,13 @@ if __name__ == "__main__":
     # t_data = generate_dataset_fn(t_featurize, verbose=True)
     # pickle.dump(t_data, open("t_data", "wb"), pickle.HIGHEST_PROTOCOL)
 
-    def get_featurized_data(best_features):
+    def get_featurized_data(best_features, gpt_only=False):
         gpt_data = np.concatenate(
             [t_data] + [exp_to_data[i] for i in best_features], axis=1
         )
+        if gpt_only:
+            return gpt_data
+
         eval_data = np.concatenate(
             [t_data_eval] + [exp_to_data_eval[i] for i in best_features], axis=1
         )
@@ -224,7 +240,7 @@ if __name__ == "__main__":
         where = np.where(generate_dataset_fn(lambda file: 1 if key in file else 0))[0]
         assert len(where) == 3000
 
-        indices_dict[f"{key}_test"] = where
+        indices_dict[f"{key}_test"] = list(where)
 
     files = generate_dataset_fn(lambda x: x)
     labels = generate_dataset_fn(
@@ -273,8 +289,13 @@ if __name__ == "__main__":
         probs = (data[test][:, -1] > threshold).astype(float)
         return get_scores(labels[test], probs)
 
-    def run_experiment(best_features, model_name, train_fn):
-        data = normalize(get_featurized_data(best_features))
+    def run_experiment(best_features, model_name, train_fn, gpt_only=False):
+        gpt_data = get_featurized_data(best_features, gpt_only=True)
+        _, mu, sigma = normalize(gpt_data, ret_mu_sigma=True)
+
+        data = normalize(
+            get_featurized_data(best_features, gpt_only=gpt_only), mu=mu, sigma=sigma
+        )
 
         print(f"Running {model_name} Predictions...")
 
@@ -287,6 +308,21 @@ if __name__ == "__main__":
             test_indices += (
                 indices_dict[f"gpt_{domain}_test"]
                 + indices_dict[f"human_{domain}_test"]
+            )
+
+            results_table.append(
+                [
+                    model_name,
+                    f"In-Domain ({domain})",
+                    *train_fn(
+                        data,
+                        indices_dict[f"gpt_{domain}_train"]
+                        + indices_dict[f"human_{domain}_train"],
+                        indices_dict[f"gpt_{domain}_test"]
+                        + indices_dict[f"human_{domain}_test"],
+                        domain,
+                    ),
+                ]
             )
 
         results_table.append(
@@ -322,6 +358,9 @@ if __name__ == "__main__":
                 ]
             )
 
+        if gpt_only:
+            return
+
         train_indices, test_indices = [], []
         for domain in domains:
             train_indices += (
@@ -329,15 +368,18 @@ if __name__ == "__main__":
                 + indices_dict[f"human_{domain}_train"]
             )
             test_indices += indices_dict[f"human_{domain}_test"]
-        test_indices += list(indices_dict["claude_test"])
 
-        results_table.append(
-            [
-                model_name,
-                "Out-Domain (Claude)",
-                *train_fn(data, train_indices, test_indices, "gpt"),
-            ]
-        )
+        for domain in eval_domains:
+            curr_test_indices = list(indices_dict[f"{domain}_test"]) + test_indices
+            # test_indices += list(indices_dict["claude_test"])
+
+            results_table.append(
+                [
+                    model_name,
+                    f"Out-Domain ({domain})",
+                    *train_fn(data, train_indices, curr_test_indices, "gpt"),
+                ]
+            )
 
     if args.perplexity_only:
         run_experiment(
@@ -374,11 +416,12 @@ if __name__ == "__main__":
             train_ghostbuster,
         )
 
-    if False and (args.ghostbuster_depth_four or args.ghostbuster):
+    if args.ghostbuster_depth_four or args.ghostbuster:
         run_experiment(
             best_features_map["best_features_four"],
             "Ghostbuster (Depth Four)",
             train_ghostbuster,
+            gpt_only=True,
         )
 
     if args.ghostbuster_no_gpt or args.ghostbuster:
@@ -427,13 +470,15 @@ if __name__ == "__main__":
         )
 
     if args.ghostbuster_vary_training_data:
-        exp_to_data_three = pickle.load(open("symbolic_data", "rb"))
+        exp_to_data_three = pickle.load(open("symbolic_data_gpt", "rb"))
 
         train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
         test_indices = indices_dict["gpt_test"] + indices_dict["human_test"]
         np.random.shuffle(train_indices)
 
-        claude_test_indices = indices_dict["claude_test"] + indices_dict["human_test"]
+        claude_test_indices = (
+            list(indices_dict["claude_test"]) + indices_dict["human_test"]
+        )
 
         scores = []
         train_sizes = [int(125 * (2**i)) for i in range(7)] + [len(train_indices)]
@@ -455,7 +500,7 @@ if __name__ == "__main__":
             curr_score_vec = []
             print(data[curr_train_indices].shape)
 
-            model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+            model = LogisticRegression()
             model.fit(data[curr_train_indices], labels[curr_train_indices])
 
             curr_score_vec.append(
@@ -490,7 +535,7 @@ if __name__ == "__main__":
                     + indices_dict[f"human_{test_domain}_test"]
                 )
 
-                model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+                model = LogisticRegression()
                 model.fit(data[domain_train_indices], labels[domain_train_indices])
 
                 curr_score_vec.append(
@@ -522,7 +567,9 @@ if __name__ == "__main__":
 
         train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
         test_indices = indices_dict["gpt_test"] + indices_dict["human_test"]
-        claude_test_indices = indices_dict["claude_test"] + indices_dict["human_test"]
+        claude_test_indices = (
+            list(indices_dict["claude_test"]) + indices_dict["human_test"]
+        )
 
         data = get_featurized_data(best_features_map["best_features_three"])
 
@@ -554,7 +601,7 @@ if __name__ == "__main__":
             curr_score_vec = []
             print(data.shape)
 
-            model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+            model = LogisticRegression()
             model.fit(data[train_indices], labels[train_indices])
 
             curr_score_vec.append(
@@ -589,7 +636,7 @@ if __name__ == "__main__":
                     + indices_dict[f"human_{test_domain}_test"]
                 )
 
-                model = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+                model = LogisticRegression()
                 model.fit(data[domain_train_indices], labels[domain_train_indices])
 
                 curr_score_vec.append(

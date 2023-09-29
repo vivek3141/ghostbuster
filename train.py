@@ -42,6 +42,18 @@ eval_dataset = [
     Dataset("normal", "data/wp/claude"),
     Dataset("author", "data/reuter/claude"),
     Dataset("normal", "data/essay/claude"),
+    Dataset("normal", "data/wp/gpt_prompt1"),
+    Dataset("author", "data/reuter/gpt_prompt1"),
+    Dataset("normal", "data/essay/gpt_prompt1"),
+    Dataset("normal", "data/wp/gpt_prompt2"),
+    Dataset("author", "data/reuter/gpt_prompt2"),
+    Dataset("normal", "data/essay/gpt_prompt2"),
+    Dataset("normal", "data/wp/gpt_writing"),
+    Dataset("author", "data/reuter/gpt_writing"),
+    Dataset("normal", "data/essay/gpt_writing"),
+    Dataset("normal", "data/wp/gpt_semantic"),
+    Dataset("author", "data/reuter/gpt_semantic"),
+    Dataset("normal", "data/essay/gpt_semantic"),
 ]
 
 
@@ -106,7 +118,7 @@ if __name__ == "__main__":
         generate_symbolic_data(
             generate_dataset_fn_eval,
             max_depth=3,
-            output_file="symbolic_data_gpt_eval",
+            output_file="symbolic_data_eval",
             verbose=True,
         )
 
@@ -229,7 +241,7 @@ if __name__ == "__main__":
     print(f"Best Features: {best_features}")
     print(f"Data Shape: {data.shape}")
 
-    base = LogisticRegression(C=10, penalty="l2", max_iter=10000)
+    base = LogisticRegression()
     model = CalibratedClassifierCV(base, cv=5)
 
     if args.train_on_all_data:

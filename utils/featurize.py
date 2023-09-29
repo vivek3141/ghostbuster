@@ -69,7 +69,7 @@ def score_ngram(doc, model, tokenizer, n=3, strip_first=False):
     scores = []
     if strip_first:
         doc = " ".join(doc.split()[:1000])
-    for i in ngrams((n - 1) * [50256] + tokenizer(doc), n):
+    for i in ngrams((n - 1) * [50256] + tokenizer(doc.strip()), n):
         scores.append(model.n_gram_probability(i))
 
     return np.array(scores)
