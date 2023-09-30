@@ -7,3 +7,5 @@ torch
 tiktoken
 flask
 tabulate
+dill
+nltk
