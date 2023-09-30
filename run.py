@@ -328,7 +328,8 @@ if __name__ == "__main__":
                     f"In-Domain ({domain})",
                     *train_fn(
                         data,
-                        indices_dict[f"gpt_train"] + indices_dict[f"human_train"],
+                        indices_dict[f"gpt_{domain}_train"]
+                        + indices_dict[f"human_{domain}_train"],
                         indices_dict[f"gpt_{domain}_test"]
                         + indices_dict[f"human_{domain}_test"],
                         domain,
@@ -482,9 +483,12 @@ if __name__ == "__main__":
 
     if args.ghostbuster_other_eval:
         data, mu, sigma = normalize(
-            get_featurized_data(best_features_map["best_features_three"]),
+            get_featurized_data(
+                best_features_map["best_features_three"], gpt_only=True
+            ),
             ret_mu_sigma=True,
         )
+
         model = LogisticRegression()
         model.fit(
             data[indices_dict["gpt_train"] + indices_dict["human_train"]],
@@ -507,23 +511,13 @@ if __name__ == "__main__":
         )
 
         other_datasets = [
-            # Dataset("normal", "data/other/ets"),
             Dataset("normal", "data/other/lang8"),
             Dataset("normal", "data/other/pelic"),
             Dataset("normal", "data/other/gptzero/gpt"),
             Dataset("normal", "data/other/gptzero/human"),
         ]
 
-        def evaluate_on_dataset(
-            model,
-            best_features,
-            curr_labels,
-            generate_dataset_fn,
-            dataset_name,
-            train=False,
-        ):
-            t_data = generate_dataset_fn(t_featurize, verbose=True)
-
+        def get_data(generate_dataset_fn, best_features):
             davinci, ada, trigram, unigram = get_all_logprobs(
                 generate_dataset_fn,
                 trigram=trigram_model,
@@ -537,10 +531,31 @@ if __name__ == "__main__":
             }
             exp_featurize = get_exp_featurize(best_features, vector_map)
             exp_data = generate_dataset_fn(exp_featurize)
+            return exp_data
 
-            curr_data = normalize(
-                np.concatenate([t_data, exp_data], axis=1), mu=mu, sigma=sigma
+        def evaluate_on_dataset(
+            model,
+            best_features,
+            curr_labels,
+            generate_dataset_fn,
+            dataset_name,
+            train=False,
+            to_normalize=True,
+        ):
+            data, mu, sigma = normalize(
+                get_featurized_data(best_features, gpt_only=True),
+                ret_mu_sigma=True,
             )
+
+            t_data = generate_dataset_fn(t_featurize, verbose=True)
+            exp_data = get_data(generate_dataset_fn, best_features)
+
+            if to_normalize:
+                curr_data = normalize(
+                    np.concatenate([t_data, exp_data], axis=1), mu=mu, sigma=sigma
+                )
+            else:
+                curr_data = np.concatenate([t_data, exp_data], axis=1)
 
             if train:
                 indices = np.arange(len(curr_data))
@@ -564,6 +579,7 @@ if __name__ == "__main__":
                     axis=0,
                 )
 
+                model = LogisticRegression()
                 model.fit(curr_train_data, curr_train_labels)
 
                 probs = model.predict_proba(curr_data[test_indices])[:, 1]
@@ -596,6 +612,26 @@ if __name__ == "__main__":
                 dataset,
             )
 
+            exp_data = get_data(gen_fn, ["davinci-logprobs s-avg"])
+
+            model_p = LogisticRegression()
+            model_p.fit(
+                exp_to_data["davinci-logprobs s-avg"][
+                    indices_dict["gpt_train"] + indices_dict["human_train"]
+                ],
+                labels[indices_dict["gpt_train"] + indices_dict["human_train"]],
+            )
+
+            probs = model_p.predict_proba(exp_data)[:, 1]
+
+            results_table.append(
+                [
+                    "Perplexity Only",
+                    f"Out-Domain (lang8)",
+                    *get_scores(curr_labels, probs),
+                ]
+            )
+
             # Evaluate roberta
             roberta_test = RobertaDataset(
                 gen_fn(lambda file: open(file).read()),
@@ -616,14 +652,12 @@ if __name__ == "__main__":
                     roberta_probs.append(
                         float(F.softmax(outputs.logits, dim=1)[0][1].item())
                     )
-            
+
             results_table.append(
                 [
                     "RoBERTa",
                     f"Out-Domain ({dataset})",
-                    *get_scores(
-                        gen_fn(lambda _: 0), np.array(roberta_probs), calibrated=True
-                    ),
+                    *get_scores(gen_fn(lambda _: 0), np.array(roberta_probs)),
                 ]
             )
 
@@ -661,6 +695,26 @@ if __name__ == "__main__":
             train=True,
         )
 
+        exp_data = get_data(gen_ets, ["davinci-logprobs s-avg"])
+
+        model = LogisticRegression()
+        model.fit(
+            exp_to_data["davinci-logprobs s-avg"][
+                indices_dict["gpt_train"] + indices_dict["human_train"]
+            ],
+            labels[indices_dict["gpt_train"] + indices_dict["human_train"]],
+        )
+
+        probs = model.predict_proba(exp_data)[:, 1]
+
+        results_table.append(
+            [
+                "Perplexity Only",
+                f"Out-Domain (ets)",
+                *get_scores(curr_labels, probs),
+            ]
+        )
+
         roberta_test = RobertaDataset(
             gen_ets(lambda file: open(file).read()),
             gen_ets(lambda _: 0),
@@ -683,9 +737,7 @@ if __name__ == "__main__":
             [
                 "RoBERTa",
                 f"Out-Domain (ets)",
-                *get_scores(
-                    gen_ets(lambda _: 0), np.array(roberta_probs), calibrated=True
-                ),
+                *get_scores(gen_ets(lambda _: 0), np.array(roberta_probs)),
             ]
         )
 

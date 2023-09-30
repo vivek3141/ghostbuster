@@ -1,7 +1,7 @@
 Model Type,Experiment,Accuracy,F1,AUC
 Ghostbuster,Out-Domain (lang8),0.955,0.0,-1
-RoBERTa,Out-Domain (lang8),1.0,0.0,-1
+RoBERTa,Out-Domain (lang8),0.986,0.0,-1
 Ghostbuster,Out-Domain (gptzero),0.9,0.9,0.9684
 Ghostbuster,Out-Domain (ets),0.999,0.0,-1
 Ghostbuster,In-Domain (ets),1.0,0.0,-1
-RoBERTa,Out-Domain (ets),1.0,0.0,-1
+RoBERTa,Out-Domain (ets),0.981,0.0,-1
