@@ -16,11 +16,11 @@ from utils.symbolic import generate_symbolic_data
 from utils.load import get_generate_dataset, Dataset
 
 
-with open("results/best_features_four.txt") as f:
+with open("results/best_features_three.txt") as f:
     best_features = f.read().strip().split("\n")
 
 print("Loading trigram model...")
-trigram_model = pickle.load(open("trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL)
+trigram_model = pickle.load(open("model/trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL)
 tokenizer = tiktoken.encoding_for_model("davinci").encode
 
 wp_dataset = [
