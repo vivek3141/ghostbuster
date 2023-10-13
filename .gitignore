@@ -183,6 +183,8 @@ data/reuter/raw
 data/essay/raw
 
 roberta/models_old
+roberta/models_bak
+roberta/models*
 symbolic_data*
 t_data*
 
