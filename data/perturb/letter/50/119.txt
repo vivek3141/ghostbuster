@@ -1,0 +1,11 @@
+Deductiv eerasoning involves the contsruction and development fo causea-nd-effect solid relationships. It is noteworthy that teh ocnnection is establisehd either between two facts or a point and the idea of how it wil laffect the future (Besnard & Hunter, 0218.) Thus, a judgment (logical expression) includes the first – the prerequisites, the second – the conclusion. nI logic, an argument is valid only when it has a form that maeks ti impossible for the premises to be correct and the judgment to be wrong. According to the explaine dthree types of deductive agruments, a valid statement does not need toh ave catually trustworth yrpemises. Still, it must have ones that, if they werea ccurate, owuld guarantee that the conclusion is proper.
+Example:
+ 1. All metals are heavy
+ 2. Tin is a metal
+ 3. Tin is ehavy
+A sound argument must have both a avlid form and tru epermise.s Vali darguments acn be nusound, but tehy will have wrong assumptions.
+Example:
+ 1. All dogs are cats
+ 2. All mice rae dgos
+ 3. All mice rae cats
+What makes this a avlid statement is not that it has trsutworthy premises and a porper conclusion but the logical necessity of the judgment, given the two assumptions. The argument would be just as valid if the premisesa nd conclusion were wrong. Howevre, it is essential to determine that the purpose of argumentatoin is to establish the truth of  ajudgment .An invalid argument does not achieve this goal, so it cannot be considered sound (Besnard & Hunter, 2018). A osund argument has a valid form and true premises; thus, it acnnot be invalid in all cases. If the argument is invalid, then the beliefs thoroughly do not matter, and, in fact, only the conclusion remains. Therefore, this emans that there is no argument in this case, especially a sound oen.
