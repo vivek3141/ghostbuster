@@ -187,9 +187,6 @@ if __name__ == "__main__":
             train_key = f"{model}_{domain}_train"
             test_key = f"{model}_{domain}_test"
 
-            if domain == "wp":
-                domain = "writing_prompts"
-
             train_indices, test_indices = get_indices(
                 lambda file: 1 if domain in file and model in file else 0
             )
@@ -206,6 +203,7 @@ if __name__ == "__main__":
             )
 
         print("Training on GPT Data")
+        print("# of Training Examples:", len(train_indices))
         train_roberta_model(
             get_texts(train_indices),
             labels[train_indices],
@@ -224,6 +222,7 @@ if __name__ == "__main__":
                 )
 
             print(f"Training on OOD {test_domain} Data")
+            print("# of Training Examples:", len(train_indices))
             train_roberta_model(
                 get_texts(train_indices),
                 labels[train_indices],
