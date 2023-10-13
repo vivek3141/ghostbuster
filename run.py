@@ -3,6 +3,7 @@ import csv
 import itertools
 import math
 import os
+from collections import defaultdict
 
 # External Imports
 import argparse
@@ -164,6 +165,8 @@ if __name__ == "__main__":
     parser.add_argument("--ghostbuster_vary_document_size", action="store_true")
 
     parser.add_argument("--hyperparameter_search", action="store_true")
+
+    parser.add_argument("--perturb", action="store_true")
 
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--output_file", type=str, default="results.csv")
@@ -332,7 +335,7 @@ if __name__ == "__main__":
                         + indices_dict[f"human_{domain}_train"],
                         indices_dict[f"gpt_{domain}_test"]
                         + indices_dict[f"human_{domain}_test"],
-                        domain,
+                        "gpt",
                     ),
                 ]
             )
@@ -383,7 +386,6 @@ if __name__ == "__main__":
 
         for domain in eval_domains:
             curr_test_indices = list(indices_dict[f"{domain}_test"]) + test_indices
-            # test_indices += list(indices_dict["claude_test"])
 
             results_table.append(
                 [
@@ -753,7 +755,7 @@ if __name__ == "__main__":
         )
 
         scores = []
-        train_sizes = [int(125 * (2**i)) for i in range(7)] + [len(train_indices)]
+        train_sizes = [int(125 * (2**i)) for i in range(6)] + [len(train_indices)]
         print(train_sizes)
 
         for size in tqdm.tqdm(train_sizes):
@@ -834,7 +836,7 @@ if __name__ == "__main__":
         plt.savefig("results/training_size.png")
 
     if args.ghostbuster_vary_document_size:
-        token_sizes = [10, 25, 50, 100, 200, 400, 800, 1600, 2049]
+        token_sizes = [10, 25, 50, 100, 200, 400, 800, 1600, 2047]
         scores = []
 
         train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
@@ -977,6 +979,78 @@ if __name__ == "__main__":
 
         probs = model.predict_proba(data[test])[:, 1]
         print(get_scores(labels[test], probs))
+
+    if args.perturb:
+        data = get_featurized_data(best_features_map["best_features_three"])
+        data, mu, sigma = normalize(data, ret_mu_sigma=True)
+
+        model = LogisticRegression()
+        model.fit(
+            data[indices_dict["gpt_train"] + indices_dict["human_train"]],
+            labels[indices_dict["gpt_train"] + indices_dict["human_train"]],
+        )
+
+        with open("data/perturb/labels.txt") as f:
+            perturb_labels = np.array([int(i) for i in f.read().split("\n")])
+
+        def get_data(generate_dataset_fn, best_features):
+            t_data = generate_dataset_fn(t_featurize, verbose=False)
+
+            davinci, ada, trigram, unigram = get_all_logprobs(
+                generate_dataset_fn,
+                trigram=trigram_model,
+                tokenizer=tokenizer,
+                verbose=False,
+            )
+            vector_map = {
+                "davinci-logprobs": lambda file: davinci[file],
+                "ada-logprobs": lambda file: ada[file],
+                "trigram-logprobs": lambda file: trigram[file],
+                "unigram-logprobs": lambda file: unigram[file],
+            }
+            exp_featurize = get_exp_featurize(best_features, vector_map)
+            exp_data = generate_dataset_fn(exp_featurize, verbose=False)
+
+            return np.concatenate([t_data, exp_data], axis=1)
+
+        data = defaultdict(list)
+        files = generate_dataset_fn_gpt(lambda x: x)
+
+        for perturb_type in tqdm.tqdm(["letter", "word", "sentences", "paragraphs"]):
+            for n in [0, 10, 25, 50, 100, 200]:
+                gen_fn = get_generate_dataset(
+                    Dataset("normal", f"data/perturb/{perturb_type}/{n}")
+                )
+                curr_labels = gen_fn(
+                    lambda file: perturb_labels[
+                        int(os.path.basename(file).split(".")[0])
+                    ]
+                )
+
+                curr_data = get_data(gen_fn, best_features_map["best_features_three"])
+                curr_data = (curr_data - mu) / sigma
+
+                probs = model.predict_proba(curr_data)[:, 1]
+
+                results_table.append(
+                    [
+                        "Ghostbuster",
+                        f"Out-Domain ({perturb_type}, {n})",
+                        *get_scores(curr_labels, probs),
+                    ]
+                )
+
+                _, f1, _ = get_scores(curr_labels, probs)
+                data[perturb_type].append(f1)
+
+        plt.plot([0, 10, 25, 50, 100, 200], data["letter"], label="Letter")
+        plt.plot([0, 10, 25, 50, 100, 200], data["word"], label="Word")
+        plt.plot([0, 10, 25, 50, 100, 200], data["sentences"], label="Sentence")
+        plt.plot([0, 10, 25, 50, 100, 200], data["paragraphs"], label="Paragraph")
+        plt.xlabel("Number of Perturbations")
+        plt.ylabel("F1 Score")
+        plt.legend()
+        plt.savefig("results/perturb.png")
 
     if len(results_table) > 1:
         # Write data to output csv file
