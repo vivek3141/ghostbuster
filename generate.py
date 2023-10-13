@@ -3,8 +3,11 @@ import openai
 import re
 import tqdm
 import os
-from datasets import load_dataset
+import math
+import nltk
+import numpy as np
 
+from datasets import load_dataset
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 from tenacity import (
     retry,
@@ -15,6 +18,16 @@ from utils.generate import generate_documents
 from utils.write_logprobs import write_logprobs
 from utils.symbolic import convert_file_to_logprob_file
 from utils.load import Dataset, get_generate_dataset
+
+datasets = [
+    Dataset("normal", "data/wp/human"),
+    Dataset("normal", "data/wp/gpt"),
+    Dataset("author", "data/reuter/human"),
+    Dataset("author", "data/reuter/gpt"),
+    Dataset("normal", "data/essay/human"),
+    Dataset("normal", "data/essay/gpt"),
+]
+generate_dataset_fn = get_generate_dataset(*datasets)
 
 prompt_types = ["gpt", "gpt_prompt1", "gpt_prompt2", "gpt_writing", "gpt_semantic"]
 html_replacements = [
@@ -74,10 +87,71 @@ def get_essay_prompts(words, prompts):
     ]
 
 
+def perturb_letter(doc, n=1):
+    """
+    Randomly swap n pairs of adjacent letters in the document
+    """
+    if len(doc) < 2:
+        return doc
+
+    for _ in range(n):
+        idx = np.random.randint(len(doc) - 1)
+        doc = doc[:idx] + doc[idx + 1] + doc[idx] + doc[idx + 2 :]
+    return doc
+
+
+def perturb_word(doc, n=1):
+    """
+    Randomly swap n pairs of adjacent words in the document
+    """
+    doc = doc.split(" ")
+    if len(doc) < 2:
+        return " ".join(doc)
+
+    for _ in range(n):
+        idx = np.random.randint(len(doc) - 1)
+        doc[idx], doc[idx + 1] = doc[idx + 1], doc[idx]
+    return " ".join(doc)
+
+
+def petrub_sent(doc, n=1):
+    """
+    Randomly swap n pairs of adjacent sentences in the document
+    """
+    doc = nltk.sent_tokenize(doc)
+    if len(doc) < 2:
+        return (" ".join(doc)).strip()
+
+    for _ in range(n):
+        # Account for the fact that some sentences have new lines in them, so keep them where they were
+        idx = np.random.randint(len(doc) - 1)
+        doc[idx], doc[idx + 1] = doc[idx + 1], doc[idx]
+
+    return (" ".join(doc)).strip()
+
+
+def perturb_para(doc, n=1):
+    """
+    Randomly swap n pairs of adjacent paragraphs in the document
+    """
+    doc = doc.split("\n")
+    if len(doc) < 2:
+        return "\n".join(doc)
+
+    for _ in range(n):
+        idx = np.random.randint(len(doc) - 1)
+        doc[idx], doc[idx + 1] = doc[idx + 1], doc[idx]
+    return "\n".join(doc)
+
+
 def generate_logprobs(generate_dataset_fn):
     files = generate_dataset_fn(lambda f: f)
 
     for file in tqdm.tqdm(files):
+        base_path = os.path.dirname(file) + "/logprobs"
+        if not os.path.exists(base_path):
+            os.mkdir(base_path)
+
         with open(file, "r") as f:
             doc = f.read().strip()
 
@@ -92,6 +166,9 @@ def generate_logprobs(generate_dataset_fn):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+
+    parser.add_argument("--seed", type=int, default=0)
+
     parser.add_argument("--wp_prompts", action="store_true")
     parser.add_argument("--wp_human", action="store_true")
     parser.add_argument("--wp_gpt", action="store_true")
@@ -105,6 +182,9 @@ if __name__ == "__main__":
 
     parser.add_argument("--logprobs", action="store_true")
     parser.add_argument("--logprob_other", action="store_true")
+
+    parser.add_argument("--gen_perturb", action="store_true")
+    parser.add_argument("--logprob_perturb", action="store_true")
 
     args = parser.parse_args()
 
@@ -524,3 +604,69 @@ if __name__ == "__main__":
         ]
 
         generate_logprobs(get_generate_dataset(*other_datasets))
+
+    if args.gen_perturb:
+        perturb_fns = {
+            "letter": perturb_letter,
+            "word": perturb_word,
+            "sentences": petrub_sent,
+            "paragraphs": perturb_para,
+        }
+
+        if not os.path.exists("data/perturb"):
+            os.makedirs("data/perturb")
+
+        np.random.seed(args.seed)
+        # Construct the test/train split. Seed of 0 ensures seriality across
+        # all files performing the same split.
+        indices = np.arange(6000)
+        np.random.shuffle(indices)
+
+        train, test = (
+            indices[: math.floor(0.8 * len(indices))],
+            indices[math.floor(0.8 * len(indices)) :],
+        )
+
+        # [4320 2006 5689 ... 4256 5807 4875] [5378 5980 5395 ... 1653 2607 2732]
+        print("Train/Test Split:", train, test)
+        files = generate_dataset_fn(lambda f: f, verbose=False)
+
+        indices = np.arange(len(test))
+        np.random.shuffle(indices)
+        indices = indices[:200]
+
+        labels = []
+        for file in files[test][indices]:
+            if "human" in file and "gpt" not in file:
+                labels.append(0)
+            elif "gpt" in file and "human" not in file:
+                labels.append(1)
+            else:
+                raise ValueError("Invalid file name")
+
+        with open("data/perturb/labels.txt", "w") as f:
+            f.write("\n".join([str(i) for i in labels]))
+
+        # Generate the perturbed documents
+        num_perturb = [0, 10, 25, 50, 100, 200]
+        for n in tqdm.tqdm(num_perturb):
+            for perturb_type, func in perturb_fns.items():
+                if not os.path.exists(f"data/perturb/{perturb_type}/{n}"):
+                    os.makedirs(f"data/perturb/{perturb_type}/{n}")
+
+                for idx, file in enumerate(files[test][indices]):
+                    with open(file, "r") as f:
+                        doc = f.read().strip()
+
+                    perturb_doc = func(doc, n=n)
+                    with open(f"data/perturb/{perturb_type}/{n}/{idx}.txt", "w") as f:
+                        f.write(perturb_doc)
+
+    if args.logprob_perturb:
+        perturb_datasets = [
+            Dataset("normal", f"data/perturb/{perturb_type}/{n}")
+            for perturb_type in ["letter", "word", "sentences", "paragraphs"]
+            for n in [0, 10, 25, 50, 100, 200]
+        ]
+
+        generate_logprobs(get_generate_dataset(*perturb_datasets))
