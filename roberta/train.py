@@ -94,7 +94,7 @@ def train_roberta_model(train_text, train_labels, output_dir):
 
     prev_val_loss = float("inf")
 
-    for epoch in range(5):
+    for epoch in range(1):
         roberta_model.train()
 
         for batch in tqdm.tqdm(train_loader):

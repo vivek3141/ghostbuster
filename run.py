@@ -24,11 +24,14 @@ from transformers import RobertaForSequenceClassification, RobertaTokenizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 from sklearn.model_selection import GridSearchCV
+from sklearn.calibration import CalibratedClassifierCV
 
 # Local Imports
 from utils.featurize import normalize, t_featurize, select_features
 from utils.symbolic import get_all_logprobs, get_exp_featurize
 from utils.load import Dataset, get_generate_dataset
+
+from generate import perturb_char_names, perturb_char_sizes
 
 models = ["gpt"]
 domains = ["wp", "reuter", "essay"]
@@ -167,6 +170,9 @@ if __name__ == "__main__":
     parser.add_argument("--hyperparameter_search", action="store_true")
 
     parser.add_argument("--perturb", action="store_true")
+    parser.add_argument("--calibration", action="store_true")
+
+    parser.add_argument("--toefl", action="store_true")
 
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--output_file", type=str, default="results.csv")
@@ -403,11 +409,7 @@ if __name__ == "__main__":
         )
 
     if args.roberta:
-        run_experiment(
-            [],
-            "RoBERTa",
-            get_roberta_predictions,
-        )
+        run_experiment([], "RoBERTa", get_roberta_predictions, gpt_only=True)
 
     if args.ghostbuster_depth_one or args.ghostbuster:
         run_experiment(
@@ -743,6 +745,108 @@ if __name__ == "__main__":
             ]
         )
 
+    if args.toefl:
+
+        def get_data(generate_dataset_fn, best_features):
+            davinci, ada, trigram, unigram = get_all_logprobs(
+                generate_dataset_fn,
+                trigram=trigram_model,
+                tokenizer=tokenizer,
+            )
+            vector_map = {
+                "davinci-logprobs": lambda file: davinci[file],
+                "ada-logprobs": lambda file: ada[file],
+                "trigram-logprobs": lambda file: trigram[file],
+                "unigram-logprobs": lambda file: unigram[file],
+            }
+            exp_featurize = get_exp_featurize(best_features, vector_map)
+            exp_data = generate_dataset_fn(exp_featurize)
+
+            t_data = generate_dataset_fn(t_featurize, verbose=True)
+
+            return np.concatenate([t_data, exp_data], axis=1)
+
+        # Evaluate on data contained in data/other/toefl91
+        data = get_featurized_data(best_features_map["best_features_three"])
+        data, mu, sigma = normalize(data, ret_mu_sigma=True)
+
+        model = LogisticRegression()
+        model.fit(
+            data[indices_dict["gpt_train"] + indices_dict["human_train"]],
+            labels[indices_dict["gpt_train"] + indices_dict["human_train"]],
+        )
+        print(
+            f"Model F1: {f1_score(labels[indices_dict['gpt_test'] + indices_dict['human_test']], model.predict(data[indices_dict['gpt_test'] + indices_dict['human_test']]))}"
+        )
+
+        toefl = get_generate_dataset(Dataset("normal", "data/other/toefl91"))
+        toefl_labels = toefl(lambda _: 0)
+        toefl_data = get_data(toefl, best_features_map["best_features_three"])
+        toefl_data = normalize(toefl_data, mu=mu, sigma=sigma)
+
+        results_table.append(
+            [
+                "Ghostbuster",
+                f"Out-Domain (toefl)",
+                accuracy_score(toefl_labels, model.predict(toefl_data)),
+            ]
+        )
+
+        # Do with perplexity only
+        perplxity_data = get_featurized_data(["davinci-logprobs s-avg"], gpt_only=True)
+
+        perplexity_model = LogisticRegression()
+        perplexity_model.fit(
+            perplxity_data[indices_dict["gpt_train"] + indices_dict["human_train"]],
+            labels[indices_dict["gpt_train"] + indices_dict["human_train"]],
+        )
+
+        toefl_data = get_data(toefl, ["davinci-logprobs s-avg"])
+
+        results_table.append(
+            [
+                "Perplexity Only",
+                f"Out-Domain (toefl)",
+                accuracy_score(toefl_labels, perplexity_model.predict(toefl_data)),
+            ]
+        )
+
+        # Do RoBERTa
+        roberta_model = RobertaForSequenceClassification.from_pretrained(
+            f"roberta/models/roberta_gpt", num_labels=2
+        )
+        roberta_model.to(device)
+
+        roberta_predictions = []
+        with torch.no_grad():
+            for file in tqdm.tqdm(toefl(lambda file: file)):
+                with open(file) as f:
+                    text = f.read()
+                inputs = roberta_tokenizer(
+                    text,
+                    return_tensors="pt",
+                    truncation=True,
+                    padding="max_length",
+                    max_length=512,
+                )
+                inputs = {k: v.to(device) for k, v in inputs.items()}
+                outputs = roberta_model(**inputs)
+                roberta_predictions.append(
+                    float(F.softmax(outputs.logits, dim=1)[0][1].item())
+                )
+
+        results_table.append(
+            [
+                "RoBERTa",
+                f"Out-Domain (toefl)",
+                accuracy_score(toefl_labels, np.array(roberta_predictions) > 0.5),
+            ]
+        )
+
+        results_table.append(["GPT Zero", f"Out-Domain (toefl)", 0.923077])
+
+        results_table.append(["DetectGPT", f"Out-Domain (toefl)", 0.6373626373626373])
+
     if args.ghostbuster_vary_training_data:
         exp_to_data_three = pickle.load(open("symbolic_data_gpt", "rb"))
 
@@ -836,7 +940,7 @@ if __name__ == "__main__":
         plt.savefig("results/training_size.png")
 
     if args.ghostbuster_vary_document_size:
-        token_sizes = [10, 25, 50, 100, 200, 400, 800, 1600, 2047]
+        token_sizes = [10, 25, 50, 100, 250, 500, 1000]
         scores = []
 
         train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
@@ -846,6 +950,7 @@ if __name__ == "__main__":
         )
 
         data = get_featurized_data(best_features_map["best_features_three"])
+        data, mu, sigma = normalize(data, ret_mu_sigma=True)
 
         for num_tokens in tqdm.tqdm(token_sizes):
             print(f"Now running size: {num_tokens}")
@@ -871,6 +976,7 @@ if __name__ == "__main__":
             )
             curr_exp_data = generate_dataset_fn(exp_featurize)
             curr_data = np.concatenate([curr_t_data, curr_exp_data], axis=1)
+            curr_data = normalize(curr_data, mu=mu, sigma=sigma)
 
             curr_score_vec = []
             print(data.shape)
@@ -1016,8 +1122,8 @@ if __name__ == "__main__":
         data = defaultdict(list)
         files = generate_dataset_fn_gpt(lambda x: x)
 
-        for perturb_type in tqdm.tqdm(["letter", "word", "sentences", "paragraphs"]):
-            for n in [0, 10, 25, 50, 100, 200]:
+        for perturb_type in tqdm.tqdm(perturb_char_names):
+            for n in perturb_char_sizes:
                 gen_fn = get_generate_dataset(
                     Dataset("normal", f"data/perturb/{perturb_type}/{n}")
                 )
@@ -1043,14 +1149,86 @@ if __name__ == "__main__":
                 _, f1, _ = get_scores(curr_labels, probs)
                 data[perturb_type].append(f1)
 
-        plt.plot([0, 10, 25, 50, 100, 200], data["letter"], label="Letter")
-        plt.plot([0, 10, 25, 50, 100, 200], data["word"], label="Word")
-        plt.plot([0, 10, 25, 50, 100, 200], data["sentences"], label="Sentence")
-        plt.plot([0, 10, 25, 50, 100, 200], data["paragraphs"], label="Paragraph")
+        for perturb_type in perturb_char_names:
+            plt.plot(
+                perturb_char_sizes,
+                data[perturb_type],
+                label=perturb_type,
+            )
+
         plt.xlabel("Number of Perturbations")
         plt.ylabel("F1 Score")
         plt.legend()
-        plt.savefig("results/perturb.png")
+        plt.savefig("results/perturb_char.png")
+
+    if args.calibration:
+
+        def calculate_ece(y_true, y_probs, n_bins=10):
+            """Compute ECE"""
+            bin_lowers = np.linspace(0.0, 1.0 - 1.0 / n_bins, n_bins)
+            bin_uppers = np.linspace(1.0 / n_bins, 1.0, n_bins)
+
+            ece = 0.0
+            for bin_lower, bin_upper in zip(bin_lowers, bin_uppers):
+                in_bin = np.logical_and(bin_lower <= y_probs, y_probs < bin_upper)
+                prop_in_bin = np.mean(in_bin)
+                if prop_in_bin > 0:
+                    y_true_bin = y_true[in_bin]
+                    avg_confidence_in_bin = np.mean(y_probs[in_bin])
+                    avg_accuracy_in_bin = np.mean(y_true_bin)
+                    ece += (
+                        np.abs(avg_accuracy_in_bin - avg_confidence_in_bin)
+                        * prop_in_bin
+                    )
+
+            return ece
+
+        def train_ghostbuster_ece(data, train, test, domain):
+            model = LogisticRegression()
+            model.fit(data[train], labels[train])
+            probs = model.predict_proba(data[test])[:, 1]
+
+            return [calculate_ece(labels[test], probs)]
+
+        def train_ghostbuster_calibrated_ece(data, train, test, domain):
+            clf = LogisticRegression()
+            model = CalibratedClassifierCV(clf, method="isotonic", cv=5)
+            model.fit(data[train], labels[train])
+            probs = model.predict_proba(data[test])[:, 1]
+
+            return [calculate_ece(labels[test], probs)]
+
+        run_experiment(
+            best_features_map["best_features_three"],
+            "Ghostbuster (Uncalibrated)",
+            train_ghostbuster_ece,
+        )
+
+        run_experiment(
+            best_features_map["best_features_three"],
+            "Ghostbuster (Calibrated)",
+            train_ghostbuster_calibrated_ece,
+        )
+
+        # data = normalize(get_featurized_data(best_features_map["best_features_three"]))
+        # train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
+        # test_indices = indices_dict["gpt_test"] + indices_dict["human_test"]
+
+        # print(train_ghostbuster_ece(data, train_indices, test_indices, "gpt"))
+        # print(train_ghostbuster_calibrated_ece(data, train_indices, test_indices, "gpt"))
+
+        # base_model = LogisticRegression()
+        # base_model.fit(data[train_indices], labels[train_indices])
+        # base_probs = base_model.predict_proba(data[test_indices])[:, 1]
+
+        # print(f"Base ECE: {calculate_ece(labels[test_indices], base_probs)}")
+
+        # clf = LogisticRegression()
+        # model = CalibratedClassifierCV(clf, cv=5)
+        # model.fit(data[train_indices], labels[train_indices])
+        # probs = model.predict_proba(data[test_indices])[:, 1]
+
+        # print(f"Calibrated ECE: {calculate_ece(labels[test_indices], probs)}")
 
     if len(results_table) > 1:
         # Write data to output csv file
