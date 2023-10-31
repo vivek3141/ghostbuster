@@ -188,6 +188,10 @@ roberta/models*
 symbolic_data*
 t_data*
 
+eve.csv
 gpt_zero.ipynb
 detect_gpt.ipynb
 zero_shot.ipynb
+*.ipynb
+
+temp

@@ -6,7 +6,9 @@ import os
 import math
 import nltk
 import numpy as np
+import string
 
+from nltk.corpus import wordnet
 from datasets import load_dataset
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 from tenacity import (
@@ -18,6 +20,9 @@ from utils.generate import generate_documents
 from utils.write_logprobs import write_logprobs
 from utils.symbolic import convert_file_to_logprob_file
 from utils.load import Dataset, get_generate_dataset
+
+nltk.download("wordnet")
+nltk.download('omw-1.4')
 
 datasets = [
     Dataset("normal", "data/wp/human"),
@@ -37,6 +42,32 @@ html_replacements = [
     ("&quot;", '"'),
     ("&apos;", "'"),
 ]
+
+perturb_char_names = [
+    "char_basic",
+    "char_space",
+    "char_cap",
+    "word_adj",
+    "word_syn",
+] 
+perturb_char_sizes = [0, 1, 2, 3, 4, 5, 10, 20, 50, 100, 200]
+
+
+def closest_synonym(word):
+    synonyms = wordnet.synsets(word)
+    if not synonyms:
+        return None  # Return None if there are no synonyms
+    closest_synset = synonyms[0]  # Assume the first synset is the closest
+    for synset in synonyms[1:]:
+        # Update closest_synset if we find a synset with more lemmas (synonyms)
+        if len(synset.lemmas()) > len(closest_synset.lemmas()):
+            closest_synset = synset
+    # Return the name of the lemma from the closest synset
+    # that is not the same as the input word
+    for lemma in closest_synset.lemmas():
+        if lemma.name() != word:
+            return lemma.name()
+    return None
 
 
 def html_replace(text):
@@ -123,7 +154,6 @@ def petrub_sent(doc, n=1):
         return (" ".join(doc)).strip()
 
     for _ in range(n):
-        # Account for the fact that some sentences have new lines in them, so keep them where they were
         idx = np.random.randint(len(doc) - 1)
         doc[idx], doc[idx + 1] = doc[idx + 1], doc[idx]
 
@@ -183,8 +213,11 @@ if __name__ == "__main__":
     parser.add_argument("--logprobs", action="store_true")
     parser.add_argument("--logprob_other", action="store_true")
 
-    parser.add_argument("--gen_perturb", action="store_true")
-    parser.add_argument("--logprob_perturb", action="store_true")
+    parser.add_argument("--gen_perturb_char", action="store_true")
+    parser.add_argument("--logprob_perturb_char", action="store_true")
+
+    parser.add_argument("--gen_perturb_sent", action="store_true")
+    parser.add_argument("--logprob_perturb_sent", action="store_true")
 
     args = parser.parse_args()
 
@@ -601,16 +634,98 @@ if __name__ == "__main__":
             Dataset("normal", "data/other/pelic"),
             Dataset("normal", "data/other/gptzero/gpt"),
             Dataset("normal", "data/other/gptzero/human"),
+            Dataset("normal", "data/other/toefl91"),
         ]
 
         generate_logprobs(get_generate_dataset(*other_datasets))
 
-    if args.gen_perturb:
-        perturb_fns = {
-            "letter": perturb_letter,
-            "word": perturb_word,
-            "sentences": petrub_sent,
-            "paragraphs": perturb_para,
+    if args.gen_perturb_char:
+
+        def perturb_char_basic(doc, n=1):
+            if len(doc) < 2:
+                return doc
+
+            for _ in range(n):
+                peturb_type = np.random.choice(["swap", "delete", "insert"])
+                if peturb_type == "swap":
+                    idx = np.random.randint(len(doc) - 1)
+                    doc = doc[:idx] + doc[idx + 1] + doc[idx] + doc[idx + 2 :]
+                elif peturb_type == "delete" and len(doc) > 1:
+                    idx = np.random.randint(len(doc))
+                    doc = doc[:idx] + doc[idx + 1 :]
+                elif peturb_type == "insert":
+                    idx = np.random.randint(len(doc))
+                    doc = (
+                        doc[:idx]
+                        + np.random.choice(list(string.ascii_letters))
+                        + doc[idx:]
+                    )
+            return doc
+
+        def perturb_char_space(doc, n=1):
+            if len(doc) < 2:
+                return doc
+
+            for _ in range(n):
+                perturb_type = np.random.choice(["insert", "delete"])
+                if perturb_type == "insert":
+                    idx = np.random.randint(len(doc))
+                    doc = doc[:idx] + " " + doc[idx:]
+                elif perturb_type == "delete":
+                    space_indices = [
+                        idx for idx, c in enumerate(doc) if c == " " or c == "\n"
+                    ]
+                    if len(space_indices) > 0:
+                        idx = np.random.choice(space_indices)
+                        doc = doc[:idx] + doc[idx + 1 :]
+            return doc
+
+        def perturb_char_cap(doc, n=1):
+            if len(doc) < 2:
+                return doc
+
+            for _ in range(n):
+                idx = np.random.randint(len(doc))
+                if doc[idx].isalpha():
+                    if doc[idx].isupper():
+                        doc = doc[:idx] + doc[idx].lower() + doc[idx + 1 :]
+                    else:
+                        doc = doc[:idx] + doc[idx].upper() + doc[idx + 1 :]
+            return doc
+
+        def perturb_word_adj(doc, n=1):
+            words = doc.split(" ")
+            if len(words) < 2:
+                return doc
+
+            for _ in range(n):
+                idx = np.random.randint(len(words) - 1)
+                words[idx], words[idx + 1] = words[idx + 1], words[idx]
+            doc = " ".join(words)
+
+            return doc
+
+        def perturb_word_syn(doc, n=1):
+            words = doc.split(" ")
+            if len(words) < 2:
+                return doc
+
+            for _ in range(n):
+                idx = np.random.randint(len(words))
+                word = words[idx]
+                synonym = closest_synonym(word)
+                if synonym:
+                    words[idx] = synonym
+            doc = " ".join(words)
+
+            return doc
+
+        perturb_char_word_fns = {
+            "char_basic": perturb_char_basic,
+            "char_space": perturb_char_space,
+            "char_cap": perturb_char_cap,
+            "word_adj": perturb_word_adj,
+            "word_syn": perturb_word_syn,
         }
 
         if not os.path.exists("data/perturb"):
@@ -648,9 +763,9 @@ if __name__ == "__main__":
             f.write("\n".join([str(i) for i in labels]))
 
         # Generate the perturbed documents
-        num_perturb = [0, 10, 25, 50, 100, 200]
+        num_perturb = [0, 1, 2, 3, 4, 5, 10, 20, 50, 100, 200]
         for n in tqdm.tqdm(num_perturb):
-            for perturb_type, func in perturb_fns.items():
+            for perturb_type, func in perturb_char_word_fns.items():
                 if not os.path.exists(f"data/perturb/{perturb_type}/{n}"):
                     os.makedirs(f"data/perturb/{perturb_type}/{n}")
 
@@ -662,11 +777,11 @@ if __name__ == "__main__":
                     with open(f"data/perturb/{perturb_type}/{n}/{idx}.txt", "w") as f:
                         f.write(perturb_doc)
 
-    if args.logprob_perturb:
+    if args.logprob_perturb_char:
         perturb_datasets = [
             Dataset("normal", f"data/perturb/{perturb_type}/{n}")
-            for perturb_type in ["letter", "word", "sentences", "paragraphs"]
-            for n in [0, 10, 25, 50, 100, 200]
+            for perturb_type in perturb_char_names 
+            for n in perturb_char_sizes 
         ]
 
         generate_logprobs(get_generate_dataset(*perturb_datasets))

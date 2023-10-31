@@ -1,0 +1,25 @@
+Model Type,Experiment,Accuracy,F1,AUC
+Ghostbuster,"Out-Domain (letter, 0)",0.985,0.983957,0.998095
+Ghostbuster,"Out-Domain (letter, 10)",0.905,0.888889,0.989474
+Ghostbuster,"Out-Domain (letter, 25)",0.655,0.429752,0.970125
+Ghostbuster,"Out-Domain (letter, 50)",0.535,0.041237,0.957594
+Ghostbuster,"Out-Domain (letter, 100)",0.525,0.0,0.937343
+Ghostbuster,"Out-Domain (letter, 200)",0.525,0.0,0.899348
+Ghostbuster,"Out-Domain (word, 0)",0.985,0.983957,0.998095
+Ghostbuster,"Out-Domain (word, 10)",0.82,0.766234,0.967519
+Ghostbuster,"Out-Domain (word, 25)",0.555,0.118812,0.94807
+Ghostbuster,"Out-Domain (word, 50)",0.525,0.0,0.918095
+Ghostbuster,"Out-Domain (word, 100)",0.525,0.0,0.922907
+Ghostbuster,"Out-Domain (word, 200)",0.525,0.0,0.915088
+Ghostbuster,"Out-Domain (sentences, 0)",0.98,0.978723,0.997794
+Ghostbuster,"Out-Domain (sentences, 10)",0.985,0.983957,0.994386
+Ghostbuster,"Out-Domain (sentences, 25)",0.98,0.978723,0.993083
+Ghostbuster,"Out-Domain (sentences, 50)",0.975,0.972973,0.995789
+Ghostbuster,"Out-Domain (sentences, 100)",0.965,0.961749,0.994586
+Ghostbuster,"Out-Domain (sentences, 200)",0.975,0.973262,0.994787
+Ghostbuster,"Out-Domain (paragraphs, 0)",0.98,0.978723,0.998095
+Ghostbuster,"Out-Domain (paragraphs, 10)",0.985,0.983957,0.997895
+Ghostbuster,"Out-Domain (paragraphs, 25)",0.98,0.978495,0.997594
+Ghostbuster,"Out-Domain (paragraphs, 50)",0.975,0.973262,0.997794
+Ghostbuster,"Out-Domain (paragraphs, 100)",0.975,0.972973,0.998897
+Ghostbuster,"Out-Domain (paragraphs, 200)",0.975,0.973262,0.998897
