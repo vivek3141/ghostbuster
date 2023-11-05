@@ -1119,40 +1119,49 @@ if __name__ == "__main__":
 
             return np.concatenate([t_data, exp_data], axis=1)
 
-        data = defaultdict(list)
-        files = generate_dataset_fn_gpt(lambda x: x)
+        def get_perturb_data(perturb_names, save_file):
+            data = defaultdict(list)
+            files = generate_dataset_fn_gpt(lambda x: x)
 
-        for perturb_type in tqdm.tqdm(perturb_char_names):
-            for n in perturb_char_sizes:
-                gen_fn = get_generate_dataset(
-                    Dataset("normal", f"data/perturb/{perturb_type}/{n}")
-                )
-                curr_labels = gen_fn(
-                    lambda file: perturb_labels[
-                        int(os.path.basename(file).split(".")[0])
-                    ]
-                )
+            for perturb_type in tqdm.tqdm(perturb_names):
+                for n in perturb_char_sizes:
+                    gen_fn = get_generate_dataset(
+                        Dataset("normal", f"data/perturb/{perturb_type}/{n}")
+                    )
+                    curr_labels = gen_fn(
+                        lambda file: perturb_labels[
+                            int(os.path.basename(file).split(".")[0])
+                        ]
+                    )
 
-                curr_data = get_data(gen_fn, best_features_map["best_features_three"])
-                curr_data = (curr_data - mu) / sigma
+                    curr_data = get_data(
+                        gen_fn, best_features_map["best_features_three"]
+                    )
+                    curr_data = (curr_data - mu) / sigma
+                    probs = model.predict_proba(curr_data)[:, 1]
 
-                probs = model.predict_proba(curr_data)[:, 1]
+                    results_table.append(
+                        [
+                            "Ghostbuster",
+                            f"Out-Domain ({perturb_type}, {n})",
+                            *get_scores(curr_labels, probs),
+                        ]
+                    )
 
-                results_table.append(
-                    [
-                        "Ghostbuster",
-                        f"Out-Domain ({perturb_type}, {n})",
-                        *get_scores(curr_labels, probs),
-                    ]
-                )
+                    _, f1, _ = get_scores(curr_labels, probs)
+                    data[perturb_type].append(f1)
 
-                _, f1, _ = get_scores(curr_labels, probs)
-                data[perturb_type].append(f1)
+            np.save(save_file, data)
+            return data
+
+        perturb_char_data = get_perturb_data(
+            perturb_char_names, "results/perturb_char.npy"
+        )
 
         for perturb_type in perturb_char_names:
             plt.plot(
                 perturb_char_sizes,
-                data[perturb_type],
+                perturb_char_data[perturb_type],
                 label=perturb_type,
             )
 
