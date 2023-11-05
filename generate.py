@@ -7,6 +7,7 @@ import math
 import nltk
 import numpy as np
 import string
+import torch
 
 from nltk.corpus import wordnet
 from datasets import load_dataset
@@ -16,13 +17,16 @@ from tenacity import (
     stop_after_attempt,
     wait_random_exponential,
 )
+from transformers import PegasusForConditionalGeneration, PegasusTokenizer
+
 from utils.generate import generate_documents
 from utils.write_logprobs import write_logprobs
 from utils.symbolic import convert_file_to_logprob_file
 from utils.load import Dataset, get_generate_dataset
 
+
 nltk.download("wordnet")
-nltk.download('omw-1.4')
+nltk.download("omw-1.4")
 
 datasets = [
     Dataset("normal", "data/wp/human"),
@@ -49,8 +53,11 @@ perturb_char_names = [
     "char_cap",
     "word_adj",
     "word_syn",
-] 
+]
 perturb_char_sizes = [0, 1, 2, 3, 4, 5, 10, 20, 50, 100, 200]
+
+perturb_sent_names = ["sent_adj", "sent_paraph", "para_adj", "para_paraph"]
+perturb_sent_sizes = list(range(11))
 
 
 def closest_synonym(word):
@@ -116,62 +123,6 @@ def get_essay_prompts(words, prompts):
         f"Write a {words}-word essay in the style of a high-school student  in response to the following prompt: {prompt}.",
         f'Write an essay with very short sentences in {words} words to the prompt "{prompt}."',
     ]
-
-
-def perturb_letter(doc, n=1):
-    """
-    Randomly swap n pairs of adjacent letters in the document
-    """
-    if len(doc) < 2:
-        return doc
-
-    for _ in range(n):
-        idx = np.random.randint(len(doc) - 1)
-        doc = doc[:idx] + doc[idx + 1] + doc[idx] + doc[idx + 2 :]
-    return doc
-
-
-def perturb_word(doc, n=1):
-    """
-    Randomly swap n pairs of adjacent words in the document
-    """
-    doc = doc.split(" ")
-    if len(doc) < 2:
-        return " ".join(doc)
-
-    for _ in range(n):
-        idx = np.random.randint(len(doc) - 1)
-        doc[idx], doc[idx + 1] = doc[idx + 1], doc[idx]
-    return " ".join(doc)
-
-
-def petrub_sent(doc, n=1):
-    """
-    Randomly swap n pairs of adjacent sentences in the document
-    """
-    doc = nltk.sent_tokenize(doc)
-    if len(doc) < 2:
-        return (" ".join(doc)).strip()
-
-    for _ in range(n):
-        idx = np.random.randint(len(doc) - 1)
-        doc[idx], doc[idx + 1] = doc[idx + 1], doc[idx]
-
-    return (" ".join(doc)).strip()
-
-
-def perturb_para(doc, n=1):
-    """
-    Randomly swap n pairs of adjacent paragraphs in the document
-    """
-    doc = doc.split("\n")
-    if len(doc) < 2:
-        return "\n".join(doc)
-
-    for _ in range(n):
-        idx = np.random.randint(len(doc) - 1)
-        doc[idx], doc[idx + 1] = doc[idx + 1], doc[idx]
-    return "\n".join(doc)
 
 
 def generate_logprobs(generate_dataset_fn):
@@ -780,8 +731,149 @@ if __name__ == "__main__":
     if args.logprob_perturb_char:
         perturb_datasets = [
             Dataset("normal", f"data/perturb/{perturb_type}/{n}")
-            for perturb_type in perturb_char_names 
-            for n in perturb_char_sizes 
+            for perturb_type in perturb_char_names
+            for n in perturb_char_sizes
+        ]
+
+        generate_logprobs(get_generate_dataset(*perturb_datasets))
+
+    if args.gen_perturb_sent:
+        if torch.cuda.is_available():
+            device = "cuda"
+            print("Using GPU")
+        else:
+            device = "cpu"
+            print("Using CPU")
+
+        tokenizer = PegasusTokenizer.from_pretrained("tuner007/pegasus_paraphrase")
+        model = PegasusForConditionalGeneration.from_pretrained(
+            "tuner007/pegasus_paraphrase"
+        ).to(device)
+
+        def paraphrase(text):
+            batch = tokenizer(
+                [text], truncation=True, padding="longest", return_tensors="pt"
+            ).to(device)
+            translated = model.generate(**batch)
+            tgt_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
+            return tgt_text[0]
+
+        def perturb_sent_adj(doc, n=1):
+            """
+            Randomly swap n pairs of adjacent sentences in the document
+            """
+            doc = nltk.sent_tokenize(doc)
+            if len(doc) < 2:
+                return (" ".join(doc)).strip()
+
+            for _ in range(n):
+                idx = np.random.randint(len(doc) - 1)
+                doc[idx], doc[idx + 1] = doc[idx + 1], doc[idx]
+
+            return (" ".join(doc)).strip()
+
+        def perturb_sent_paraph(doc, n=1):
+            """
+            Randomly paraphrase n sentences in the document
+            """
+            doc = nltk.sent_tokenize(doc)
+            if len(doc) < 1:
+                return (" ".join(doc)).strip()
+
+            for _ in range(n):
+                idx = np.random.randint(len(doc))
+                doc[idx] = paraphrase(doc[idx])
+
+            return (" ".join(doc)).strip()
+
+        def perturb_para_adj(doc, n=1):
+            """
+            Randomly swap n pairs of adjacent paragraphs in the document
+            """
+            doc = doc.split("\n")
+            if len(doc) < 2:
+                return "\n".join(doc)
+
+            for _ in range(n):
+                idx = np.random.randint(len(doc) - 1)
+                doc[idx], doc[idx + 1] = doc[idx + 1], doc[idx]
+            return "\n".join(doc)
+
+        def perturb_para_paraph(doc, n=1):
+            """
+            Randomly paraphrase n paragraphs in the document
+            """
+            doc = doc.split("\n")
+            if len(doc) < 1:
+                return "\n".join(doc)
+
+            for _ in range(n):
+                idx = np.random.randint(len(doc))
+                doc[idx] = paraphrase(doc[idx])
+
+            return "\n".join(doc)
+
+        perturb_sent_fns = {
+            "sent_adj": perturb_sent_adj,
+            "sent_paraph": perturb_sent_paraph,
+            "para_adj": perturb_para_adj,
+            "para_paraph": perturb_para_paraph,
+        }
+
+        if not os.path.exists("data/perturb"):
+            os.makedirs("data/perturb")
+
+        np.random.seed(args.seed)
+        # Construct the test/train split. Seed of 0 ensures seriality across
+        # all files performing the same split.
+        indices = np.arange(6000)
+        np.random.shuffle(indices)
+
+        train, test = (
+            indices[: math.floor(0.8 * len(indices))],
+            indices[math.floor(0.8 * len(indices)) :],
+        )
+
+        # [4320 2006 5689 ... 4256 5807 4875] [5378 5980 5395 ... 1653 2607 2732]
+        print("Train/Test Split:", train, test)
+        files = generate_dataset_fn(lambda f: f, verbose=False)
+
+        indices = np.arange(len(test))
+        np.random.shuffle(indices)
+        indices = indices[:200]
+
+        labels = []
+        for file in files[test][indices]:
+            if "human" in file and "gpt" not in file:
+                labels.append(0)
+            elif "gpt" in file and "human" not in file:
+                labels.append(1)
+            else:
+                raise ValueError("Invalid file name")
+
+        with open("data/perturb/labels.txt", "w") as f:
+            f.write("\n".join([str(i) for i in labels]))
+
+        # Generate the perturbed documents
+        num_perturb = list(range(11))
+        for n in tqdm.tqdm(num_perturb):
+            for perturb_type, func in perturb_sent_fns.items():
+                if not os.path.exists(f"data/perturb/{perturb_type}/{n}"):
+                    os.makedirs(f"data/perturb/{perturb_type}/{n}")
+
+                for idx, file in enumerate(files[test][indices]):
+                    with open(file, "r") as f:
+                        doc = f.read().strip()
+
+                    perturb_doc = func(doc, n=n)
+                    with open(f"data/perturb/{perturb_type}/{n}/{idx}.txt", "w") as f:
+                        f.write(perturb_doc)
+
+    if args.logprob_perturb_sent:
+        perturb_datasets = [
+            Dataset("normal", f"data/perturb/{perturb_type}/{n}")
+            for perturb_type in perturb_sent_names
+            for n in perturb_sent_sizes
         ]
 
         generate_logprobs(get_generate_dataset(*perturb_datasets))
