@@ -32,6 +32,7 @@ from utils.symbolic import get_all_logprobs, get_exp_featurize
 from utils.load import Dataset, get_generate_dataset
 
 from generate import perturb_char_names, perturb_char_sizes
+from generate import perturb_sent_names, perturb_sent_sizes
 
 models = ["gpt"]
 domains = ["wp", "reuter", "essay"]
@@ -1119,12 +1120,11 @@ if __name__ == "__main__":
 
             return np.concatenate([t_data, exp_data], axis=1)
 
-        def get_perturb_data(perturb_names, save_file):
+        def get_perturb_data(perturb_names, perturb_sizes, save_file):
             data = defaultdict(list)
-            files = generate_dataset_fn_gpt(lambda x: x)
 
             for perturb_type in tqdm.tqdm(perturb_names):
-                for n in perturb_char_sizes:
+                for n in perturb_sizes:
                     gen_fn = get_generate_dataset(
                         Dataset("normal", f"data/perturb/{perturb_type}/{n}")
                     )
@@ -1155,7 +1155,7 @@ if __name__ == "__main__":
             return data
 
         perturb_char_data = get_perturb_data(
-            perturb_char_names, "results/perturb_char.npy"
+            perturb_char_names, perturb_char_sizes, "results/perturb_char.npy"
         )
 
         for perturb_type in perturb_char_names:
@@ -1169,6 +1169,24 @@ if __name__ == "__main__":
         plt.ylabel("F1 Score")
         plt.legend()
         plt.savefig("results/perturb_char.png")
+
+        plt.clf()
+
+        perturb_sent_data = get_perturb_data(
+            perturb_sent_names, perturb_sent_sizes, "results/perturb_sent.npy"
+        )
+
+        for perturb_type in perturb_sent_names:
+            plt.plot(
+                perturb_sent_sizes,
+                perturb_sent_data[perturb_type],
+                label=perturb_type,
+            )
+
+        plt.xlabel("Number of Perturbations")
+        plt.ylabel("F1 Score")
+        plt.legend()
+        plt.savefig("results/perturb_sent.png")
 
     if args.calibration:
 
@@ -1218,26 +1236,6 @@ if __name__ == "__main__":
             "Ghostbuster (Calibrated)",
             train_ghostbuster_calibrated_ece,
         )
-
-        # data = normalize(get_featurized_data(best_features_map["best_features_three"]))
-        # train_indices = indices_dict["gpt_train"] + indices_dict["human_train"]
-        # test_indices = indices_dict["gpt_test"] + indices_dict["human_test"]
-
-        # print(train_ghostbuster_ece(data, train_indices, test_indices, "gpt"))
-        # print(train_ghostbuster_calibrated_ece(data, train_indices, test_indices, "gpt"))
-
-        # base_model = LogisticRegression()
-        # base_model.fit(data[train_indices], labels[train_indices])
-        # base_probs = base_model.predict_proba(data[test_indices])[:, 1]
-
-        # print(f"Base ECE: {calculate_ece(labels[test_indices], base_probs)}")
-
-        # clf = LogisticRegression()
-        # model = CalibratedClassifierCV(clf, cv=5)
-        # model.fit(data[train_indices], labels[train_indices])
-        # probs = model.predict_proba(data[test_indices])[:, 1]
-
-        # print(f"Calibrated ECE: {calculate_ece(labels[test_indices], probs)}")
 
     if len(results_table) > 1:
         # Write data to output csv file
