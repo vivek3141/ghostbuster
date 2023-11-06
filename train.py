@@ -91,6 +91,8 @@ if __name__ == "__main__":
 
     parser.add_argument("--perform_feature_selection_only_ada", action="store_true")
     parser.add_argument("--perform_feature_selection_no_gpt", action="store_true")
+    parser.add_argument("--perform_feature_selection_domain", action="store_true")
+
     parser.add_argument("--only_include_gpt", action="store_true")
     parser.add_argument("--train_on_all_data", action="store_true")
     parser.add_argument("--seed", type=int, default=0)
@@ -235,6 +237,32 @@ if __name__ == "__main__":
 
         with open("results/best_features_only_ada.txt", "w") as f:
             for feat in best_features:
+                f.write(feat + "\n")
+
+    if args.perform_feature_selection_domain:
+        wp_indices = np.where(generate_dataset_fn(lambda file: "wp" in file))[0]
+        reuter_indices = np.where(generate_dataset_fn(lambda file: "reuter" in file))[0]
+        essay_indices = np.where(generate_dataset_fn(lambda file: "essay" in file))[0]
+
+        wp_features = select_features(
+            exp_to_data, labels, verbose=True, to_normalize=True, indices=wp_indices
+        )
+        with open("results/best_features_wp.txt", "w") as f:
+            for feat in wp_features:
+                f.write(feat + "\n")
+
+        reuter_features = select_features(
+            exp_to_data, labels, verbose=True, to_normalize=True, indices=reuter_indices
+        )
+        with open("results/best_features_reuter.txt", "w") as f:
+            for feat in reuter_features:
+                f.write(feat + "\n")
+
+        essay_features = select_features(
+            exp_to_data, labels, verbose=True, to_normalize=True, indices=essay_indices
+        )
+        with open("results/best_features_essay.txt", "w") as f:
+            for feat in essay_features:
                 f.write(feat + "\n")
 
     data, mu, sigma = normalize(

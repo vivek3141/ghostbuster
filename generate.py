@@ -482,101 +482,15 @@ if __name__ == "__main__":
                     f.write(reply)
 
     if args.logprobs:
-        print("Generating WP logprobs...")
-
-        for idx in tqdm.tqdm(range(1, 1001)):
-            if not os.path.exists(f"data/wp/human/logprobs"):
-                os.makedirs(f"data/wp/human/logprobs")
-
-            with open(f"data/wp/human/{idx}.txt", "r") as f:
-                doc = f.read().strip()
-
-            if not os.path.exists(f"data/wp/human/logprobs/{idx}-davinci.txt"):
-                write_logprobs(
-                    doc, f"data/wp/human/logprobs/{idx}-davinci.txt", "davinci"
-                )
-
-            if not os.path.exists(f"data/wp/human/logprobs/{idx}-ada.txt"):
-                write_logprobs(doc, f"data/wp/human/logprobs/{idx}-ada.txt", "ada")
-
-            for type in prompt_types + ["claude"]:
-                if not os.path.exists(f"data/wp/{type}/logprobs"):
-                    os.makedirs(f"data/wp/{type}/logprobs")
-
-                with open(f"data/wp/{type}/{idx}.txt", "r") as f:
-                    doc = f.read().strip()
-
-                if not os.path.exists(f"data/wp/{type}/logprobs/{idx}-davinci.txt"):
-                    write_logprobs(
-                        doc, f"data/wp/{type}/logprobs/{idx}-davinci.txt", "davinci"
-                    )
-
-                if not os.path.exists(f"data/wp/{type}/logprobs/{idx}-ada.txt"):
-                    write_logprobs(doc, f"data/wp/{type}/logprobs/{idx}-ada.txt", "ada")
-
-        print("Generating Reuters logprobs...")
-
-        authors = os.listdir("data/reuter/human")
-        for type in ["human", "claude"] + prompt_types:
-            print(f"Generating {type} logprobs...")
-            for author in tqdm.tqdm(authors):
-                if not os.path.exists(f"data/reuter/{type}/{author}/logprobs"):
-                    os.makedirs(f"data/reuter/{type}/{author}/logprobs")
-
-                for i in range(1, 21):
-                    with open(f"data/reuter/{type}/{author}/{i}.txt", "r") as f:
-                        doc = f.read().strip()
-
-                    if not os.path.exists(
-                        f"data/reuter/{type}/{author}/logprobs/{i}-davinci.txt"
-                    ):
-                        write_logprobs(
-                            doc,
-                            f"data/reuter/{type}/{author}/logprobs/{i}-davinci.txt",
-                            "davinci",
-                        )
-                    if not os.path.exists(
-                        f"data/reuter/{type}/{author}/logprobs/{i}-ada.txt"
-                    ):
-                        write_logprobs(
-                            doc,
-                            f"data/reuter/{type}/{author}/logprobs/{i}-ada.txt",
-                            "ada",
-                        )
-
-        print("Generating Essay logprobs...")
-
-        for idx in tqdm.tqdm(range(1, 1001)):
-            if not os.path.exists(f"data/essay/human/logprobs"):
-                os.makedirs(f"data/essay/human/logprobs")
-
-            with open(f"data/essay/human/{idx}.txt", "r") as f:
-                doc = f.read().strip()
-
-            if not os.path.exists(f"data/essay/human/logprobs/{idx}-davinci.txt"):
-                write_logprobs(
-                    doc, f"data/essay/human/logprobs/{idx}-davinci.txt", "davinci"
-                )
-
-            if not os.path.exists(f"data/essay/human/logprobs/{idx}-ada.txt"):
-                write_logprobs(doc, f"data/essay/human/logprobs/{idx}-ada.txt", "ada")
-
-            for type in prompt_types + ["claude"]:
-                if not os.path.exists(f"data/essay/{type}/logprobs"):
-                    os.makedirs(f"data/essay/{type}/logprobs")
-
-                with open(f"data/essay/{type}/{idx}.txt", "r") as f:
-                    doc = f.read().strip()
-
-                if not os.path.exists(f"data/essay/{type}/logprobs/{idx}-davinci.txt"):
-                    write_logprobs(
-                        doc, f"data/essay/{type}/logprobs/{idx}-davinci.txt", "davinci"
-                    )
-
-                if not os.path.exists(f"data/essay/{type}/logprobs/{idx}-ada.txt"):
-                    write_logprobs(
-                        doc, f"data/essay/{type}/logprobs/{idx}-ada.txt", "ada"
-                    )
+        datasets = [
+            Dataset("normal", "data/wp/human"),
+            Dataset("normal", "data/wp/gpt"),
+            Dataset("author", "data/reuter/human"),
+            Dataset("author", "data/reuter/gpt"),
+            Dataset("normal", "data/essay/human"),
+            Dataset("normal", "data/essay/gpt"),
+        ]
+        generate_logprobs(get_generate_dataset(*datasets))
 
     if args.logprob_other:
         other_datasets = [
@@ -586,6 +500,7 @@ if __name__ == "__main__":
             Dataset("normal", "data/other/gptzero/gpt"),
             Dataset("normal", "data/other/gptzero/human"),
             Dataset("normal", "data/other/toefl91"),
+            Dataset("normal", "data/other/undetectable"),
         ]
 
         generate_logprobs(get_generate_dataset(*other_datasets))
