@@ -129,7 +129,7 @@ def get_scores(labels, probabilities, calibrated=False, precision=6):
 
     assert len(labels) == len(probabilities)
 
-    if sum(labels) == 0:
+    if sum(labels) == 0 or sum(labels) == len(labels):
         return (
             round(accuracy_score(labels, probabilities > threshold), precision),
             round(f1_score(labels, probabilities > threshold), precision),
@@ -678,6 +678,14 @@ if __name__ == "__main__":
             curr_labels,
             gpt_zero,
             "gptzero",
+        )
+
+        evaluate_on_dataset(
+            model,
+            best_features_map["best_features_three"],
+            [1] * 100,
+            get_generate_dataset(Dataset("normal", "data/other/undetectable")),
+            "undetectable",
         )
 
         gen_ets = get_generate_dataset(Dataset("normal", f"data/other/ets"))
