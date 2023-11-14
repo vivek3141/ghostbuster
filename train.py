@@ -240,6 +240,8 @@ if __name__ == "__main__":
                 f.write(feat + "\n")
 
     if args.perform_feature_selection_domain:
+        exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
+
         wp_indices = np.where(generate_dataset_fn(lambda file: "wp" in file))[0]
         reuter_indices = np.where(generate_dataset_fn(lambda file: "reuter" in file))[0]
         essay_indices = np.where(generate_dataset_fn(lambda file: "essay" in file))[0]
