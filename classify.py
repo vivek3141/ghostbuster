@@ -18,7 +18,7 @@ if args.openai_key != "":
 
 file = args.file
 MAX_TOKENS = 2048
-best_features = open("model/best_features.txt").read().strip().split("\n")
+best_features = open("model/features.txt").read().strip().split("\n")
 
 # Load davinci tokenizer
 enc = tiktoken.encoding_for_model("davinci")
