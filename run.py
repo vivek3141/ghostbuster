@@ -28,7 +28,7 @@ from sklearn.calibration import CalibratedClassifierCV
 
 # Local Imports
 from utils.featurize import normalize, t_featurize, select_features
-from utils.symbolic import get_all_logprobs, get_exp_featurize
+from utils.symbolic import get_all_logprobs, get_exp_featurize, backtrack_functions
 from utils.load import Dataset, get_generate_dataset
 
 from generate import perturb_char_names, perturb_char_sizes
@@ -158,6 +158,7 @@ if __name__ == "__main__":
     parser.add_argument("--ghostbuster_depth_three", action="store_true")
     parser.add_argument("--ghostbuster_depth_four", action="store_true")
 
+    parser.add_argument("--ghostbuster_random", action="store_true")
     parser.add_argument("--ghostbuster_no_gpt", action="store_true")
     parser.add_argument("--ghostbuster_no_handcrafted", action="store_true")
     parser.add_argument("--ghostbuster_no_symbolic", action="store_true")
@@ -452,6 +453,16 @@ if __name__ == "__main__":
         run_experiment(
             best_features_map["best_features_only_ada"],
             "Ghostbuster (N-Gram and Ada)",
+            train_ghostbuster,
+        )
+
+    if args.ghostbuster_random or args.ghostbuster:
+        all_features = backtrack_functions(max_depth=3)
+        random_features = np.random.choice(all_features, 10, replace=False)
+
+        run_experiment(
+            random_features,
+            "Ghostbuster (Random)",
             train_ghostbuster,
         )
 
