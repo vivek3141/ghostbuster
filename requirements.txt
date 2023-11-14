@@ -2,8 +2,10 @@ tqdm
 scikit-learn
 numpy
 tenacity
-openai
+openai==0.28.1
 torch
 tiktoken
 flask
 tabulate
+dill
+nltk

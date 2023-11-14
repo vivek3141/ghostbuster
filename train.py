@@ -117,6 +117,9 @@ if __name__ == "__main__":
             verbose=True,
         )
 
+        t_data = generate_dataset_fn(t_featurize)
+        pickle.dump(t_data, open("t_data", "wb"))
+
     if args.generate_symbolic_data_eval:
         generate_dataset_fn_eval = get_generate_dataset(*eval_dataset)
         generate_symbolic_data(
@@ -126,6 +129,9 @@ if __name__ == "__main__":
             verbose=True,
         )
 
+        t_data_eval = generate_dataset_fn_eval(t_featurize)
+        pickle.dump(t_data_eval, open("t_data_eval", "wb"))
+
     if args.generate_symbolic_data_four:
         generate_symbolic_data(
             generate_dataset_fn,
@@ -133,6 +139,9 @@ if __name__ == "__main__":
             output_file="symbolic_data_gpt_four",
             verbose=True,
         )
+
+        t_data = generate_dataset_fn(t_featurize)
+        pickle.dump(t_data, open("t_data", "wb"))
 
     labels = generate_dataset_fn(
         lambda file: 1 if any([m in file for m in ["gpt", "claude"]]) else 0
