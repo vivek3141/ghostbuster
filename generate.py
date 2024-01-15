@@ -129,6 +129,9 @@ def generate_logprobs(generate_dataset_fn):
     files = generate_dataset_fn(lambda f: f)
 
     for file in tqdm.tqdm(files):
+        if "logprobs" in file:
+            continue
+
         base_path = os.path.dirname(file) + "/logprobs"
         if not os.path.exists(base_path):
             os.mkdir(base_path)
@@ -137,12 +140,12 @@ def generate_logprobs(generate_dataset_fn):
             doc = f.read().strip()
 
         davinci_file = convert_file_to_logprob_file(file, "davinci")
-        if not os.path.exists(davinci_file):
-            write_logprobs(doc, davinci_file, "davinci")
+        # if not os.path.exists(davinci_file):
+        write_logprobs(doc, davinci_file, "davinci-002")
 
-        ada_file = convert_file_to_logprob_file(file, "ada")
-        if not os.path.exists(ada_file):
-            write_logprobs(doc, ada_file, "ada")
+        ada_file = convert_file_to_logprob_file(file, "babbage")
+        #if not os.path.exists(ada_file):
+        write_logprobs(doc, ada_file, "babbage-002")
 
 
 if __name__ == "__main__":

@@ -61,6 +61,8 @@ def get_generate_dataset(*datasets: Dataset):
         files = tqdm.tqdm(files) if verbose else files
 
         for file in files:
+            if "logprobs" in file:
+                continue
             data.append(featurize(file))
         return np.array(data)
 
