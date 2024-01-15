@@ -90,7 +90,7 @@ def train_trigram(verbose=True, return_tokenizer=False):
     Trains and returns a trigram model on the brown corpus
     """
 
-    enc = tiktoken.encoding_for_model("davinci")
+    enc = tiktoken.encoding_for_model("davinci-002")
     tokenizer = enc.encode
     vocab_size = enc.n_vocab
 
@@ -134,12 +134,15 @@ def get_all_logprobs(
     to_iter = tqdm.tqdm(file_names) if verbose else file_names
 
     for file in to_iter:
+        if "logprobs" in file:
+            continue
+
         with open(file, "r") as f:
             doc = preprocess(f.read())
         davinci_logprobs[file] = get_logprobs(
             convert_file_to_logprob_file(file, "davinci")
         )[:num_tokens]
-        ada_logprobs[file] = get_logprobs(convert_file_to_logprob_file(file, "ada"))[
+        ada_logprobs[file] = get_logprobs(convert_file_to_logprob_file(file, "babbage"))[
             :num_tokens
         ]
         trigram_logprobs[file] = score_ngram(doc, trigram, tokenizer, n=3)[:num_tokens]

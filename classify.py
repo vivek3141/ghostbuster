@@ -17,11 +17,11 @@ if args.openai_key != "":
     openai.api_key = args.openai_key
 
 file = args.file
-MAX_TOKENS = 2048
+MAX_TOKENS = 2047
 best_features = open("model/features.txt").read().strip().split("\n")
 
 # Load davinci tokenizer
-enc = tiktoken.encoding_for_model("davinci")
+enc = tiktoken.encoding_for_model("davinci-002")
 
 # Load model
 model = pickle.load(open("model/model", "rb"))

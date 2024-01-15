@@ -56,10 +56,10 @@ print("Loading trigram model...")
 trigram_model = pickle.load(
     open("model/trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL
 )
-tokenizer = tiktoken.encoding_for_model("davinci").encode
+tokenizer = tiktoken.encoding_for_model("davinci-002").encode
 
 print("Loading features...")
-exp_to_data = pickle.load(open("symbolic_data_gpt_four", "rb"))
+exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
 t_data = pickle.load(open("t_data", "rb"))
 
 print("Loading eval data...")

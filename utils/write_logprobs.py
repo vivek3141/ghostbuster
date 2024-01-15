@@ -2,7 +2,7 @@ import openai
 import json
 import tiktoken
 
-tokenizer = tiktoken.encoding_for_model("davinci")
+tokenizer = tiktoken.encoding_for_model("davinci-002")
 
 
 def write_logprobs(text, file, model):
