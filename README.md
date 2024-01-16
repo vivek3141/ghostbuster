@@ -1,4 +1,4 @@
-# Ghostbuster: Detecting Text <i>Ghostwritten</i> by Large Language Models <a href="https://arxiv.org/abs/2305.15047">[paper]</a> <a href="https://ghostbuster.app">[demo]</a>
+# Ghostbuster: Detecting Text <i>Ghostwritten</i> by Large Language Models <a href="https://arxiv.org/abs/2305.15047">[paper]</a> <a href="https://ghostbuster.app">[demo]</a> <a href="https://github.com/vivek3141/ghostbuster-data">[data]</a>
 
 We introduce Ghostbuster, a state-of-the-art system for detecting AI-generated text. Our method works by passing documents through a series of weaker language models, running a structured search over possible combinations of their features, and then training a classifier on the selected features to predict whether documents are AI-generated. 
 
