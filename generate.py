@@ -18,15 +18,21 @@ from tenacity import (
     wait_random_exponential,
 )
 from transformers import PegasusForConditionalGeneration, PegasusTokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from utils.generate import generate_documents
-from utils.write_logprobs import write_logprobs
+from utils.write_logprobs import write_logprobs, write_llama_logprobs
 from utils.symbolic import convert_file_to_logprob_file
 from utils.load import Dataset, get_generate_dataset
 
 
 nltk.download("wordnet")
 nltk.download("omw-1.4")
+
+
+llama_tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("Using device:", device)
 
 datasets = [
     Dataset("normal", "data/wp/human"),
@@ -125,7 +131,7 @@ def get_essay_prompts(words, prompts):
     ]
 
 
-def generate_logprobs(generate_dataset_fn):
+def generate_logprobs(generate_dataset_fn, llama_7b_model=None, llama_13b_model=None):
     files = generate_dataset_fn(lambda f: f)
 
     for file in tqdm.tqdm(files):
@@ -140,12 +146,20 @@ def generate_logprobs(generate_dataset_fn):
             doc = f.read().strip()
 
         davinci_file = convert_file_to_logprob_file(file, "davinci")
-        # if not os.path.exists(davinci_file):
-        write_logprobs(doc, davinci_file, "davinci-002")
+        if not os.path.exists(davinci_file):
+            write_logprobs(doc, davinci_file, "davinci")
 
-        ada_file = convert_file_to_logprob_file(file, "babbage")
-        #if not os.path.exists(ada_file):
-        write_logprobs(doc, ada_file, "babbage-002")
+        ada_file = convert_file_to_logprob_file(file, "ada")
+        if not os.path.exists(ada_file):
+            write_logprobs(doc, ada_file, "ada")
+
+        llama_7b_file = convert_file_to_logprob_file(file, "llama-7b")
+        if llama_7b_model and not os.path.exists(llama_7b_file):
+            write_llama_logprobs(doc, llama_7b_file, llama_7b_model)
+
+        llama_13b_file = convert_file_to_logprob_file(file, "llama-13b")
+        if llama_13b_model and not os.path.exists(llama_13b_file):
+            write_llama_logprobs(doc, llama_13b_file, llama_13b_model)
 
 
 if __name__ == "__main__":
@@ -166,6 +180,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--logprobs", action="store_true")
     parser.add_argument("--logprob_other", action="store_true")
+    parser.add_argument("--logprob_llama", action="store_true")
 
     parser.add_argument("--gen_perturb_char", action="store_true")
     parser.add_argument("--logprob_perturb_char", action="store_true")
@@ -507,6 +522,30 @@ if __name__ == "__main__":
         ]
 
         generate_logprobs(get_generate_dataset(*other_datasets))
+
+    if args.logprob_llama:
+        print("Loading LLAMA...")
+        # llama_7b = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf").to(
+        #     device
+        # )
+        llama_13b = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-13b-hf").to(
+            device
+        )
+        print("LLAMA Loaded")
+
+        datasets = [
+            Dataset("normal", "data/wp/human"),
+            Dataset("normal", "data/wp/gpt"),
+            Dataset("author", "data/reuter/human"),
+            Dataset("author", "data/reuter/gpt"),
+            Dataset("normal", "data/essay/human"),
+            Dataset("normal", "data/essay/gpt"),
+        ]
+        generate_logprobs(
+            get_generate_dataset(*datasets),
+            # llama_7b_model=llama_7b,
+            llama_13b_model=llama_13b,
+        )
 
     if args.gen_perturb_char:
 

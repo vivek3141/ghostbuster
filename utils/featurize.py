@@ -141,7 +141,7 @@ def t_featurize(file, num_tokens=2048):
     Manually handcrafted features for classification.
     """
     davinci_file = convert_file_to_logprob_file(file, "davinci")
-    ada_file = convert_file_to_logprob_file(file, "babbage")
+    ada_file = convert_file_to_logprob_file(file, "ada")
 
     davinci_logprobs = get_logprobs(davinci_file)[:num_tokens]
     ada_logprobs = get_logprobs(ada_file)[:num_tokens]
