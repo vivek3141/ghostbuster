@@ -56,15 +56,15 @@ print("Loading trigram model...")
 trigram_model = pickle.load(
     open("model/trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL
 )
-tokenizer = tiktoken.encoding_for_model("davinci-002").encode
+tokenizer = tiktoken.encoding_for_model("davinci").encode
 
 print("Loading features...")
 exp_to_data = pickle.load(open("symbolic_data_gpt", "rb"))
 t_data = pickle.load(open("t_data", "rb"))
 
 print("Loading eval data...")
-exp_to_data_eval = pickle.load(open("symbolic_data_eval", "rb"))
-t_data_eval = pickle.load(open("t_data_eval", "rb"))
+# exp_to_data_eval = pickle.load(open("symbolic_data_eval", "rb"))
+# t_data_eval = pickle.load(open("t_data_eval", "rb"))
 
 roberta_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
@@ -312,7 +312,7 @@ if __name__ == "__main__":
         probs = (data[test][:, -1] > threshold).astype(float)
         return get_scores(labels[test], probs)
 
-    def run_experiment(best_features, model_name, train_fn, gpt_only=False):
+    def run_experiment(best_features, model_name, train_fn, gpt_only=True):
         gpt_data = get_featurized_data(best_features, gpt_only=True)
         _, mu, sigma = normalize(gpt_data, ret_mu_sigma=True)
 

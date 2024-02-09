@@ -23,7 +23,7 @@ print("Loading trigram model...")
 trigram_model = pickle.load(
     open("model/trigram_model.pkl", "rb"), pickle.HIGHEST_PROTOCOL
 )
-tokenizer = tiktoken.encoding_for_model("davinci-002").encode
+tokenizer = tiktoken.encoding_for_model("davinci").encode
 
 wp_dataset = [
     Dataset("normal", "data/wp/human"),

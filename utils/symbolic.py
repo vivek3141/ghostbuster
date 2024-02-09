@@ -59,7 +59,15 @@ def get_words(exp):
     return exp.split(" ")
 
 
-def backtrack_functions(prev="", max_depth=2):
+def backtrack_functions(
+    vectors=(
+        "davinci-logprobs",
+        "ada-logprobs",
+        "trigram-logprobs",
+        "unigram-logprobs",
+    ),
+    max_depth=2,
+):
     """
     Backtrack all possible features.
     """
@@ -90,7 +98,7 @@ def train_trigram(verbose=True, return_tokenizer=False):
     Trains and returns a trigram model on the brown corpus
     """
 
-    enc = tiktoken.encoding_for_model("davinci-002")
+    enc = tiktoken.encoding_for_model("davinci")
     tokenizer = enc.encode
     vocab_size = enc.n_vocab
 
@@ -142,7 +150,7 @@ def get_all_logprobs(
         davinci_logprobs[file] = get_logprobs(
             convert_file_to_logprob_file(file, "davinci")
         )[:num_tokens]
-        ada_logprobs[file] = get_logprobs(convert_file_to_logprob_file(file, "babbage"))[
+        ada_logprobs[file] = get_logprobs(convert_file_to_logprob_file(file, "ada"))[
             :num_tokens
         ]
         trigram_logprobs[file] = score_ngram(doc, trigram, tokenizer, n=3)[:num_tokens]
@@ -159,25 +167,27 @@ def generate_symbolic_data(
     max_depth=2,
     output_file="symbolic_data",
     verbose=True,
+    vector_map=None,
 ):
     """
     Brute forces and generates symbolic data from a dataset of text files.
     """
-    (
-        davinci_logprobs,
-        ada_logprobs,
-        trigram_logprobs,
-        unigram_logprobs,
-    ) = get_all_logprobs(generate_dataset, preprocess=preprocess, verbose=verbose)
+    if vector_map is None:
+        (
+            davinci_logprobs,
+            ada_logprobs,
+            trigram_logprobs,
+            unigram_logprobs,
+        ) = get_all_logprobs(generate_dataset, preprocess=preprocess, verbose=verbose)
 
-    vector_map = {
-        "davinci-logprobs": lambda file: davinci_logprobs[file],
-        "ada-logprobs": lambda file: ada_logprobs[file],
-        "trigram-logprobs": lambda file: trigram_logprobs[file],
-        "unigram-logprobs": lambda file: unigram_logprobs[file],
-    }
+        vector_map = {
+            "davinci-logprobs": lambda file: davinci_logprobs[file],
+            "ada-logprobs": lambda file: ada_logprobs[file],
+            "trigram-logprobs": lambda file: trigram_logprobs[file],
+            "unigram-logprobs": lambda file: unigram_logprobs[file],
+        }
 
-    all_funcs = backtrack_functions(max_depth=max_depth)
+        all_funcs = backtrack_functions(max_depth=max_depth)
 
     if verbose:
         print(f"\nTotal # of Features: {len(all_funcs)}.")
