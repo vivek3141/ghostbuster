@@ -1,0 +1,17 @@
+Microsoft Responds to Threat of Network Computers with Push for Inexpensive, Easy-to-Use Personal Computers  
+
+Microsoft is making a big push into the market for low-cost personal computers in response to the growing threat of network computers. This week, the software giant is releasing an updated version of Windows 95 and new low-cost PCs from Compaq, Packard Bell and other makers. The new systems are aimed squarely at home users and promise to be easy to set up and simple to operate. 
+
+"There is clearly a demand for low-cost, easy-to-use PCs, and we want to make sure Windows is the operating system of choice for those systems," said Bill Gates, Microsoft's chairman. "These new offerings will expand the PC market by making computers more accessible to average folks."
+
+The updated Windows 95 software, called Windows 95 Plus, includes improved plug and play features to detect hardware components automatically when turned on. It also includes redesigned menus and tasks organized by common activities to make the system simpler to navigate. Windows 95 Plus will be installed on the new entry-level PCs hitting the market this week.
+
+The new PCs, some retailing for less than $1,000, are designed to appeal to first-time buyers with little technical experience. Compaq is unveiling its new Presario line starting at $899, which will include Pentium chips, large hard drives, multimedia capabilities and pre-installed software. Packard Bell's new models start at $699 and also emphasize ease-of-use, with simpler interfaces and built-in help features.  
+
+"The threat of thin-client network computers from companies like Oracle and Sun has spurred Microsoft into action," said Amy Dysenchuk, an industry analyst with Dataquest. "They are aiming to defend their desktop software dominance by promoting low-cost PCs with a friendlier Windows experience."
+
+Microsoft has reason to be concerned. Network computers, which rely on servers to provide software and storage, pose a threat to the traditional PC model. If they gain mainstream popularity, sales of copies of Windows could suffer. Microsoft hopes that by collaborating with partners to offer inexpensive but powerful PCs, it can persuade buyers that PCs offer a better solution.
+
+Some analysts, however, argue that network computers still have key advantages for large companies. They are seen as easier to deploy, support, and maintain because software and data are centralized. "For corporate environments, network computers make a lot of sense because they simplify management and lower technology costs," said Frank Gillett, an analyst with Forrester Research. "But for home users and small businesses, inexpensive PCs—especially when bundled with an easy-to-use operating system—will likely have the edge."
+
+The new PCs and updated Windows software are the latest move in Microsoft's plan to stay competitive in the low-cost market. Last year, Microsoft invested $1 billion in struggling PC maker Apple Computer to keep it afloat as an alternative to PCs running the Windows operating system. Microsoft faces challenges on multiple fronts, with competition also coming from alternative operating systems like Sun's JavaOS. The push for simpler, less expensive PCs seems aimed at defending its core Windows business as competition intensifies in the computing industry. Overall, though, most analysts expect PCs to continue to dominate for the foreseeable future.

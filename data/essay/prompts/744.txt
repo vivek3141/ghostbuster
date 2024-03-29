@@ -1,0 +1,3 @@
+Write a prompt based on the essay:
+
+Discuss the psychological mechanisms that influence the vaccination behavior of young people and the importance of considering both individual factors and systemic factors when developing interventions to increase vaccination rates. How does the Tailoring Immunization Program contribute to improving vaccination services and addressing social inequalities?

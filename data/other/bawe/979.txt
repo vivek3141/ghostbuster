@@ -1,0 +1,23 @@
+I used the Brookfield viscometer to determine the viscosity characteristics of two solutions, Glycerol and 1% Guar Gum. This viscometer works by indicating the 'drag' of the solution by reading the values from a pointer on a scale, which changes as a spring of phosphor bronze is deformed. I chose a suitable spindle and took readings at different speeds, both increasing and then decreasing. In deciding what spindle to use, I started with the smallest (1 LV) and increased the spindle size if a reading could not be taken. I could not calculate the shear rate using this viscometer. To calculate the viscosity I multiplied the reading by a factor from a conversion chart provided, which depended on the spindle size used. The temperature of the liquids were ambient.
+The viscosity was calculated by taking the reading and multiplying this by a factor given on a conversion chart. Each factor was determined by the speed and spindle size.
+For example:
+Reading of glycerol at an increasing speed: 0.5
+Reading of glycerol at a decreasing speed: 11
+Reading of guar gum at an increasing speed: 6.5
+Reading of guar gum at a decreasing speed: 24
+Reasons for some of my results may be:
+Whilst changing the spindle head from 1 LV to 2 LV during the glycerol experiment, I noticed that the glycerol had formed circles around the spindle head. The glycerol may have genuinely become thicker as the experiment went on, with the molecules lining up.
+Alternatively, the circles around the spindle may have shown that the liquid had built up its own momentum and so was continuing at its own pace, unaffected by the speed of the spindle head.
+The reading took much longer to take with the Guar Gum than the Glycerine; the spindle head had to circulate numerous times before the needle settled and we could take a reading.
+From the experiment I think that glycerol is a Newtonian fluid because from 3 RPM onwards, the viscosity was generally constant at both increasing and decreasing speeds. An explanation for why the velocity increased and decreased for increasing and decreasing speeds respectively may be that the spindle head may just have been slipping across the liquid rather than moving it, as the slow spindle head was not enough to move the strong cross links in the liquid.
+I think that the 1% guar gum is not a Newtonian fluid because the viscosity changed with speed. As with the glycerol, the spindle may have been slipping across the strong crosslinking at slow speeds. Towards the end of the experiment, at between 1.5 RPM and 0.3 RPM at decreasing speeds, the strong crosslinking may have began to be broken, giving a high viscosity reading.
+I used the Haake concentric cylinder viscometer to determine how viscosity changes with speed. This viscometer is different to the Brookfield, in that the Haake has two spindles and the Brookfield has a wide gap width. The Haake viscometer is composed of two cylinders with a narrow gap between them, and one of them is attached to a variable-speed motor. Fluid to be measured was put in the gap, and in this experiment evaporated milk, Devon custard and tomato soup was used. A velocity gradient is created while a cylinder rotates, and the fluid transmits a torque to the second cylinder, dragging it around. The shear stress and shear rate is calculated, and each of these is related to the torque and angular velocity respectively.
+To the calculate the shear stress and shear rate, the values for speed and shear rate were looked up in the following table, depending on the spindle used:
+Then, the following calculations were used:
+Where A is the value for the shear rate shown in the above table, and S is the reading in the experiment.
+Where  is the value for the speed shown in the above table, and n is the speed of the spindle.
+Reasons for some of my results may be:
+The milk may have had little shear stress (drag) because it does not have a strong, crosslinked structure: it has a thin and light viscosity, and so the spindle head was able to turn easily. This may be why the results were very similar at both increasing and decreasing speeds.
+The Devon custard had more cross linking and a more complex structure and so the drag was much higher than the milk.
+I do not think that I received any anomalous results whilst using the Haake concentric cylinder viscometer.
+From the experiment I think that all fluids used were dilatant, so were Non-Newtonian. The shear stress against shear rate graphs showed this clearly. Out of all of the fluids, I think that the milk was the most Newtonian as it had the least complex structure and consisted mainly of water.

@@ -1,0 +1,10 @@
+Determining the rate law and activation energy of a chemical reaction allows scientists to understand the factors that influence how fast a reaction proceeds. There are several methods used to determine this information.
+
+The rate law shows the mathematical dependence of the reaction rate on the concentrations of reactants. It is determined experimentally by conducting the reaction with different initial concentrations of reactants and measuring the initial reaction rate each time. For example, for the reaction A + 2B → C, the rate law may be rate = k[A][B]2, where k is the rate constant.  This means the reaction rate depends on the concentrations of both A and B, with a second-order dependence on B. The rate law is determined by plotting the concentration of a reactant versus the initial reaction rate, with the slope of the line equal to the order of dependence on that reactant.  
+
+The activation energy (Ea) refers to the minimum amount of energy required for the reaction to go forward. The Arrhenius equation relates the rate constant (k) to the activation energy and absolute temperature (T) in Kelvin: k=Ae−Ea/RT. Where A is the frequency factor and R is the gas constant. By measuring reaction rates at different temperatures, an Arrhenius plot of ln(k) versus 1/T can be constructed, with the slope of the line equal to –Ea/R. The steeper the slope, the higher the activation energy.
+
+For example, for the reaction 2NO2 → 2NO3, experiments at 300 K, 330 K, and 360 K produce rate constants of 0.02 s−1, 0.08 s−1and 0.32 s−1 respectively. An Arrhenius plot of these data gives a slope of -8273 K. 
+From this, the activation energy can be calculated as Ea = -slope x R = -(-8273 K) x  8.314 J/mol×K = 69 kJ/mol. 
+
+In summary, the rate law is determined graphically from plots of concentration versus reaction rate, while the activation energy is determined graphically from an Arrhenius plot of the natural log of the rate constant versus inverse temperature. These plots and calculations provide insights into the energy barriers of chemical reactions and how they proceed over time.

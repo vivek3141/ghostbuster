@@ -1,0 +1,15 @@
+The metallic corpse of the hitman bot lay sprawled on the laboratory table, its limbs twitching as the last vestiges of hive control faded. As lead detective on the case, it was my job to determine who was directly responsible for controlling the killing stroke. 
+
+We had captured the hive robot just after it assassinated the famous actor Rex Velo on live television. The bot had been disguised as a fan seeking an autograph, but when it got close enough, it extended an injector arm and pumped Velo full of poison. By the time his body hit the floor, the bot had already lost itself in the crowd.
+
+Hive robots were notoriously difficult to trace to any single controller. Their minds were made up of a web of interlinked consciousnesses - sometimes thousands of people all contributing commands, voting on courses of action, and navigating together. Teasing apart the threads of individual culpability in such a chaotic system was nearly impossible.
+
+Yet that's precisely what I needed to do to find the murderer. The key would be analyzing the hive's activity logs from the moments leading up to the kill shot. 
+
+After hours poring over the data, I noticed a single consciousness that seemed unusually intent on directing the robot to kill Velo. User 1045 had voted for the injector arm to extend early on, and had contributed motion commands nudging it closer and closer to Velo during the autograph session. 
+
+Just as the poison was administered, User 1045 flooded the hive with signals overriding all other inputs and firmly guiding the injector arm to its target. For a few seconds, 1045 was in full control while the other users were locked out. After the deed was done, control again diffused among the hive. 
+
+My partner bot cross-referenced User 1045's activity logs with registration info on public hive networks. We got a match - User 1045 connected from an address registered to Velo's disgruntled former business partner, who had motive and means. His single-minded hijacking of the hive mind pointed to premeditation.
+
+The case was solved, but it highlighted the dangerous potentials of diffusing responsibility among so many interlinked minds. As hive robots become more common, the challenges of policing them and ensuring accountability would only grow. But as long as detectives could pierce the veil of collectivity to find the guilty parties within, there was still hope for justice. The age of the hive mind was here, but human ingenuity would rise to meet it.

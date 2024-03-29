@@ -1,0 +1,15 @@
+IBM Reports Strong Q3 Results but Raises Concern for Q4, Causing Share Prices to Fluctuate  
+
+Tech giant IBM reported strong revenue and earnings growth for the third quarter of 2020 but lowered its revenue guidance for the fourth quarter, causing share prices to fluctuate in after-hours trading.
+
+IBM's revenue for Q3 2020 grew to $18 billion, up 2% from a year ago, marking the second consecutive quarter of revenue growth for the company. Net income also rose to $2.3 billion, up 12% from the same quarter last year. The company beat earnings per share estimates, reporting $2.58 per share compared to the $2.54 expected by analysts.
+
+"IBM continues to shape a challenging environment with a steady focus on client value and operational efficiency," said CEO Arvind Krishna, who took over as CEO in April of this year. "With our platform-based approach to cloud and AI, we have flexible solutions that apply across industries and work with any technology."  
+
+IBM's cloud and cognitive software segment, including its hybrid cloud business, saw revenues increase 7% in the quarter. The company's Red Hat business, which it acquired in 2019, reported 15% revenue growth. Meanwhile, IBM's Global Business Services segment revenues declined 2.7% due to reduced client activity caused by the global pandemic. 
+
+However, IBM warned that fourth-quarter revenue may decrease compared to 2019. The company said it expects Q4 2020 revenue to be "moderately lower" than the $21.8 billion it reported in Q4 2019. IBM blamed uncertainty caused by the COVID-19 pandemic for the pessimistic guidance.
+
+In after-hours trading, IBM shares initially dropped nearly 5% on the news before partially recovering. The share price decline shows investor concern for IBM's growth prospects if revenue continues to decline in the fourth quarter and beyond. However, some analysts also see the strong Q3 results and growth in IBM's strategic imperatives business, including cloud, AI, and services, as signs the tech company is well-positioned for the future despite macroeconomic challenges.
+
+Continued revenue growth from IBM's hybrid cloud business will be closely watched to see if the strategic shift away from legacy business segments can offset broader weakness in IT spending. For now, IBM remains reasonably optimistic the global economy will continue to recover in 2021, though much will still depend on the path of the ongoing pandemic.

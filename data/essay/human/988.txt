@@ -1,0 +1,96 @@
+In the rapidly changing world, the significance of investing is well-known. Such finance managements enable individuals to protect their assets from inflation and enable their further growth. With respect to the recent COVID-19 pandemic, the situation in the already volatile market became even less stable. For our group, it implies the necessity of the in-detailed investment analysis to facilitate further portfolio management and evaluate its past performance.
+S&P 500 ETF TRUST ETF (SPY) was added to it with the purpose of diversification to complement the portfolio. Thus, the further calculations consider daily returns from SPY from October 01, 2021, to November 30, 2021. This work will present an economic analysis of the portfolio beta, mean, and Sharpe ratio based on the performance of the stock during the specified period. The analysis of SPY will also be provided to complement understanding of the stock, discuss current values of its essential indicators, and evaluate its potential.
+Calculation of Key Economic Indicators
+Determination of Portfolio Beta
+Before processing to calculate portfolio beta, the overview of portfolio performance for the period taken for further analysis is due. It is possible to see in Figure 1 that there is a strong tendency for the stock (SPY) to grow. The axis Y shows the percentages indicating changes in the value of stock that occurred on a certain day. The axis X shows the exact date. The revealed pattern is similar to the one reflecting a change in prices of the stock for the period.
+Figure 1. Overview of Portfolio for the Period October-November.
+Portfolio beta or security beta is a measure of volatility that is often referred to as systematic risk. Considering that the portfolio consists of only one stock, the change of a security’s price in percentage equals the change in the portfolio in percentage, and the mentioned two concepts are one and the same for this particular case. Beta is widely used for the determination of the relationship between systematic risk and expected return for assets.
+The portfolio beta was calculated using the provided Excel spreadsheet that takes into consideration stock prices and respective index levels for this security for the same period. A number of data periods equal 41, which is explained by the absence of information for price and index level for some days, which does not significantly affect the calculations. Split factor also was considered, but because SPY wasn’t split even once during the period, all the values equal 1, as shown in Table 1. The index level is the one for S&P 500 Index (roughly 10 times more than the SPY price, as they are correlated in a certain manner).
+Table 1. Data Used for Calculating Beta.
+1   1  $434,24         1  4300,46                
+2   1  $428,64         1  4300,46  -1,29%  0,00% 
+3   1  $433,10  $0,00  1  4345,72  1,04%   1,05% 
+4   1  $434,90         1  4363,55  0,42%   0,41% 
+5   1  $438,66         1  4399,76  0,86%   0,83% 
+6   1  $437,86  $0,00  1  4391,34  -0,18%  -0,19%
+7   1  $434,69         1  4361,19  -0,72%  -0,69%
+8   1  $433,62         1  4350,65  -0,25%  -0,24%
+9   1  $435,18  $0,00  1  4363,80  0,36%   0,30% 
+10  1  $442,50         1  4438,26  1,68%   1,71% 
+11  1  $445,87         1  4471,37  0,76%   0,75% 
+12  1  $447,19  $0,00  1  4486,46  0,30%   0,34% 
+13  1  $450,64         1  4519,63  0,77%   0,74% 
+14  1  $452,41         1  4536,19  0,39%   0,37% 
+15  1  $453,59  $0,00  1  4549,78  0,26%   0,30% 
+16  1  $453,12         1  4544,90  -0,10%  -0,11%
+17  1  $455,55         1  4566,48  0,54%   0,47% 
+18  1  $455,96  $0,00  1  4574,79  0,09%   0,18% 
+19  1  $453,94         1  4551,68  -0,44%  -0,51%
+20  1  $458,32         1  4596,42  0,96%   0,98% 
+21  1  $459,25  $0,00  1  4605,38  0,20%   0,19% 
+22  1  $460,04         1  4613,67  0,17%   0,18% 
+23  1  $461,90         1  4630,65  0,40%   0,37% 
+24  1  $464,72  $0,00  1  4660,57  0,61%   0,65% 
+25  1  $466,91         1  4680,06  0,47%   0,42% 
+26  1  $468,53         1  4697,53  0,35%   0,37% 
+27  1  $468,93  $0,00  1  4701,70  0,09%   0,09% 
+28  1  $467,38         1  4685,25  -0,33%  -0,35%
+29  1  $463,62         1  4646,71  -0,80%  -0,82%
+30  1  $463,77  $0,00  1  4649,27  0,03%   0,06% 
+31  1  $467,27         1  4682,85  0,75%   0,72% 
+32  1  $467,43         1  4682,80  0,03%   0,00% 
+33  1  $469,28  $0,00  1  4700,90  0,40%   0,39% 
+34  1  $468,14         1  4688,67  -0,24%  -0,26%
+35  1  $469,73         1  4704,54  0,34%   0,34% 
+36  1  $468,89  $0,00  1  4697,96  -0,18%  -0,14%
+37  1  $467,57         1  4682,94  -0,28%  -0,32%
+38  1  $468,19         1  4690,70  0,13%   0,17% 
+39  1  $469,44  $0,00  1  4701,46  0,27%   0,23% 
+40  1  $458,97         1  4594,62  -2,23%  -2,27%
+41  1  $464,60         1  4535,43  1,23%   -1,29%
+42  0  $464,60  $0,00  1  4535,43  0,00%   0,00% 
+43  0  $464,60         1  4535,43  0,00%   0,00% 
+44  0  $464,60         1  4535,43  0,00%   0,00% 
+45  0  $464,60  $0,00  1  4535,43  0,00%   0,00% 
+46  0  $464,60         1  4535,43  0,00%   0,00% 
+47  0  $464,60         1  4535,43  0,00%   0,00% 
+48  0  $464,60  $0,00  1  4535,43  0,00%   0,00% 
+49  0  $464,60         1  4535,43  0,00%   0,00% 
+50  0  $464,60         1  4535,43  0,00%   0,00% 
+51  0  $464,60  $0,00  1  4535,43  0,00%   0,00% 
+52  0  $464,60         1  4535,43  0,00%   0,00% 
+53  0  $464,60         1  4535,43  0,00%   0,00% 
+54  0  $464,60  $0,00  1  4535,43  0,00%   0,00% 
+55  0  $464,60         1  4535,43  0,00%   0,00% 
+56  0  $464,60         1  4535,43  0,00%   0,00% 
+57  0  $464,60  $0,00  1  4535,43  0,00%   0,00% 
+58  0  $464,60         1  4535,43  0,00%   0,00% 
+59  0  $464,60         1  4535,43  0,00%   0,00% 
+60  0  $464,60  $0,00  1  4535,43  0,00%   0,00% 
+
+On Table 2 is shown regression statistics and risk parameters including Beta.
+Table 2. Regression Statistics and Risk Parameters.
+REGRESSION STATISTICS AND RISK PARAMETERS
+RISK AND PERFORMANCE MEASURES                                
+Intercept (Alpha) =                        0,06%               
+Slope (Beta)=                                     0,798697096    
+Rf(1- Beta) =                                     0,00%          
+Intercept-Rf(1-Beta)=                      0,06%               
+
+It is determined that the value of Beta equals 0.798697096 (roughly 0.798697096), indicating that the portfolio tends to be less volatile than the market.
+Determination of Portfolio Mean Return
+Portfolio mean return is the expected value of how much a stock return. In this case, only one security composes a portfolio (SPY), which means that there is no necessity to consider the weight of each comprising security. However, the portfolio mean can be determined only for the portion of the year (End of September-November) as the stock was held only for this period. It is known that on September 30, 2021, the portfolio was equal to 1000000, while on November 30, 2021, the portfolio was equal to 1011296.3. Following the formula: Mean return = (End of the period – Beginning of the period) / Beginning of the period; Mean return = (1011296.3 – 1000000) / 1000000 = 0.0112963 or toughly 1.13%. Therefore, the risk premium for stocks for the portfolio for the given period of time equals 1.13%.
+Determination of Sharpe Ratio
+It is possible to provide calculations of the Sharpe ratio for the portfolio to determine the value of the stock price based on current values of determinants. Those indicators are risk premium for stocks (portfolio mean return), risk-free rate during 2 months period (roughly 0,06%), current monthly risk-free rate (0,11%) based on the Daily Treasury Yield Curve Rates and standard deviation. Using the formula for standard deviation in Excel(STDEV. S(A2:A10) dividing it by the mean and multiplying by 100%, it is possible to find the percentage of standard deviation for this asset, and therefore, for the entire 1-asset portfolio. The standard deviation for the portfolio equals 1.59% roughly, which implies that high risks were taken to gain a profit. According to the formula: Sharpe ratio = (return of portfolio – risk-free rate) / standard deviation; Sharpe ratio = (1.13% – 0.06%) / 1.59% = 0.673. It is possible to conclude, considering that the ratio is lower than the desired value (1), that the management of the portfolio was too risky. Simultaneously, the Sharpe ratio for the stock for the same period is much better.
+Stock Analysis
+S&P 500 ETF TRUST ETF is a fund that owns the stocks in the Standard & Poor’s 500 index and is considered to be the benchmark for investing. Such corporations as Microsoft, Apple, Amazon, Nvidia, Tesla, and others contribute to the value of the stock. The representation of SPY performance is presented in Figure 2 . The estimated yield equals 1.30% (which is close to the one calculated above), and the historical 52 week-range (the lowest and the heist price for the past year were $362.03 and $473.54, respectively.
+Figure 2. SPY Stock Performance for the Past 1 Year.
+10 years yield from this security equals 14.71%, and the growth is rather steady and slow than volatile and rapid, and it is shown in Figure 3.
+Figure 3. SPY Stock Performance for the Past 10 Years.
+SPY is spread across 11 sectors, ensuring that the stock does not depend on only one of them. 11 sectors are Information Technology, Health Care, Consumer Discretionary, Communication Services, Financials, Industrials, Consumer Staples, Utilities, Real Estate, Materials, and Energy.
+With respect to the outlined summary of SPY performance, it is possible to list several key points:
+  * SPY has shown steady growth for the past 2 years
+  * SPY volume is high and tends to rise over time
+  * SPY capitalization is over $40.3 trillion
+  * SPY consists of 500 companies and is spread across 11 sectors
+It is possible to conclude that despite the performance of the portfolio consisting of SPY shares being worse than it could have been, it is possible to recommend further long-term holding of the security. Its growth potential is high because the economy is reviving after the COVID-19 pandemic.

@@ -1,0 +1,6 @@
+Consistency of data is a key factor in achieving reliability.
+In an experiment testing the effect of a new drug on blood pressure, it is crucial to follow a standardized protocol.
+The degree to which a study measures what it claims to measure is called validity.
+If a researcher is interested in measuring depression, they can use the Beck Depression Inventory.
+Inter-rater reliability checks can be performed to ensure consistent interpretation of qualitative data.
+In conclusion, reliability and validity are vital in research, particularly when measuring the relationship between independent and dependent variables.

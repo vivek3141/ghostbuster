@@ -1,0 +1,5 @@
+Because I want draw CHARTS in excel by python, I 'm reading microsoft excel binaries. Its format is so complex : - (
+Excel binary format is known as" Compound Document". It is sequences of 512 bytes blocks (= " sector ").
+The first sector is" header sector" that indicates" dictionary sector", and data structure like FAT (file allocation table) in FAT16 / 32 filesystem. The directory sector points head of" Stream".
+sequences by some sectors made byte stream.
+The byte stream is sequences of BIFF Records.

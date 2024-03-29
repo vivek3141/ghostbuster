@@ -1,0 +1,19 @@
+Sun Microsystems Launches New Javastation Network Computer to Compete with Low-End PCs, Analysts Remain Cautious about Sales 
+
+Sun Microsystems today unveiled its new Javastation network computer, aimed at competing with low-end personal computers for basic tasks like word processing, web browsing, and e-mail. The Javastation is a standalone device with no hard disk that relies on network servers for applications and data storage.  
+
+Sun is betting that network computers can appeal to cost-conscious consumers and businesses that want simple and affordable computing options. The Javastation will sell for $500, significantly less than most desktop PCs. 
+
+"The Javastation delivers solid computing performance at an unprecedented price point," said John Jones, vice president of marketing at Sun. "For the cost of a low-end PC, customers can now have a dedicated network computer that is administratively simpler and more secure."
+
+The Javastation runs a version of Sun's Java operating system and relies exclusively on Java-based network applications. It includes a CPU, memory, and Java co-processor on a single chip. Sun claims the Javastation boots up and launches applications faster than typical PCs because of its simple architecture and operating system. 
+
+However, industry analysts remain skeptical about strong sales growth for network computers, which have struggled since first introduced in the 1990s. "Price is important but network computers have not yet delivered a compelling enough user experience for mainstream adoption," said Mike Myers, research director at technology analysis firm IDC. "For basic needs like e-mail and web browsing, low-end PCs currently have an edge on features and convenience."
+
+Sun faces significant competition in the low-cost computing market, with major PC makers including Dell, HP, and Lenovo offering entry-level desktops and laptops for under $500. Network computers also face competition from thin clients, low-powered desktop terminals that rely on central servers. Thin clients currently dominate the market for low-maintenance desktop computing.  
+
+To gain traction, Sun will have to convince more software developers to adapt their applications for the Java-based network computer platform. The Javastation ships with a few bundled apps including the StarOffice productivity suite but the selection of other compatible applications remains limited.  
+
+Still, some analysts believe network computers can find niche success, especially for single-purpose uses like point-of-sale systems, kiosks, and classroom monitors. The Javastation may also appeal to some cost-conscious schools and individuals looking for an inexpensive machine dedicated to basic tasks.
+
+Sun says the Javastation is available for order on its website and through select resellers, with the first devices shipping next month. The company has not disclosed specific sales targets but views the new product as a trial balloon to gauge interest in network computers. Analysts say if Javastation sales beat conservative forecasts, it could mark the start of another wave of competition between PCs and network devices.

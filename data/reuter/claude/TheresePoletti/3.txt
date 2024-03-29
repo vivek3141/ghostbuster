@@ -1,0 +1,15 @@
+Netscape Unveils Low-Cost Software for Corporate Networks, Embraces Microsoft in Market Battle 
+
+Netscape Communications Corp. unveiled a new low-cost version of its browser and server software for corporate networks and announced support for Microsoft Corp.'s rival browser and network software, ending a year's threats and counterthreats in the corporate networking market.
+
+The moves mark a profound strategy shift for Netscape, which had hoped to dethrone Microsoft's browser and network software in corporate networks. Netscape executives now appear ready to concede market leadership to Microsoft and work with their former nemesis. "We're through playing hardball," said Netscape President James Barksdale.
+
+Netscape announced a new $49 suite of software, code-named Constellation, that combines its browser and server software. It runs on Windows 95, Microsoft's operating system software for business desktop computers. It is aimed at small and midsize companies that couldn't afford Netscape's current high-end software. 
+
+Netscape also announced support for Microsoft's Internet Explorer browser and its network operating system software, NT Server. Netscape's own software has dominated the market for connecting groups of business computers, but Microsoft's NT Server software has recently gained ground. Netscape had refused to support Microsoft's software, hoping to undermine it.
+
+The new moves angered some Netscape allies, who felt the company had capitulated to Microsoft. But Netscape executives felt they had no choice. "We had to face reality," said Product Manager Louise Kehoe. "Microsoft won this round. Now we have to co-exist and work together for the benefit of customers."
+
+Under the deal, Netscape will help customers use its software in tandem with Microsoft products and make it easier for corporate computer networks to interchange data. Executives said they hoped to cooperate on other fronts as well. The pact caught industry observers by surprise, given the bitterness that had characterized competition between the two companies. But many analysts said the deal made good business sense. 
+
+(remaining words in article: 464)

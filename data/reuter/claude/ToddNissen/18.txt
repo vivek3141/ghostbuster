@@ -1,0 +1,13 @@
+Ford Launches New Computer-Aided Design Project That Cuts Prototype Costs by 50% 
+
+Ford Motor Company announced today the launch of a new computer-aided design (CAD) initiative that is expected to cut the cost of building vehicle prototypes by up to 50%. The project will leverage advanced simulation software to create highly detailed virtual vehicle prototypes that can be tested and evaluated before any physical models are built.
+
+The CAD initiative is the result of a multi-year partnership between Ford and software maker Cadence Design Systems. Ford engineers will use Cadence's simulation and modeling tools to design new vehicle components like engines, transmissions, and battery systems. The virtual prototypes can be subjected to millions of simulated miles of testing to identify and fix any potential issues with performance or reliability long before metal has been cut for a real-world physical prototype.      
+
+"This project is a game changer for Ford that will fundamentally transform how we design and test new vehicles," said Jim Farley, Ford's President and CEO. "By leveraging advanced CAD software and simulation, we can evaluate many more design options and ensure we build the highest quality, most technologically advanced vehicles much more efficiently at lower cost."
+
+The CAD initiative is part of Ford's broader push to accelerate the adoption of virtual development in vehicle design. The automaker estimates that virtual prototypes can reduce the cost of building a new vehicle by up to $10 million compared with traditional physical prototype methods. The savings will come from lower costs for parts, materials, and the time required from engineers and assembly workers to construct and test physical prototypes.  
+
+Ford has long used CAD, virtual reality, and 3D printing technologies in its design process but not to the scale of entire vehicle prototypes. The partnership with Cadence now gives Ford the software capabilities required to simulate complete powertrains, electrical systems, and vehicle dynamics with a high degree of accuracy. Ford and Cadence have been working together for the past two years to customize and optimize Cadence's simulation tools based on Ford's specific needs and requirements.
+
+With this announcement, Ford is hoping to accelerate the use of advanced technologies to streamline the vehicle development cycle. The payoff could be huge, allowing Ford to bring new models to market faster at a lower cost. The CAD initiative stands as an example of how strategic partnerships and investments in new tools and technologies are helping Ford stay at the forefront of automotive innovation.

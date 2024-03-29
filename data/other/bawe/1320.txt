@@ -1,0 +1,52 @@
+The power produced by a wind turbine is dependant upon several things: the wind speed incident on the turbine, the turbine characteristics, and the load on the turbine.
+The efficiency of the turbine at extracting power from the wind can be described in terms of a coefficient of performance, C p; a dimensionless number. The value of Cp of the turbine will vary with wind speed, but it is better to compare it to another dimensionless number, , tip speed ratio. A graph of Cp against  will show the performance of a wind turbine at a range of wind speeds.
+(1)
+Where P w is the power extracted from the wind (W),  is air density (kg m -3), A is the area swept out by the wind turbine blades (m 2), and V is the free stream velocity (ms -1).
+(2)
+Where  is the rate of turbine rotation (Hz), R is the rotor radius (m), and V as before.
+Another turbine characteristic is C q, which is coefficient of torque.
+(3)
+Where Q is the torque exerted by the rotor; , R and V as before. C q is equivalent to C p divided by .
+The objective of the experiment is to investigate the characteristics of a small wind turbine at different wind speeds and for varying electrical loads (resistances) on the generator.
+A Rutland Wind Charger was positioned in the exhaust flow from a wind tunnel, and connected to a circuit containing variable resistors. An ammeter was connected into the circuit, and a voltmeter across the resistors. Measurements of current, I (A), and voltage E (V), could then be used to investigate the generator characteristics at different wind speeds and loads. The rotation rate of the turbine was measured using an optical tachometer. Free stream wind speed in the tunnel was measured using a pitot tube.
+A hot wire anemometer was used to measure wind speeds at the turbine.
+Using these measurements, C p was approximated by (4):
+(4)
+Where P is the pressure difference as recorded by the manometer connected to the pitot tube (Pa).
+Tip speed ratio is approximated by (5):
+(5)
+Plotting (4) against (5) will give a representation of the C p- curve of the turbine.
+Since torque coefficient is equivalent to (1) divided by (2), an approximation to C q can be obtained from (4)/(5)= (6):
+(6)
+The experiment is set up so that several measurements of I and  can be made by varying the resistance and so the voltage across the circuit at a certain wind speed. The wind speed is also altered several times, and a set of current and rotational speed readings taken at each different wind speed. In this way, graphs equivalent to C q- curves can be made for each wind speed (each pressure difference), by plotting I against . This graph will give an indication of how the turbine reacts to changing loads at constant wind speeds.
+The pitot tube pressure difference is equated to wind speed by (7):
+(7)
+A generator characteristic for the turbine can be obtained by plotting I against  for each different voltage set, which gives an indication of how the generator responds to changing wind speeds at different loads.
+Appendix 1 contains tables of the data recorded.
+The wind tunnel is designed for experiments to be performed within the square working section, however the wind turbine was too large to fit within it (Table 1 gives the exact measurements). Instead, the turbine was placed within the exit air stream. The air stream outside is less controlled, and so there will be more turbulence: the air flow reaching the turbine is likely to vary across the turbine cross section, and be slower than the air flow within the wind tunnel working section.
+During the experiment recordings of wind speed at several places across the area of the rotor were made in order to investigate this. Figure 1 shows two sets of readings taken at a low and a high wind speed at five places in front of the rotor.
+Recordings of wind speed at the central part of the rotor were also made at each pressure difference in order to compare speeds inside and out of the wind tunnel.
+Figure 2 shows how the wind speed measured at the turbine compared to the wind speed within the wind tunnel, as obtained from (7) using the pitot tube pressure difference. The wind speed at the centre of the rotor increases linearly with the wind speed inside the wind tunnel, and so the wind tunnel pressure differences p, measured by the pitot tube, correspond to increasing wind speed very well for qualitative analysis.
+Figures 3, 4 and 5 show the Cp- curve, generator characteristic, and torque coefficient obtained for the Rutland Windcharger turbine.
+The optical tachometer required positioning behind the turbine to obtain results. The tachometer was handheld, and so there will have been some influencing of the air-stream near the turbine by the tachometer operator.
+Figure 1 shows that wind speed across the rotor cross section varies by quite a large amount. The two sets of data for the two different wind speeds both show the same sort of decrease in wind speed towards the edge of the rotor disk. The bottom of the rotor appears to experience the greatest decrease in wind speed from the central value, while the top has the smallest decrease. The left and right hand sides of the rotor both experience decreases in wind speed. The reason for the different wind speeds at different locations is likely to be due to changes in the air flow as it exits the wind tunnel. At room air temperatures and pressures, air flow is very turbulent, and so turbulent entrainment of ambient air from outside the wind tunnel exit region is likely to slow the outer regions of the air flow. The continuity equation, (8), shows how the wind speed at the tunnel exit will be lower then the speed within the tunnel. Past the tunnel exit, turbulence, entrainment, and further expansion of the stream tube of the air flow will further slow the air.
+(8)
+Using values from table 1 and tunnel wind speeds as used in figure 1:
+This is an interesting result, as the recorded wind speeds at the turbine are higher than these calculated values of wind speed at the tunnel exit. It could be that there is some error, either in the measurements of P or wind speed at the turbine.
+A polynomial regression line of fourth order fitted to the curve in figure 3 gives an equation: C p = 210 -9 
+
+4 - 510 -7 
+
+3 + 410 -5 
+
+2 - 0.0012  + 0.0131, similar in form to other C p approximations for other wind turbines (Cockerill, 2006 (2))
+This graph shows how C p peaks for a certain value of tip speed ratio: this is the Betz limit, a physical constraint which is a consequence of the balance of forces which must occur as the wind stream acts upon the turbine. The exact shape and peak of the C p curve depends upon the free stream wind speed, and the characteristics of the turbine itself. The maximum value of C p that can occur is 0.59. Since we have used an equivalent to C p (4), we cannot obtain the true maximum value of C p for this turbine. Figure 1 is proof, however, that the turbine being tested has a power coefficient response similar to that of other turbines.
+Figures 4 and 5 are best considered in unison, as they show how the turbine responds to changes in free stream wind speed and electrical load. Both wind speed and load have an affect on the current in the circuit and the rotational speed of the turbine.
+From figure 5 it can be seen that increasing wind speeds lead to increased rotational speeds and an increased current. Figure 4 shows that increasing voltages (higher loads in the circuit) lead to smaller currents in the circuit for the same rotational rate, following Ohm's Law: E=IR, where R is the circuit resistance. This can be looked at alternatively; higher loads at the same wind speed lead to a decrease in current but an increase in rotational rate. For a higher voltage across the resistors, a higher rotation rate is needed to produce the same current.
+For a constant load, increasing wind speed means increasing rotational rate and so increasing current.
+For a constant wind speed, increasing load means a decrease in current and increase in rotational rate: the faster the turbine must turn in order to provide the required voltage/current.
+Figure 5 shows that higher wind speeds (greater values of P=DP) give higher rotation rates of the turbine, and higher currents produced in the circuit, however the relationship between current and rotational speed is not linear for changing loads at the same wind speed. As the load in the circuit is increased (voltage increases), current and rotational speed both increase at first for most of the wind speeds, but as load continues to increase, the current in the circuit drops while rotational speed continues to increase.
+In order to produce the maximum power, a balance between load and wind speed must be found; the power output is equal to the current times the voltage, but current and voltage are also bound by Ohm's Law. Increasing the circuit resistance causes a decrease in the current for a given voltage, and so an increase in the rotation rate of the turbine. In practice, many wind turbines make use of this fact, and use resistance control to affect wind turbine speed so that the frequency output of the turbine generator remains constant.
+Resistor control can also be used to ensure that the power output of the turbine is at a maximum for a given wind speed.
+Figure 4 can be used to compare the measured performance of the turbine with its expected performance, as reported by the turbine manufacturer.
+The manufacturer provides a curve of charge provided by the turbine into a 12V battery against wind speed. The manufacturer presents results from 0 - 20 ms -1, however this experiment only had a range of wind speeds 7.25 - 15.4 ms -1 (as measured at the turbine), which is equivalent to the straight line portion of the manufacturer's curve. As such, the experimental results match quite well except in terms of magnitude; the maximum current produced by the turbine at about 15ms -1 for 12V is about 4A from the manufacturer's graph, but only about 2A from the experiment. However, the manufacturer states that the expected performance curve is for ideal, non-turbulent conditions, which are unlikely to have been achieved in the experiment. The resistive load for charging a 12V battery could also have been smaller than the load imposed in the circuit during the experiment.

@@ -1,0 +1,19 @@
+Microsoft Looks Beyond Desks, Aims to Put Windows in Subway Machines and Video Games 
+
+Microsoft Corp. is looking to push its Windows operating system beyond personal computers and make it a part of people's lives in new ways, from video games to automated subway ticketing machines.
+
+The company on Tuesday unveiled plans to make a special version of Windows available free for makers of small devices like ticket scanners, cash registers and information kiosks. The new offering, called Windows Embedded Compact 2013, is designed to run on specialized devices that use minimal processing power and memory. 
+
+Microsoft hopes the free access will attract manufacturers that traditionally haven't used Windows and get them to incorporate the platform into more of their products. The goal is to spread Windows to new classes of devices as PC sales growth slows.
+
+"We want to enable scenarios we have not traditionally served," said Microsoft's Windows Embedded General Manager Kevin Dallas. "Ticketing machines and point-of-sale devices can now leverage the power of Windows."
+
+Microsoft's push for new areas of growth comes as worldwide PC shipments are declining for the first time since 2001, falling by about 7% last year according to research firm Gartner Inc. Microsoft still generates much of its revenue and profit from sales of Windows and Office for PCs.
+
+Extending Windows to new corners of people's lives could open up new business opportunities. The Redmond, Wash., company is working with rail systems in several countries for automated ticketing machines that run on Windows Embedded Compact. It's also working with video game makers on consoles that can run versions of the system. 
+
+Microsoft currently makes a Windows system called Xbox for use in its own game consoles but not for competing platforms. Putting a version of Windows in Nintendo Co.'s Wii or Sony Corp.'s PlayStation could yield licensing fees and expand the platform's base. Still, that is seen as unlikely given game consoles' intense competition. 
+
+The company on Tuesday also announced new versions of its server software and developer tools for building cloud computing services. The new releases aim to make it easier for companies to launch and manage Internet-based services on Microsoft's Azure cloud infrastructure and software platform.
+
+The announcements at Microsoft's Build 2013 developer conference came as the company fights to catch up with competitors in areas beyond PCs like smartphones, tablets and cloud services. While Microsoft remains a dominant force in technology, it faces challenges on many fronts as it looks for new avenues for growth.

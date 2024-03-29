@@ -1,0 +1,1 @@
+Analyze the role of data science in decision-making processes and its impact on human agency in light of the contrasting perspectives presented in the essay. Use examples from healthcare to illustrate the benefits and limitations of data science in reducing human error.

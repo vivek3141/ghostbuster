@@ -1,0 +1,6 @@
+On June 9, I joined to Google Develper's Day. At the event, Google gave me a Google phone - mobile phone with Android. Android is a platform for mobile phone which the company is developing.
+At this summer, the phone is coming to Japan!
+In advence it, Google distributed it!!
+It facisnated me and I began to develop software for the platform. I installed eclipse, which is the development environment for Java, and Android Development Toolkit (ADT) which is a plugin to make it easy to development on it. But ADT seems to be broken on Mac OS X, and I google it, I found below mail :" Please erase a file and readd it, it seems work well."
+Hmm, and I tried it, I succeeded it.
+Below picture is its snapshot.

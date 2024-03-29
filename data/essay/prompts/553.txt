@@ -1,0 +1,1 @@
+Discuss the importance of sampling resolution and quantization in digital processing, and explain the four stages of color picture quantization. Compare and contrast uniform sampling and non-uniform sampling methods, highlighting their respective advantages and disadvantages.

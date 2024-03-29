@@ -1,0 +1,13 @@
+Sun Microsystems Inc. Stock Plummets Despite Strong Earnings and Milestones
+
+Sun Microsystems Inc. announced strong quarterly earnings and the completion of key technology milestones today, yet its stock price plunged nearly 25% in early trading. The Silicon Valley tech firm reported profits for the quarter ending June 30 of $123 million, up from $107 million in the same period last year. Revenues also rose slightly to $3.4 billion from $3.1 billion. The results exceeded analyst expectations. 
+
+However, investors appeared to ignore the positive financials and instead reacted to Sun's lower guidance for the current quarter. Citing weaker sales of low-end servers, the company forecast revenue growth of only 3% to 5% for the quarter ending in September, down from 7% growth in the previous quarter. The slower growth projection rattled investors, overshadowing Sun's achievements with its next-generation SPARC processor and open-source Solaris operating system.
+
+Sun unveiled its new SPARC T7 processor, which offers significantly improved processing power over its predecessor. The company said early customer testing showed the T7 processor can achieve up to 30 times faster performance than the previous generation for some workloads. Sun expects the first systems containing the SPARC T7 chip to start shipping to customers in the next six months. 
+
+The company also announced that Solaris, its industrial-strength operating system, is now fully open source. After years of planning, all of the Solaris source code has been released to the open-source community under an open-source license. Sun hopes that open-sourcing Solaris will drive more widespread adoption by developers and customers alike. The move is a bold bet that cedes some control over Solaris to the open-source world but could help Sun gain more traction against Linux.
+
+However, with the stock in free fall, investors appear unconvinced. Many analysts downgraded Sun shares and cut their price targets, concerned the slowing growth signals deeper troubles. “While earnings were solid, guidance was disappointing,” said Joseph Horan, an analyst with JPMorgan Chase. “The new processor and Solaris news, while positive strategically, won't lift results for a couple of quarters. We see too many risks to growth looking ahead and don't believe the stock will recover anytime soon.”
+
+With its shares pummeled, Sun faces ongoing questions about its ability to revive sustained and profitable growth. Open-sourcing Solaris and new server chips are bold moves, but the benefits may be too far out to reassure investors - at least for now. Today was a stark reminder of the unforgiving scrutiny facing Sun and its leadership. Strong results and milestones, it seems, may not be enough.

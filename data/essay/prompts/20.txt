@@ -1,0 +1,1 @@
+Discuss the risks associated with creating a web-based system to store university information and transcripts, both in terms of project continuation and completion, as well as the performance of the end product. Explain the methods and processes that can be used to identify and mitigate these risks.

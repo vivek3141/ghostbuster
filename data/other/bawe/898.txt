@@ -1,0 +1,20 @@
+During the calculation of estimates and timescales phase, there were three calculations.
+Due to the saving on cost and time buying the package was considered instead of developing it. While this itself isn't a risk at all if it was evaluated properly, the main problem was the selection process or the lack of information for the selection process of buying a package.
+Buying a package for sub systems 2 has the highest risk exposure for this project. At least according to the information given.
+All the information we have regarding buying a sub systems 2 are: "The account manager knows of another project done by Opus where the development team used, with success, a package for managing appointments." The problems with this statement are highlighted.
+First of all it's the account manager who knows of the package. Did the account manager of Opus evaluate the requirements of the customer needs of the project? Why did the account manager make the decision to buy a package? Isn't it the project manager's call?
+The systems analysts haven't even been to the customer site. In fact this is just the feedback proposal for the invitation tender.
+The package was suited for another project. Another customer. Which mean it was a customized solution for that particular customer. Opus hasn't done a similar project of this magnitude. Opus has "limited" experience in a simple clinical system. This is way different from the new project. The application factor is the second largest risk in the table!
+But all the estimates and costs (including the Grant chart) were based on the package for subsystem 2 calculation.
+The reasons for this having the highest risk exposure has been several risk other factors
+Management expects that packaged system will require only little or no modification.
+Package selected as lowest cost alternative
+Level of technical evaluation is zero (with respect to this project)
+No defined or documented requirements for product evaluation (At least the info wasn't disclosed)
+New customer requirements process is undocumented so that comparison is not possible.
+This new project requires a custom system development approach.
+The responsibility for maintenance of modifications is vendor.
+There's no information on the vendor quality control standards. (The client quality control standards are assumed not to happen...which itseld is a major risk. This is the 3 rd biggest risk in the table i.e. Changes to specification requirements)
+If Opus is invited to develop this project (with the package estimation), Opus would have to meet their deadlines. If the sub systems 2 package did not fit the requirements of the new project what would Opus do? It would be a disaster.
+The risk can be eliminated by evaluating the customer requiments first. But this is not possible during the tender process. Without atleast a initial study by the systems analysts it is difficult to evaluate the sub system 2 package. Opus should give the 2 nd recalculated estimates of costs and time scales. And include the sub system 2 package buying to as an bonus if the package meets the customer requirements.
+The management shouldn't be quick to the take decisions if the project isn't going to fail. The project should adhere to project management standards and guidelines. The management should respect and take the advice of the technical teams and project manager very seriously. After all, it's them who knows (and make) the nuts and bolts of the software development industry.

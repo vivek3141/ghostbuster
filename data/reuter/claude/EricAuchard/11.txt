@@ -1,0 +1,11 @@
+Computer Associates to Extend Systems Management Software to New Platforms and Strengthen Ties to Microsoft and Other Tech Companies
+
+Computer Associates International Inc. announced today that it is updating its technology offerings to manage critical IT infrastructure.  The company will extend its Unicenter systems management software to newer platforms like Microsoft's .Net framework and also strengthen ties with Microsoft and several other technology companies.
+
+Unicenter, CA's flagship systems management software, has long been used to monitor and control things like security, storage, and performance of servers, networks, and applications in data centers.  However, as companies have started using newer technologies like cloud computing, virtualization, and Web services, Unicenter required updates to manage these environments.  
+
+CA has now enhanced Unicenter to manage systems running on Microsoft's .Net platform and also platforms from VMware, IBM, and others.  The company announced partnerships with Microsoft, VMware, and IBM where the companies will work together on product development and also cross-sell each other's software.  CA believes these moves will allow its customers to use Unicenter to manage both legacy mainframe systems as well as newer distributed systems, virtualized servers, and cloud platforms.
+
+The partnerships with other technology vendors also signals a change in strategy for CA.  Once known more as a mainframe software company, CA has been working to establish itself as a broader systems management software provider for companies using hybrid IT environments.  The company believes that with its large installed customer base of mainframe users, it is well positioned to cross-sell more modern tools for managing newer platforms and virtualized systems.
+
+While some analysts view these moves as a good step forward, others argue that CA may be late in offering true hybrid and cloud management capabilities.  Competitors like BMC, HP, and IBM have tools that already work across numerous virtualization, cloud and traditional platforms.  Still, with its focus on systems management and partnerships with leading tech companies, CA hopes these latest Unicenter and strategy updates will make it a viable provider of management software for the modern enterprise data center.

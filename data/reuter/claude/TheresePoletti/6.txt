@@ -1,0 +1,11 @@
+Analysts Expect 5% Growth in IBM Earnings for Third Quarter
+
+Technology giant IBM is set to report its third quarter financial results after the market closes on Tuesday. Analysts are anticipating a solid quarter from the company with earnings per share forecast to increase approximately 5% from the same quarter last year. Revenue growth is also expected to be up modestly, buoyed by the company's cloud computing and artificial intelligence divisions.  
+
+IBM has been moving away from its legacy hardware and software businesses in recent years and pivoting towards higher-margin cloud computing and AI opportunities. This shift in strategy appears to be paying off so far. In the second quarter, IBM's cloud and cognitive software segment revenue was up 3% and cloud revenue specifically grew 20%. Revenue from the company's global technology services division also rose, indicating strong demand for hybrid cloud services.
+
+"IBM has successfully revamped its business model to focus on cloud and AI, and the company's growth seems to be accelerating as these newer initiatives gain more traction," said Daniel Ives, technology analyst at Wedbush Securities. "If this quarter's results show another quarter of momentum in these key areas, I think investor sentiment around IBM's turnaround story will strengthen."
+
+However, the company's more traditional IT infrastructure business continues to struggle with another quarter of expected revenue declines. But most analysts believe the growth in cloud and AI can more than offset weakness in legacy areas over time if the current trends continue. The company's mainframe z15 system, released in 2019, should also continue to provide hardware revenue in the near term. 
+
+For the third quarter, analysts forecast IBM will report revenue of $17.6 billion, up 1% from the $17.4 billion in the same quarter last year. Earnings per share are expected to come in at $2.58 compared to $2.45 last year, indicating 5% year-over-year growth. The results will be closely watched by investors to gauge the pace of IBM's transition. If the results beat estimates with strong growth in the cloud and AI segments, IBM's stock price could get a boost. But another quarter of lackluster overall growth could signal the turnaround is still a work in progress.

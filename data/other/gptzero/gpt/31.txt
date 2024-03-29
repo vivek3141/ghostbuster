@@ -1,0 +1,5 @@
+1. Numeric data types: This includes integers, floating-point numbers, and decimal numbers. Integers are whole numbers with no decimal places, floating-point numbers have decimal places, and decimal numbers are used to store exact decimal values.
+
+2. String data types: These are used to store text and are represented by a sequence of characters enclosed in quotes. Examples include names, addresses, and messages.
+
+3. Boolean data types: These are used to represent logical values such as true/false or on/off. They are often used in decision-making statements and conditions.

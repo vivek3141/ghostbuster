@@ -1,0 +1,18 @@
+Dear Student,
+We live at an exciting time in the development of real analysis. Over the past ten years Cauchy has done a great deal to formalise the fundamental concepts that our techniques and theories rely upon. I refer in particular to the lecture notes (Cours d'analyse) he prepared for the Ecole Polytechnique, Paris in 1821. These notes contain definitions for limits, real functions, infinitesimals, and convergence that are more rigorous than ever before.
+There remains however some uncertainty around the key concept of continuity. Even Cauchy himself appears to treat continuity with inconsistency. His definition for continuity is stated on pages 34-35 of Cours d'analyse,
+In English, f(x) is continuous between the given limits, if, between these limits, an infinitesimal increase in x always produces an infinitesimal increase in f(x). In particular, the following function satisfies his definition for each n on any interval: f n(x) = 0, for x < 0 ; f n(x) = nx, for 0 
+x 
+ 1/n ; f n(x) = 1, for x > 1/n.
+Later, on pages 131-132, he states the following theorem,
+In English, when the terms of a series are functions in the same variable x, each function being continuous in the neighbourhood of a particular value for which the series converges, then the sum of the series itself will be continuous in that neighbourhood. But this certainly doesn't hold true for our example f n(x). Indeed, for this theorem, Cauchy appears to assume a somewhat stronger definition of continuity, and hence convergence than he himself has has stated.
+There has also been much progress on making calculus more rigorous. Again, Cauchy has been at the forefront of this effort, and his Rsum
+ (1823) is a highly significant work.
+It has, until recently, been believed that every function can be expanded as a Taylor series. Indeed Lagrange's attempt to set up a rigorous framework for calculus through his Thorie des fonctions analytique (1797) was based on the assumption that a function f could, in general, be expressed as a power series of the form f(x+1) = f(x) + a
+1
+i + a
+2
+i
+2 + ... where i was an arbitrary increment. The derivatives of f could then be defined from this increment. In Rsum 
+Cauchy provides a counter example to this assumption, hence invalidating Lagrange's approach. Cauchy has instead chosen to define the derivative of a function, where it exists, as a limit.
+Due to the likes of Ampre and Cauchy, we are entering a new, far more rigorous era in real analysis. Over the next few years we are likely to find that the rules of differential calculus we have come to take for granted do not lend themselves well to some of the more unusual functions that Abel and others have begun to consider - functions that were either disregarded, or simply slipped the attention of Fourier and Lagrange.

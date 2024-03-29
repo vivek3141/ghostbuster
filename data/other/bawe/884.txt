@@ -1,0 +1,32 @@
+The tensile test consists of steadily pulling a material sample with a tensile load, which increases at a constant rate, until the sample brakes.
+Tensile tests are used to obtain Stress-Strain corves and then obtain values such as yield stress, ultimate tensile strength and Young's modulus for a given material. The stress-strain curve also shows the elastic and plastic behaviour of the material.
+The test gives a curve of load against extension, which can then be converted into a stress vs strain curve. The curves will however be exactly the same, only the values of the properties will differ.
+The tensile test machine to be used is the Tetsometric.
+Two main regions of behaviour can occur when a material is under tensile loading:
+Elastic deformation is shown as the linear region of a stress-strain curve. This is when chemical bonds in a materials microstructure are stretched, and not broken. If a load is removed the material will regain 100% of it's original characteristics i.e. length.
+Plastic deformation occurs after the yield point on a stress-strain curve. This occurs when chemical bonds are broken and atoms literally move along one space then return to stable configuration with the new neighbour. This occurs as a dislocation moves along a slip plane.
+Once plastic deformation has occurred the material cannot regain 100% of its original characteristics, although it will try.
+Plastic deformation is sometimes very visible during tensile testing as a phenomenon called 'necking' occurs. This is when the cross-sectional area of the sample begins to decrease, normally towards the middle of the sample.
+This is where the dislocations are concentrated, fracture will occur in this region perpendicular to the applied load.
+Three properties that can be shown using stress-strain curves are ductility, strength and stiffness.
+Ductility is the ability of a material to sustain large amounts of plastic deformation. A brittle material is one with very low ductility.
+Strength is shown as the height of the curve on the graph, higher is stronger.
+Stiffness can be shown as the steepness of the elastic line on the graph, steeper is stiffer.
+The calculations that will need to be used are:
+Stress = load/area  = l/A
+Strain = change in length/original length  = L/L
+Obtain a mean diameter for the specimen by measuring the diameter at three different points along the specimen and taking the average
+Obtain a gauge length by measuring the thinner part of the specimen
+When program returns to start unlock the bottom grips
+The material graphs have been labelled 1, 2 and 3.
+For each material yield stress and Ultimate Tensile Strength (UTS) will be calculated.
+Young's modulus would also normally be calculated, but there is no gauge length to calculate the strain so Young's modulus cannot be calculated.
+The three stress - strain curves show similar elastic behaviour, the linear part at the beginning of the curve where the extension is proportional to the load being applied.
+Material 3 only shows this behaviour and fractures before any yielding or plastic deformation can occur.
+Materials 1 and 2 show yielding where the curve takes on an erratic shape and then continues to elongate. The material is now in plastic deformation.
+The curve for materials 1 and 2 then shows a point where the extension increases but the load remains the same. This is the ultimate tensile strength of the material. Past this point the curves begin to rapidly fall, this is where necking occurs. Necking continues until the sample fractures.
+The experiment has allowed various calculations to be carried out in order to compare the values.
+It has also illustrated different behavioural patterns and different properties a material can have.
+The principle aim on an example tensile test and theoretical evaluation of results has been well met.
+Errors could have occurred during calculations either in the form of rounding errors or human error in reading the graphs.
+Overall it is felt that this was a successful and valuable experiment.

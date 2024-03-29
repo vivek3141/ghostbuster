@@ -1,0 +1,17 @@
+Tech Firms Unisys and Stratus Report Improved Third Quarter Results 
+
+Unisys Corp. and Stratus Computer Inc., two longtime players in the enterprise technology space, reported improved financial results for the third quarter ended September 30. The companies, which provide infrastructure software and fault-tolerant servers, respectively, are continuing their turnarounds and transitions to new business models.
+
+Unisys, based in Blue Bell, Pennsylvania, posted revenue of $435.3 million, down 7.2% from a year ago but slightly above analysts’ estimates of $431.7 million. The firm reported a net loss of $12.7 million, or 25 cents per share, compared with a loss of $18.7 million, or 37 cents per share, a year earlier. On an adjusted basis, the company broke even, better than the 6 cent loss analysts had forecast.
+
+“We remained focused on our strategic priorities in the third quarter while navigating macroeconomic headwinds,” said Unisys CEO Peter Altabef. “We made further progress strengthening our balance sheet, advancing our strategic partnerships and alliances, and driving new innovations to enhance our product portfolio.”
+
+Like other technology companies, Unisys is shifting more of its business to software and services and away from hardware. Its technology consulting division grew revenue 5% in the quarter, while infrastructure sales declined 21%. The company ended the quarter with $458 million in cash and cash equivalents, down slightly from the prior quarter.
+
+Meanwhile, Stratus Technologies, based in Maynard, Massachusetts, reported revenue of $25.5 million, up 8% from a year ago. Net income was $1.9 million, or 29 cents per share, compared with a net loss of $1.8 million, or 30 cents per share, a year prior. Revenue from product sales increased 18% year over year. 
+
+Stratus sells fault-tolerant servers and software for “always on” applications in industries such as financial services, healthcare, telecommunications and technology. It has shifted to more software and services to supplement its hardware business. During the quarter, the company’s bookings for software and services grew 21% from a year ago.
+
+“We executed well in the third quarter, delivering strong top-line and bottom-line results,” said Stratus CEO David Laurello. “We continued to generate momentum for our all-software ftServer line, winning several new customers in the quarter, and built a sizable services backlog to fuel future services revenue growth.”
+
+The improved results from Unisys and Stratus come as technology firms adapt to a “new normal” of gradual growth, a shift to cloud and software-based offerings, and increased competition from startups. Their turnaround efforts appear to be gaining traction, but higher growth may remain elusive until their business models fully transform in the coming years. Investors responded positively to the companies' latest results, sending their shares up in after-hours trading.

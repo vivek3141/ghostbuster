@@ -1,0 +1,23 @@
+The Capital Asset Pricing Model, or CAPM, is a theoretical framework that describes the relationship between risk and expected return for assets. It shows how the expected return of an asset depends upon its risk relative to the market as a whole. The CAPM makes several key assumptions:
+
+1. Investors are risk averse—they prefer less risk to more risk for a given level of return. 
+
+2. All investors have access to the same information and agree on the risk and expected returns of all assets.
+
+3. There are no transaction costs or taxes. Investors can trade any asset freely.
+
+4. Investors can lend and borrow unlimited amounts at a risk-free rate.
+
+5. The investment period is a single time period. There is no uncertainty about future investment opportunities.
+
+The CAPM equation is: Expected Return = Risk-Free Rate + Beta x (Market Return - Risk-Free Rate). The risk-free rate is the return on very low-risk assets like Treasury bills. The market return is the expected return on the overall stock market. Beta measures the sensitivity of an asset's returns to the market—it is a measure of the risk of an asset relative to the market. The market risk premium is the excess return of the market over the risk-free rate.
+
+The CAPM implies that assets with higher betas—that is, more risk relative to the market—will have higher expected returns. The risk-free rate is the base return any investor can get without taking any risk. The market risk premium is the extra return that investors demand for taking on the risk of the overall stock market. Assets with betas equal to 1 have the same level of systematic risk as the market, so they receive the same market risk premium.
+
+ The CAPM has several weaknesses. Some of the key assumptions, like no transaction costs, are unrealistic. The model also assumes that beta alone determines an asset's risk, ignoring other risk factors like size, value, and liquidity. The model is also sensitive to the choice of market proxy used to represent the market portfolio. Finally, the CAPM assumes investors only care about two moments—the expected return and the variance of returns—ignoring higher moments like skewness.
+
+The CAPM is useful for evaluating projects and portfolios. The required rate of return for any asset is the risk-free rate plus its beta times the equity risk premium. Firms can compare a project's expected return to its required return to determine whether to undertake the project. The CAPM is also useful for estimating the cost of capital for firms based on their betas.
+
+While early empirical tests of the CAPM provided some support for the model, more recent evidence is mixed. Beta alone does not fully explain the cross-section of stock returns, suggesting other factors like size, value, and momentum also matter. However, beta does still seem useful for explaining much of the variation in returns over time and for estimating the cost of capital.
+
+In summary, the CAPM is a seminal model for asset pricing that provides many key insights into the relationship between risk and return. While the model has some weaknesses, it remains a theoretically elegant model that is still useful in practice for project valuation and determining firms' cost of capital. Extending and improving the model by incorporating other risk factors and more realistic assumptions holds promise for developing even more powerful asset pricing models.

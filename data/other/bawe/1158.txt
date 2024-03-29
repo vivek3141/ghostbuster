@@ -1,0 +1,19 @@
+Biologists use various types of microscopes to see and study cells. The two key concepts in microscopy are magnification and resolution.
+Microscopy - The science of the interpretive use, and applications of microscopes for small objects.
+Microscope - a piece of laboratory equipment that is used to magnify and resolve objects that are too small to be seen by the naked eye, usually micro organisms, so that their finer details can be seen and studied. E.g.
+Magnification - the ratio between the size of an object and its image
+Resolution - the ability to see detail (to distinguish two separate points of an object or image). An image of a cell is formed when light (in a light microscope) or electrons (in an electron microscope), are focused. Particles or membranes in cells can be seen as separate objects if they are further apart than half the wavelength of light of the beam of electrons used.
+N.B. the main difference is that magnification is the ability of the lens to enlarge the image of an object.
+Galileo was one of the first inventors of microscope, who created a compound microscope (see Fig. 1) in 1609.
+In the 17 th Century, Dutch scientist Anton van leeuwenhoek (1632-1723) first seen and discovered microbes using his home-made microscope, with small enough lenses and adequate precision (see Fig. 2). He could make clear description of microbes within a drop of water.
+Use of Oil immersion and special oil immersion objectives directs more light into the lens, which increases resolution. For light the limit is 0.18m.
+- Refraction occurs when light travels from one medium into another.
+- The oil reduces the amount of light refraction when passing through the slide and specimen.
+- The light refracts again as it leaves the glass of the slide and enters the air.
+- Refraction repeats when light travels from the immersion oil into lens. Light is refracted inwards
+- Eventually, more diffraction is collected by the lens.
+- The more diffraction orders (image information) collected to form the resultant image, the higher the resolution the lens possess.
+N.B. This technique refers to the use of oil between the lens and the specimen, but not inside the mount of the object.
+As the objective lens is responsible for resolution (as well as magnification), the numerical aperture (N.A.) of the lens is directly related to the resolution. The higher the N.A. of a lens the better its resolving power and the brighter the image it can produce.
+Substage illumination (Light source) - light of shorter wavelength e.g. blue light, produced by a different bulb or with a system of filters i.e. blue filter. Since blue has the shortest wavelength of visible light in the electromagnetic spectrum.
+A shorter wavelength of illumination is needed to improve the resolving power of an microscope, which can be achieved using electron microscopes, which use a much shorter wavelength of electrons beam. This is because resolution of an image is limited by the wavelength of radiation used to view the sample. Electrons are fired and radiated in the form electrons beam. A much greater resolution can be achieved at about 0.5nm.

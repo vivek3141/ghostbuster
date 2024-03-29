@@ -1,0 +1,5 @@
+After writing all of the functions needed for this set of tasks, I had a lecture about patterns. I realised that a few of my functions could be neatened using these, so I have added a more concise second version to some of the working functions.
+Through doing this work, I appreciate more fully how recurring functions as well as functional programming in general works. I have realised the importance of the order of the code - you can't refer to a function in a piece of code unless you've declared said function previously.
+I also realised that when working with integers, it is necessary to think about integer arithmetic, for example that 3/2 = 1. This is something I'm not used to doing, so it comes as a bit of a shock.
+I did encounter difficulties using Xemacs and Unix themselves; it took a while to get used to not performing copy and paste operations using MS Windows keyboard shortcuts, and it was odd not having the CTRL-ALT-DEL option when it crashed.
+As an afterthought, the prime number function in question 4 could be made even more economical by using the square root of x as the initial value of d, rather than x / 2.

@@ -1,0 +1,10 @@
+After solving the problem using Microsoft Excel and analysing possible future changes the following recommendations can be made.
+At current costs and internal capacities, the cost of supplying the customer with 500m of cloth is 8580.00, or 17.16 per metre.
+Introducing a new product requiring only 700 hours of vat time a week would not require an increase in production capacity.
+When the cost of producing yarn is cheaper that buying yarn in, 80 extra hours of carding and combing capacity should be purchased at a price according to other costs and amounts of bought in yarn purchased.
+If the cost of buying in yarn becomes less costly than producing yarn internally, it may be prudent to relax the constraint on supplying cloth made from a minimum of 50% internally produced yarn.
+The department should look to negotiate a 20% discount with the current external suppliers of yarn as this will help reduce overall costs. The department should be cautious of an unreliable supplier, and weigh up a 30% discount with the possibility of delays in supplying customers and the financial implications this may have.
+The amount of cloth supplied to the customer can be increased to a maximum of 680m, but profit margins per metre are decreased
+A-Z Cloth UK has agreed to supply a customer at least 500 metres of cloth per week using yarn produced internally and bought in. The minimum cost of supplying this contract is required.
+The problem has been simulated as a linear programming problem and solved using Solver, with Microsoft Excel. Details are contained within the appendix.
+NB: - Situations will be referred to in the text by their number. Refer to Table 1 in the appendix for details of each situation.

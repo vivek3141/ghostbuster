@@ -1,0 +1,13 @@
+Microsoft Reports Record Sales and Better-Than-Expected Profits for Latest Quarter 
+
+Microsoft Corp. on Tuesday reported a quarterly profit of $8.9 billion and revenue that topped $33 billion, both of which exceeded analysts’ forecasts, as the technology giant saw demand for its software and cloud-computing services rise during the pandemic.
+
+The company said its commercial cloud business exceeded $15 billion in revenue for the first time in the quarter, rising 33% from a year earlier. Its other fast-growing divisions include gaming, search advertising, and Surface laptops. Microsoft said the sales and profit gains in the quarter ended June 30 "were driven by our commercial business" and reflected "customers' continued trust" in its products during a pandemic that has forced many employees to work from home.
+
+The results bolster Microsoft's status as one of the companies that has thrived economically during the coronavirus crisis. While businesses across multiple industries have slashed costs, reduced staff or in some cases shut down entirely, technology companies have seen demand for their products booming. People cooped up inside are turning to tech for connectivity, entertainment and productivity. Microsoft's latest numbers reinforce that trend.
+
+Revenue from Microsoft’s productivity and business tools including Office 365 rose 12% in the quarter to $11.8 billion. Revenue from its Azure cloud-computing service jumped 63%, helping propel Microsoft’s broader “Intelligent Cloud” segment to sales of $15.1 billion, higher by 21% from a year earlier. Revenue from its personal-computing business including Windows and gaming grew 3% to $12.9 billion, as the company saw increased demand for gaming consoles and Windows laptops due to the increase in remote learning and work.
+
+“Our strong position is based on consistent investments in these areas over the long term,” Chief Financial Officer Amy Hood said in an interview. “What we've built really is a very broad set of tools and platforms that can enable people in all parts of their work and life with or without a crisis. I do think that positions us well as people think about key tools they need to stay productive, stay connected and create more flexibility in their business models over time.”
+
+The solid results could help support the company's stock, which hit fresh record highs this month ahead of the earnings report. Shares edged down about 1% in after-hours trading Tuesday following the results. For the fourth quarter, Microsoft projected double-digit revenue growth, though at a slower pace than the last three months, and forecast continued margin expansion.

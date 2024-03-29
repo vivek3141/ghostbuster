@@ -1,0 +1,10 @@
+Very often;
+  * Constantly.
+How often do you experience manifestations of anxiety, including fear, anger, and irritability?
+  * Never;
+  * Sometimes;
+  * Often;
+  * Very often;
+  * Constantly.
+
+Please rate your experiences according to the given options.

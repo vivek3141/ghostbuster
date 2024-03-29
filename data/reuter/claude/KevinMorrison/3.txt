@@ -1,0 +1,17 @@
+Sun Microsystems Chairman: Internet Sparks Biggest Creative Explosion in Computer History
+
+In a speech at the TechPulse conference today in Silicon Valley, Scott McNealy, the Chairman of Sun Microsystems, predicted that the growth of the Internet and network computing would lead to the biggest burst of innovation the computer industry has ever seen. "The revolution that is about to hit us will make the PC and client-server computing revolutions look small by comparison," said McNealy. 
+
+McNealy argued that connecting millions of computers and devices together via open networks was creating an environment that would spark unprecedented creativity from developers and lead to new products and services that would transform how we live and work. "We're putting more and more brains together, and that amplifies our ability to solve problems and create value," he said.
+
+McNealy cited several areas that he believes will see major innovation in the coming years thanks to pervasive connectivity and computing:
+
+•Artificial intelligence and machine learning. With massive datasets from millions of connected users and devices, AI and machine learning systems will rapidly improve, leading to new tools that will augment and enhance human capabilities. "AI is going to turbocharge every industry and profession," McNealy said.
+
+•Augmented and virtual reality. Powerful edge computing in phones, wearables, and other devices will enable new AR and VR experiences that overlay and alter our experience of the real world. "Computing will disappear into the world around us," McNealy predicted.
+
+•Smart homes and cities. Networks will connect homes, transportation systems, infrastructure, and civic services in smart cities that utilize data and AI to improve efficiency, sustainability, and quality of life. "We'll have the opportunity to redesign our living spaces and cities to be more responsive, efficient, and livable."
+
+•Precision medicine. With connected health monitors and medical devices, along with access to comprehensive patient data, healthcare providers will gain insights into highly personalized diagnoses and treatments tailored to each individual. "We'll have a far more proactive and preventative approach to medicine," McNealy said.  
+
+In concluding his speech, McNealy argued that the companies that endure and thrive will be those that recognize the power of open systems, embrace interoperability, and understand how to build collaborative networks. "The network is the computer," he said, echoing Sun's famous mantra. "Those who forget that will be in big trouble." Overall, McNealy's message was unequivocally optimistic about the future of technology and its potential benefit to humanity. "The best news is, we've got all these incredible innovations coming, and they're going to make the world a better place."

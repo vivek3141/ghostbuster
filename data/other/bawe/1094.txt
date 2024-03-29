@@ -1,0 +1,105 @@
+The word voice refers to two different aspects of pronunciation. Phonetically, it describes the state of vibration of the vocal folds during articulation; phonologically, as voiced and voiceless or unvoiced, it describes the distinction between the pairs of obstruents /
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Thesetwo definitions, however, are frequently confused or combined. A handbook for teaching pronunciation is typical of much the information intended to illuminate English teachers:
+Another best-selling pronunciation course explains how to produce /d/: "First practice t. Use your voice to make d."
+For many English teachers, this is the furthest extent of their knowledge on the issue, and one, in my experience, that fails to address the needs of learners with have difficulty producing or hearing, for example, /f/ and /v/ or /
+
+ and /
+
+. That the vibration of the larynx, or lack of it, suggested by the terminology voiced and voiceless is the distinguishing characteristic of the pairs of obstruents, is the basis of the inadequacy. In this assignment I shall examine the true role of the larynx (voice) in the production of the obstruents, and the productive and perceptual features of the voiced/ voiceless contrast.
+So what is the role of the voice in the production of the obstruents? In the voiceless series, it can be said that these sounds are truly voiceless - that is, the vocal folds are in the normal breathing position and not in a state of vibration.
+Regarding the voiced series, Catford (1977) writes: " It has long been known since Sweet (1877) that in certain phonetic contexts the so-called 'voiced' stops and fricatives of English exhibit little or no actual vocal-fold vibration". Davidsen-Nielsen (1969) in his study of British and American production of /b d g/, found that in initial position, these consonants were voiceless in nearly 50% of the American sample, and in 100% of the British. Between vowels, where one would most expect voicing due to the influence of the adjoining vowels, while the Americans produced 100% voicing, the British sample carried the vowel voicing through to the consonant only a quarter of the time. In final stops, any voicing is finished before the release.
+To refer to the voiced series as phonetically voiced is therefore clearly incomplete, as vibration of the vocal fold may be present or completely absent during the actual production of the supposed voiced phoneme, and we need to look elsewhere to identify any defining quality or qualities.
+In order to describe more accurately the pairs of contrasting obstruents, the words fortis and lenis are often used as terms instead of voiced and voiceless. Fortis (forceful) consonants have been considered to be articulated with more energy than lenis (gentle) sounds. This question of 'force' is considered below.
+In this assignment, to avoid ambiguity, I will use the terms fortis and lenis to refer to the phonemic pairs in English obstruent sounds, embracing all the phonetic features that they display, and voice and voicing to refer to the specific phonetic feature of vocal fold vibration.
+Since voice plays a variable role in lenis consonants and is frequently absent with no effect on perception, how do we define the difference between fortis and lenis? What aspects of sound production result in a listener hearing /b/ and not /p/? The answer varies according to the position and environment of the consonant.
+In final lenis plosives, there is little or no voicing, and when there is it is at the beginning of the compression phase, and any plosion is often weak or inaudiable. An important perceptual factor appears to be the effect of the final consonant on the preceding segment. Chen (1970) found that a final fortis reduced the length of the preceding vowel by an average of 39%: enough to create a clear perceptual difference:
+So the /
+in /
+
+/ is shorter than the one in /
+
+/, and, even more noticeably in long vowels, the / 
+/ in /
+
+
+/ is considerably shorter than in / 
+
+
+/. This clipping is also evident when the final is preceded by a consonant, so we find that / 
+
+
+
+
+
+
+/ + final fortis, as in built , has a shorter pre-final compared to a lenis-final word, such as build.
+Raphael asserts that clipping is the primary cue:
+Others have challenged this, adding that voice duration, silent closure duration and plosion/ frication duration can also play a role (Hillenbrand et al, 1984; Hogan and Rozsypal 1980), with vowel duration bearing more weight when the vowel is a long phoneme, and before a fricative or stop/fricative cluster. More recently, Fischer and Ohde (1990) have investigated the role of the sound frequency made by the final voicing, the Voice Offset Frequency, which is lower for lenis consonants.
+In addition to the factors described above, a number of other bases for the fortis/lenis contrast have been advanced. Most of these come under the category of 'force of articulation', which can constitute intraoral pressure (Davidsen-Nielsen, 1969), tenseness of the lip muscles (Harris, K.S., Gay, T., Sholes, G.N. and Lieberman, P., 1968, cited in Catford, 1977) or energy of articulation - the pressure exerted by the articulators against each other (McGlone and Proffit, 1967; Luker and Parris 1970). As mentioned above, vocal fold vibration may reduce the volume of air reaching the oral articulators, and the prolonged closure of a fortis stop may result in greater pressure building up before release. These studies, however, have been largely inconclusive regarding their role in defining fortis and lenis in English, and if 'force' plays a part in the perception of the two series, it is a minor one, in combination with other cues.
+While the lenis/ fortis opposition cannot be said to be truly voiced or voiceless in English, it is true to say that voicing, and the various effects of voicing in the environment of the obstruent is the principal basis of this distinction. In a lenis obstruent, while the consonant itself may or may not be voiced, there is greater voicing in the environment of the consonant - the voicing is 'closer', and this is manifested and perceived in a variety of ways. In a final fortis, there is more [-voice] time due to the clipping of the previous voiced segment and the consequent lengthening of the voiceless closure time and the more 'forceful' plosion or longer the frication. In initial position, the delay in the onset of voicing in the vowel following a fortis produces the characteristic voiceless aspiration. Most of the apparently disparate phenomena of the fortis/lenis contrast, therefore, can be ascribed to actions or by-products of voicing, which is increased for lenis, and decreased for fortis. We can summarize by saying that the one unifying feature of the contrast is the voice, although it appears in various forms. In this respect, using the terms voiced and voiceless is arguably the closest we can come to a single unifying feature, although as a complete description it is inadequate.
+To use the description voiced and voiceless is adequate only in as far as i) voice plays a role in the distinction and ii) these terms are widely used and understood. In a teaching situation, however, where a learner is experiencing difficulty between two sounds where the only distinction is [+/- fortis], it is misleading to describe the difference in terms of [+/- voice], when it may be far more productive to draw attention to, for example, aspiration and clipping as distinctive features of English fortis, or to reassure them that the clusters /sp st sk/ are, in effect, no different from /sb sd sg/.
+It can be said that there is no single discrete productive or perceptive feature that will predict whether a sound falls into what we feel to be the discrete categories of fortis or lenis, but rather we can think of various phonological features acting on multiple continua which the listener uses to reach a decision about the category of fortis or lenis:
+The voiced/voiceless question is an important reminder that a speech sound, like other forms of perception, is a complex array of various and variable fragments of information which combine to produce an apparently simple, singular and unified identity in the mind of the listener, and that a description such as voiced/ voiceless or lenis/fortis is necessarily a convenient over-simplification.

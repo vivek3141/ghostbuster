@@ -1,0 +1,37 @@
+In spite of stringent market conditions, Routledge is expanding its Humanities and Social Science catalogue, having added 5 Media and Communication titles in 2005, and launching Journal of European Media and Communications Studies (EMCS) and Journal of Intercultural Communication Research in 2006.
+We aim at building market share for EMCS, allowing Routledge to:
+The marketing campaign also supports the advantageous shift towards e-journals, as the adoption of purely electronic publications yields "savings of up to 20% [...] by the elimination of printing."
+"[E]lectronic delivery has revolutionized journal publishing. The emphasis now is on usage, rather than on the absolute number of subscribers."
+Goals are therefore set at:
+Target readers are academics and researchers, based in the UK and Europe, interested in the development of new means and models of communication in the context of a new European identity overlapping with the national ones.
+Routledge has strong presence, with "Media Student's Handbook" being considered indispensable, in the field of Media and Communication, and is renown for high-quality peer-reviewed journals.
+EMCS is the official title for ECREA, and is dedicated to the publication of original scholarly articles advancing understanding of human communication in the context of changing national identities. It provides an academic forum for interpretive approaches to mass-communication theory and research in Europe.
+Several specialized journals represent particular national traditions, but EMCS enriches the broad debate among them and shapes the parameters of this genre.
+EMCS reflects the need of a new European community to develop its cross-national means of communication. This campaign puts that idea into practice, encouraging and exploiting networks amongst academics and researchers in different countries (presence at international conferences, peer-recommendations).
+To stand out against competition and make a lasting impression, we prompt involvement: giving feedback, recommending EMCS, visiting the website and subject arenas.
+Printed material is graphically consistent, establishing a recognisable look. Messages aren't tailored to national characteristics, as EMCS's target is interested in the common means of communication emerging in the continent as a whole.
+Subscribing is conveniently made possible through different channels. Renewing is possible over the phone as well.
+Rates are structured as follows:
+Routledge uses a simple rough currency conversion, so rates can be shown freely to all prospective subscribers.
+Discounts aren't necessary to promote sales in countries which are part of the geographical scope of the journal (unlike, e.g., Asian Journal of Communication): Routledge's presence is already affirmed in Europe (26% of revenue comes from continental Europe and 18% from the UK).
+Subscriptions include both the print and the digital versions, because, although we aim at increasing online usage, a new journal benefits from the lasting impression of "physical appearance". Also, print journals are still what readers are used to, and ask for.
+An online-only rate will be available from the third year.
+Promotions planned since launch are:
+Should subscriptions lag, special rates will be offered through the subject arenas.
+Library consortia are contacted in advance to allow for longer bureaucracy.
+Promotional packs with sample copy request forms are sent out a month before an issue is due for publication, while those including a specimen are sent as soon as the issue is ready. This means that some librarians will receive packs only in October 2006: back issues are available if they don't order immediately.
+Basic individual packs can be sent only after the special online version of the first issue is ready to be viewed.
+See appendix A for whole schedule.
+We aim at reaching objectives quickly, to secure:
+Therefore, the allocated budget corresponds to 85% of the expected margin after covering production costs.
+The remaining 15% is a buffer, not a profit objective: in the first two years of publication, investment for long-term success is paramount.
+Cash flow will be balanced by pooling EMCS with other Routledge projects.
+See appendix H for assumptions, title and marketing budgets, and cash flow.
+For the first two years, progression towards the campaign's objectives will be measured monthly, and evaluated quarterly after one month from the publication of each issue (possibly identifying articles which boosted sales):
+Number of subscriptions is checked with reports from the Subscriptions Office (broken down by country and geographical area, and institutional/individual)
+Online usage is monitored through login (identifying the subscriber) and variables built into PHP webpages (collecting data about navigation sessions, then deposited in a server database and aggregated into statistics)
+The Sales Department will provide single article and single sales reports, pointing out peaks.
+Feedback is encouraged with an array of initiatives:
+The Subscriptions Office will keep track of expiring subscriptions, and a monthly report will break-up numbers by country and type (institutional/individual), to reveal any relevant target for specific marketing actions (special offers, extra communication).
+Avoid confusing overlap, or annoying repetition, bearing in mind that libraries ordering through subscription agents will be reminded with renewal instructions by the Swets Information Services.
+Individuals will be prompted to renew with:

@@ -1,0 +1,43 @@
+The Flexi Connector component is expected to reach its full capacity of 75 million units in 1994, the expected demand is estimated to rise by 10% per year
+Three alternative options are presented and analysed.
+Option 1 - involves expansion of the Santa Clara plant, this would lead to the NPV of -$1,143,242 after 5 years using 20% discount rate, $4,549,094 using 10% discount rate and $40,915,000 after 10 years using 10% rate.
+Option 2 - involves using an existing plant in Waltham, which yields the MPV of $6,418,086 after 5 years with 20%, $11,297,189 with 10% and $40,189,842 after 10 years with 10%
+Option 3 - involves building a new plant in Ireland, this gives NPV of -$29,810,367 after 5 years with 20%, -$25,996,435 with 10% and $62,068,509 using 10% discount rate.
+Based on the analysis, the detailed plan should be established for Waltham and Ireland projects since Waltham produces highest NPV after 5 years and Ireland the highest NPV after 10 years
+With a detailed plan, there is a need to consider other factors apart from NPV as well, such as labour availability at the area, accessiveness of materials, or other methods such as IRR and Payback
+This report has been based on assumptions that there is no inventory policy, and thus the production every year corresponds exactly to the demand, up to a point when demand reaches the maximum production capacity, from this point onwards the units of sales are equal to the maximum capacity. It also assumes that all cash flows occur at the end of the respective year. Additional assumptions are stated in the appendix.
+A report has been required to evaluate the alternative options of increasing the production capacity of Flexi - Connector component for Compotech Industries Plc. The current plant producing this component is projected to reach its full capacity of 75 million units in 1994. The sale is expected to rise by 10% per year.
+The possible alternatives to bring additional capacity of Flexi - Connector are as follows:
+Option 1 - Expansion of the existing Santa Clara plant, headed up by Elisabeth Upton
+Expand the Santa Clara site in California to produce an additional 30 millions units annually starting from 1995, with a cost involving $23 million. The selling price and variable costs would remain the same, with fixed cost rising from $2.1 million to $2.4 million in 1997.
+Option 2 - Using a plant in Waltham with existing equipment, headed up by David Hope
+The capacity of the plant would be about 25 million units, with a total cost of $14 million spent on renovations of the site and equipment. Selling price and variable cost remain the same, with higher fixed manufacturing costs - $2.4 million from 1995 to $2.6 million from 1997.
+Option 3 - Build a new greenfield plant in Ireland, headed up by Jack Dunbar
+New site can produce up to 70 million units per year. The cost involves $1 million for acquiring a site, $10 million on building the plant and additional $50 million on equipments. Selling price remains the same, but variable cost would decrease to $0.195 per unit. Fixed manufacturing cost would be $2.8 annually beginning in 1995, increasing to $2.9 million from 1999.
+NPV method is the method of evaluating project that recognizes that the dollar received immediately is preferable to a dollar received at some future date. By taking into account the time value of money and discounting cash flows, projects can be appraised before the investment decision is made.
+This approach finds the present value of expected net cash flows of an investment, discounted at cost of capital and subtract from it the initial cash outlay of the project. The method has a clear decision rule to apply. In case the present value is positive, the project should be accepted; if negative, it should be rejected. If the projects under consideration are mutually exclusive the one with the highest net present value should be chosen.
+NPV is being most often recommended as the soundest technique for assessing alternative investment opportunities as it:
+- takes into account the time value of the money (the discount factor is based on the opportunity cost of finance)
+- includes all of the relevant cash flows irrespective of when they are expected to occur
+- addresses the objectives of the business: to maximise shareholders wealth
+However, like other investment appraisal methods, it has limitations such as:
+It can be difficult to identify an appropriate discount rate, which is crucial for NPV, i.e. if the discount factor is stated too high, the NPV may come out unnecessarily negative, or if the discount rate is stated too low, all risk factors may not be included and the project maybe over appraised.
+Moreover, as the solution comes in dollars, the NPV does not show the percentage rate of return. I.e. A particular project may seem to give the highest NPV, but the percentage of return, in comparison of the capital initiated, may be lower than other projects.
+Moreover, in order to calculated NPV, cash flows are usually assumed to occur at the end of a year, which in practice is over simplistic. NPV also does not show the demand trend, whether it as downward or upward.
+Despite NPV having disadvantages stated above, it may be the most recommended technique. IRR is conceivable as realistic as NPV, however, the R value there is much harder to find through the method of trial and error. Moreover, unlike Payback or ARR takes into account the time factor and discounts cash flows accordingly.
+Thus the NPV is necessary in assessing the alternative investment opportunities, and is definitely needed in order to asses a project in advance whether it is worth considering. However it is recommended that other methods, such as Payback, ARR are used at the same time as well, to asses the attractiveness of various options from different perspectives.
+The NPV calculations using different discount rate and time horizons are included in Appendix 2 and explained below.
+According to NPV rules, if the projects under consideration are mutually exclusive the one with the highest net present value should be chosen.
+From the analysis given above, it would be advisable to focus on Ireland and Waltham and establish a more detailed plan on these two projects, based on expectation that Flexi - Connect is expected to remain strong for at least 10 years.
+Santa Clara alternative would not be recommended since it involves a higher amount of capital invested in than Waltham, but in 5 years horizon it yields a lower NPV and in 10 years horizon insignificantly higher amount. However if the Flexi Connect is expected to remain strong for longer than 10 years, Santa Clara may yield a higher NPV than Waltham since then, but this is uncertain.
+When comparing Waltham with Ireland, Waltham would produce an earlier payback, but after that it would not be able to satisfy a complete demand and other expansion options would need to be considered again or CIS may consider outsourcing as another option.
+In case of Ireland, in 10 years time it produces the highest NPV but there is a need to consider a risk factor as well since payback will not be achieved before 7 years.
+Thus based on the arguments and supporting calculations included in the Appendix, there is a need to develop Ireland and Waltham projects more in detail, with the exact calculations on expenditure and other costs.
+Based on the exact detailed plans, the decision can then be made on the chosen alternative with higher NPV.
+However, apart from NPV, other issued should be taken into account as well when making decisions, such as:
+Firstly it may not be advisable to invest in capacity that will be fully utilised only after 5 yrs and idling afterwards (Waltham, Santa Clara) unless the company considers outsourcing (to ask other businesses to produce the stock) as an additional external source for keeping up the stock
+There is a need to consider the location of the plant, its proximity to the local market, and cost of transport to transfer components
+The availability of labour at the specified area, whether enough staff could be recruited to produce the component
+The availability of materials at that area
+The availability and skills of managers, and their ability to overlook additional plant
+With these specific points in mind, the most realistic and appropriate project with highest NPV should be chosen.

@@ -1,0 +1,13 @@
+Clinton Administration to Revise Controversial Export Rules for Computer Encoding Technology 
+
+The Clinton administration announced today that it will revise controversial export rules for sophisticated encryption software and other computer encoding technologies. The new policy will significantly loosen restrictions on the export of encoding tools that allow users to securely encrypt messages, data, and communications.
+
+The administration's previous policy severely limited the export of strong encryption technology, especially to foreign individuals and entities. Tech companies argued these restrictions hurt U.S. businesses and prevented them from competing in the global market. Privacy advocates also said the rules infringed on civil liberties and the ability for people to keep their digital communications private.
+
+However, law enforcement and intelligence agencies pushed back, arguing that widely available encryption could hinder their ability to monitor criminal plans and activities. They said loosening controls could threaten national security by making it harder to uncover terrorist plots or intercept communications from foreign adversaries.
+
+Under the new rules announced today, most encryption technology can be freely exported after a one-time review. The administration will allow the export of encryption software and tools that use keys of up to 64 bits in length, which officials said should satisfy most commercial and privacy needs. The rules also allow for the unrestricted export of encryption systems for banking and other financial transactions.  
+
+The policy change aims to strike a balance between promoting an industry vital to the economy and maintaining the ability to monitor criminal communications. In a statement, White House officials said the new rules will allow "the telecommunications and software industries to build the strongest and most robust encryption systems available." However, law enforcement agencies will still have "the necessary means and sufficient techniques" to execute court-authorized surveillance and intelligence gathering.  
+
+The tech industry praised the announcement, with many companies calling it an important step in the right direction. However, some privacy advocates argue the new rules do not go far enough and still impose too many restrictions. The new policy is set to take effect next month, though additional revisions to the rules may follow. Both advocates and critics are closely watching how the administration chooses to implement the changes in the coming weeks.

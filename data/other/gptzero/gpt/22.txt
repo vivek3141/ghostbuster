@@ -1,0 +1,18 @@
+Sure, here's a step-by-step guide for finding the area of a scalene triangle with two sides of 6 cm and 8 cm and an included angle of 45 degrees:
+Step 1: Use the cosine rule to find the length of the third side of the triangle. The cosine rule states that c^2 = a^2 + b^2 - 2ab cos(C), where c is the length of the third side, a and b are the lengths of the other two sides, and C is the included angle. In this case, a = 6 cm, b = 8 cm, and C = 45 degrees. Plugging these values into the formula gives us:
+c^2 = 6^2 + 8^2 - 2(6)(8)cos(45)
+c^2 = 36 + 64 - 96(0.7071)
+c^2 = 100 - 67.68
+c^2 = 32.32
+c = 5.68 cm (rounded to two decimal places)
+Step 2: Use Heron's formula to find the area of the triangle. Heron's formula states that the area of a triangle with sides a, b, and c is given by:
+Area = sqrt(s(s-a)(s-b)(s-c)), where s is the semiperimeter (half the perimeter) of the triangle. In this case, the semiperimeter is:
+s = (a + b + c)/2
+s = (6 + 8 + 5.68)/2
+s = 9.34 cm
+Plugging this value and the lengths of the sides into the formula gives us:
+Area = sqrt(9.34(9.34-6)(9.34-8)(9.34-5.68))
+Area = sqrt(9.34(3.34)(1.34)(3.66))
+Area = sqrt(44.93)
+Area = 6.70 cm^2 (rounded to two decimal places)
+Therefore, the area of the scalene triangle with two sides of 6 cm and 8 cm and an included angle of 45 degrees is 6.70 cm^2.

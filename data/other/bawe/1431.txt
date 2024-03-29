@@ -1,0 +1,28 @@
+Iron thiocyanate complexes are deep red in colour. Many different species of the complex may be formed when solutions containing Fe 3+ and SCN- ions are mixed, depending on the concentrations of the different ions. These complexes generally have the formula:
+In general, the wavelength of light absorbed increases as the thiocyanate concentration increases.
+The aims of this experiment are:
+Initially three standard solutions were prepared:
+The absorbance of the complex was first measured at different concentrations of SCN-, while the concentration of Fe3+ was kept constant. This was done by producing 6 reaction mixtures containing:
+Between 0.50 cm 3 and 2.50 cm 3 at 0.50 cm 3 increments of the 0.01 M KSCN solution were added to five of these mixtures, and they were all made up to 100 cm 3 with distilled water.
+The Jenway spectrophotometer was set up to emit light of wavelength of 450 nm, which is close to the flat maximum of the absorption spectrum for the complex ion. The spectrophotometer was calibrated using a 1 cm cuvette containing the prepared solution containing no SCN-. The absorbance of each of the 5 solutions was then measured using the same cuvette, which was rinsed out between the different solutions.
+To measure the effect of different concentrations of Fe 3+ on the absorbance on the complex 8 solutions were made up as follows:
+The following volumes of 0.3M Fe(NO 3)3 were then added to 7 of these solutions: 0.60, 1.00, 1.50, 2.00, 3.00, 5.00, and 10.0 cm 3. Each of these solutions were then made up to 100 cm 3 with distilled water and the absorbance of these solutions was then measured as before, after calibrating the spectrophotometer with the solution containing no Fe(NO 3)3.
+From the equation for the equilibrium concentration quotient (Q) for the formation of iron thiocyanate complexes (equation (1) in the introduction) the following formula may be derived:
+In order to calculate Q the concentrations of the ions are defined in terms of their stoichiometric concentrations as follows:
+Where a, b and c are the stoichiometric concentrations of Fe 3+, SCN- and X respectively. Substitution of these expressions into equation (2) gives:
+This expression may be simplified because this experiment was conducted at low thiocyanate concentrations, in an excess of Fe 3+ ions so a>>c while b and c are comparable. This gives the expression:
+The conditions of the procedure also ensure that only the simplest of the complex ions were formed, which means that n = 1. This means that equation 4 may be further simplified:
+or
+From equation 6 it can be seen that a plot of logb against logA (see Figure 1) will produce a straight line graph, where the intercept is [log{(1/Qa)+1} - log l] where is the molar absorption coefficient and l is the length of the sample in meters. The gradient of this graph was found to be 1 proving that n=1 and therefore the absorbing species is the simplest iron thiocyanate complex ion: FeSCN 2+.
+Using the formula for the thermodynamic equilibrium constant (K) for this reaction:
+where Q is the equilibrium concentration quotient and f is the activity coefficient factor. The solution S used in this experiment helps to ensure the value of f is independent of the concentrations of the reacting ions as the [NO 3-] ions don't complex with the Fe 3+ ions and the H+ ions suppress its hydrolysis. Assuming that this keeps f constants then Q will be constant for the swamping medium used (solution s in this case). Taking this into consideration and substituting a, b and c for [Fe3+] [SCN-] and [FeSCN2+] respectively gives the expression:
+Assuming that c is very small compared with a but not b, this can be simplified to:
+From the Beer-Lambert Law for light of a single wavelength
+Substituting for c in (9) gives:
+Thus a plot of 1/A against 1/a where b is kept constant produces a straight line where the gradient and intercept are as follows:
+The results obtained show clear trends, although in the second part of the experiment an anomalous value was obtained as shown on figure 2. This is most likely to be because the complex had deteriorated more than in the other samples. The reason for this may be that a longer period of time had elapsed between the addition of the Fe(NO 3)3 solution and the absorbance being measured, or possibly because slightly less benzyl alcohol had been added to this particular solution.
+The rapid deterioration of the complex due to oxidation is likely to be the greatest source of error in this experiment, although steps were taken to reduce this effect such as the addition of the benzyl alcohol and measuring the absorbance of the solutions as quickly as possible after making then up.
+This degree of uncertainty is added to by the difficulties in reading values from the graphs accurately to more than 2 significant figures in some cases, this may have had an effect on the precision of the values obtained for and Q.
+In order to calculate f, the activity coefficient, I would use the following formula:
+Where z is the charge on the ion, so in this case +2, and I is the ionic strength.
+It was found that the complex formed was the simplest form of the iron thiocyanate complex, with the formula: [FeSCN]2+. The reaction quotient (Q) for the formation of this complex was found to be 110 mol -1dm 3. From this the molar absorption coefficient () was found to be 430 molm 2 for this substance.

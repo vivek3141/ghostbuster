@@ -1,0 +1,35 @@
+Bimodal and asymmetric
+About  of the time there are less than 200 reported cases
+The other large amounts of reported cases of measles centred around 900-1000
+2 epidemic outbreaks - 2 extreme data points denote the peaks of the outbreaks.
+From Scatter Graph of Data....
+Data collected at equal time intervals thus constitutes a time series
+One can clearly see epidemic outbreaks
+Randomness? Future observations may depend on past observations b/c future cases arise from previous ones
+Scatter points above 45 degreeline refer to the times when the infection/ epidemic is rising and points below the 45 degree are times when epidemic/ infection is falling.
+Constructive Crit: 5 points
+Only reported cases- some people may have not reported
+(what if someone lives in Birmingham but goes to GP outside?)
+If people have measles for over fortnight are they counted twice?
+Other useful info e.g. ages may have been useful
+Interesting to see 20 yr data not jus 2 yr
+Data may look diff if vaccination intro.
+Summary of data:
+See above
+2 erroneous values where the height of the cross fertilized plant < self fertilized. Both cross values are 96- has some rounding taken place?
+Constructive Crit
+Height associated with health but are other measures of health of a plant a good/ better indicator?
+Plants that grow best in the field do not necess grow best in lab.
+96's- rounded?
+Median diff in heights is a more appropriate comparison than the mean.
+2 outliers are at either end of the data set - if plants in a row could be affected disease/ pest
+Any other plants included and omitted because died?
+Five Figure Summary
+Draw a box plot to compare
+Survival times appear highest for monarchs - considerably higher than for presidents and popes.
+Constructive Crit:
+Zeros: seem to be quite a few for presidents and popes- is this because no data for this specific person or did they just die less than a year after inauguration/ election? When is the time rounded to a year?
+Do not have the same sample size for each set - difficult to compare?
+Working off very large time period- 1690-1990. Life expectancy has changed a lot in these years and do not have the data close to hand as when each of these people lived. Is difficult to compare a pope living in 1990 to a monarch living in 1700 etc. Would be good to group them all into categories.
+How have these been selected? Are they all of the popes/ presidents/ monarchs? Is this a random sample or where these people simply the easiest to gain data about?
+Does not include the the time in a persons life when they became pope/ president/ monarch- maybe monarchs (because it is birthright) come into office earlier than pope/ president which is why appear to survive longer after coronation than others after inauguration/ election.

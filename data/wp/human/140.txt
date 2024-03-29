@@ -1,0 +1,23 @@
+Manhunt 1-2-3.
+*A game that was actually banned in my primary school due to people having a weird idea that it was connected to some murder...thing. Was weird. *
+*Basically, it was a game of tic, or as Americans call it, tag, except that anyone you tagged became a Hunter. To make it balanced, you had to hold your finger on someone and say 'Manhunt, 1, 2, 3' clearly and loudly. If they squirmed away then the chase had to continue. In reality, what typically happened is you had one really motivated initial Hunter, but the people he turned tended to be pretty lazy about it. However, it was a fun concept, and me and some friends at the time did expand the rules to include 'safe zones' and 'neutral areas'. I've always felt it could make a good Augmented Reality game if expanded, sort of like a virtual version of the Mirror's Edge setting*
+---
+The Hunters were everywhere. Of that much, Jack could be certain. However, most typically kept to the rooftops, to get a better view. Only a few Hunters were ever on the ground, being lead by the flocks who stood up above, their phones messaging them with details.
+Runners worked much the same, though they typically had more people on the ground.
+The only way you could really tell the difference is by the colour of the UI on their phone app.
+He flipped open his phone, and his app suggested there was a temporary safe zone ahead, in the coffee shop. Red blips appeared, showing other Runners' location.
+Jack grinned, and ran for the location.
+He saw his buddy, whose username was Dr_Chronopolis, slamming the keyboard on his blue-lit phone rapidly.
+Jack smiled, and tapped the Runner on the shoulder.
+"Manhunt. One. Two. Three."
+Dr_Chronopolis' face fell as his screen went red and showed the location of other Hunters.
+"...You're a Hunter."
+"Yup. And now, so are you, Doc."
+"How long?"
+"About six months."
+"Seriously? You went to that meet-up and all, as a Hunter?"
+"It was a safe zone. And I felt it not necessary to advertise."
+"You sneaky bastard!"
+"What can I say? I'm finding the Hunter side of the ManhuntAR app way more fun than the Runner side."
+They shook hands, and then went in to have a coffee.
+Surrounded by Runners who had no idea that a Hunter team stood amongst them.

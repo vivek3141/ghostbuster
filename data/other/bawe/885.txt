@@ -1,0 +1,17 @@
+The objective of the laboratory is to use photoelasticity to observe the stress gradient around the discontinuity of the shoulder bar, and to determine the distribution of the stress in a cross section near the shoulder. Thus calculating the concentration factor.
+Photoelasticity is the measurement of stress or strain in a stressed transparent specimen using polarised light. It is done using a polariscope.
+Photoelastic measurements arose from the fact that the velocity of light through a transparent body is dependant upon the stress in that body.
+The polariscope is used to combine the transmitted light components so that optical interference effects can be observed.
+The polariscope consists of a light source, a filter, a polariser and an analyser. The polariser and the analyser are filters which produce plane polarised light. This is light in which traverse vibrations are restricted to movement in parallel planes.
+Two types of fringe will be observed through the analyser, isoclinic and isochromatic.
+An isoclinic fringe is where  (from Figure 2) equals 0 or 90. This means that one of the principle stress directions will be parallel to the polarising axis of either the polariser or the analyser. A dark continuous band or fringe will be seen passing through these points.
+The isochromatic fringe is an interference fringe. Isochromatic fringes have a fringe order where if the changes in principle stress difference are sufficient over the specimen there will be the n th order the next higher order (n+1)th on one side and the next lower order (n-1)th on the other side. The spacing between fringes is dependant on the rate of change of principle stress difference. The isochromatic fringe is seen by a dark line appearing on the specimen when loading. As the load increases so does the number of isochromatic lines.
+Mount the specimen shoulder bar on the sharples polariscope.
+With a load of 400N, load the bar until the fourth order isochromatic line appears on the 4.5mm radius.
+Determine the position of the whole half order isochromatic lines across the section b-b using the PCX image processing software. Plot the stress profile (in fringe orders) over the section and extrapolate to obtain a fringe order at the boundary point of the section.
+Determine the fringe order at the section a-a using the Tardy method.
+Calculate the stress concentration factor k t using the equation given below:
+Where t is the specimen thickness and f is the fringe constant.
+To calculate max the stress concentration factor k t is needed.
+It can be seen that the two k t values are different. There are a number of reasons for this.
+Photoelasticity is a very good way of measuring stresses in certain transparent materials. It allows many different parameters and factors to be measured and is relatively quick and easy. It has drawbacks with human error involved with experimental testing.

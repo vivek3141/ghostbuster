@@ -1,0 +1,13 @@
+Internet Society Backs Away from Proposal to Expand Global Address Availability  
+
+The Internet Society, a nonprofit organization focused on internet security and stability, announced today that it is withdrawing its support for a proposal to expand the availability of Internet Protocol Version 4 addresses. IPv4 addresses are the unique numbers assigned to connected devices like computers, smartphones, and other smart devices. The current IPv4 address system is running out of unused addresses, prompting a transition to a new system called IPv6 that will provide millions more addresses.
+
+Some technology companies have proposed expanding the IPv4 address space as a stopgap measure during the IPv6 transition. Specifically, they proposed reclaiming unused IPv4 address blocks and allowing companies to use those recycled addresses. The Internet Society had initially backed this proposal but now says the added complexity would threaten the security and stability of the internet.  
+
+"We do not believe reclaiming unused IPv4 address space is worth the risk at this point in time," said Internet Society President Andrew Sullivan. "While IPv4 address exhaustion is a serious issue, tampering with the addressing system could introduce hard-to-foresee vulnerabilities and reliability issues. The transition to IPv6 is progressing well and should continue as the top priority."
+
+IPv6 provides an almost unlimited number of addresses compared to the roughly 4 billion addresses possible under IPv4. However, transitioning the entire internet to IPv6 is a slow, gradual process. Some critics argue that expanding IPv4 in limited ways can help ensure connectivity for users and devices still relying on the older standard during the transition period.  
+
+The Internet Society acknowledged the need to ensure connectivity but said reopening IPv4 at this point could threaten the very infrastructure it aims to protect. "The internet technical community is focused on managing the complexities of running two IP address systems simultaneously," Sullivan said. "Weakening IPv4 at this point would be like repairing a crumbling foundation while also building a new house—it undermines both efforts and puts the entire system in jeopardy."
+
+The Internet Society's stance is a setback for proponents of limited IPv4 expansion. However, the group says it remains open to re-evaluating its position as the IPv6 transition continues to unfold in the coming years.

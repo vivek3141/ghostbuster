@@ -1,0 +1,19 @@
+One possible shorter sentence could be: "Grocery shopping prevented me from completing my tasks."
+Here's a Java code solution that takes in the original sentence as input and outputs the shorter sentence:
+```
+import java.util.Scanner;
+public class ShortenSentence {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      
+      System.out.print("Enter a sentence: ");
+      String sentence = scnr.nextLine();
+      
+      String shortenedSentence = sentence.replace("I couldn't finish my tasks because", "")
+                                          .replace("had to go grocery shopping", "prevented me from completing my tasks");
+                                          
+      System.out.println("Shortened sentence: " + shortenedSentence);
+   }
+}
+```
+This code uses the `replace` method to replace the longer phrases with shorter ones. Note that this solution assumes that the original sentence always follows the same structure, with the reason for not completing tasks coming before the grocery shopping task.

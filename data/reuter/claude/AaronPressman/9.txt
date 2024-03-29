@@ -1,0 +1,13 @@
+Survey Shows Growth in Internet Usage, But Online Services Struggle to Add New Customers  
+
+A new report shows that Internet usage continues to rise around the world, with billions of new websites, social media accounts, and internet-connected devices coming online each year. However, while people are spending more time on the internet, many popular online services are finding it difficult to attract new customers.
+
+The “2019 Global Internet Survey” found that 52% of the world's population now uses the Internet, up from 43% in 2016. Much of this growth is coming from developing countries in Asia, Africa, and Latin America where Internet infrastructure has expanded rapidly in recent years. Social media usage has skyrocketed, with over 3.2 billion social media users globally, a 15% increase from last year. 
+
+Yet despite this growth, established tech companies are struggling to gain new users. For example, Facebook recently reported zero growth in daily users in North America and a loss of over 2 million users in Europe. Twitter's monthly user base has remained largely flat for the past two years. And Google's advertising revenue from Search has declined for two consecutive quarters as the search engine market has become saturated.
+
+"There is a seeming paradox in the tech world right now," said Dave Wilson, lead analyst at the market research firm that conducted the survey. "Internet usage and time spent online are at all-time highs, but the largest internet companies are finding little growth in their customer bases. The problem is one of limited attention spans and over-saturation."
+
+Industry observers note several factors contributing to the stagnation of big tech companies. Constant controversies around data privacy, election interference, and content moderation have damaged some brands and driven away certain users. Competition from newer social networks and entertainment options has also pulled attention and time away from established services. And in developing countries, locally-focused internet companies have drawn users that may have otherwise signed up for Silicon Valley platforms.  
+
+Still, declining user growth does not mean the demise of major tech companies, at least not yet. "Facebook, Google, and others have a colossal number of users, and even single-digit or flat user growth still represents an enormous audience," said Wilson. "But companies can't rest on their laurels. To reignite strong growth, they must continue improving their services, address users' concerns, and find new areas for innovation and expansion.”

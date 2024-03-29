@@ -1,0 +1,29 @@
+A sensor is a device that detects and responds to some type of input from the physical environment. The primary characteristics of a sensor include:
+
+1. Sensitivity - Ability to detect small changes in the measured quantity. Sensitivity depends on the materials and geometry of the sensor.
+
+2. Selectivity - Ability to detect a specific quantity in the midst of other quantities. Selectivity depends on the materials and geometry of the sensor as well as the measurement technique. 
+
+3. Range - The maximum and minimum values of the measured quantity that can be detected by the sensor. The range depends on the materials, geometry, and measurement technique.
+
+4. Accuracy - How close the measured value is to the actual value of the measured quantity. Accuracy depends on the sensor materials, geometry, measurement technique as well as calibration.
+
+5. Response time - The time required for the sensor to detect a change in the measured quantity. Response time depends on the materials, geometry, and measurement technique.
+
+The steps involved in wet etching a single crystal silicon are:
+
+1. Cleaning - The silicon wafer is cleaned to remove any surface contaminants.
+
+2. Oxidation - A layer of silicon dioxide is grown on the wafer surface. The oxide will act as a mask for etching.
+
+3. Photolithography - A photoresist is deposited and patterned on the oxide layer using UV light exposure through a mask. The photoresist is then developed leaving the pattern on the oxide.
+
+4. Oxide etching - The oxide layer is etched where it is not protected by the photoresist pattern. The photoresist is then stripped. 
+
+5. Anisotropic etching - The silicon wafer is etched in an anisotropic etchant like KOH that etches the silicon in specific crystal planes. The oxide pattern acts as a mask.
+
+6. Stripping - The remaining oxide mask is stripped leaving the pattern etched into the silicon.
+
+The response of a tin oxide gas sensor depends strongly on the temperature. At higher temperatures, the chemical reactions proceed faster leading to higher sensitivity and faster response time. However, very high temperatures can reduce selectivity and accuracy. The optimal temperature is often a trade-off between sensitivity, selectivity, and accuracy.  
+
+Most chemical sensors still lack high sensitivity, selectivity, accuracy, and stability required for many applications. However, some specific types of chemical sensors like oxygen sensors have seen huge commercial success due to their low cost, adequate performance, and large scale production. With continuing research and development, chemical sensors are improving and finding wider commercial applications. But a lot still needs to be done to overcome their deficiencies.

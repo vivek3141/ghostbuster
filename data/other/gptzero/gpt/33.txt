@@ -1,0 +1,1 @@
+Additionally, it's important to note that this code uses the mysqli extension, which is a more secure and recommended alternative to the older mysql extension. It's also a good practice to sanitize user input and use prepared statements to prevent SQL injection attacks.

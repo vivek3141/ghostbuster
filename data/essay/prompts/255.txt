@@ -1,0 +1,1 @@
+Discuss the structure and components of Farcargo's information system, highlighting its use of dynamic infrastructure, hardware, software, and storage components. What design considerations does Farcargo prioritize in its information system?

@@ -1,0 +1,2 @@
+In any software involved safety-critical project development, chose a suitable programming language is very importance, using an unsuitable programming language would lead to extra cost or even a project failure.
+The considerations to determine the suitability of a programming languages includes the characteristics and the common problems of the programming languages, the comparison of computer languages, the supporting tools and the expertise on the programming languages.

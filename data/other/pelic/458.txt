@@ -1,0 +1,5 @@
+Point(n): when I think about something I get the same point that my roommate gets.
+
+Client(n): Sometimes it is helpful to be client becasue you may have a lot of things that you want to ask about.
+
+Overstate(v): a lot of markts overstate about hteir stuff, and they put someone to ask to attracte people to buy their stuff.

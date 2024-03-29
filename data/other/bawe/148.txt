@@ -1,0 +1,124 @@
+As a publicly funded service, the question of resources permeates so many of the legal issues raised by our health care system. Our starting point must be a recognition that no resources, whether economic or human, are infinite [1]. Shortages and 'agonising decisions' [2] about priorities are inevitable. It may be true that it is impossible to derive a perfectly just solution to this problem [3], yet as the 'costs crisis' [4] in the NHS is ever-worsening, it is clear that the issue must be confronted. This essay will consider the proper role of the courts in confronting the issue.
+The courts are often faced with understandably controversial cases in which an individual has been denied treatment due to a shortage of resources [5]. In an age in which patient choice and control are paramount, such decisions are extremely difficult to accept, yet the traditional position is that the courts can offer little assistance:
+When faced with actions against the Secretary of State for breach of his statutory duty to provide health care [6], the courts have made clear that this duty, and therefore any corresponding individual right, is not absolute. Rather they are subject to consideration of 'the resources available . . . and the demands on those services' [7]. Similarly, when faced with judicial review of resource allocation, the courts are reluctant to confront the issue, treating such policy questions as non-justiciable [8]. Even where the decision is amenable to review, the Wednesbury test [9] is difficult to overcome [10]. When such leeway is given to health authorities that a decision would have to be clearly in bad faith in order to be overturned [11], is there too much deference?
+Neither the European Court of Justice nor the European Court of Human Rights have added much to this traditional non-confrontational jurisprudence [12], as individual states are granted a considerable "margin of appreciation" in relation to economic and political policies such as health care provision [13].
+It is arguable, then, that in relation to access to healthcare, the courts have already developed a realistic jurisprudence which recognises the fundamental nature of the question of resources in the public interest. It is neither desirable nor necessary for them to go any further.
+For the courts to intervene on these decisions made by health care professionals would be to impede clinical freedom. Judges lack the expertise to make decisions on treatment priorities, as questions of resources are inextricably linked to questions of clinical judgment. If judges were to take a more active role, setting down guidelines for resource allocation, it may undesirably tie the hands of the medical profession, making it difficult to take subjective clinical decisions in specific situations [14].
+In Re J, Lord Donaldson MR emphasised that it would be an abuse of the court's power to force a medical practitioner to act contrary to the fundamental duty which he owes to a patient [15]. The fact that the medical profession makes controversial decisions, acting with little official guidance, is not a failing for the courts to address; it reflects a recognition that these kinds of decisions are best left to clinicians considering the individual circumstances. 'All generalisations fail when applied to the particular' [16].
+Legatt LJ [17] and Balcombe LJ [18] in Re J further made the point that for them to order the treatment of the individual who happens to have come before the court would be to ignore other patients 'to whom the health authority owes the same duties but about whose interests the court is ignorant. ' Essentially the nature of the adversarial court process is such that judges are best suited to two-dimensional disputes, dealing with rights and duties of the parties before them; they are not capable of resolving the kind of polycentric problems raised in cases concerning resource allocation [19].
+Similarly it may be argued that clinicians, bound by the Hippocratic Oath, are in no better a position to look beyond the individual injustice of the case at hand. Yet doctors are increasingly embracing an identity as 'community practitioners'; furthermore, the major decisions on resource allocation are taken at the macro level by politicians with a view of the wider picture and with the kind of broad base of representation which is most desirable in making ethical decisions about priorities [20].
+As well as weaknesses in the institutional capacity of the courts, the primary reason for reluctance to enforce socio-economic rights, such as the right to health care, is that it raises controversial questions of constitutional legitimacy. If the courts were to actively confront the question of resources they would be making political and economic choices, which is the proper task of the legislative and executive. The courts would be usurping the authority of Parliament as reflected in decisions taken directly or delegated to health authorities and health care professionals. This is contrary to the fundamental constitutional doctrine of the separation of powers, and is not within the legitimate role of unelected and unaccountable courts [21].
+Even if we accept the proposition that current methods of resource allocation are giving rise to injustice, is there any indication that the courts could offer a better alternative? What sort of jurisprudence could they adopt in order to confront the question of resources? Of all the models that have been mooted, of which the QALYs test [22] is perhaps the most well known, none is without criticism [23]. There is an inescapable difficulty in dealing with socio-economic rights as they require a balancing between incommensurable goods, such as is not amenable to utilitarianism [24]. Moreover, as Mason & McCall Smith emphasise, 'as societies differ, no single system of resource allocation will be universally acceptable' [25]. Therefore, we may look to the U.S. or the German Social Courts for examples of judicial oversight of healthcare rationing [26] but how helpful would this be?
+This traditional deference to health authorities on questions of resources may be realistic, yet such passive responses create a weak jurisprudence, which makes no real attempt to seek justice. It results in rights which are subject to such indeterminable qualification that they become 'vacuous' [27].
+With an ageing population and continuous progress in medical science, scarcity of health care resources presents a growing problem. It is true that it is difficult to come up with a model to show that courts could deal with the question any better than doctors or health authorities do, but as Mason & McCall Smith highlight, 'doctors cannot opt out of decisions' [28], so why should judges be able to? Courts face 'difficult and agonising decisions' [29] all the time - to adjudicate on such decisions is their role in society. As Fletcher points out [30],
+Critics express surprise at the fact that so few court actions are taken by patients who are denied access to healthcare due to rationing [31], yet it is hardly surprising given the courts' usually deferential, non-interventionist attitude [32]. This sends a clear message to society not to bother questioning decisions, not to bother to attempt to vindicate their rights. Hendrick argues that unless this changes, unless the courts begin to confront the question of resources,
+Rights become meaningless if we cannot really enforce them [34].
+It may be right that judges show some deference to policy decisions and the discretionary decision-making of government, health authorities and doctors, but 'it is wrong to think that judges have no role to play in the exercise of deciding who should be treated'[35].
+An international comparative analysis may be instructive. The UK's approach is not the only - and perhaps not the best - way, as for example German Social Courts have proved successful at playing a greater role in overseeing health care rationing [36]. Constitutional and jurisdictional differences are of relevance, however, and therefore the Canadian Court of Appeal's interventionist decision in Auton v British Columbia [37] may be seen as more influential towards a change in the traditional deferential approach of UK courts. The decision may have been overturned by the Supreme Court [38], yet perhaps such an approach at such a high level, in a system which bears many similarities to our own, provides some impetus for change?
+Many decisions on access to healthcare are not finally decided on the basis of medical considerations. They are moral decisions which the courts are suited to deal with [39]. Why should doctors be trusted with such decisions? [40]. Yet even when non-medical considerations come into the equation, the courts are conservative in their approach [41]. Furthermore, in an increasingly managerial-style NHS [42], decisions about access to healthcare are largely taken at macro or meso level. There is a danger, then, that the trends towards privatisation will result in such decisions being undermined by the profit-motive [43]. The courts need to recognise and directly confront this reality in order to protect society [44]. However, current jurisprudence regards these as macro-political decisions for which the court will not substitute its own judgment [45].
+What is acceptable, and what the courts are increasingly doing, due to a lack of agreement on a substantive theory underpinning resource allocation, is focussing on the process of decision-making [46]. This trend may be seen as part of a move away from an 'excessively deferential' approach [47]. In addition to addressing the concern with arbitrary decision-making [48], this is a realistic jurisprudence, recognising that although 'a right to treatment "on demand" is unlikely . . . what may develop is a legal right to an equitable process of decision-making' [49]. Within the bounds of constitutional legitimacy, the courts may also make use of developing doctrines of legitimate expectations [50], proportionality, and the duty to give reasons where fairness requires it [51]. In the infamous Child B case, trial judge Laws J called for health authorities to do more than 'toll the bell of resources' [52]. What did Laws propose that they do? 'They must explain the priorities that have led them to decline to fund the treatment' [53]. Such a jurisprudence would contribute to improved decision-making in the NHS; increased transparency, which guards against narrow financial motives; and greater public understanding of the tragic choices that must be made [54]. Moreover, it may eventually pave the way to a measure of substantive review.
+Unlike in questions of access to healthcare, where courts recognise the relevance of considering resources but decline to actively adjudicate on it, when it comes to setting standards of care in negligence actions, they deny that resources are even an issue [55]. It is understandable why the courts take this approach. The public would no doubt find it repugnant if the courts explicitly allowed shortages of resources to excuse a hospital causing damage to a patient. Moreover, slippery slope objections can be raised [56]. Although there is no universal fundamental right to healthcare of any standard, we have a system in which the Secretary of State undertakes to provide a 'comprehensive' service to all [57] and national guidelines are in place to ensure uniform standards for all [58].
+Yet, how realistic is this current jurisprudence, which puts pressures on the NHS to meet a standard in terms of rights and responsibilities despite its defence on resource grounds? The consequence is that the only option for hospitals and doctors is to turn patients away altogether rather than giving some care, albeit of a lower standard. Is this the best way? While recognising the political difficulties of so doing, Newdick calls for greater candour about standards of care which can be provided within the NHS [59]. Recent media debate on Accident & Emergency care is right to criticise government targets which distort clinical priorities, providing financial motivations hospitals to see the maximum number of patients within the shortest time [60]; however, this is not necessarily an unprincipled approach. Why is it assumed that sending one patient home within 4 hours, and therefore giving him/her a standard of care which may fall below the ideal, is not justified in order to provide prompt treatment to others? If we recognise that rights of access to healthcare are subject to qualification, why not also recognise that rights to a particular standard of care may be similarly qualified? Newdick suggests a variable standard of care, set by what ought to be expected from reasonable doctors or hospitals in the circumstances, given the available resources, but, crucially, subject to a minimum obligation [61]. These arguments may be more potent in the U.S. where healthcare is paid for, as comparisons can be made with a commercial context where a buyer accepts greater risks in return for a lower price [62]. Yet it could feasibly apply in the UK. The Bolam test [63] is applicable, in a manner not dissimilar to the lower standard of care permitted in emergency situations [64]. There have been signs of support for this position in the English courts [65], which might be revisited in the future as part of a different strategy to meet scarcity of resources by providing maximum access to healthcare rather than treating fewer patients at an optimum standard.
+Equally controversial is the proposition that resources should be taken into account when deciding on levels of compensation in medical negligence. Again the rights and needs of the individual before the court eclipse wider considerations; compensatory justice trumps distributive justice.
+Yet, as rights discourse becomes more fashionable [66], the compensation culture increasingly diverts limited resources from patient care [67]. The courts recognise this problem but refuse to take the impact on NHS resources into account when calculating damages awards [68]. Lord Irvine has rightly questioned whether this is a realistic approach [69]. Equally relevant when setting standards of care, the issue is whether the courts ought to inject some utilitarianism into their traditional Kantian, rights-based approach [70]. As Brazier aptly puts it:
+A realistic jurisprudence needs to contextualise rights and duties, what Montgomery refers to as healthcare law rather than medical law [72], looking beyond legal rules to how they impinge on healthcare practice. It is important to note the impact of such jurisprudence on public perceptions and expectations of the NHS, which in turn affects the number of resource-sapping negligence actions taken.
+Healthcare rights and duties are not absolute. Courts have long recognised this in relation to access to healthcare, taking a quasi-utilitarian approach [73], although it may be argued that current jurisprudence does not go far enough in setting limits on this qualification in the face of the danger of intrusion of the profit-motive in an increasingly privatised health service. Yet when it comes to setting standards of care and awarding compensation in medical negligence, it is clear that the courts have failed to include resources in the equation, leaving us with a somewhat unrealistic and unhelpful jurisprudence. As rationing becomes an even greater imperative, and as courts in other jurisdictions adopt more realistic approaches, this may be set to change.
+1 Mason, J.K.; McCall Smith, A.; Laurie, G.T.; Law and Medical Ethics (6 th edn, 2002), Butterworths Lexis Nexis, at
+p314
+2 R v Cambridge Health Authority ex parte B (A Minor) [1995] 2 All ER 129
+3 op cit n1 at p365; Newdick, C., Who Should We Treat? (1996), Oxford at p15
+4 Newdick, C., Who Should We Treat? (1996), Oxford at p1
+5 e.g. R v Cambridge Health Authority ex parte B (A Minor) [1995] 2 All ER 129
+6 s.1 NHS Act 1977
+7 R v North East Devon Health Authority ex parte Coughlan [2001] QB 213; R v Secretary of State for Social Services,
+West Midlands RHA and Birmingham AHA (Teaching) ex p Hincks and Others (1980) 1 BMLR 93; op cit n4 at p123
+8 e.g. ex p Hincks and Others (1980) 1 BMLR 93; Blyth v Bloomsbury HA [1993] 4 Med LR 151; R v Chelsea and
+Westminster Hospital Health Care Trust ex parte O'Callaghan QBD 11 March 1998; R v Central Birmingham HA ex
+parte Collier (1988) LEXIS, 6 Jan; R v Central Birmingham HA ex parte Walker (1987) 3 BMLR 32
+9 Associated Provincial Picture House v Wednesbury Corporation [1947] 2 All ER 680: test of whether a decision is 'so
+unreasonable that no reasonable decision-maker could have come to it.'
+10 op cit n1 at p375; R v Central Birmingham HA ex parte Walker (1987) 3 BMLR 32; 'United Kingdom - R v
+North West Lancashire Health Authority Ex Parte A, D, and G,' Medical Law Review, Med Law Rev 2000.8(115)
+11 Montgomery, J., Health Care Law (2 nd end, 2003), Oxford at p68
+12 On ECJ op cit n11 at p63
+On CHR see Brazier, M., Medicine, Patients and the Law (3 rd edn, 2003), Penguin at p24
+13 e.g. Osman v United Kingdom (1998) 29 EHRR 245
+14 New Zealand case of Shortland v Northland Health Ltd [1998] 1 NZLR 433 cited in Mason, J.K.; McCall Smith, A.;
+Laurie, G.T.; Law and Medical Ethics (6 th edn, 2002), Butterworths Lexis Nexis,; op cit n4 at p28: danger of eroding
+the traditional doctor-patient relationship
+15 Re J (A Minor)(Wardship: Medical Treatment) [1990] 3 All ER 930
+16 op cit n1 at p379
+17 op cit n15 at p31
+18 ibid at p70
+19 Syrett, K.,'Nice Work? Rationing, Review And The "Legitimacy Problem" In The New NHS,' Medical Law
+Review, Med Law Rev 2002.10(1); Steiner, H. (Director) Economic and Social Rights and the Right to Health
+(Sept 1993), Harvard Law School
+20 op cit n1 at p366; Dingwall, R. (ed), Socio-Legal Aspects of Medical Practice (1989), Royal College of Physicians of
+London at p49
+21 see generally Stauch, M.; Wheat, K.; Tingle, J., Medical Law (2 nd edn, 2002), Cavendish at ch2
+22 Quality of Life Adjusted Years test. See generally ibid at pp52-4
+23 Criticism of QALYs - see McHale, J.; Fox, M.; Murphy, J., Health Care Law: Texts and Materials (1997), Sweet &
+Maxwell at p100: its 'inescapable arbitrariness.'
+24 Steiner, H. (Director) Economic and Social Rights and the Right to Health (Sept 1993), Harvard Law School
+Michael Mander at p29
+25 op cit n1 at p370
+26 Stoltzfus Jost, T., 'The Role of the Courts in Health Care Rationing: The German Model,' Washington & Lee Public
+Law Research Paper No. 02-9
+27 op cit n24, Ken Anderson at p5; De Cruz, P., Comparative Health Care Law (2004), Cavendish
+28 op cit n1 at p386
+29 op cit n2
+30 Fletcher, N.; Holt, J.; Brazier, M.; Harris, J., Ethics, Law and Nursing (2001), Manchester University Press at p101
+31 e.g. op cit n1 at p374
+32 see above at p1
+33 Hendrick, J., Law and Ethics in Nursing and Health Care (2000), Nelson Thornes Publishing at p141
+34 op cit n11
+35 op cit n4 at p126.
+See also Liebenberg, S., 'The courts and socio-economic rights'
+()
+36 op cit n26
+37 (2002) BCCA 538; O'Brien, K., 'Will The Courts Decide How Hospitals Spend Their Funding?' 18 July 2003
+()
+38 Auton v British Columbia (Attorney General) 2004 SCC 78
+39 See Lord Hoffmann in Court of Appeal in Airedale NHS Trust v Bland [1993] AC 789; op cit n4 at p280; op cit n1
+at p381
+40 op cit n4 at p285, p380: 'such choices are beyond the capacity of a doctor';
+McHale, J.; Fox, M.; Murphy, J., Health Care Law: Texts and Materials (1997), Sweet & Maxwell at p98
+41 e.g. R v Sheffield HA ex parte Seale (1994) 25 BMLR 1; Brazier, M., Medicine, Patients and the Law (3 rd edn,
+2003), Penguin at p32
+42 Davies, M., Textbook on Medical Law (2 nd edn, 1998), Blackstone at p8
+43 Dingwall, R. (ed), Socio-Legal Aspects of Medical Practice (1989), Royal College of Physicians of London at p56
+44 op cit n24, Albie Sachs at p12
+45 e.g. R v Secretary of State ex parte Nottinghamshire County Council The Times 10 November 1986
+46 Daniels, J.E.; Sabin, N., 'Accountability for Reasonableness' BMJ 321 1300-1301 (2000); Syrett, K.,'Nice Work?
+Rationing, Review And The "Legitimacy Problem" In The New NHS,' Medical Law Review, Med Law Rev
+2002.10(1); R v North West Lancashire HA ex parte A, D and G [1999] Lloyd's Rep Med 399; R v North
+Derbyshire HA ex parte Fisher [1997] 8 Med LR 327
+47 Woolf, H., 'Are the Courts Excessively Deferential to the Medical Profession?' Medical Law Review, 2001, vol. 9,
+no. 1, pp. 1-16(16)
+48 op cit n1 at p278, p366; op cit n4 at p19, p21, p379
+49 Brazier, M., Medicine, Patients and the Law (3 rd edn, 2003), Penguin
+50 see R v North East Devon Health Authority ex parte Coughlan [2001] QB 213
+51 op cit n4 at p297
+52 op cit n2
+53 ibid
+54 Stewart, C., 'Tragic choices and the role of administrative law' BMJ, July 8, 2000; 321(7253): 105 - 107
+55 Wilsher v Essex Area Health Authority [1988] AC 1074; Glasgow Corporation v Muir [1943] AC 448
+56 e.g. op cit n4 p110-111
+57 op cit n6
+58 Health Act 1999; Health and Social Care Act 2001 s.61 - National Institute of Clinical Excellence (NICE) guidelines
+59 op cit n4 p276
+60 ibid p106, p109
+61 ibid at p106, p109
+62 ibid
+63 Bolam v Friern HMC [1957] 1 WLR 582
+64 see Jones, M., Medical Negligence (1996), London at 135
+65 Knight v Home Office [1990] 3 All ER 237
+66 Davies, M., Textbook on Medical Law (2 nd edn, 1998), Blackstone at p13
+67 Fenn, P., 'Current Cost of Med Neg in NHS hospitals: analysis of Claims Database' (2000) 320 BMJ 2000 1567-
+1571: on current cost of NHS
+68 Wells v Wells [1999] 1 AC 345
+69 Irvine, 'The Patient, The Doctor, Their Lawyers And The Judge: Rights And Duties' Med Law Rev 1999.7(255)
+70 above at p3
+71 see McHale, J.; Fox, M.; Murphy, J, Health Care Law: Texts and Materials (1997), Sweet & Maxwell at p90
+72 op cit n49 at p42
+73 op cit n34 at p3

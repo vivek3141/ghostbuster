@@ -1,0 +1,35 @@
+What were the objectives and stakeholders of a project to deploy an Active Desktop system at Aston Martin, and how did the project align with top-level organizational goals? 
+
+Aston Martin, the iconic British luxury carmaker, embarked on an ambitious project in the mid-2010s to overhaul its desktop IT infrastructure and deploy an Active Desktop system across its global operations. The Active Desktop project had several key objectives:
+
+First, the project aimed to upgrade Aston Martin's aging desktop hardware and software systems which had become outdated, slow, and incompatible. Many employees were still using desktop PCs running Windows XP, and collaboration was hindered by a lack of messaging and videoconferencing tools. By deploying new hardware running Windows 10 and Office 365, the Active Desktop project sought to ensure all employees had fast, modern devices and software that were secure, compatible, and enabled collaboration.
+
+Second, the project sought to enhance security and data protection. With sensitive design, engineering, and business data on employee desktops and laptops, security was a major concern. The Active Desktop project aimed to apply centralized security policies, two-factor authentication, full-disk encryption, and other measures to safeguard Aston Martin's intellectual property and other digital assets.  
+
+Third, the project aimed to improve IT management efficiency. With outdated systems, IT support staff spent significant time managing patches, fixes, and other maintenance. The Active Desktop project aimed to consolidate systems on a single platform, allowing for centralized and automated management that reduced the burden on IT staff.
+
+The key stakeholders in the Active Desktop project included:
+
+•Aston Martin employees: The primary users of the new desktop systems with an interest in gaining secure, modern, and collaborative tools to do their jobs.
+
+•Aston Martin IT department: Responsible for deploying and managing the new systems, with an interest in gaining efficiencies and improving support for end users.
+
+•Aston Martin executives: Interested in the strategic benefits of the project like enhanced security, data protection, and enabling a modern digital workplace to attract and retain top talent. 
+
+•Microsoft: The supplier of Windows 10, Office 365, and other technologies for the Active Desktop platform, with an interest in gaining Aston Martin as a customer.
+
+•Desktop hardware vendors: Suppliers of PCs, laptops, monitors and other hardware, with an interest in supplying equipment to Aston Martin.
+
+In summary, the Active Desktop project was strongly aligned with Aston Martin's top-level business goals:
+
+•Attracting and retaining world-class talent: By providing modern collaborative tools and technologies. 
+
+•Enhancing competitiveness: By enabling a productive, digital workplace and partnerships with tech leaders like Microsoft.  
+
+•Protecting intellectual property: By applying robust security measures to safeguard digital assets.  
+
+•Driving efficiency: By reducing IT support costs through platform consolidation and automation.
+
+•Positioning for growth: By laying the technology foundation to enable future innovations.
+
+The Active Desktop project was a strategic initiative that provided both short-term tactical benefits as well as long-term advantages to help Aston Martin thrive as a leader in the luxury automotive industry. With updated systems and software in place, employees gained tools to boost their productivity, creativity and collaboration.

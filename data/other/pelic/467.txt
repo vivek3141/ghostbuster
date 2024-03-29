@@ -1,0 +1,8 @@
+vote: verb
+ We will vote our class monitor. 
+ 
+persevere: verb
+ He persevered his principle from beginning to end.
+
+prohibit: verb
+ This place was prohibited to enter.

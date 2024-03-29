@@ -1,0 +1,17 @@
+The admissibility of parliamentary materials, such as Hansard reports of debates and proceedings, as an aid to statutory interpretation is a complex issue. There are a number of criteria and limits imposed by the courts on referencing Hansard. 
+
+The first criterion is that Hansard can only be used when the meaning of a statute is ambiguous or obscure. As established in the case of Davis v Johnson, Hansard cannot be used to contradict the ordinary meaning of clear words in a statute. If the ordinary meaning of a provision is evident, parliamentary history is irrelevant.
+
+Second, Hansard can only be referenced to understand the mischief that the statute aimed to remedy and the legislator’s intention. In Pepper v Hart, the House of Lords ruled that Hansard can be used as an aid to determine the objective intention of Parliament in enacting a measure. However, the subjective intentions of individual members of Parliament are not relevant.
+
+Third, the statements referenced must be clear and unambiguous. Judges will not rely on inconclusive or conflicting materials. As Lawton LJ noted in Davis v Johnson, “to choose between conflicting views expressed in a debate is to make history, not to discover it.”
+
+Fourth, the spokesperson for the relevant ministry must make the referenced statement. As seen in Davis v Johnson, statements by backbenchers are given little weight. Only statements by the minister in charge can authoritatively represent the objective intention of Parliament.
+
+Fifth, weight is given to statements from the legislative stage at which the meaning arises for consideration. Explanatory statements made during the second reading of a bill are more authoritative than those made at committee stage.
+
+Despite these criteria, there are limits to the admissibility of Hansard. A key argument is that it violates the exclusionary rule of evidence that prohibits reference to parliamentary materials to interpret statutes under the principle of parliamentary privilege. There is also a risk of judicial error or uncertainty in analyzing volumes of complex debates.
+
+Opinions differ among judges on this issue. In Davis v Johnson, the majority resisted reference to Hansard due to the exclusionary rule. However, Lord Wilberforce argued that as long as courts are sensitive in using parliamentary materials, doing so “serves the purpose of giving effect to the true intention of the legislature.”
+
+In conclusion, there are established criteria for when and how Hansard may be referenced to interpret ambiguous statutes, but also limits to and arguments against its use due to parliamentary privilege and the risk of uncertainty. The debate on this issue depends on balancing these considerations. Overall, when used cautiously and subject to the stated criteria, Hansard continues to serve as a useful extrinsic aid to uncovering the objective legislative intention.

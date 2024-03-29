@@ -1,0 +1,35 @@
+Burt Lanchester of Malibu Garden Furniture Ltd has provided forecasts of costs and cash flow information for garden chairs that he intends to begin manufacturing and selling in January 2006. The data that he has provided will be analysed to produce a profit forecast as well as a cash flow forecast. The profit forecast will give an estimate of future performance at different levels of sales and at different selling prices, whilst the cash flow forecast will give an indication of the ability of the business to survive with or without additional funding or overdraft facility. Recommendations will be made on how performance can be improved.
+Each chair, when sold, contributes an amount of money to the fixed costs of the company. Once the fixed costs have been covered, the remainder is profit for the business.
+Sales price per unit: 70
+Less variable costs per unit: 12.50 + 7.25 + 2(7.50) + 6.25 + 4.50
+Contribution per chair: 
+24.50
+Repeating the calculations for a sales price 10% higher (i.e. 77):
+Contribution per chair: 
+31.50
+Repeating the calculations for a sales price 10% lower (i.e. 63):
+Contribution per chair: 
+17.50
+To break even, total contribution must equal the fixed costs: Contribution x (number of units) = 45,000
+Therefore the number of units required to break even = 1837
+At 10% higher sales price and 10% lower demand (=2160 units):
+The number of units required to break even = 1439
+At 10% lower sales price and 10% higher demand (=2640 units):
+The number of units required to break even = 2572
+When the total contribution exceeds fixed costs, the additional amount is profit:
+Profit = Total Contribution - Fixed Costs
+Where Total Contribution = (Contribution per unit) x (number of units) = 24.5 x 2,400 = 58,800
+Hence Profit = 58,800 - 45,000 = 
+13,800
+At 10% higher sales price, profit = 
+23,040
+At 10% lower sales price, profit = 
+1,200
+The margin of safety indicates the volume of sales that can fall short of the forecast sales, before the company falls below the break-even point. It is hence the forecast volume of sales minus the volume to break even:
+2400 - 1837 = 563 units
+At 10% higher sales price, margin of safety = 731 units
+At 10% lower sales price, margin of safety = 68 units
+The resulting Profit - Volume graph for the three sales prices is provided here:
+At the current forecast levels, the company is going to face bankruptcy unless it receives additional funding in the form of a loan, or a higher overdraft limit is allowed by the bank. In February the closing cash is -13,150 yet the current overdraft limit is only 10,000. The problem becomes more severe in March and April and then slowly improves as sales increase.
+A further problem is that the company is not going to have enough chairs to meet demand at the forecast levels. If it manufactures 200 chairs per month, then in May it will already have run out of chairs. The recommendation here is to alter the production schedule so that slightly more chairs are produced in the spring/summer months, and less in the autumn/winter months. Obviously this will affect the monthly costs of labour and purchases in the cash flow forecast,
+At a 10% higher sales price, the profit is greater for any given level of sales (as per the profit-volume graph). On the whole, larger amounts of cash will come into the company in the same space of time, and so the closing cash will be higher and also less overdraft (or loan) will be required. The margin of safety is also higher. The reverse is true if the sales price is 10% lower. Hence the recommendation is to increase the sales price, and also to obtain funding (or an increased overdraft limit) if the closing cash in any given month still exceeds the current overdraft limit.

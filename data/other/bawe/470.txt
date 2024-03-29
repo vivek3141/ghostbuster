@@ -1,0 +1,35 @@
+"Why do people not walk or even run with a smooth level gait, like a waiter holding two cups brim-full of boiling coffee? Why do people select walking and running from the other possibilities? We address such questions by modelling a person as a machine describable with the equations of Newtonian mechanics.
+"Although people's legs are capable of a broad range of muscle-use and gait patterns, they generally prefer just two. They walk, swinging their body over a relatively straight leg with each step, or run, bouncing up off a bent leg between aerial phases. Walking feels easiest when going slowly, and running feels easiest when going faster. More unusual gaits seem more tiring. Perhaps this is because walking and running use the least energy. Addressing this classic conjecture with experiments requires comparing walking and running with many other strange and unpractised gaits.
+"As an alternative, a basic understanding of gait choice might be obtained by calculating energy cost by using mechanics-based models. Here we use a minimal model that can describe walking and running as well as an infinite variety of other gaits. We [can] use computer optimization to find which gaits are indeed energetically optimal for this model. At low speeds the optimization discovers the classic inverted-pendulum walk, at high speeds it discovers a bouncing run, even without springs, and at intermediate speeds it finds a new pendular-running gait that includes walking and running as extreme cases.
+"One way of characterizing gaits is by the motions of the body. In these terms, walking seems well caricatured (Fig. 1) by the hip joint going from one circular arc to the next with push-off and heel-strike impulses in between."
+This analysis will examine assumptions that can be used to model the bipedal gait, analysis of the bipedal model, and how the model may be generalised to consider the quadrupedal gait.
+People have compact bodies; legs are massless.
+Gait choice is based on energy optimisation.
+Energy cost muscle work.
+Treat the body as a point mass m at a position (x,y) at a time t (figure 2).
+Assume no dependence on elastic storage; assume no springs (tendons).
+Stance phase is when at most one foot can be in contact with the ground at a time (figure 3).
+Flight phase is when neither leg touches the ground (figure 3).
+The left and right legs have identical force and length.
+A single step is defined by one stance phase and one flight phase. Thus running would consist of a short stance phase, whilst walking would have a flight phase of zero duration.
+A gait is characterized by the position and velocity of the body at the start of a stance phase relative to the stance foot, the step period, and F(t); the force along the leg (figure 4).
+Resolving forces vertically and horizontally, Newton's Law gives, for stance (i.e. when at least one foot is in contact with the ground) with duration t
+s,
+where
+Time t = 0 is the beginning of a stance phase with foot-contact point x
+c = 0. The initial conditions are , , , and . At , periodicity requires that , ,  and .
+For given l
+max, d and v, we need to find the optimal strategy  that minimizes work. Now mechanical work is given by d W = Fd l, giving effective cost:
+.
+where []+ is non-zero only for positive values, i.e. [p]+ = p if p > 0 and [p]+ = 0 if p < 0. This problem cannot be solved by elementary methods since l depends on x, y and t, but can be solved using numerical methods (Srinivasan and Ruina, Nature 439). The resulting solution (Figure 6) shows that inverted pendulum walking is the preferred gait for low speeds and running is preferred at high speeds, as expected.
+According to the article, real biological legs approximately simulate an elastic spring during running. Define e to be the extension of a leg. Then e can be modelled as a simple harmonic oscillator:
+, with a frequency . Since k and m are constant, this is independent of e. Solving this gives,
+Now, given l = l
+0 at t = 0,
+.
+The biped gait can also be linked to the quadruped gait. While the pronk is similar to standing in terms of leg movement, the gaits with a single line of symmetry can be modelled to the biped gait. Imagine two bipeds of equal mass and height moving alongside each other at constant distance. Pair the legs of the quadruped that are 0.5, i.e. half a phase out. These are the legs of the bipeds. By taking the average of their leg positions, we can find the position of the centre of mass that we need to model the quadruped to the biped.
+We can model the transverse gallop, the rotary gallop, and the walk in the same way, but the two 'bipeds' would be moving out of sync with each other.
+The canter, on the other hand, is more difficult as the legs move in unequal periods.
+Combining these models we believe that the optimal gait will still be walking for low speeds and galloping for higher speeds, with the bound, pace and trot being energy inefficient.
+Our model, by definition, is a simplification of the real life situation and so we have ignored several factors. These include the energy cost of leg swinging, the possibility of higher period gaits such as skipping, and the assumption of inelasticity in human legs. However, the elasticity we assumed in the legs of running bipeds, reducing the effective cost at high speeds, can be generalised to quadrupeds.
+While we have applied these assumptions, using our model we can see that a smooth level gait will be energy inefficient.

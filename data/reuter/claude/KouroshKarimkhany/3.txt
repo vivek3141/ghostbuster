@@ -1,0 +1,15 @@
+Software Publishers Report Only Modest Increases in Earnings Due to Seasonal Slowdown and Lack of New Products  
+
+Major software companies reported modest year-over-year increases  in revenue and earnings this quarter, citing both seasonal trends and a lack of significant new product releases.  
+
+Industry bellwether Microsoft announced quarterly revenue of $32.5 billion, up just 5% from the same period last year. Profits rose only 3% to $8.8 billion. The company saw strong growth in its cloud computing business, with revenue from Azure and other cloud services up a whopping 59%. However, sales of Windows and Surface computers declined due to what Microsoft called “post-holiday seasonality.” The company also has not released any major new versions of software in recent months.
+
+“While we see strong demand for our cloud platform and services, our earnings were impacted by the usual drop-off in the PC market following the holiday season and the fact that we didn’t launch any big new blockbuster products this quarter,” said CEO Satya Nadella in a statement.
+
+Adobe also reported a seasonally-soft quarter with revenue of $2.5 billion, up 6% year over year, and net income of $538 million, a 4% increase. Sales were particularly weak for the company’s popular Creative Cloud software suite, which includes Photoshop, Illustrator and InDesign. Adobe partly blamed some customers delaying purchases in anticipation of a major new release coming later this year.
+
+“We typically see a lull in the first quarter as the initial exuberance around the holidays subsides, and this year was no exception,” said Adobe CFO John Murphy. “While demand for our products remains very strong, the lack of a marquee software update led some customers to defer buying decisions until our next generation of Creative Cloud is released in a few months.”  
+
+Other major software companies including Salesforce, Oracle, SAP and Autodesk also reported results that mostly matched lowered expectations, with revenue and earnings growth in the mid-to-high single digits. Almost universally, the companies cited a slowdown in sales following the strong fourth quarter, a lack of new products for customers to buy so far this year, and—in some cases—the impact of a stronger U.S. dollar abroad.  
+
+While not alarming, the results confirm that even large, well-established software firms remain dependent on a steady cycle of new releases and upgrades to drive consistent growth. Investors are now looking ahead to the next round of major updates planned for later in the year, as well as any new technologies or capabilities that could reaccelerate momentum across the software sector.

@@ -1,0 +1,13 @@
+Intel Corp.'s Strong Earnings Report Boosts Stock to New Highs
+
+Intel Corporation, the world's largest semiconductor chip maker, reported strong third-quarter earnings after the close of markets Tuesday. The better-than-expected results sent Intel's stock price surging more than 10% in after-hours trading to a new 52-week high. 
+
+The Santa Clara, California-based company posted earnings of $1.25 a share, up 33% from a year earlier and well above analysts' forecasts of $1.15. Revenue rose 8% to $18.3 billion, also topping estimates. Sales of chips used in data centers and personal computers led the gains. Data-center revenue rose a whopping 24% as companies continued upgrading equipment to handle cloud services and fast-growing demands for AI and machine learning.
+
+"Our product roadmap continues to deliver strong growth across the business, particularly in areas like inference at the edge, 5G networking and cloud computing," said Intel CEO Bob Swan. "This quarter we launched our next-generation Intel Xeon Scalable processors with built-in AI acceleration, and we're ramping the world's first 10nm-based CPU for PCs."
+
+The results offered the latest evidence that semiconductor companies are overcoming a slowdown in global economic growth and trade disputes. Intel's largest rival, Advanced Micro Devices, also reported better-than-expected results last week, citing strong sales of chips for business and gaming PCs. Nvidia, the dominant maker of graphics chips for AI applications, beat estimates with its latest report in August.  
+
+Intel said it expects fourth-quarter revenue of about $19.2 billion, higher than Wall Street targets, with earnings of $1.30 a share. The company’s upbeat forecast indicates solid demand for chips ahead of the holiday shopping season and new product rollouts. Intel shares leaped to $58.75 in after-hours trading, topping the previous intraday high of $59.59 in July. The stock has gained more than 30% so far this year.
+
+While Intel dominates the overall PC and server markets, it faces intensifying competition in chips for AI, autonomous vehicles, and 5G wireless networks. Swan has made manufacturing improvements and development of new technologies priorities since taking over as CEO last year. The third-quarter results show his turnaround efforts are beginning to pay off. With a new lineup of advanced products launching this year and next, Intel seems poised to power more gains in the global digital economy.

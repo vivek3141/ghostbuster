@@ -1,0 +1,15 @@
+Intel Corp Stock Surges Ahead in Heavy Trading After Strong Q3 Earnings Report Fuels Gains in PC Makers  
+
+Shares of Intel Corp jumped more than 10% in heavy trading on Friday after the company reported better-than-expected third-quarter earnings the day before. The solid results and optimistic forecast from the world's largest chipmaker helped boost stocks of major PC makers as well, signaling renewed confidence in that industry.
+
+Intel reported earnings per share of $1.42, beating analysts' forecasts of $1.11. Revenue also topped expectations, coming in at $19.2 billion compared with estimates of $18.21 billion. The strong quarter was driven by growth in Intel's personal computer and data center groups, which both saw double-digit percentage revenue increases. Sales of Intel's PC chips were up 16% over the previous quarter. 
+
+"Our product and financial execution this quarter was exceptional, driving strong revenue and earnings growth that exceeded our guidance, even as market conditions remain challenging,” said Bob Swan, Intel’s chief executive, in a statement.
+
+Intel also issued bullish guidance for the fourth quarter, with revenue expected to come in at about $18.2 billion. Analysts had been expecting $17.8 billion. Intel’s stock surged on the news, climbing over 10% to $58.25 a share in morning trading. The gains lifted shares of major PC makers as well, with Dell up 6%, HP Inc rising 8% and Lenovo gaining 5% on optimism for continued strong sales.
+
+The results provide more evidence that sales of personal computers, Intel's main revenue source, are holding up better than expected during the global coronavirus pandemic. Shipments of PCs grew at the fastest pace in a decade during the third quarter, as more people continued working and taking classes from home. While overall demand for consumer electronics has dipped this year, PCs have been an bright spot, along with items like webcams, monitors and wireless keyboards and mice.
+
+Some analysts cautioned that Intel's rally could be short-lived, however. Despite the pandemic-fueled bump, the long term outlook for PCs remains challenging as more everyday tasks shift to smartphones and tablets. Intel also faces steep competition in the data center market from rivals like AMD, which recently released new server chips that some analysts say outperform Intel's offerings.
+
+While the next few quarters may continue to benefit from strong PC demand, Intel will need to show progress in other areas like software, graphics chips and 5G wireless technologies to prove it can thrive even as PC sales moderate, analysts say. Still, investors seemed willing to celebrate the good news today, sending shares of the world's largest chipmaker sharply higher in an otherwise down day for the markets.

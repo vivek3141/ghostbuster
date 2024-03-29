@@ -1,0 +1,31 @@
+Certainly! Here's a Scala program that generates a pronounceable string without consecutive consonants or vowels:
+```scala
+import scala.util.Random
+object PronounceableStringGenerator {
+  val vowels = "aeiou"
+  val consonants = "bcdfghjklmnpqrstvwxyz"
+  def main(args: Array[String]): Unit = {
+    val length = 10
+    val random = new Random()
+    var result = ""
+    var lastChar = ""
+    for (i <- 1 to length) {
+      var nextChar = ""
+      if (lastChar == "") {
+        // First character can be either a vowel or a consonant
+        nextChar = if (random.nextBoolean()) vowels(random.nextInt(vowels.length)).toString else consonants(random.nextInt(consonants.length)).toString
+      } else if (vowels.contains(lastChar)) {
+        // Last character was a vowel, so next character must be a consonant
+        nextChar = consonants(random.nextInt(consonants.length)).toString
+      } else {
+        // Last character was a consonant, so next character must be a vowel
+        nextChar = vowels(random.nextInt(vowels.length)).toString
+      }
+      result += nextChar
+      lastChar = nextChar
+    }
+    println(result)
+  }
+}
+```
+This program generates a random string of length 10 that alternates between vowels and consonants. The first character can be either a vowel or a consonant, but subsequent characters must be the opposite of the previous character to ensure there are no consecutive consonants or vowels. The `Random` class is used to generate random indices into the `vowels` and `consonants` strings to select the next character. Finally, the generated string is printed to the console.

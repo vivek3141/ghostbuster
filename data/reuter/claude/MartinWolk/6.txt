@@ -1,0 +1,13 @@
+Microsoft's Earnings Growth Slows Down Due to Sales Surge Last Year
+
+Microsoft Corp. reported its quarterly earnings this week, posting solid gains in revenue and profits but showing slower growth compared with a year earlier. The tech giant said its sales climbed 12% in the January-March quarter to $30.6 billion, while net income rose 19% to $8.8 billion, or $1.14 a share.
+
+While the results beat analysts' estimates, the growth was slower than the surge in business Microsoft saw early in the COVID-19 pandemic. In the same quarter a year earlier, sales rose 15% and profit gained 33% as the shift to remote work and learning drove heavy demand for Microsoft's cloud-computing services and productivity software like Teams.  
+
+"Over a year into the pandemic, digital adoption curves aren't slowing down," said Microsoft CEO Satya Nadella. "They're accelerating, and it's just the beginning." However, Mr. Nadella warned that the prior-year comparison would be difficult to match given the unusually high growth last year.
+
+Microsoft continues to benefit from the broader trend of companies moving more of their operations to the cloud. Revenue from the company's Azure cloud-computing services grew 50% in the quarter. The firm's productivity software unit posted 17% sales growth, while revenue from PC-related software and services climbed 28% with strong demand for Windows software and the Xbox gaming business.
+
+The quarterly results reinforce Microsoft's steady transformation in recent years into a cloud-computing powerhouse. While growth in some areas like gaming and PCs can be volatile, the shift of companies to Microsoft's Azure and Office 365 cloud services has fueled consistent gains. The firm now rivals Amazon.com Inc. as a leading cloud provider.
+
+Overall, the numbers show Microsoft's strong and durable growth despite facing a tough comparison with the year-earlier period. While the pace of increases may moderate in coming quarters, Microsoft's growing dominance in business software and cloud computing points to a steady flow of revenue and profit for years to come.

@@ -1,0 +1,13 @@
+Federal Reserve Rejects Justice Department Request for Banks to Collect Borrower Data to Combat Discrimination  
+
+The Federal Reserve announced today that it has rejected a request from the Justice Department to require large banks to provide detailed information on borrowers, including their race, income, and credit scores. The Justice Department had requested the data to help enforce fair lending laws and combat discrimination in the banking system.
+
+However, the Federal Reserve indicated that providing such granular data on individuals could pose privacy concerns and harm consumer trust in the banking system. "While we fully support the important goal of fair lending and non-discriminatory access to credit, collecting and sharing such sensitive borrower data raises substantial privacy questions," said Federal Reserve Chairman Jerome Powell. 
+
+The Justice Department had argued that access to more detailed borrower data was necessary to properly monitor bank lending practices and ensure they are not discriminating unfairly based on race, religion or other prohibited factors. “We cannot adequately monitor discrimination without understanding who is actually receiving loans and on what terms,” said Attorney General William Barr. The agency has opened several investigations into potential discriminatory lending in recent years, but has said its efforts were hampered by lack of data.
+
+Consumer groups had also voiced concerns about privacy issues and the security risks of collecting and distributing such data. "This is extremely sensitive information that, if mishandled or obtained illegally, could be used to harm consumers through identity theft or scams," said Alyson Burns, policy director at the Consumer Rights League.
+
+The banking industry opposed the data collection based on the administrative burden. The Federal Reserve's decision is a win for the banking lobby, which argues that fair lending laws can be enforced through random audits and testing, rather than accumulation of mass data. However, civil rights groups counter that analysis of more comprehensive data is necessary to uncover subtle or institutional patterns of discrimination.
+
+The issue is likely to spur further debate on how to balance consumer privacy concerns with civil rights protections. The Federal Reserve left open the possibility of revisiting its decision if additional privacy safeguards and limits on data use can be put in place. But for now, large banks will not be required to provide the granular borrower data sought by the Justice Department.

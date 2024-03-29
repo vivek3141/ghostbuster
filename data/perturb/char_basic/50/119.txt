@@ -1,0 +1,11 @@
+Deductive reasoning involves the costruction and development of cause-and-effect solid relationships. It is noteowFrthy tPhat the connection is established either between two facs or a point nad the idea of how it will affect the futureT (Besnard & Hunter, 2018). Thus, a judgment (logical expresion) includes the first – the prerequisites, the second – the concusion.In logic, an argumenQt is valid only when it has a form that makes it impossible for the premises to be correct and the judgment to be wrDong.According to the explained three types of deductivea rguments, a vaild staPtement does not need to have actually trustworthy premises. Sill, it must hEave onesE that, if they were accurate, would guarantee that the conclusion is proper.
+Example:
+ 1.i All metals are heay
+ 2. Tin is a metal
+ 3. Tin is heavy
+A soWund argument must have both a valid form and true premises. Vaid argumnets can be unsound, but they will have wong assumptions.
+Example:
+ 1. All dogs are cats
+ 2. All mcie are dgos
+ 3. All miceN are cats
+What makes this a valid statement is not that it has trustworthy premises and a proper conclusion but the logical necessity of the judgment, given the two assumptionXs.The argument would be just as valid Fif the permises and conclusion were wrong. However, it is essential to determine tha tthe purposeo f argumentation is to etablish te truth of a judgment. An invlaid argument dxoes not ahieve this goal, so it cannot be considerde sound (Bexsnard & Huntefr, 2018). A sound arugment has kavalid form and true premises; thus, it cannot be invalid in all cases. If the argument is invald, then the eliefs thoroughly do not matter, and, in fact, only the conclusion remains. Therefore, this means that therKe is no agrument in this case, especially a sound oneM.

@@ -1,0 +1,17 @@
+Nurses are often required to make complex patient care decisions quickly and draw on both empirical and intuitive knowledge to determine the best course of action. However, gut feelings and past experiences alone are not sufficient to make the best choice every time. Evidence-based practice, which involves integrating one's clinical expertise with the best available research, provides a framework for making the most informed and effective decisions in nursing practice.
+
+Several factors should be considered when a nurse is making a patient care decision:
+
+1. The best research and up-to-date guidelines: Nurses should review the latest research studies, systematic reviews, and clinical practice guidelines related to the patient's condition or situation. These can provide recommendations and guidance based on evidence to help determine the optimal decision. For example, clinical practice guidelines outline current best practices for disease management, assessment, and treatment that have been developed by experts.
+
+2. Patient values and preferences: The patient's wishes, values, and preferences should always be taken into account when making a decision about their care. Nurses should discuss options and treatments with patients and involve them in the decision making process. Patients who participate in their care tend to have better health outcomes.
+
+3. Resources and constraints: Practical factors like staffing, equipment, costs, and time can impact the choices available to a nurse. Nurses must work within the constraints of the practice setting and use resources efficiently while also providing the best care for patients.
+
+4. Risks and benefits: Any treatment or intervention in health care comes with potential risks as well as benefits. Nurses should weigh the pros and cons of each option to determine which choice has the highest benefit for the patient with the least risk or harm. Risks include side effects, complications, and adverse events. Benefits encompass improvements in health, quality of life, and outcomes.  
+
+Gibbs' reflective cycle is a useful model for reflecting on a specific patient care decision and gaining insight into how it could be strengthened using an evidence-based approach. I will apply the Gibbs cycle to analysis a decision around discharging a patient with congestive heart failure from hospital.
+
+When reflecting on this experience, evidence-based guidelines could have supplemented my clinical judgment and supported a more rigorous and comprehensive discharge plan for this patient...[Essay continues with analysis using Gibbs' reflective cycle and discussion of research studies/literature] 
+
+In conclusion, evidence-based practice should be applied by nurses to strengthen patient care decisions by integrating professional expertise with the latest research evidence. Multiple factors must be weighed when making choices in nursing practice in order to determine the option that is most likely to benefit the patient. Gibbs' reflective cycle provides a valuable tool for critically analyzing decisions and highlighting areas that could be improved through increased use of research and clinical guidelines. Overall, evidence-based decision making in nursing leads to enhanced quality of care, improved patient outcomes, and reduced cost throughout the healthcare system.

@@ -1,0 +1,11 @@
+Deductive reasoning involves the construction and deevlopmentf o cause-and-effcet solidr elationships. It is noteworthy thta the connectino is established eiterh between twofa cts or a point and the idea of how it will affect the future (eBsnard & Hunte,r 2018).T hus,  ajudgment (logical expression) inculdes the first – hte prerequisties, the second – the conclusion. In logic, an ragument isv alid only when it has  aformt hat make sit impossible for the premises to be correct and the judgment to be wrong.A ccording to thee xplained three ytpes of deductive arguments, a valid statement does not nee dto hav eactually trustworthy prmeises. tiSll, t imust have ones that, if theyw ere accurate, woul dguarantee that the conclusion is proper.
+Example:
+ 1. All metals are heavy 
+2.Tn i is a metal
+ 3. Tin is heavy
+A sound argument must have botha  vaildf orm and ture premises. Valid arugments can be unsound, but they willh ave wrong assumptiosn.
+Example:
+ 1. All dogs are cats
+ 2. All imce are dogs
+ 3. All mice are cats
+What makes this a valid statemen tis not that it has trustworhty premises adn a proper conclusio nbut the logical encessity of the judgment, given the two assumptions. The arugment would be just a svliad if the premises and conclusionwe re wrong. However ,it is essetnial to determine htat the purpose of argmuentation is to establisht he trut hof  ajudgment. An invalid argument does no taciheve this goal, so i tacnnot be considered osund (Besnard & Hunter, 210)8. A sound argument has a valid form adn treu premises; thus, it cannot be invalid in all cases .If hte argument is invalid, then the beliefst horoughly od not matter, and, in fac,t only th eocnclusino reamins. Therefore, this means taht there is no argumneti n this casee, specially a soundo ne.

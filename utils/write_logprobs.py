@@ -9,7 +9,7 @@ from transformers import AutoTokenizer
 
 tokenizer = tiktoken.encoding_for_model("davinci")
 
-llama_tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf")
+llama_tokenizer = AutoTokenizer.from_pretrained("daryl149/llama-2-7b-chat-hf")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 vocab_map = {}

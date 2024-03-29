@@ -1,0 +1,15 @@
+Compaq to Launch Low-Cost Workstations, Threatening Traditional Vendors  
+
+Computer giant Compaq Computer Corp. announced plans today to roll out a new line of low-cost workstations that could threaten traditional workstation makers like Sun Microsystems Inc. and Hewlett-Packard Co. 
+
+Compaq said its new ProLiant workstations will start at less than $5,000, significantly undercutting the price of competing workstations. The machines are powered by Intel's latest Pentium Pro and Pentium II processors and run on Windows NT and Unix operating systems.
+
+"This is a part of the market we have not played in, and we think we can be very competitive," said Eckhard Pfeiffer, Compaq's chief executive. "We are going to be very aggressive on pricing to build market share."
+
+The workstation market has been dominated by specialized makers such as Sun and HP, which have focused on powerful, expensive machines used for technical tasks like software engineering, design, and animation. However, the performance of Intel-compatible chips has improved in recent years, allowing Compaq and other so-called "Wintel" PC makers to challenge traditional workstation vendors. 
+
+"This is the start of a long, downhill slide for workstation makers who don't also have a strong Intel-based Windows NT business," said Tim Bajarin, an analyst with Creative Strategies Inc. in San Jose, Calif. "Compaq is in a position to be very price competitive in this market because of their volume and size."
+
+Compaq's workstations, which will debut next month, will range from a $4,999 model to a $25,000 machine that rivals the capabilities of much more expensive Unix workstations. The new systems are designed to appeal to cost-conscious customers and could find niches in markets like financial services, petroleum exploration, and digital content creation.  
+
+(remaining words: 491)
