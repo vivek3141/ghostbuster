@@ -192,6 +192,7 @@ eve.csv
 gpt_zero.ipynb
 detect_gpt.ipynb
 zero_shot.ipynb
+ghostbuster_stats.ipynb
 *.ipynb
 
 temp
