@@ -400,7 +400,7 @@ if __name__ == "__main__":
 
             idx += 1
 
-            if "table of contents" in essay.lower() or "[" in essay.lower():
+            if "table of contents" in essay.lower():
                 continue
 
             essay = essay.replace("\n\n", "\n")
@@ -423,9 +423,6 @@ if __name__ == "__main__":
                     break
                 doc.append(line)
             doc = "\n".join(doc)
-
-            if len(doc.split(" ")) < 200:
-                continue
 
             with open(f"data/essay/human/{num_documents + 1}.txt", "w") as f:
                 f.write(doc.strip())
@@ -528,7 +525,7 @@ if __name__ == "__main__":
         # llama_7b = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf").to(
         #     device
         # )
-        llama_13b = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-13b-hf").to(
+        llama_13b = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-13B-AWQ").to(
             device
         )
         print("LLAMA Loaded")
