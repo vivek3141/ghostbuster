@@ -1,0 +1,13 @@
+IBM Unveils E-Commerce Strategy and New Partners in Press Conference 
+
+IBM held a press conference today to announce an aggressive new e-commerce strategy and several key partnerships with major retailers. Speaking to a room of journalists and analysts, IBM's CEO Arvind Krishna laid out the company's vision to help retailers adapt to the rapid growth of online shopping.
+
+"E-commerce has experienced a massive acceleration due to the events of 2020, and it's clear this trend is here to stay," said Krishna. "IBM is uniquely positioned to help retailers adapt to this new reality." Krishna highlighted IBM services and technologies to enable frictionless e-commerce, including AI-powered virtual shopping, blockchain for supply chain transparency, and edge computing to improve response times.
+
+As part of the new strategy, IBM unveiled partnerships with Walmart, Target and Home Depot. Walmart will tap into IBM's AI and hybrid cloud solutions to enhance their digital marketplace and optimize pricing and promotions. Target will roll out IBM's virtual shopping technology to allow customers to visualize products in 3D and see recommended, shoppable outfits. Home Depot will leverage IBM blockchain to give customers end-to-end transparency into their supply chain and product journeys.  
+
+"We're always looking for ways to improve the customer experience, and AI and blockchain are game-changing technologies," said Walmart CEO Doug McMillon. Target CEO Brian Cornell said their new virtual shopping experience "will inspire customers and fuel our sales growth well into the future." Home Depot CEO Craig Menear cited "the peace of mind that comes from truly understanding where our products came from and how they were made" as a key driver of their IBM partnership.
+
+In addition to the retail partnerships, IBM announced the launch of a new commerce-focused cloud platform. The IBM E-Commerce Cloud Platform integrates Watson AI, hybrid cloud and security capabilities tailored to the needs of the commerce industry.  Krishna highlighted the platform's "extremely fast page load speeds, seamless omnichannel experiences, and an open architecture with an ecosystem of partners." The E-Commerce Cloud Platform will become generally available next month, and Krishna urged retailers to "move fast and be first" in adopting the technology.
+
+With e-commerce surging 43% this year alone, Krishna emphasized the urgency for retailers to accelerate digital transformation and make strategic long-term investments. The partnerships and platform announced today position IBM to gain a stronger foothold in the retail industry as companies look to the future of online shopping. IBM shares rose 4% on the news, signaling the market's confidence in IBM's e-commerce play.

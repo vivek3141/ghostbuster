@@ -1,0 +1,4 @@
+An overview of other literature on methodologies and criteria used in supplier evaluation and selection process is one of the vital components of a successful operation of a manufacturing company.
+The paper starts with mathematical models, Simple multi-attribute rating technique, and analytic network process.
+The popularity of methodologies is compared by the number of mentions in the literature.
+Knowing this distribution can help build an idea of the most prominent ways to address issues with suppliers.

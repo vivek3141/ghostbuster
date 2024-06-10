@@ -1,0 +1,3 @@
+1. **Content** - Textual, visual or aural content that forms the primary information available on a website, which often includes images, videos, and other multi-media elements.
+2. **Structure and Navigation** - The structural layout of a website that determines how webpages are organized and how users can navigate through it, including menus, sidebar, footer, and links.
+3. **Design and Layout** - The visual elements of a website, including colors, fonts, and layout, that affects the overall aesthetics and user experience.

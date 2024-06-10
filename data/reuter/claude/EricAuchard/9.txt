@@ -1,0 +1,15 @@
+Computer Associates Launches One-Stop Internet Division for Businesses  
+
+The large software company Computer Associates International Inc. announced today the launch of a new division focused on providing Internet-based business services and software to companies. The new division, called CA Internet Solutions, will offer companies a "one-stop shop" for services and applications to establish an Internet presence and conduct e-commerce.
+
+The move signals Computer Associates' intention to be a major player in the fast-growing market for business-to-business e-commerce and Internet services. The division will provide services such as web hosting, e-commerce platforms, marketing services, and payment processing. It will also develop business software for supply chain management, customer relationship management, and other Internet-based applications.
+
+"Companies today want help navigating the complex world of e-business," said Sanjay Kumar, president of Computer Associates. "CA Internet Solutions provides a single source for the services and software to accelerate companies' Internet initiatives and e-commerce strategies." 
+
+CA Internet Solutions will draw on Computer Associates' expertise in systems management, security, and enterprise software. However, the new division will operate independently and partner with other technology companies to provide open, platform-neutral solutions. "We will work with any and all partners that share our vision of enabling companies to succeed on the Internet," said David McCue, vice president and general manager of CA Internet Solutions.
+
+The division launches with an impressive list of initial partners, including Akamai Technologies for web content delivery, CheckFree for payment processing, and Propel Software for e-commerce and marketing automation services. CA Internet Solutions will also use Computer Associates' own Unicenter TNG infrastructure management system and Neugent machine learning technology in some of its offerings.
+
+Several pilot customers have already signed on for services from CA Internet Solutions, including Daisytek International, one of the world's largest wholesale distributors of computer supplies and accessories. But industry observers note that Computer Associates faces significant competition in the market for Internet business services, from established players like IBM, EDS, and CSC as well as from nimble startups. The key to success will be how well and how quickly CA Internet Solutions can pull together a comprehensive, user-friendly package of services and applications for its business customers.
+
+Overall, the launch of CA Internet Solutions is a bold move by Computer Associates to extend its reach into the Internet era. With its formidable resources and technical capabilities, Computer Associates is well positioned to capture a leading role in the next generation of business computing. But in the fast-changing world of e-business, the company will have to move quickly to make CA Internet Solutions a success.

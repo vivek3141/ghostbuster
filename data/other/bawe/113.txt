@@ -1,0 +1,533 @@
+Circa 2000 BC the Babylonians developed a formula for solving the quadratic polynomial equation. Since that time, mathematical history is littered with successful and failed attempts to solve poly-nomials of higher degrees. In the four thousand years since the Babylonians solved the quadratic, the cubic and quartic were solved towards the end of the Dark Ages and the Renaissance respec-tively and there were numerous researches into polynomials. Then Abel and Galois independently proved the unsolvability of the quintic by radicals, early in the nineteenth century.
+Solving the quadratic equation is something we learn early in secondary school and is instantly recognizable to the mathematician and non-mathematician alike. We learn to solve the equation ax 2 + bx + c by the following formula.
+Example 1.1
+This may seem inane but once the polynomials grow in degree, the question of the existence of solutions by radicals becomes more interesting and important. One of the main themes of this essay is the solution by radical of polynomials, leading to:
+Theorem 6.17 If n  5 then the general polynomial of degree n is not soluble by radicals.
+(The theorem is quoted from page 147, I.N Stewart's Galois Theory, Chapman and Hall/CRC (1973)). To prove this we need to become familiar with some Galois theory.)
+We will also investigate a method of solving the quintic equation not involving radicals.
+The Eisenstein irreducibility criterion, below, gives a situation where a polynomial f is irreducible i.e it is not a product of two polynomials of lesser degree. To get there we need the following:
+Definition 2.1 For a quotient field F,  and  are called the content and primitive of
+Theorem 2.2 Let U be a unique factorization domain with quotient field F and let nonzero . Then  with  and  unique. Also, the coefficients of  belong to U and have no non-trivial common factors in U, a primitive element.
+Proof:
+The coefficients of a(x) are fractions of elements of U with a common denominator from the definition of a field of quotients. Then  and for , . From Algebra II, let b be a highest common factor so that . Then  with  and .
+For uniqueness we have  =  = . Then  and since  we see  for , . Then . U is a unique factorization domain so r, s have no non-trivial common factor. If s is not a unit of U then it has an irreducible factor p. We know p divides the coefficient of  and p is prime since U is a unique factorization domain. This gives rise to a contradiction since r and s are relatively prime and p divides s so it does not divide r. Then p must divide the coefficients of  giving the contradiction, so  is a unit. Then  is a unit and .
+The next theorem follows easily.
+Theorem 2.3 Let U be a unique factorization domain with quotient field F with . Suppose  for , . Then  for ,  with the degrees  and  equal.
+Proof:
+We know a(x) = 
+ = . The product of primitive polynomials is again primitive (Page 396, A First Course In Abstract Algebra, Fraleigh, Addisn-Wesley (2003)) and by the uniqueness proved in Theorem 2.2,  for some unit . Take a c to be a highest common factor of the coefficients of a(x), so . Then we can take  and .
+Now to prove Eisenstein's irreducibility criterion.
+Theorem 2.4 Let U be a unique factorization domain with quotient field F. Let f(x) be a non-constant polynomial with coefficients in U. Suppose there exists an irreducible  such that
+a) p does not divide the leading coefficient b) p divides all other coefficients c) p2 does not divide the constant term.
+Then f(x) is irreducible over F[x].
+Proof:
+Take f(x) a polynomial of degree n, with leading coefficient .By Theorem 2.3, we only have to consider factorizations with coefficients in U. Let f(x) = 
+ with the leading coefficients of g(x), bk, and h(x), cl, nonzero. We have k +l = n, a0 = b0c 0 and a n = bkc l.We know that p divides all but the leading coefficient of f(x) so without loss of generality, p divides b0 and not c 0 since p 2 does not divide a0. Let i be the smallest positive integer such that p divides b i. Then we see ai =  and p divides bj for j < i. We know p is prime and does not divide bi, c 0 so does not divide bic meaning it does not divide ai. So i = n and since we know n = k + l and i < k we have k = n and l = 0. This means that we can only factorize in the form f(x) = hg(x) for  and by Theorem 2.2, there is no proper factorization of f(x) in F[x].  (Page 54, Chatters and Hajarnavis, An Introductory Course In Commutative Algebra, Oxford (1998))
+This next basic example shows how the Eisenstein irreducbilty criterion may be used.
+Example . This is irreducible since p = 11 does not divide 1 and p2 = 121 does not divide 22 although p divides all other coefficients.
+One of the most important ideas in Galois theory is the field extension. To quote page 29, I.N
+Stewart's Galois Theory, Chapman and Hall/CRC (1973):
+But what is a field extension?
+Definition 2.6 Let M be a field. A extension of M is a field N, containing M, such that the inclusion  is a field homomorphism.
+We say that N is an extension of M, N : M. We also need to consider simple extensions,
+Definition 2.7 M() is the field obtained from M by adjoining ,. If N is an extension of M then it is a simple extension if N = M() for some .
+We can classify simple extensions M() : M into distinct classes according to the type of element adjoined to M.
+Definition 2.8 If M() : M is a simple extension, then  is an algebraic element of M if f() = 0 where f(x) 
+ is some non-zero polynomial. Then M() : M is a simple algebraic extension. Otherwise,  is a transcendental element and M() : M is a simple transcendental extension.
+Definition 2.9 A polynomial is monic over M if the leading coefficient an = 1.
+The minimum polynomial is the polynomial of least degree which meets the requirement of Definition 2.9.
+Definition 2.10 For an element , algebraic over M, the minimum polynomial over M is the unique monic polynomial of least degree such that m() = 0.
+Theorem 2.11 Let m be an irreducible monic polynomial over M. Then there exists M() : M such that m(x) is the minimum polynomial of  over M.
+The proof is not given here since it is not required for later proofs, but is worth looking at. (INS)
+The next theorem gives us an idea when the minimum polynomial of a field M is irreducible. The proof is simple but quite long so we only give an outline.
+Theorem 2.12 Let M be a field. If  is an algebraic element over M then the minimum polynomial m of  is irreducible over M. Further, it divides every polynomial for which p() = 0.
+Outline of Proof:
+Assuming that m of  over M is reducible we have m = ab with a and b monic of degree . Since m() = a()b() = 0 we see that there is a contradiction so m is irreducible.
+Take p over M with p() = 0. Then there exist q and r over M such that p = mq + r for . With p() = m()q() + r() = 0, we see that we must have r = 0 so m divides p.
+Theorem 2.13 Any element of M(), where M() : M is a simple extension, has a unique expression as a polynomial in  of degree less than that of the minimum polynomial of  over M.
+Proof:
+Let m(x) be the minimum polynomial of  over M. The elements of M() can be expressed as  with  and f, g are elements of M[t] the field of rational expressions. We can see that m does not divide g and m and g are coprime since m is irreducible (a minimum polynomial is irreducible for an algebraic element). So ag + bm = 1. Then  =  = 1. So  Let d =  = and d() = r(). The degree of r is less than that of d.
+For uniqueness we let f() = g(
+) with degrees less than that of m. With h =  we have h() =  = 0. We have the degree of h less than that of m and h is unique by the definition of m.
+These results explores the relationship between extensions and isomorphisms.
+Theorem 2.14 If we have two simple extensions M() : M and M() : M, with ,  the zeros of the same minimum polynomial, the extensions are isomorphic and the isomorphism of M() and M() maps  to .
+Proof:
+Every element of M() can be expressed uniquely as a polynomial x = xo + x\
+ + xnn with degree less than that of the minimum polynomial m. Clearly , defined by , is bijective.
+=
+=
+=
+=
+Let x = a(), y = b(),xy = c() with a, b, c polynomials over M with degree less than that of m. We have 0 = xy - xy = a()b() - c() and there exists p such that ab = mp + c by INS. c is the remainder on dividing ab by m. Then,
+So  is an isomorphism, the extensions are isomorphic since  is the identity on M and () = .
+Definition 2.15 The degree of a field extension N : M is the dimension of N considered as a vector space over M. It is written as [N : M]
+This theorem is also known as the tower law and is always useful when dealing with field extensions.
+Theorem 2.16 If M, N, P are fields with  then [P : M] = [P : N][N : M].
+Proof:
+Let [P : N] = n and [N : M] = m. If  is a basis for P over N there exist  such that . With  we have  for  and a basis  for N over M. So  span P over M.
+Let  with . Let  for  and let . We know that the xi are linearly independent over N so 
+i = 0 for . We know that the yj are linearly independent over M so j = 0 for i and j so  is a linearly independent set over M. Then the elements of this set form a basis of P over M so [P : M] = [P : N][N : M] if the RHS is finite.
+Suppose the LHS is finite. A basis for P over M spans P over N. So . N is a linear subspace of P so .
+This next theorem states the relationship between the degree of a minimum polynomial over a field and the field extension. This theorem is very useful when we are trying to decide on the properties of constructible points.
+Theorem 2.17 If M() : M is a simple algebraic extension then [M() : M] = deg(m) where m is the minimum polynomial over M.
+Proof:
+By Theorem 2.13 we know  are linearly independent and span M() over M when deg(m) = n. So the form a basis of M() over M and [M() : M] = n.
+The definition of a finite basis and the concluding theorem of this section are important in later section when dealing with extensions that are finite.
+Definition 2.18 A finite field extension is an extension with finite degree n.
+This theorem links an algebraic simple extension with a finite one.
+Theorem 2.19 If N is algebraic over M and there exist a finite number of elements in N such that  iff N : M is finite.
+Proof:
+Suppose N : M is finite. If  then  so  is algebraic and N : M is algebraic. If  is a basis for N over M then  so that L is finitely generated over K.
+Let M0 = M and  for . Note that  is algebraic over  so . Then .
+Extensions can be applied to geometrical problems as well as the classification of numbers. For example, the impossibility of doubling a cube and the trisection of an angle. First we need to know what a constructible point is.
+Let  be a set of points in R 2. Draw a line through any two points of . Draw a circle with centre at a point in  and with radius equal to the distance to another point in . The point of intersection of circles or lines drawn in this way, is said to be constructible in one step.
+A point p is constructible if a finite sequence of points in R 2, , exists such that pi is constructible in one step from .
+Theorem 3.1 Let  be the subfield of R generated by the coordinates of points in . Say . Then  is obtained by adjoining  to . Then 
+i and 
+i are zeroes of quadratic polynomials in .(A Course in Galois Theory, DJH Garling,CUP (1986)).
+Theorem 3.2 If we have a point p = (
+i, 
+i) that is constructible from  and  is a subfield of R generated by the coordinates of  then  and  are powers of 2.
+Proof:
+From 3.1 and 2.16 we have , . So
+So . Obviously, by induction,  and since  we see that  is a power of 2 and similarly for .
+Now for some impossibility proofs. A problem that was a major headache for the Greeks was how
+to trisect an angle of . We now prove the impossibility of this.
+Theorem 3.3 The angle  cannot be trisected.
+Proof:
+First note that
+=
+=
+=
+.
+We realise that trisecting this particular angle depends on constructing the point . Letting  we see that . By 2.4 we see that  is irreducible over Q[x]. Then [Q() : Q]. So the point  is not constructible.
+You may have heard of the Greek puzzle where Athena's wrath was revealed when her instructions for doubling the cube were not followed correctly.
+Theorem 3.4 Doubling the cube is impossible.
+Proof:
+Let us have the unit cube. We are looking to construct a cube with volume 2, and hence we must
+construct . This is a zero of  which is irreducible over  by 2.3. So
+This is the last of our impossibility proofs, but there are many others including the construction of n-gons.
+Theorem 3.5 We cannot square the circle.
+Proof:
+Let the circle we are attempting to square have radius 1 and hence an area . We would need to construct a square with side . However, we know that this is transcendental.
+We now look at the application of number theory to the construction of polygons. This theorem concerns Fermat primes, but on the same subject you may have heard of Gauss' 17-gon.
+Definition 3.6 A Fermat prime is a prime .
+As stated in IN Stewart's Galois Theory, Chapman and Hall (1973) the only known Fermat primes are . We do not prove the next theorem but it is interesting to consider.
+Theorem 3.7 Suppose that the regular p-gon is constructible where p is prime. Then p is a Fermat prime or p = 2.
+To those unfamiliar with Galois theory, the ideas in the last section do not seem to be building towards any specific goal. However, we are can now begin to explore the Galois group and some other ideas.
+Definition 4.1 Let K a subfield of M and  an automophism of M. If  then  is a K-automorphism of M.
+Theorem 4.2 The set of K-automorphisms forms a group for an extension M : K.
+Proof:
+Let  and  be K-automorphisms then, 
+
+(k) = 
+(k) = k so 
+ is clearly an automorphism which fixes k. Let i be the identity map, which is a K-automorphism by definition. Clearly,  is an automorphism of M,  so that -l is a K-automorphism. If  is another K-automorphism, we see that since composition of maps is associative we can conclude the set of K-automorphims of M is a group.
+Definition 4.3 The group of all K-automophisms of M is known as the Galois group of the extension M : K and is denoted 
+(M : K).
+We can find Galois groups and K-automorphisms by a simple exploration of the elements adjoined to the extension.
+Example 4.4 The Q-automorphisms of the extension  are simple to find. Let  be a Q-automorphism of . Let . Then s 2 =  =  =  = 3. Hence s =  = .
+We have  and . Now we see that ,  and . Then - is a Q-automorphism and so is  since it is the identity map. So the Galois group  is cyclic of order 2.
+Let us explore the set  of all elements in N for N : M such that  for ,  where L is a subgroup of (N : M).
+Lemma 4.5 If L is a subgroup of 
+(N : M) then  is a subfield of N containing M.
+Outline of Proof:
+Take the M-automorphism  and . This gives . We also have . Similarly for the other field operations.
+So  is a subfield of N. We have  so .
+Definition 4.6  is known as the fixed field of L.
+Let us also consider a field P such that  for N : M. Let P be known as an intermediate field and .  and . If  then . From the above we see  then . We can easily see that with P an intermediate field and L a subgroup of the Galois group then , .
+The following mathematics seem to lead in the right direction since they involve the factorization and zeroes of polynomials over fields and extensions. We will now define splitting fields, normal and separable extensions and state and prove some results that will be of use later.
+Definition 4.7 Let M be a field and . If f can be expressed as  with  then f splits over M.
+Definition 4.8 The field  is a splitting field for the polynomial f over the field K if  and 1. f splits over  2. If  and f splits over ' then ' = .
+(Definition from DJH Garling's A Course in Galois Theory, Cambridge University Press (1986))
+Here we give an example of a splitting field, we see a field with
+Example 4.9 Let  =  =  over Q. Inside C f splits into the linear factors  so the splitting field in C is .
+The next two theorems explore the relationships between splitting fields under maps, specifically uniqueness up to isomorphism.
+Theorem 4.10 Let  be an isomorphism. Let f be a polynomial over M and  the splitting field for f over M. Let (f) split over N, an extension of M'. There is a monomorphism  such that . (Page 79, I.N Stewart's Galois Theory, Chapman and Hall/CRC (1973))
+This leads to,
+Theorem 4.11 Let  be an isomorphism. Let f be a polynomial over M and  the splitting field for f over M. Let ' be a splitting field for (f) over M'. There is an isomorphism  such that .
+Proof:
+By 4.10 there exists a monomorphism  such that . We see () is a splitting field for (f) over M'. ' is also a splitting field for (f) over M' so () = ' so  is surjective hence an isomorphism.
+The normal extension has specific criteria for which polynomials split.
+Definition 4.12 N is said to be a normal extension of M if each polynomial  splits in N if it has at least one zero in N.
+We now give an example of a non-normal extension.
+Example 4.13 Q() : Q is a normal extension when  is the real seventh root of 5. This is because while  has a zero in Q() but it can't split in Q() or this would lead to the conclusion that there are seven real seventh roots of 5.
+This theorem explores a relationship between normal extensions and splitting fields.
+Theorem 4.14  : M is finite and normal iff  is a splitting field for some polynomial f over M.
+Proof:
+Let . By Theorem 2.10 and Theorem 2.15 we can see that  for certain 
+i. Let , where mi is the minimum polynomial of 
+i. We see that p splits over  since each mi is irreducible over M with a zero n . Hence  is a splitting field.
+Conversely, let  be a splitting field for some polynomial p over M. The extension  : M is then seen to be finite. Let m be an irreducible polynomial over M with a zero in , Let ' be a splitting field for m p over M. Let 1, 2 be zeros of m in '. For i = 1,2 we have
+=  =
+Theorem 2.16 gives . Then (
+i) is a splitting field for p over M(
+i) and Theorem 2.1 gives M(
+1) = M(2) so by Theorem 3.11 we have an isomorphism between the extensions (
+1) : M(
+
+1) and (2) : M(2). So . If  then  so that  and  : M is normal.
+Next, we must define separability, monomorphisms, automorphisms and normal closures. Monomorphisms can be used to build up K-automorphisms which enables us to calculate the order of the Galois group of a finite normal extension. A normal closure is an extension of an algebraic extension satisfying the condition that the new extension is normal. It allows the recovery of normality and an avoidance of the difficulties caused by a non-normal extension.
+Definition 4.15 An irreducible polynomial f of degree n over a field M is separable over M if it has n distinct roots in a splitting field.
+Definition 4.16 If an irreducible polynomial f over a field M is not separable over M then it is inseparable.
+Definition 4.17 An extension N:M is seperable if every  is seperable.
+The following gives an example of a separable polynomial.
+Example 4.18 The polynomial x3 + 5 is seperable over Z7. In C, f splits into linear factors f(x) = (x + 
+)(x + 
+)(x + ) where ,  and  are the distinct cube roots of -5.
+This quick proof is useful in later sections.
+Theorem 4.19 If M is a field such that char(M) = 0 then every irreducible polynomial is separable over K. If , a polynomial over M is inseparable iff  for .
+Proof:
+Assume that an irreducible polynomial m over M is inseparable iff m and Dm have a common factor of degree greater than one (This theorem is simple to prove but a proof is on page 86. I.N Stewart's Galois Theory, Chapman and Hall/CRC (1973)). Then Dm = 0 since m is irreducible and deg(Dm) < deg(m). Then for  this implies nan = 0 and if char(M) = 0 we have an = 0. If  we have an = 0 if n = cp. Let ki = a
+ip and m is inseparable for .
+Definition 4.20 A K-monomorphism is a field monomorphism  such that 
+(k) = k for all  where K is a subfield of M and N.
+Definition 4.21 If N : M is an extension and P : M is normal then P : N is a normal closure for N : M. If  is a tower and O : N is normal then O = M.
+Now for the fundamental theorem of Galois theory. This is a rather beautiful correspondence between the set of automorphisms, the Galois groups, and the field extension. The full statement of the theorem is long and complicated so we settle for an informal statement which will be easier to follow. Much depends on our earlier discussion of intermediate fields and fixed fields.
+Theorem 5.1 Let us say we have a finite extension that is both separable and normal having degree n and Galois group G.
+Also, let us have a set  of intermediate fields,  of all subgroups of G with maps from one to the other. Then the Galois group G has order n since we can show that in this case we have , , and the maps between  and  are mutual inverses with a bijection between the sets which follows from the first part.
+Given an intermediate field P we have  and . The first equality is obvious since N : P is seperable and normal, so the other follows.
+We have  a normal subgroup of G iff P is a normal extension of M. We also have an isomorphism between 
+(P : M) and  given P a normal extension of M. This is given by the standard application of group theory that we are familiar with to the Galois group of P : M.
+The full correct statement and proof are shown in I.N Stewart's Galois Theory, Chapman and Hall/CRC (1973), I.N Herstein's Topics in Algebra, Wiley (1975) and D.J.H Garling's. A Course In Galois Therory, Cambridge (1986) although it is stated and proved differently in the three books. This statement is easier to understand although examining all three will lead to a better understanding.
+We now define soluble groups, which Galois studied when working on the solution of polynomials by radical.
+Definition 6.1 A finite group is soluble if it has a series of subgroups  such that each  is a proper normal subgroup of Gi and each  is abelian.
+The next results are the second and third isomorphism theorems which will enhance our knowledge about soluble groups.
+Theorem 6.2 Suppose G is a group and H is normal to G and K is a subgroup of G.
+i)  is normal to K and .
+ii) If  and K is normal to G then H is normal to K, K/H is normal to G/H and
+(G/H)(K/H) = G/K.
+Proof:
+Take ,  then . Define  and . so  with kernel . By the first isomorhism theorem, the result holds.
+Only the proof for the first part is stated here since the second part is not required at the moment. For any interested parties, there are proofs of this theorem in almost every algebra book on the second year level.
+We now look at some conditions for groups to be soluble. This will be a great help in following theorems since we are searching for soluble groups.
+Theorem 6.3
+i) If H is a subgroup of a soluble group G then H is soluble.
+ii) Suppose H is a normal subgroup of a group G. G/H and H are soluble iff G is soluble.
+iii) If N and G/N are soluble then G is soluble.
+Proof:
+i) Let  be a series for G with Gi+1/Gi abelian. Let . Then H has a series of subgroups such that . So,. We get this result from the isomorphism theorem we have just proved. This is a subgroup of Gi+1/Gi so we have H soluble since Hi+1/Hi.
+ii) Define Gi as above. Then G/N has a series . We write the quotient as . Then  which is obviously abelian. So G/N is soluble. (Page 116, IN Stewart, Galois Theory, Chapman and Hall (1973)).
+iii) Let  and  with their quotients being abelian. Then the series . The quotients are N i+1/Ni which is abelian and  which is also abelian. So G is soluble.
+Definition 6.4 A group G is simple if its only normal subgroups are the trivial cases e and G.
+Theorem 6.5 A soluble group is simple if and only if it is cyclic of prime order.
+Proof:
+Let G be a simple soluble group. It has a series of normal subgroups and its only normal subgroups are {1} and G. So Gn-1 = {1} and G = G/{1} which is an abelian quotient group. We know every subgroup of an abelian group is normal and each  generates a cyclic subgroup. Then G must be cyclic and hence |G| = p where p is prime.
+Conversely, if |G| = p and G is cyclic, it has not non-trivial proper subgroups and hence it is simple.
+Theorem 6.6 If n 
+ 5 then the alternating group An of degree n is simple.
+Proof:
+Let us have a normal subgroup  and suppose that N contains a 3-cycle. Without loss of generality, N contains (123). For m >
+ 3 we have (321) in An and  which is in N. Then N contains  for all m > 3. We know An is generated by all elements of the form (1i)(1j) = (1ij). We see  so that A n is generated by 3-cycles (12m) and N = A n.
+We need to prove that N contains a 3-cycle for the proof to make sense.
+Case 1: Suppose N contains a = bcd where  is a cycle of length greater or equal to 4. If p = (b1b2b3) then N contains  and p commutes with c and d so  and N contains .
+Case 2: Let N contain an element involving at least two 3-cycles. Without loss of generality, take a = (123)(456)b. Let c = (234), then N contains  and by Case 1 N contains a 3-cycle.
+Case 3: If N contains an element of the form a = (lmn)p with p being a product of 2-cycles, the N contains a 2 = (lnm).
+Case 4: Let N be the product of two cycles. Assume N contains a + (12)(34)b. Let c = (234) and  is in N. If d = (145) then N contains  and N contains (45)(23)(14)(23) = (145).
+This proves the theorem.
+Corollary 6.7 The symmetric group Sn of degree n is not soluble if n > 5.
+Proof:
+Let Sn be soluble for n > 5. Then so is An which is simple. Then An is cyclic of prime order. We know I  which is not prime for n >
+ 5. So we have a contradiction and Sn is not soluble.
+We can see how this particular corollary leads us to the issue of the quintic. We now define radical extensions. We are now beginning the exploration of soluble polynomials by radicals, because any radical expression is contained in a radical extension
+Definition 6.8 N:M is an extension by radicals if N can be obtained by successively adjoining radicals i.e if there exists an integer m(i) such that  and .
+Example 6.9 Let us say that we need to find a radical extension of Q for the following elements of C : . We need to adjoin the elements  and  so we obtain the radical extension .
+So we can now ask when is a polynomial soluble by radicals?
+Definition 6.10 Suppose f is polynomial over M. f is soluble by radicals if there exists a field N containing , the splitting field over M, such that N:M is a radical extension.
+Definition 6.11 If f is a polynomial over K and has a splitting field  over K then the Galois group of f over K is ( : K), the group of K-automorphisms of .
+There seems to be on link between Galois and radicals yet. We now state a crucial theorem.
+Theorem 6.12 Let f be a polynomial over K of characteristic zero. If f is soluble by radicals then the Galois group of f over K is soluble.
+Outline of Proof:
+We let M0 be the fixed field of (N : M). We also let Q : P be a normal closure of P : M. Then . Using two unproved theorems, we can say that P : M0 is a normal radical extension and that its Galois group is soluble.By a further unstated theorem, we can say that (N : M0) is normal.
+By the Galois correspondence, . So theorem 6.3(ii) implies that (N : M0) is soluble. But (N : M0) = (N : M) so (N : M) is soluble.
+This proves that if  and P : M is radical then (N : M) is soluble. By the above definitions, this is equivalent to the statement of the theorem. .
+The best proof can be found on page 255, I.N Hernstein's Topics in Algebra, Wiley (1964).
+It is interesting to look at the radical formulas for polynomials of degree > 2 and this will become important later.
+Example 6.13 Let f(x) = ax 2 + bx + c be a polynomial over K where a=0. We complete the square as in Example 1.1 and we see that if the field is not of characteristic 2, the splitting field of f is . If K is of characteristic 2, then x 2 + c = 0 so the spltting field is .
+We know that there are radical formulas for cubic and quartic polynomials. Now let us find a polynomial not soluble by radicals. First we need two theorems.
+Theorem 6.14 The group S n is generated by the cycles (12.. .n) and (12) for any n,
+Proof:
+Let a = (12...n) and b = (12). Let G be generated by a and b, so G contains . Then G contains all (k,k + 1), and hence all (1k). Then G contain all (1k)(1m)(1k) = (km) and hence G = S n.  (INS)
+This is necessary for the next proof.
+Theorem 6.15 Let f be an irreducible polynomial of degree p over Q, for some prime p. Suppose f has two non-real zeros in C. Then the Galois group of f over Q is S p.
+Proof:
+We know C contains a splitting field  for f. Let  be the Galois group of f over Q, considered as a permutation group on the zeros of f, and these are distinct since the characteristic is zero so that  is a subgroup of S p. Obviously [ : Q] is divisible by p, so by Theorem 5.1  is divisible by p. From Algebra II this means that G has an element of order p. The only element of S p having order p are the p-cycles.
+Complex conjugation is seen to be a Q-automorphism of C giving a Q-automorphism of . This fixes the real zeros and transposes the two non-real zeros to their complex conjugates so G contains a 2-cycle. We assume G contains a p-cycle and a 2-cycle. Then G = S p by the previous theorem.
+Now to find a quintic that can't be solved by radicals.
+Example 6.16 The polynomial x 5 - 4x 2 + 2 over Q is not soluble by radicals.
+Let f(x) = x 5 - 6x 2 + 3. By Eisenstein's irreducibilty criterion f is irreducible over Q. We need to show that f has two zeros in C, which is simple to show by applying Rolle's theorem to the zeros of f. By Theorem 5.8, the Galois group of Q is S5. S5 is not soluble so by 5.7, f is not soluble by radicals.
+We can show that a polynomial is not soluble by radicals if it does not satisfy the condition that its degree n < 5. This is a wonderful but regularly misinterpreted theorem.
+Theorem 6.17 If n > 5 then the general polynomial of degree n is not soluble by radicals.
+Proof:
+Let M be any field and f be the general polynomial of degree n over M. Then the Galois group of  is S n where  is the splitting field for f (For a proof see I.N Stewart's Galois Theory, Chapman and Hall/CRC (1973)). We know that S n is not a solvable group. By Theorem 6.7, f is not soluble by radicals.
+Now we prove a theorem that leads to 6.19, giving us a guide to when a polynomial is solvable.
+Theorem 6.18 Let M have characteristic zero and N : M be a finite normal extension with soluble Galois group (L : K). Then there exists an extension of N, say P, such that P : M is radical. (DHJ Garling's First Course in Galois Theory, CUP (1986)).
+To prove Theorem 6.19 we need only use Theorems 6.12 and 6.18.
+Theorem 6.19 Over a field of characteristic zero, a polynomial is soluble iff it has a soluble Galois group.
+Proof:
+Let K be of characteristic 0 with a polynomial f over K. Let M:K be a finite normal extension with soluble Galois group ( : K). We know that the exists an extension N of M such that N : K is radical. By definition 6.5, f is soluble.
+We know that if f is soluble by radicals then the Galois group of f over K is soluble.
+So we can know, by calculating the Galois group of f over K, if f is soluble by radicals.
+Interestingly, the last section indicates that polynomials of degree n > 5 are insoluble by radicals but not, as taken by many, that the quintic can not be solved at all. We will examine a few methods in the next three sections, drawing on our knowledge of algebra, analysis and geometry.
+In 1877 the German mathematician Felix Klein (he of the famous Klein bottle) published his Lectures on the Icosahedron and the Solution of Equations of the Fifth Degree.
+Example 7.1 Klein manipulated the general quintic  into a form that was solvable ().
+To show this simply we take a monic quintic (leading coefficient of 1) polynomial
+and substitute  so we can write the polynomial as
+with , ,  and . This is called a Tschirnhaus transformation.
+Klein used a similar transformation to reduce the general quintic to . This is explained in a later section. He then solved the equivalent icosahedral equation thus solving the quintic.
+How do we reduce the quintic into a form so that it is equivalent to the icosahedral equation? What is the icosahedral equation? To understand this method we must first define the stereographic projection, with which you may be familiar.
+Stereographic projection is a homeomorphism  where
+is the unit sphere and n denotes the north pole. The map is defined by  an intersection of the plane and the line through n and p. We can write
+since we need  so we must have
+Definition 7.2 It can also be defined as a function of the form  with h(z) = 0 and complex differentiable on all finite points of C. ()
+The complex field C contain x+iy for (x, y) in the plane R 2. The Riemann sphere is a set  where  is a point not in C. Taking the Riemann sphere as a topological space we can extend the stereographic projection  defined by .
+Let us set up an equivalence class on C 2. If  then each vector is related if (z 1, z2) = k.(c1,c2) for some . Call the set of equivalence classes, (z1|z2), P(C) in C 2/{0}. We see that we can write  so we see that P(C) is topologically equivalent to the Riemann sphere.
+Let  be a polynomial in the ring of polynomials over the complex plane. P is called a form if . A pair of forms of the same degree  gives an algebraic mapping  defined by . This is well defined since  is a homeomorphism so we can set up a map between the projective complex line and itself with  depending only on . So any meromorphic function can be expressed as an algebraic mapping.
+If we dehomogenize the forms, let Z2 = 1, we have a correspondence  and similarly in the other direction. Let us introduce the notation  for dehomogenization. So we write .
+An automorphism of the Riemann sphere is a meromorphic bijection on S. The finite groups of such automorphisms are classified up to conjugacy by rotation groups. Importantly for us, the rotation groups of Platonic solids are some of these groups. The set of automorphisms of the Riemann sphere, let us denote it A(S), contains fractional linear transformations  such that , .
+Definition 7.3 The general linear group of two times two complex matrices with nonzero determinant is written as .
+The group maps to A(S), and we can write  for all . We will now
+show that the image of  is a group so that  is a homomorphism. It is a surjective homomorphism since any of the automorphisms can be written as fa for some .
+Theorem 7.4 The image of  under a map to  is a group.
+Proof:
+The composition of maps is known to be associative, and obviously and inverse and identity are contained in A(S) since it consists of meromorphic bijections. So to show that the image of  is a group, we only need to show that it is closed. If  then
+=
+=
+=
+=
+= .
+So if  then  and  is a group.
+From this result we observe that the projective linear group , with element , is isomorphic to  by the First Isomorphism Theorem since  where . By further examination we see that  is isomorphic to , the projective special linear group where , since . We can then see that constant through linear maps are absorbed by projective classes. These results will become useful shortly.
+It is easily proved that a matrix A is orthogonal if it preserves inner products so (Ax, Ay) = (x, y). We use this to prove:
+Theorem 7.5 The orthogonal matrices form a group , and the special orthogonal matrices  form a subgroup of index 2.
+Let A be an orthogonal matrix. Then (Ax, Ay) = (x, y) and (Bx, By) = (x, y) so (ABx, ABy) = (A[Bx], A[By]) = (Ax, Ay) = (x,y). So if  then . Obviously (Ix,Iy) = (x,y) so . If we have  then (Ax, Ay) = (A[BC]x, A[BC]y) = ([AB]Cx, [AB]Cy) = (ABx, ABy) = (Ax, Ay). shows that  is invertible.
+Once we know this we can show that  is a group isomorphic to  and using this result we can show . Introducing  of unitary matrices,  where  is the adjoint. A matrix is special unitary if and only if it is of the form  with . We can show . This leads to,
+Theorem 7.6 As a subgroup of , .
+Proof:
+We show that any rotation lies in . Take the antipodal pair , . Suppose they have stereographic images , so let p = (p1,p2,p 3) and . Then
+taking . Let  be a rotation of the Riemann sphere. This is induced by a rotation r of S 2, which we know takes antipodal pairs to antipodal pairs. Hence f must satisfy f(z)* = f(z*) for nonzero z. By calculating as necessary, we see that the condition is equivalent to saying , , ,  using the condition that ad - bc = 1 for unitary matrices. Then .
+For the converse, take . Let f (0) = 0. If  then if f (0) = 0 we must have  and b = 0 hence . Then we see  so that , so f is rotation. If  then some rotation  takes z to 0. Then  fixes zero and is thus a rotation. Hence  is a rotation and the proof is complete.
+This theorem and the result  gives a relationship between automorphisms of the Riemann sphere and rotation groups. We must assume the following.
+Theorem 7.7 If  is a surjective group homomorphism,  is a subgroup and  then H is a subgroup of G. If kerf and H' are finite then .
+Proposition 7.8 Any finite subgroup G of GL2(C) is conjugate to a subgroup of U 2(C).
+We can use Proposition 7.8 to prove that finite groups of bijective meromorphisms are classified up to conjugation by rotation groups.
+Theorem 7.9 All finite groups of automorphisms of the sphere are conjugate to a rotation group.
+Let  be a finite group of automorphisms. By Theorem 6.6 we see that there is a finite group  with  since . By Proposition 6.7,  is conjugate to a subgroup of . Then  is such that  has . As such, it defines an element  such that . So a finite subgroup of  is conjugate to a subgroup of . Since  and  this proves the theorem.
+So we have proved the relationship between rotations of the sphere and rotation groups. Next we find these rotation groups. First we must prove the theorems we assumed.
+This theorem uses a relationship between inner product and Hermitian positive matrices, Hermitian meaning self-adjoint A* = A and positive meaning x* Ax >
+ 0 for nonzero . Specifically, given an inner product  on  satisfying the standard properties we have  where  is defined by  for  where  is a standard basis vector. By using the inner product properties it is easily proved that every Hermitian matrix has real eigenvalues. A bit more work shows that a unitary matrix diagonalises the Hermitian matrix. This implies that a Hermitian matrix H is positive if and only if its eigenvalues are real and positive. So it must satisfy H = A 2 where A is Hermitian positive. So an Hermitian inner product has form  if it satisfies the standard properties..
+Proof of Proposition 7.8
+Define an inner product  on C 2 by averaging the usual one over G,
+The new inner product is G-invariant meaning  and . It satisfies the usual inner product properties, so [x, y] = (Ax, Ay) for some Hermitian positive A and all . Therefore, for any ,
+so  is unitary.  (Page 28, Geometry Of The Quintic, Jerry Shurman, Wiley (1997))
+We show that the inner product is G-invariant in order to validate the proof.
+Theorem 7.10  is G-invariant.
+where .
+This theorem follows simply from our knowledge of homomorphisms.
+Proof of Theorem 7.7
+Let H' be a subgroup of G1. Suppose  Then  since H' is a subgroup. Then  since f(ab) = f(a)f(b). We must have  so since e' = f(e) we have . With  we have  so . Since  we have . Then  so H is a subgroup of G.
+We can set up an isomorphism . So and since kerf and H' are finite we can write .
+What are the Platonic solids? Simply they are any one of five solids whose faces are congruent regular polygons and whose polyhedral angles are all congruent. However, we can give a much better definition:
+Definition 7.11 Any polyhedron whose symmetry groups act on the sequence (v, e, f), where v is a vertex, e is an edge with v in e and f is a polygon with e in f, is a Platonic solid.
+( and
+In this case we can use the Schlfli symbol (m,n), where m is the number of edges meeting at each vertex and n denotes the edges of the polygons, to describe the polyhedra. We have (3, 3), (3,4), (4,3), (3, 5), (5,3) for the tetrahedron, cube, octahedron, dodecahedon and icosahedron. To dualise a Platonic solid we place vertices at the face-centers of the original polyhedron and connect the pairs from adjacent faces so we take (m,n) to (n,m). The dual can be shown to have the same symmetries as the original polyhedron and the sequence (v,e, f) is mapped bijectively from the original solid. We see that the octahedron is the dual of the cube, the icosahedron is the dual of the dodecahedron and the dual of the tetrahedron is another tetrahedron.
+The icosahedron is constructed by taking the positive root of , . Take three rectangles in the coordinate plane centred at the origin, with sides of length 2 and 2r. We get the icosahedron by connecting vertices. It can be proved that possible rotations are 15 about antipodal pairs on the mid-points (order 2), twenty rotations about each antipodal pair in face centers (order 3), twenty four abut each antipodal vertex pair (order 5) and the identity rotation.
+Theorem 7.12 There are only 60 possible rotations of the icosahedron.
+Proof:
+Take a nonidentity rotation about a point p, lying in some face of the icosahedron. If p is a vertex the rotation has been counted. If not the rotation permutes the vertices on the face containging p. Then p has at least two nearest vertices which implies that it is a face-center or a mid-edge point. So there are no other rotations of the icosahedron.
+We have already proved that rotation groups of the sphere are conjugate to rotation groups. It is possible to show:
+Theorem 7.13 Each finite rotation group of the sphere is isomorphic to one of the following groups:
+Any two finite rotation groups of the same form are conjugate, so these isomorphism classes are also the conjugacy classes. (Page 40, Geometry Of The Quintic, Jerry Shurman, Wiley (1997))
+Outline of Proof:
+Take  a finite rotation group acting on S 2. Start from  which follows from the orbit-stabilizer theorem. This can be replaced by , summing over degenerate orbits. Letting  we see,
+Now, we know  and that . This gives  for each degenerate orbit . We see that  so  where m is the number of degenerate orbits. We see
+giving
+so
+so obviously .
+If k = 2;  so that . This implies that  is cyclic. If k = 3; we can easily see that  are given as
+If  is a finite rotation groups, we can say that a meromorphic function on S is -invariant if .
+Theorem 7.14 A meromorphic function is -invariant iff it is invariant under a set of generators for
+.
+Proof:
+Let  be a generator of  and let f be a meromorphic function . Take f to be -invariant, . Then .
+Let  for  a generator of . The proof follows from definition.
+We know any meromorphic function can be expressed as an algebraic mapping. If we think of  as the group of linear maps , we know  with  such that  can be viewed as the linear maps .
+We can show that for each . Then,
+Theorem 7.15 For all algebraic mapping and ,  for . This shows that  if and only if .
+Proof:
+We know  so . We also know  so . So  and proving this for  merely requires us to consider that P and Q are homogeneous forms and that (P|Q) = 3.
+Then,
+Theorem 7.16 The algebraic mapping  is -invariant if and only if for each  there exists some nonzero complex number  such that  and . In other words, f is -invariant if and only if P and Q both transform by some common factor C under . (Page 51, Geometry Of The Quintic, Jerry Shurman, Wiley (1997))
+The proof of this theorem is much simpler when this definition is introduced.
+Definition 7.17 A nonzero form  is -invariant with character Cp if there exists some functions  such that .
+Proof of 7.16:
+P and Q are relatively prime so let  and  for . Then C() must be constant from a comparison of degrees. We know that constants through linear maps are absorbed by projective classes. So P,Q are '-invariant. By Theorem 7.13, f is -invariant.
+Conversely; f is invariant. Then  for some constant
+C(;).
+Definition 7.18 A full orbit-form for a finite rotation group  is a form of degree  with its zeroes on one orbit , and a zero of the same order at each orbit point. This type of form is '-invariant, as explained in INS. A nondegenerate orbit-form is expressed as . A full orbit-form for degenerate orbits , is expressed as a power P i for  with degree  and . Pi is known as a degenerate orbit-form.
+Theorem 7.19 The full orbit forms are the linear combinations  with .
+Proof:
+We can see that P is a full orbit-form if  or . If this is not the case then the zeroes of P are a union of multisets of orbits of length , where a multiset is defined as  for . So this is not O 1 or O2. So P must be  or the form of a full orbit. So P is a full orbit-form.
+In the other direction, if we take any orbit of a point p and set , then P vanishes at p.
+Theorem 7.20 The general invariant form is given by
+for  and  for only finitely many . (INS)
+Since Theorem 7.19 proves that  are linearly dependent we have,
+Definition 7.21 A syzygy is a linear relation such that .
+Take a real valued function on an open subset . The Hessian matrix of f at ,  is defined as the n x n matrix  (Page 33, Sean Dineen's Multivariate Calculus and Geometry, Springer (1994)). The Hessian matrix crops up in multivariate calculus and is at the heart of a very neat theorem which can be used to find local maxima, local minima and saddle points on real-valued functions defined on . The determinant of the Hessian matrix of the form P is know as the Hessian of P, HP. Similarly, the Jacobian JP of P is the determinant of the Jacobian matrix for the vector-valued function (P, HP).
+A covariant is a function  such that  and for -invariant P we have  if  for all  and . So VP is also -invariant. H and J are both covariants .
+Example 7.22 The Hessian is a covariant. Take a linear mapping , with matrix having
+determinant 1. Then  and . Now
+by the chain rule. Then
+by another application of the chain rule. So
+so the Hessian is a covariant.
+The Jacobian can be shown to be a covariant in a similar manner.
+By Theorem 7.19 we need only find the degenerate orbit-forms to find all invariant forms. The Jacobian and Hessian of a form P are used to this end. Differentiating twice reduces the degree of F by 2 so it is easy to see that HF is a form of degree 2(deg(F) - 2) and similarly JF has degree 3(deg(F) - 2).
+We see that for the Platonic rotation groups  and , so  and . As an example take the group of rotations of the icosahedron. There are  rotations about face centers,  rotations about the vertices and . So to find , ,  we need only find . For the icosahedral case, we simply substitue the vertices from  into the full orbit form. So we find
+and
+.
+Then the syzygy on degenerate icosahedral forms can be written as .
+Theorem 7.23 The -invariant algebraic mappings are ; G, H are disjoint products o (Geometry of the Quintic, Jerry Shurman, Wiley (1997))
+Proof:
+If f is a nonconstant -invariant algebraic mapping it takes every value in P(C) on a union of multisets of -orbits. Then its degree is divisible by , so by Theorem 6.18 G and H are both products of full orbit-forms multiplied by an exceptional form,  for  and  for only finitely many . By Lemma 7.24 below, this cannot be the case since we need P and Q to share the same character.
+Conversely,any f of this sort is invariant so the result is obvious.
+Lemma 7.24 No two exceptional forms share the same character. (Page63,JerryShurman,Wiley (1997))
+From this follows,
+Theorem 7.25 The  -invariant algebraic mappings of degree  are.
+Since we know that there is a correspondence between algebraic mappings  and rational functions  we can take Theorem 7.24 as a statement about the set -invariant rational functions. Then we see,
+Theorem 7.26 The field  of -invariant rational functions is equal to  for any -invariant  with degree .
+From Theorem 7.23 and the correspondence  wehave : ; P,Q are disjoint products of full orbit-foms. This is clearly equal to . So . Then .
+Conversely,  by Theorem 7.24.
+This means that a -invariant rational function f of degree , for each rotation group , generates the field  of -invariant rational functions. So  generates , the rational functions that are invariant under actions of the group of rotations of the icosahedron. But what is ?
+Let us take two rational functions that are related by a fractional linear transformation, such that both take distinct points  for . Since all these points end up at the same image point under both maps it becomes clear that they are equal. So any -invariant function of degree  is determined by its values on three distinct orbits.
+Take , , . Then  for some scalars a, b and remembering our definition of the syzygy, we see .
+Now we find the Brioschi resolvent of . This is found by inverting . We know that  is a map the set of -orbits. By inverting  we can recover the orbit.
+Now we return to Galois theory. We want to examine the specific extension . Letting  we can write  where  since we can write . So the extension  is obtained by adjoining the root of pw to C(W). From Definition 3.8 we see that C(Z) is the splitting field of pw since the roots of pw are  which are elements of C(Z).
+Then we can show that for a rotation group  we have,
+Theorem 8.1
+Proof:
+The roots of pw, the elements of 
+Z, are distinct so they occur once and  by some group theory. Now we know  and from some ring theory from Algebra II we see that this is a . So it follows that pw is a product of irreducibles. INS. So pw is irreducible, it is the minimum polynomial over C(W) so .
+Theorems 6.12 and Theorem 6.17 tell us that L : K is a radical extension if and only if its Galois group Gal(L : K) is soluble. If we take  to be a solvable group then C(Z) : C(W) is a radical extensions, since  by the Galois correspondence.. We see the containments given by  which are normal to each other; and  mean we can construct polynomials  when  and inverting W involves fining the roots of this polynomial, and similarly for other . However, this is not the case for the icosahedral group of rotations is not solvable.
+Theorem 8.2 The group of rotations of the icosahedron 
+I is simple.
+Proof:
+We know that since  we have  which we know to be simple by Theorem 6.6.
+Let the extension L : K be normal and separable and let Gal(L : K) = G. Take  which is fixed by . We have  and each  acts on r as g. The resolvent of  is . The polynomial is G-invariant since .
+We can show that the resolvent is the minimum polynomial of  over K so by correct choice of  we can construct intermediate fields between K and L. So we can construct resolvents for C(Z) : C(W), with  for some rotation group , which reduce to the polynomials discussed in the previous paragraph.
+It is possible to show that the icosahedral group of rotations has five tetrahedral subgroups that stabilize the configuration discussed in Section 7. 'Single out the stabilizing group  of the configuration originally set in the coordinate planes but then rotated about the x2-axis. Thus  (Jerry Shurman, Geometry of the Quintic, Wiley (1997)). If  is a -invariant function then it has a resolvent of degree . Taking I to  we can construct a resolvent  which has degree 5. The rotation  of the octahedron about the x2-axis shows that  and by calculating this form we arrive at  where . Then inverting  involves finding finding a root of the Brioschi resolvent and a root of .
+So we see that the icosahedral inverse solves the Brioschi quintic, and inverting  involves solving the Brioschi quintic.
+Now that we know that solving the icosahedral equation is equivalent to solving its Brioschi resolvent, the way forward is clear. We know the resolvent is of the form  so the questions are whether the general quintic can be reduced to this form, and how.
+First of all how do we transform a polynomial to another, simpler, polynomial? A Tschirnhaus transformation is a polynomial g such that given , with  with a i the coefficient of f, we can define a new polynomial  where  for  for some extension N of M.
+Let  be algebraically independent. Any monic polynomial has the expansion  where the elementary symmetric functions of  (Geometry of the Quintic, Jerry
+Shurman, Wiley (1997)). We can see that however we permute , the  are invariant.
+Theorem 9.1 If  are algebraically independent then there is no nonzero rational function
+such that .
+Proof:
+Assume that such a nonzero rational function exists. There exists no polynomial  such that
+Let the nonzero rational function . Adding 1 to both sides and multiplying by  we have  so . This gives a contradiction so there is no such nonzero rational function.
+We see that the extension  is normal and separable by Theorem 3.14 and Theorem 3.19. Let .  since an automorphism of  over  permutes the roots of p so G is a subgroup S n and each permutation of the roots is an automorphism of  which fixes  by our earlier statement so that S n is a subgroup of G.
+Theorem 9.2 If  are algebraically independent then so are their elementary symmetric functions .
+Proof:
+There exists no polynomial  such that
+Take  with  the associated elementary functions. Each entry is a polynomial  such that
+So there is no polynomial g in  such that .
+So, going back to the Tschirnhaus transformation, h has degree n and its coefficients . we see .  if and only if  such that  and .
+Following from the previous theorem,  can be given any value. By the expansion of p, we can take it as the general polynomial of degree n over C. So it lies in the field . So  and has n distinct roots in . Then p is a separable polynomial. So the Galois group of this polynomial is the Galois group of the splitting field extension .  since an automorphism of  over . This gives,
+Theorem 9.3 The Galois group of the general polynomial g of degree n over C is .
+Definition 9.4 The discriminant of the polynomial p is
+The following follows,
+Theorem 9.5 The discriminant  is invariant under permutations of  for any transposition of
+Proof:
+Let us have  and permute it to get . Then . So we see that the discriminant is invariant under permutation.
+Let us have a transposition . . Under the transposition we have  since the only new term is .
+So we can see that An fixes . Back in the Tschirnhaus transformation, we can calculate h from f and g in the following way. Ostensibly, the resultant of two polynomials is a good way to find whether they have roots in common without the tedious calculation of roots. Let  and  in . These are general when the coefficient are algebraically independent.
+Theorem 9.6 Polynomials p and q share a common non-constant factor if and only if there exist nonzero polynomials  of degree less than n and  of degree less than m, such that .
+Proof:
+Let  of degree less than n and  of degree less than m, such that  exist. In their splitting field over  we can factorize p and q as  and . Since P and Q are of degree less than n and m we have P and Q changing a polynomial of degree less than m and P and Q have common factors. So then p and q must have common factors.
+Conversely, p and q have a common factor. So divide by the common factor an we can find polynomials of degree less than n and m such that  and multiplying by the common factor we have .
+The resultant of two polynomials  is the determinant of what is known as the Sylvester matrix with staggered rows of , then staggered rows of  and all other entries zero.
+Theorem 9.7 The polynomials p and q in  share a nonconstant factor if and only if .
+We know that there exist P and Q of lower degree such that  or . This is the same as saying that  with  which is true if and only if . So .
+If  there exists a nonzero solution v. So the necessary P and Q exist, so p and share a nonconstant factor. .
+We can think of R(p, q) as a formula applying to all polynomials of degree n and m. Calculating detM is obviously a long string of calculation but we can use a much simpler way. The following theorem gives us a simple method.
+Theorem 9.8 The resultant of  and  is given by .
+In their splitting field over  we can factorize p and q as  and . We write . This is a homogeneous polynomial of degree mn which is zero if and only if p and q share a root., so dividing the resultant. For p, each  so each coefficient has homogeneous degree i, and similarly for q. Then we see that the (i, j)th entry of the corresponding Sylvester matrix has degree j - i for , in the ri and j - i + n for ,  in the sj.
+We then see that any nonzero term in the determinant R(p,q) has degree mn in the ri,sj. So  and  agree up to some multiplicative constant. Finding the constant is a simple matter of matching coefficients.  (Jerry Shurman, Geometry of the Quintic, Wiley (1997))
+Going back to the Tschirnhaus transformation again we note that since we know that  is equivalent to  and , we can write . This is explained below,
+Example 9.9 We know . So . We know that  and . We know  so h and  vanish for the same values of S, so .
+Two examples interest us, a Tschirnhaus transformation that reduces the general polynomial to a form with the a zero coefficeient to the term , so-called depressed form, and principal form with zero coefficient for terms  and .
+Example 9.10 To find the depressed form we need to choose the transformation  so that the transformed polynomial has . We know  and 
+. So  and . .
+The principal form is a more complicated reduction since . We need some new mathematics to ease us through the calculations. The power sums of  are .
+Let . The derivative . If we derive lnp we get  by the formulas for geometric series. So . Equating coefficients gives Newton's identities .
+Theorem 9.11 The first j coefficients  of the polynomial  are zero exactly when the first j power sums of its roots vanish.
+Outline of Proof:
+This follows from the fact that for any 
+ ,sj are polynomials in  and vice versa. We see that for some j = n we have
+When j = n - 1 we have
+Then
+so  is written as a polynomial in . This works the other way in a similar manner.
+Take . Replace the last column by  for . Then the Vandermonde matrix is  and its determinant is . Take the transpose of the Vandermonde matrix . If we left multiply the Vandermonde matrix by its transpose we get  with determinant .
+We can now transform the general polynomial p of degree n into principal form.
+Example 9.12 To find the principal form we need to choose the transformation  so that the transformed polynomial has . We know . Then . We know from Newton's identities that . This means that  since we know that . So .
+From Theorem 9.11 we set . So we solve for T the quadratic  where the  are the power sums for . Solving this quadratic for  gives the transformation.
+We now know that we can write the general quintic in principal form. This is displayed as . This has three paramaters ,  and  and the goal is to reduce it to a one-parameter form, the Brioschi form. To do this we must first explore some new ideas.
+Consider the Tschirnhaus transformation geometrically. This is a fascinating subject and it is intuitive that the transformation moves the so-called root vector  to . Without getting distracted, we can make a few observations.
+We define n-dimensional projective space  as a set of equivalence classes on  where x y in  if  for . We see  maps to  under the map .
+An algebraic set in  is the set of common zeros of a finite set of forms in ,
+We see that these sets are structures in .
+By the transformation t1 of Example 9.10, we make the entries of the root vectors sum to zero. Affine Tschirnhaus transformations  are invertible: . Considering what this implies for the operations on root vectors we can consider a Tschirnhaus transformation as acting on . This surface is known as a hyperplane. A hypersurface A(F) for a single form, a hyperplane is a hypersurface for a linear form. We see from Theorem 9.11 that reduction to principal form can be thought of as transforming  onto the canonical surface . Of course, these ideas are just a small selection of the necessary mathematics to see us to our goal.
+Theorem 9.13 There exists a , monic of degree three or four, such that .
+Proof:
+Let  and  be elements of . Then .
+We also see .
+Let . Then
+=
+=
+=
+.
+To complete the proof we need .
+This can be written as .
+The usual process of finding eigenvalues shows that finding  and  requires
+in .
+Earlier on we expressed the discriminant of a polynomial as a determinant with pwer sum entries. Since p is a principal quintic, . Using the standard, but lengthy, method of row and column operations we get
+.
+Then it is obvious that the required square root lies in .
+The next proof uses the geometry we discussed.
+Corollary 9.14 Let  lie on the canonical surface C. For any , the -transformed vector  also lies on C. Equivalently, the -transformed principal quintic is also principal.
+Proof:
+We know .
+The transformed vector also lies on C since
+by Theorem 9.13.
+This is obviously equivalent to the condition that the transformed principal quintic remaining principal since  and  by Theorem 9.11.
+It is easily seen that the Tschirnhaus transformation taking  to  is dependent only on . We can see that the transformed polynomial q is wholly dependent on . Using the division algorithm,  and  where l is unspecified extension of .
+Theorem 9.15 There exist a linear form and a quadratic form in , ,  and , such that .
+Outline of Proof:
+We can write . We need to show that  and that .
+We evaluate the congruence at  and sum over i. Then .
+This gives r = 0.
+To show the second part, we need to consider the values for  in Theorem 9.13. Then, the result follows from field operations in .
+Theorem 9.16 Let k be any field not of characteristic 2. In  let  and . Assume that L does not divide Q in . Let  and . Then for some , .
+This is a straightforward proof using some basic linear algebra. The best proof is in Geometry of the Quintic, Jerry Shurman, Wiley (1997). Now we can find the Brioschi quintic.
+Take L = L(T, 
+) and Q = Q(T, ) as in Theorem 9.17. Then
+.
+and by Theorem 9.14 we have
+.
+Now we construct a Tschirnhaus transformation as . To find t we write
+.
+This gives
+and
+.
+Solving for t, we have
+and
+.
+Then
+and
+.
+Example 9.18 Take the transformed quintic . We see q(S) = 0 when .
+Write . Then  which is zero for . We have a quintic in P with roots which are a linear combination of ri and 
+(ri), so this is still principal by Corollary 9.15. The same method is used for .
+The coefficients of ,  vanish. By expanding and multiplying, the terms vanishing for  are  and . We can easily find the terms for , so we combine the terms.
+'Linear algebra shows ' (Page 128, Geometry of the Quintic, Jerry Shurman, Wiley (1997)) . Let , then . Then  if we let  and .
+We have now reduced the principal quintic to a one parameter form. So even if a quintic is not soluble by radicals it can be done by solving the Brioschi quintic.

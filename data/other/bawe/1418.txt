@@ -1,0 +1,25 @@
+To look at the effects three different acids have on the freezing point of water. Through experiment the depression of water's freezing point will be studied and the results used to calculate the Van't Hoff factor for each acid and therefore the degree of dissociation of each acid.
+A colligative property is one that depends only upon the concentration of a solute and not upon its nature. The colligative properties of electrolyte solutions are more complicated than those of non-electrolytes because the solute dissociates into free ions and because the ions in the solution are then subject to strong interactions. However colligative properties can be used to give a rough indication of the number of particles present in a solution, and hence the extent of dissociation of an electrolyte in solution.
+The depression of a freezing point is one example of a colligative property. The depression, T = T f
+o - T f is proportional to the concentration c of the solution. When defined in this way T is positive. In the case of an electrolyte which dissociates into i particles when it dissolves, T is proportional to ic. Hence:
+k f is the molal freezing-point depression or cryoscopic constant for the solvent. For water, k f = 1.860 K mol -1 dm 3, but it is different for other solvents.
+i is the Van't Hoff factor. It is 1 for non-electrolytes and 2 for strong 1:1 electrolytes like NaCl which are fully dissociated into two ions. For a weak acid HA, with a degree of dissociation :
+For a solution of a monoprotic weak acid of concentration c and degree of dissociation , the acidity constant K a = 
+2c/(1- ) 
+
+2c if  is small. Different equations apply for polyprotic acids.
+Strictly colligative properties depend on the molality (moles of solute per kg of solvent) rather than the concentration or molarity (moles of solute per dm 3 of solution), but the difference between the two scales is small for aqueous solutions and was neglected in the experiment. Molality is independent of temperature and pressure whereas concentration is not, so k f was taken as 1.860 K mol -1(dm solution)3, properly it is 1.860 K mol -1(kg solvent). The value k f can be calculated from the relation:
+R is the gas constant, 8.314 J K -1 mol -1.
+T f is the freezing point of pure solvent.
+M is the molar mass of the solvent in kg mol -1.
+H o
+fus is the molar heat of fusion of the solvent.
+150cm 3 of; distilled water, 1.5M ethanoic acid, 1.5M hydrochloric acid and 1.5M sulfuric acid were placed in separate 250cm 3 conical flasks and all were immersed in a bowl of crushed ice. The flasks were shaken frequently until the temperature of each solution was below 3 oC. Four Dewar flasks were filled two-thirds full with crushed ice. Just enough of one chilled solution was added to each flask to cover the surface of the ice.
+Each ice solution mixture was stirred thoroughly. After 5 minutes the calibration of a -20 to +20 x 0.1 oC thermometer was checked by immersing it in the Dewar flask containing ice and the water, stirring, and waiting until the reading was steady. The thermometer was then transferred to the Dewar flask containing the ethanoic acid-ice mixture. The mixture was stirred and the temperature recorded once the reading had steadied, with the thermometer in the middle and not the bottom of the ice. Three 5cm 3 samples of the liquid phase were then removed using a 5cm 3 pipette with a polymer-wool filter. The three samples were set aside and later titrated against 0.3M sodium hydroxide from a 50cm 3 Teflon tap burette, using phenolphthalein as an indicator.
+This operation was repeated for each of the other acids.
+Exact concentration of 0.3M NaOH: 0.29765 mol dm -3
+Reading of thermometer in melting ice: 0.10 oC
+Results for each acid:
+Mean Volume delivered = 19.63
+Mean Volume delivered = 17.50
+Mean Volume delivered = 37.20 (3rd titration anomalous so not included in mean)

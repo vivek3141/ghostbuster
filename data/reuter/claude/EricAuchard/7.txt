@@ -1,0 +1,17 @@
+Computer Associates Plans to Shift Focus to PC-Based Mid-Range Software, Causing Stock to Drop Initially  
+
+Computer Associates International Inc. announced today that it plans to shift its strategic focus to developing and marketing software for mid-range PCs and servers, moving away from its traditional focus on mainframe applications. The company said it sees significant growth opportunities in providing software and services to mid-size companies with networks of PCs and low-end servers.
+
+The announcement initially sent Computer Associates' stock price down nearly 12% as investors reacted to the shift in strategy and the uncertainties it brings. However, shares started to recover some of the losses later in the day as analysts said the new strategy could help position Computer Associates for faster growth over the long term.
+
+"The mainframe market that has long been Computer Associates' bread and butter is mature, with limited opportunities for expansion," said Charles LeGrand, an analyst at InfoTech Strategies. "This strategic shift positions Computer Associates to leverage the faster growth in the PC and distributed mid-range server market."
+
+Computer Associates said it has already started developing a new line of software products tailored to PC and server networks with up to 500 nodes. The Unicenter line of network management and security software is being adapted to run in these mid-range environments, and the company plans to roll out a new set of accounting, human resources, and supply chain management applications targeting mid-size companies over the next 18 months. 
+
+The company will continue to support and update its existing mainframe software product line but will shift the majority of its research and development budget to new PC and server-based offerings. Computer Associates will also retrain and redeploy many of its services consultants and support staff to build up its expertise in the distributed computing environment. 
+
+"This is an evolutionary shift for Computer Associates to make sure we are aligning our products and services with where the growth in IT infrastructure is today and where it's heading in the future," said CEO Sanjay Kumar. "We aim to bring the mission-critical robustness and functionality of our mainframe software to the distributed, mid-range environment."
+
+Some analysts cautioned that Computer Associates faces significant challenges in competing with entrenched players in the PC and server network management and applications market. The company will have to develop, market and support an entirely new set of products, open up new sales channels, and go head-to-head with competitors like BMC Software, CA Inc., and IBM. However, if successful, the rewards could be substantial given the size and growth of the mid-range market.
+
+Computer Associates said it is firmly committed to the new strategy but expects the transition to take up to two years. The company forecast that revenue and earnings may fluctuate over the next several quarters as the strategy unfolds but reiterated previous guidance that profit and revenue will rise over the long run. The major strategy shift came as Computer Associates reported fiscal third-quarter earnings that were generally in line with analysts' expectations.

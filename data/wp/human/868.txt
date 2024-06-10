@@ -1,0 +1,49 @@
+I'm just a placeholder right now. I stand here to make the city of Yavin seem reasonably well-populated, but they haven't given me any dialogue. They've finalized my artwork, though. I've got blue hair. I don't think anyone else in town can say that.
+...
+I've got dialogue now!
+"Have you been to the market yet? It's just east of here. Visit the **Pie Shop** while you're there!"
+Not a lot, but it's fun to say, and it'll be really helpful to any adventurers who walk by, I'm sure.
+...
+They added random-walk movement so that we don't look like we're all rooted to the ground. Yavin is really bustling now!
+...
+I met this weird guy running through the town, I think he was a playtester. He kept bumping into me as I was wandering the narrow streets. We did that annoying thing where you step aside to let someone through, but they sidestep at the same time and bump into you again.
+The next day, they slowed down our random-walk code. I guess it'll be easier for the PCs to navigate, but Yavin's lost some of its hustle and bustle.
+...
+I'm running the **Pie Shop** now! It's a big step up from just standing around and advertising it. Instead, they gave me a little scripted scene where I bump into the PCs when they first enter town, say a little bit about where they can find everything, and then tell them to stop by my shop for a pie. I think it's because the play-testers kept getting lost. Anyway, it's a funny scene. I have to learn a lot more lines, and I've got a whole dialog tree to keep track of when I'm manning the shop, but it's worth it.
+I wonder what happened to the original owner of the pie shop. Did they re-use his sprite for something else, or was he just deleted?
+...
+I'm proud to announce that I've got a beautiful wife and daughter now. Someone thought that the **Pie Shop** looked a little bare with just me, I guess.
+My daughter's first words were "I love pie!" Isn't she adorable? They'll probably change that before release, though.
+...
+My family now has a little side-quest where the PCs help me find ingredients for an **Elvish Lembas Pie. ** My daughter mentions that I once baked her an amazing Lembas Pie but I haven't made it in a long time, then my wife complains about how you can't get some ingredients unless you travel to the Elf Kingdom. If the PCs are smart, they can put two and two together, bring me some Lembas from the Elf Kingdom, and I'll bake it for them for free! It's a really amazing pie, heals 500 HP, 500 MP, cures status effects, and tastes like a little slice of heaven.
+Kids grow up so fast these days, don't they? It's been barely a week, and my daughter is already helping the family business and handing out plot hooks.
+...
+Something is wrong. There are two sets of graphics for my shop now. One normal, and one with the roof caved in. I walked inside, and found there was completely new art for the interior as well. The display case smashed, the inventory looted, the door off its hinges, holes in the walls and roof. Something bad is going to happen, I can feel it.
+My family's art is still normal, and none of us have new animations. Are we safe, or are we simply not finished?
+...
+I asked my neighbors if any of them had been revamped, and found that the destruction had spread. The streets were littered with debris, there were dozens of new "on fire" animations attached to the buildings, and full on half the residents had corpses added to their sprite-sheets. Yavin is going to burn, and the PCs won't be able to save us.
+...
+They added a corpse sprite to my wife. When the disaster hits, she'll be crushed when a wall collapses on her. They didn't even bother to render most of her, there's just her upper body and a splatter of red where her legs should be. At least we know what'll happen to her.
+I need to figure out how to explain this to my daughter. I can handle a change like that in my life. If it turns out that our whole city is crushed under the Gallian Empire's war machine, and I'm reduced to standing in the ruins and saying "Promise me you'll make them pay!" to any PCs that pass by, I'll survive. I've had worse dialogue, back when I was a placeholder.
+But my daughter? Her whole life, she's been part of the shop. She helped my wife bake, she ran around and played and got in the way of the playtesters who wanted to buy pies, she's handed out sidequests...If (no, *when*) Yavin burns, she'll lose everything. She'll just be another atrocity paraded in front of the PCs to give them motivation to fight the Gallians. I hope with all my heart that the developers won't use her like that.
+...
+I couldn't figure out how to explain what the update meant to Elspeth, but I think she found out anyway. Something got added to her dialogue last night, and she burst into tears when she read it. I tried to comfort her, but she gave me the strangest look when I reached out to her. I don't know what's going on.
+Hang on, "Elspeth"? They gave my daughter a name? Is she important to the plot? I'm feeling a little more hopeful now. We'll see how things go in the next update.
+...
+I still haven't gotten a sprite or dialogue update. Elspeth, by contrast, changes daily. Her dialogue tree keeps growing, it looks to be bigger than mine. Her sprite-sheet has new animations. Searching. Sobbing. Digging. She's got more dialogue and animation than almost anyone else in town, but none of it seems to be happy. She still doesn't want to talk about it, she's stayed cooped up in her room practicing her lines.
+My wife's been going over her old dialogue; I think she's trying to stay in a happier time for as long as she can, before the game ships. I wonder if I should join her. Nobody's buying my pies anyway, so why not? We can go back to that goofy scene where I crash into the PCs and advertise the pie shop. It has to be better than sitting here, wondering what new tragedy will visit my family. Are they ever going to update me?
+...
+I finally realized why I haven't gotten any updates for after the Burning of Yavin. I'm "missing, presumed dead." I should have known, it wasn't just an oversight from the developers. I'm going to disappear, and I'm never coming back.
+I asked Elspeth how long she'd known. Ever since the first update, apparently. Her first line of dialogue after the Burning is "Please, have you seen my dad?" For over a month now, she's lived with the knowledge that she'll lose both her parents halfway through the game. There's nothing any of us can do about it, that's just what the plot demands.
+The only consolation I could give her was that the game isn't finished yet. Her dialogue tree is still growing. The ending to our story hasn't been written. Anything could change - the developers might even spare Yavin completely.
+I don't think I was very convincing, though. I don't believe it myself. Elspeth's situation has too much pathos. The developers clearly want her to be a symbol of the whole town's suffering - give the PCs a face to put on the atrocity. Elspeth is a smart girl, she's studied the plot as much as I have, she must know this too.
+How do the PCs deal with this? I'm pretty sure they all lose their parents or their village or their mentor or something at the very start of the game. Are they just stronger-willed than a mere pie merchant?
+...
+There was another change, this time to my shop's art. After the "ruined" artwork, there's some art of a little market stall, small but colorful, like the ones that dot the market in town's non-ruined state. It's small, it's ramshackle, it's literally built on the rubble of the previous building, but it's unmistakably a **Pie Shop. ** Does it get rebuilt? There's no scripting attached yet, but I'm hoping there's a quest there.
+Hope. That's something I haven't felt in a long while.
+...
+Most of the major shops have "rebuilt" artwork now. Ramshackle, but they have everything you need to run a shop (i.e., a counter for you to stand behind, and an inventory). It's a quest! A whole set of side-quests, in fact. The PCs can gather building materials and donate treasure to restore the city of Yavin. Things are going to get better. We can rebuild, little by little, devs willing.
+They also updated Elspeth's art. I think she's going to hit her growth spurt, because the new art is a bit taller. She's also wearing an apron like her mother. She's going to rebuild. She's going to keep running the pie shop.
+We practiced our dialogue as a family again, for the first time in months. Teaching Elspeth all the little ins and outs, what happens to pies in your inventory and what you do with all the vendor trash the PCs sell. I'm still apparently "missing" after the Burning, but I'm finding that easier to deal with. I know we can trust our daughter to carry on for us.
+...
+Elspeth was smiling today. Not only that, there are some new sprites in her sprite-sheet. They're smiling too.

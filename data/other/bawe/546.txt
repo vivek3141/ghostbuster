@@ -1,0 +1,30 @@
+We begin with Ampre's Law, which is
+(1.1)
+Set as the integration path a circle, with radius r, centred on the wire and in a plane perpendicular to the plane of the wire, with directed clockwise around this path (see Fig. 1.1).  is the outwards normal from the wire, and  is directed along the wire.
+At each point,  is tangential to the integration path, so the angle  between  and  is zero. Also, splitting  into 3 components,  as both  and  are perpendicular to . So we only need to consider  in the following integral, which is constant at fixed  by symmetry, and so can be taken outside of the integration.
+Now we can apply Eqn. 1.1 around this closed path:
+Re-arranging this, we obtain an expression for the magnitude of the magnetic field around the wire:
+(1.2)
+Ampre's Law also determines the direction of  is in the clockwise direction, and so the positive current direction is into the page. The current is flowing in this direction, so the actual current is positive, and so B is positive, from Eqn. 1.2. The direction of positive integration is clockwise, parallel to , and so  must be clockwise as well, as shown in Fig. 1.2.
+The Biot-Savart Law is
+(2.1)
+We set up the problem as shown in Fig. 2.1. From this, we see that  and . The right-hand rule for the vector product  shows that the direction of  is into the page (point the fingers of the right hand in the direction of , curl the fingers the direction of , and the thumb will point in the direction of the vector cross product, which in this case is the direction of ). Furthermore, all contributions to the magnetic field from all elements  of the wire are in the same direction (into the page).
+So now we can use Eqn. 2.1 to find the field  caused by an element of the wire of length  shown in Fig. 2.1.
+So we have .
+i.e.
+(2.2)
+However, notice that from Fig. 2.1,
+and
+So from Eqn. 2.2 we have that
+So  (2.2)
+Again, notice that from
+we get
+So substituting this into Eqn. 2.3 gives
+So  (2.4)
+When the length of the wire, , becomes much larger than its distance  to point P, then we can consider it to be infinitely long. Also, when  is much larger than ,  is approximately equal to .
+Hence, from Eqn. 2.4, we have that
+(2.5)
+The situation is axially symmetric about the y-axis, so  must have the same magnitude at all points on any circle centred on the wire, and also  must always have direction at a tangent to this circle.
+Hence, at all points on a circle of radius  around the wire, we have
+,
+which is the same result as that obtained when the problem is analysed with Ampre's Law.

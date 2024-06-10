@@ -1,0 +1,1 @@
+Data augmentation is important in machine learning as it helps to reduce overfitting by increasing the size of the dataset and enriching its features. It also helps to improve the accuracy of the model by providing more relevant data for the model to learn from. By generating new data from the original data, data augmentation also helps to reduce bias in the dataset.

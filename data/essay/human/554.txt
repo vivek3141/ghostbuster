@@ -1,0 +1,64 @@
+Construct Development and Scale Creation
+Operating Definition
+Operational definition of depression: a mood disorder characterized by depressed mood and anhedonia for more than two weeks, which is often accompanied by a decrease in the ability to perform daily tasks and a feeling of helplessness, including reoccurring suicidal thoughts. Guillot-Valdés et al. (2019) note that depressive disorders are clinically diagnosed when a patient has depressive symptoms for more than two weeks, one of which is low mood and anhedonia. Nguyen et al. (2018) identify depression “as persistent sadness, a loss of interest and energy, an inability to carry out daily activities, a change in appetite or sleeping time, poor concentration, hopelessness and thoughts of self-harm or suicide” (p. 2). Garcı´a-Batista et al. (2018) underline that depression is also associated with “decreased concentration and decision-making ability, loss of self-confidence, feelings of inferiority or worthlessness and guilt” (p. 2). Additionally, depressive disorder is related to manifestations of fear and anger, as well as symptoms of anxiety (Guillot-Valdés et al., 2019). Comorbidity between depression and anxiety disorders is a significant challenge in developing definitions and symptom measurement instruments.
+Items used to Sample the Domain
+ 1. Manifestations of depressed mood including feelings of sadness, worthlessness, hopelessness;
+ 2. Loss of interest, including a decreased ability to experience pleasure and joy;
+ 3. Reoccuring suicide thoughts;
+ 4. Disorders in daily activities including decreased concentration and decision-making ability;
+ 5. Manifestations of symptoms of anxiety including fear, anger, and irritability.
+Method of Scaling
+The method of scaling appropriate for the described domain is an indication of the extent of the patient’s symptoms, including never, sometimes, often, very often, constantly. These items, in turn, are associated with numeric scaling from 0 to 4, where 0 is never, 1 is sometimes, 2 is often, 3 is very often, 4 is constantly. This scaling method was chosen because it makes it easier for the patient to interact with the test. By noting the frequency of occurrence of symptoms, they will be able to assess their emotional manifestations more deeply. For the therapist, this scaling allows to assess the general picture of the patient’s psychological state and obtain a result that is suitable for measurement. Additionally, this scaling helps to determine not only the presence or absence of symptoms of depression but also to assess their severity preliminarily.
+Instrument to Query Respondents
+How often do you experience manifestations of low mood, including feelings of sadness, worthlessness, hopelessness?
+  * Never;
+  * Sometimes;
+  * Often;
+  * Very often;
+  * Constantly.
+How often do you note the loss of interest, including a decreased ability to experience pleasure and joy?
+  * Never;
+  * Sometimes;
+  * Often;
+  * Very often;
+  * Constantly.
+How often do you note the presence of suicidal thoughts?
+  * Never;
+  * Sometimes;
+  * Often;
+  * Very often;
+  * Constantly.
+How often do you experience a decrease in the ability to complete daily tasks, including decreased concentration and decision-making ability?
+  * Never;
+  * Sometimes;
+  * Often;
+  * Very often;
+  * Constantly.
+How often do you experience symptoms of anxiety, including fear, anger, and irritability?
+  * Never;
+  * Sometimes;
+  * Often;
+  * Very often;
+  * Constantly.
+Interview or Self-Report
+This instrument is more appropriate for patient self-reporting, as it implies a more superficial identification of the manifestation of symptoms. Stuart et al. (2014) report that “61% of the study population identified as having a history of depression using the SCID / NP also self-reporting past depression” (p. 868). Thus, this instrument can be used to determine the presence of symptoms and indications for a more detailed interview with the therapist. It provides not sufficient amount of specific information to be used in interviews.
+Analysis and Justification
+Norm and Reliability Scores
+The definition of norm scores for a scaling instrument allows you to determine the influence of background factors on the test results. Such aspects include gender, age, educational level, and others respondents’ characteristics. Roelofs et al. (2013) argue that a multiple regression analysis allows fairly reliable determining the predicates of the norm, as well as establishing possible interactions between them. Thus, the use of this approach provides the norm score for a more accurate interpretation of the results.
+Reliability is a measure of how well test results reflect reality. Nolte et al. (2019) note that this criterion consists of “internal consistency and test-retest reliability” (p. 2). There are special coefficients for measuring these specific items and checking the questionnaire for reliability. In particular, Cronbach’s alpha is used to assess internal consistency, and the intraclass correlation coefficient (ICC) is used for test-retest reliability (Massai et al., 2018). Cronbach’s alpha allows you to evaluate how each of the items included in the test meets the purpose of the assessment. If the value of the coefficient is equal to or greater than 0.70, then the test is sufficiently reliable (Taber, 2018, p. 1293). However, when using Cronbach’s alpha, a higher ratio means more reliability, which also reflects the quality of the questionnaire. In the case of a test-retest reliability study, it is also necessary to select a model corresponding to the type of ICC questionnaire (Qin et al., 2019). For the scale presented, ANOVA Model is appropriate since it allows the researcher to consider the non-attachment of test results to time frames. Thus, reliability can be described by two coefficients and signal the need for adjustments.
+Number of Respondents
+The number of respondents depends on the purpose of patient testing and may vary depending on this aspect. In this case, it is important to identify whether the test will be used for individual diagnostics or for collecting statistical data. For example, this questionnaire can be used to examine the predisposition of certain populations to depressive disorders. It can also be utilized to collect statistics on the possibilities of self-reporting questionnaires. Therapists can also use this scale for individual rapid testing of vulnerable groups or people who suspect symptoms of depression. Thus, the number of people who will be asked to undergo testing depends on the goals of its development. However, within the proposed scale, to assess the effectiveness of this test, it is necessary to offer it to at least 8-10 people.
+Characteristics of Respondents
+The characteristics of the respondents can be diverse since the symptoms of depression are inherent in completely different people. As in the case of the number of respondents, their characteristics depend on the purpose of using the questionnaire. In particular, the study can be conducted for members of a specific group that has distinctive features in the form of gender, age, or conditions. For example, there are studies that target medical students, women with endometriosis, patients aged 65-80, and the general public of a particular country (Nguyen et al., 2018; Ceran et al., 2020; Djukanovic et al., 2017; Garcı´a-Batista et al., 2018). Within the proposed scale, the main characteristic of the respondents may be the suspicion of the presence of symptoms of depression. With a sufficiently large sample of patients with different backgrounds, the norm score will help make the study more relevant. In general, the spectrum of people to whom this scale can be applied is extremely wide, but it is necessary to take into account the characteristics of patients when applying it.
+Generalization
+Generalization helps researchers to establish patterns that are determined based on the results of participants and apply them to a broader population. The population to which the results can be generalized is the “totality of elements or people that have common, defined characteristics, and about whom the study results are relevant” (Polit & Beck, 2010, p. 1452). Thus, this aspect directly depends on what goals the testing pursues and who its respondents are. In the case of the proposed scale, the generalization of the results can be carried out only when taking into account the patient’s background and factors affecting his disorder. In particular, it is necessary to take into account the differences of the respondents in the factors that are taken into account when identifying the norm score. If the scale is applied to a wide audience for individual testing and not for a specific group, the results can be generalized only if the respondents are statistically divided into such groups. However, since the purpose of testing is to confirm or refute a suspicion of depression symptoms, the results can be generalized to people who suspect they have a depressive disorder.
+Validity
+The validity, along with reliability, reflects how accurately the questionnaire reflects exactly those topics that are intended for research. First of all, it is necessary to assess the face validity of the test by testing the respondents. This type of assessment makes it possible to understand how accurately, in the opinion of the participants, the questionnaire touches on the topic under study. Content validity should be produced by professionals in the field who can tell how well items reflect aspects important for diagnosing a depressive disorder. Concurrent validity allows correlating the results of the questionnaire with findings from other sources. It is necessary to collect data on a specific group of respondents, for which the patterns of manifestation of symptoms of depression have already been established.
+For a more accurate measurement of validity, Confirmatory factor analysis (CFA) is also used, which aims to identify the relationship between items and the construct to which they belong. This model makes it possible to assess the extent to which the respondents’ answers correlate with the characteristics they possess (Orcan, 2018). In this case, using CFA, it is possible to find out how much the choice of a particular answer to each item correlates with the frequency of manifestations of symptoms of depression.
+Item Selection
+The selection of items for compiling the questionnaire was conducted by the rational method. This approach is based on the analysis of empirical data available on the topic under study. In this case, expert knowledge plays a key role in the compilation of the questionnaire (Oosterveld, 2019). The rational method involves several stages:
+ 1. Concept analysis within which the researcher analyzes the available in the literature information and creates the operational definition of the construct;
+ 2. The item production stage involves selecting items based on known data using informal and intuitive criteria;
+ 3. The scale construction involves evaluating items by an expert based on their face validity;
+ 4. The evaluation includes an assessment of validity and reliability, as well as a comparison of test and clinical examination results.
+Cut-Off Scores

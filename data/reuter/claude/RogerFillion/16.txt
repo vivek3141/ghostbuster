@@ -1,0 +1,15 @@
+Supreme Court denies request to reactivate landmark rules for opening local phone markets to competition 
+
+The Supreme Court today declined to revive Obama-era rules that opened local telephone service markets to competitors. The court refused to hear an appeal from internet calling service companies and consumer groups that sought to reverse an FCC decision eliminating price caps and other regulations on incumbent local exchange carriers like AT&T Inc. and Verizon Communications Inc.
+
+The rules in question date back to 1996 when Congress passed the Telecommunications Act requiring incumbents to lease parts of their networks to competitors at regulated rates. The aim was to introduce competition in local phone service markets that for decades were monopolies. The FCC in the Obama administration strengthened and expanded these rules, known as the Open Internet order.
+
+However, the FCC under the Trump administration repealed these rules in 2017, arguing they were outdated in an era of technological change and competition from wireless and internet-based calling services. The agency scrapped price caps and other restrictions on incumbents, saying the regulations were stifling investment in broadband infrastructure.
+
+Consumer groups and startups including RingCentral Inc., Vonage Holdings Corp. and Nextiva Inc. appealed the FCC's repeal, saying it allowed incumbents to raise prices and undermine competition in local calling markets. But a federal appeals court upheld the agency's decision last year, and now the Supreme Court has declined to take up the case.
+
+In a statement, incumbents applauded the Supreme Court decision, saying it provides them certainty to continue investing in networks. "This is a win for consumers and for continued investment in America's broadband infrastructure,” said a Verizon spokesman.
+
+However, consumer advocates warned it could lead to price hikes and declining service quality, especially in rural areas where there are fewer options. "The Supreme Court's decision today allows anti-competitive behavior that costs Americans billions per year," said the policy director for the Open Technology Institute. 
+
+The high court's action leaves the current light-touch regulatory approach to local phone service in place. Going forward, incumbent phone companies face limited restrictions under general antitrust and consumer protection laws. The FCC continues to oversee issues like universal service funding and technology transitions. But price caps, leasing requirements and other rules meant to spur competition are now defunct.

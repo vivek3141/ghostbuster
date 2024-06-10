@@ -1,0 +1,11 @@
+(1 - a) He can not be trusted.
+(1 - b) He is not able to be trusted.
+(1 - c) He is not to be trusted.
+(2 - a) Not a soul can be seen in the street.
+(2 - b) Not a soul is able to be seen in the street.
+(2 - c) Not a soul is to be seen in the street.
+How do you feel about these sentences?
+It is my understanding that...
+(1 - a) is grammatically correct but not ordinary,
+(1 - b) & (2 - b) is quite unnatural or doesn't make sense, and (1 - c) & (2 - c) is the most acceptable (( 2 - a) can be used as well as (2 - c) ).
+Is this right?

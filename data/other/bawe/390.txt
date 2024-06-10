@@ -1,0 +1,49 @@
+To apply Lagrange interpolation, it is important to understand the theory of how it works
+We are asked to find a 2 nd order interpolating polynomial that approximates the function , in the range x=0 to x=4. 2 nd order polynomial is used to approximate a function for 3 data points. First of all, the three data points have to be found out.
+We are given
+(4)
+The value of the function  at  are once again given by
+Evaluate the integral
+I=0.7854 is an ideal solution
+By using rectangular rule, and use 6 segments,
+which is derived from
+We have,
+Percentage of Error using rectangular rule:
+By using trapezoidal rule with six segments:
+Here  because of 6 segments, therefore we have
+Percentage of Error using trapezoidal rule:
+Approximate the integral with Simpson's 1/3 rule, for the entire range of integration,
+Percentage of Error using Simpson's rule:
+To obtain an  accurate integration, we can use Romberg integration, each error given by trapezoidal rule is given by
+By applying Romberg integration each time, we can eliminate the leading error. First, we have to decide what segments to use for Romberg integration; we use 3, 6, and 12 here. As trapezoidal integration in 6 segment already been calculated. So only 3 and 12 segments have to be worked out.
+To find the third order derivative by central difference method, one needs to find Taylor's series expansions for  and .
+We can then work out
+Where
+(Q.E.D)
+To find the 4 th order accurate central difference approximation, we need to complete the following steps.
+Ordinary differential equation, , can be approximated by iterative process as
+where h is the time step, 0.1 with
+With this available data,  of initial value problem  can be approximated by the following steps
+We have obtained enough data in step 1 and can now substitute our results into the given approximating equation
+If we choose i=2, we will have enough data of previous time steps to work out y (0.3),
+Explicit method approximates the state of a system at a later time step from the state of the system at the current time, while an implicit method approximates by solving an equation involving both the current state of the system and the later one.
+Implicit method is harder to compute and implement as it involves state of the system of an unknown time-step. However, it is useful because many problems arising in real life are stiff, for which the use of an explicit method requires impractically small time-steps t to keep the error in the result bounded (conditionally stable). Meanwhile, implicit method is unconditionally stable and therefore could solve such problems.
+To carry out predictor-corrector method, we can use the data worked out in 4i), Since the corrector formula requires the function of the system at different time steps, we can substitute the data back in the initial value problem .
+So for time step i=3 we have
+For i=0.2
+For i=0.1
+Now, we have all the predicted function at different time steps and they are going to be improved in the corrected formula in terms of accuracy and thus a more accurate  (when t=0.3) Once again i=2,
+If ,
+Consider the following Runge-Kutta method,
+(10)
+Because , we can obtain,
+Substitute back into the equation (10)
+After n steps,
+where  is represented by .
+To prove the approximation solution is stable within , we can substitute both end values into  to see whether it is equal to 1.
+Substitute
+Substitute
+Therefore, the highest value of  to maintain a stable solution is 0
+Substitute
+Substitute
+Therefore, the lowest value of  to maintain a stable solution is -2

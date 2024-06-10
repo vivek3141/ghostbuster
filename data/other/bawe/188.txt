@@ -1,0 +1,35 @@
+Pepper v Hart - The taxpayers were teachers at Malvern College who could educate their sons at the school at one-fifth the normal fees. The question raised was the precise amount of tax to be paid for the benefit received. The Court of Appeal held the cost for the employer, i.e., school was the average cost and gave a ruling in favour of the school; and the House of Lords reversed the opinion deciding in favour of the taxpayers i.e., the cost of benefit was the marginal cost; and for doing this it relied on parliamentary debates, or Hansard.
+The ratio laid down in the case was reference to Hansard would be permitted only under the following circumstances:
+where there is an ambiguity or obscurity as to the meaning of the legislation or when the literal meaning leads to absurdity; and
+the statement is the statement of a minister or other promoter of the bill; and
+the statement relied is clear.
+The importance of the case lies in that, the court had to decide if they could have recourse to Hansard in deciding a case, and if did, would it infringe Art. 9 of the Bill of Rights (1688), i.e., "the freedom of speech, and debates or proceedings in the Parliament, ought not to be impeached or questioned in any court or place out of Parliament." (The judges ruled out any infringement of Art. 9)
+Hansard is defined as "The name by which the Official Report of Parliamentary Debates is customarily referred to". It is not the understanding of the individual Members of Parliament on the present state of law of, but the words, which provide evidence of the purpose of the legislation. It is one of the extrinsic aids to statutory interpretation, now widely considered after this famous decision.
+Statutory interpretation is the process by which the courts attach meaning to a particular statute in a case before it. There are three rules of statutory interpretation: -
+Literal Rule - The courts uses the actual words in the statute and gives meaning to it irrespective of the result produced.
+Golden Rule - The courts construes the statute as a whole to give effect to the legislation. This can be used only if literal meaning leads to absurdity.
+Mischief Rule - If there is any mischief in the common law, which the statute intended to remedy, the courts will give effect to it.
+Though they are referred to as rules, they are only guiding principles. And they have to be used in the order of priority.
+There are two approaches to interpretation:
+Literal Approach - This approach suggests, the judge, unless under rare circumstances, should use only the words of the statute to give meaning to it.
+Purposive Approach - This approach suggests the judge can look at words outside the statute to give effect to the true intention of the legislature.
+The English Law is said to use the literal approach to interpretation. But now, for matters concerning the European Community (EC) legislation and also the domestic legislation designed to implement Community legislation purposive approach is adopted.
+The courts never permitted using Hansard as an aid to interpretation until the 1990s as it was thought to be unreliable.
+In the case of Davis v Johnson
+, Lord Denning MR, wanted to change this and dissented the view that parliamentary material should not be used and said it would throw light on the matter if used.
+But when the case went before the House of Lords Lord Scarman reversed the judgement and said that use of parliamentary material did not promote clarity and was unreliable and hence not to be used. This was the position on until the decision in Pepper v Hart
+, which allowed reference to Hansard as an aid to interpretation. The House of Lords reversed its earlier decisions in Beswick v Beswick
+, Black-Clawson v Papierwerke Waldohf-Aschaffenburg AG
+, and Davis v Johnson
+.
+Lord Browne- Wilkinson, delivering the leading judgement in the case said:
+This suggests that in case of any ambiguity, instead of giving a wrong interpretation of Parliamentary intention, the court can have recourse to parliamentary debates. The courts have, after all to give effect to the Parliament's intention. But this has to be construed very strictly and used only in the cases set out above and when the other internal aids fail to give meaning.
+But there is one major drawback of the use of Hansard addressed by almost all the judges and other critics time and again, which is that the use of Hansard greatly increases the cost of litigation. While I accede to this view I feel that since parliamentary materials are to be used only in limited cases as set out in the decision it will not lead to increased costs in all cases. But this is not always true as can be seen from a multitude of cases where lawyers have tried to use Hansard but in vain. There are cases where Hansard was used even when there was no ambiguity in construing the statute.
+Another drawback, as argued by the commentators is that by using the words of the ministers, they may get the power to make laws. This goes against the separation of powers between the Executive and the Judiciary. It is also thought of as encroaching upon the judicial functions.
+The cases where Hansard was used were Warwickshire County Council, Ex Parte Johnson
+, a case that came before the House of Lords immediately after Pepper v Hart
+. But there were cases where Hansard could not be used since they did not satisfy the requirements.
+In Three Rivers District Council v Bank of England (No.2)
+ it was held that the rule on Hansard must be relaxed in order to give effect to some particular EC Directive. Held, it could be used to determine the purpose of the statute. Similarly, in the case of Wilson v First County Trust
+, HL considered for the first time if parliamentary material could be used to ascertain if a statutory provision was compatible with the ECHR. But it was held that it was not appropriate for the court to use Hansard here.
+In conclusion I submit that though Hansard as an aid to interpretation has proven itself useful, in most cases a plain reading of the statute will suffice. Another important aspect to be noted is the ministers have to now take greater care to see that what they say reflects the purpose of the Act and this involves greater time and money for the Parliament since it has to look at all the notes and see to it that it does not include unnecessary material since the court may rely upon these in future. Not only this, the use of Hansard may not prove to be useful; and in many, in fact most occasions the courts have refused to use it since it does not shed any light on the matter.

@@ -1,0 +1,30 @@
+Introduction
+The detailed investigation of clinical cases is a critical necessity for a health care system interested in improving the quality of life of the population and improving public health. It should be understood, however, that as far as the patient is concerned, their diagnosis is not always obvious, as it is often associated with subjective experiences of their own deteriorating health, feelings of stigma, and any possibility of inaccurate clinical tests. It is true that laboratory tests are a scientifically reasonable practice to refine the diagnosis as much as possible, but the possibility of human or instrumental error is never ruled out. Therefore, a comprehensive approach to clarifying the diagnosis, using a synthesis of scientifically based and subjective aspects of the course of the disease. This paper consistently evaluates an example of such a comprehensive approach, describing a case study of HIV infection.
+Background Information
+Although it is not a societal issue, especially in light of COVID-19, humanity is exposed to several pandemics on a daily basis. One of these pandemics is HIV, as a huge number of individuals are exposed to this infection: according to statistical studies, the number of HIV-positive patients will exceed 37.7 million globally by 2020 (UNAIDS, 2021). People from every continent are exposed to the disease, which gives it pandemic status. HIV itself is an infection caused by the human immunodeficiency virus – during this disease, a pathogen from the class of retroviruses affects the patient’s immune T and B lymphocytes, resulting in lowered immunity. It is true that HIV has never been the cause of a person’s death, but instead, death occurs due to critical immune suppression and the development of opportunistic diseases.
+Purpose
+The purpose of this study is to determine a comprehensive approach to diagnosing HIV in a hypothetical patient.
+Question
+Can HIV infection in a suspected patient really be detected comprehensively?
+Hypotheses
+ 1. HIV infection can be detected by obtaining laboratory tests alone.
+ 2. The use of the comprehensive method increases the reliability of the diagnostic results.
+Procedure
+Equipment Used
+  * History questionnaire.
+  * Rapid ELISA test kit.
+  * PCR test kit.
+  * Sanitary kit for physiological and clinical examination.
+Procedures
+ 1. A hypothetical patient comes to see a general practitioner and talks about his or her concerns. The physician (after signing informed consent and consent for medical services) asks a series of clarifying questions to narrow down diagnostic options. The end point is to determine a possible (but not exact) diagnosis and referral to the following stages of diagnosis.
+ 2. The lab technician sterilizes the site for the blood sample, administers an injection, and draws a few milliliters of blood for analysis. The puncture site is treated with a disinfectant.
+ 3. The blood sample taken in the second step is used for PCR testing. In addition, the man gives a semen sample for PCR testing.
+Results
+This laboratory work explores three types of HIV testing. The first step uses a patient questionnaire, an example of which is shown in Figure 1 below. It is an extensive questionnaire that is completed by a general practitioner to clarify the diagnosis. In addition, the results of the ELISA test are given; Figure 2 shows that the diagnosis of HIV by ELISA is implemented visually with a control for which it is known for sure that HIV is not there. Finally, Figure 3 shows the results of the PCR test for HIV and demonstrates that the value obtained is significantly higher than the norm.
+Figure 1. Example of a patient questionnaire for HIV pre-screening and history taking (WHO, n.d.).
+Figure 2. Example of ELISA results for HIV infection (HIV ELISA, n.d.).
+Figure 3. Example of a PCR assay result for HIV (POZ, n.d.).
+Discussion
+Support the Hypothesis
+This laboratory work examined the possibility of diagnosing HIV infection in a hypothetical patient. The diagnosis was investigated using three variants of the test, a questionnaire, and conversation with the therapist, ELISA testing, and PCR testing. A summary of these results demonstrates confirmation of both hypotheses, as indeed, HIV was diagnosed using two different tests. In the paper above, the results of these three procedures were given; for two of them, it was shown that HIV infection was diagnosed.
+Explanation and Conclusion

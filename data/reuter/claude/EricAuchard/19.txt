@@ -1,0 +1,13 @@
+Microsoft to License Fore Systems' High-Speed Networking Technology for Future Windows Operating Systems  
+
+Microsoft Corp announced today that it has signed an agreement to license high-speed networking technology from Fore Systems Inc. for inclusion in future versions of the Windows operating system. The deal signals Microsoft's ambition to make gigabit networking standard in future Windows releases as broadband Internet connectivity becomes more widely available.
+
+Fore Systems is a pioneer in gigabit Ethernet networking equipment and technology. Gigabit Ethernet provides data transfer speeds of up to 1,000 megabits per second, which is 10 to 100 times faster than typical broadband connections today. With gigabit networking capability built into Windows, transferring large files, streaming high-definition video, and other bandwidth-intensive tasks could become commonplace for home and business users with access to gigabit broadband connections.
+
+"Gigabit Ethernet is the future of networking, and we want to ensure Windows is ready for that future," said John Thompson, general manager of Microsoft's Windows Division. "By licensing technology from Fore Systems, the leader in gigabit networking, we will enable a new generation of powerful networked applications and ensure Windows provides an exceptional experience for customers with gigabit connectivity."
+
+Under the terms of the agreement, Microsoft will license Fore Systems' gigabit Ethernet technology for Windows and provide joint marketing and development efforts around high-speed networking. Microsoft expects to ship Windows versions with gigabit networking capability starting in 2012. Fore Systems will continue to produce gigabit networking equipment for enterprise and telecommunications customers but gains a lucrative new source of licensing revenue from the partnership.   
+
+"We are thrilled to partner with Microsoft to bring the benefits of gigabit networking to the masses," said Susan Crown, CEO of Fore Systems. "By combining our innovative gigabit Ethernet technology with the power and reach of Windows, we can make gigabit speeds accessible and practical for both home and business users."   
+
+Continued on next page...

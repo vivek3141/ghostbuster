@@ -1,0 +1,61 @@
+The maximum number of predicted records is 200 with occasional insersertions and deletions.
+It is expected that the database size remains fairly constant.
+Assuming 200 records is 80% of the total table size so the efficiency is not degraded, the table size is:
+Initially the closest prime number to 250 was selected as the table size.
+(prime numbers near 250 are {.., 223, 227, 229, 233, 239, 241, 251, 257, 263, ..})
+This is makes sure the records are evenly distributed throughout the hash table so possibility of collisions is greatly reduced.
+However there's the power of 2 close by which is 256.
+(Powers of two near 250 are {..,128, 256, 512,..})
+191 is the ideal prime number since it is best positioned between 128 and 256, however is it too low if load factor is to be less than 80% in the worst case scenario of 200 records in the catalogue.
+So the table size was reduced to a prime number few positions below 256. (we can afford compromise the table size a little since we took the maximum database size of 200 to be 80%).
+After all the adjustments the final table size is 223.
+Coincidently this value closely matches with the concept of "Size should be about 10% larger than the maximum number of entries". Source: lecture notes: Slide 33, U08020 Lecture Notes - week 6
+However it is just a coincident as the table size calculation is a bit more bias to performance issues than resources issues. The table size is specifically tuned to this specific plant online catalogue.
+"Division method" using the modular function is used as the hash function. This is so the hash function is made simplest as possible and minimum amount from statements so it does to steal too many CPU cycles. The even distribution of values and collision reduction of the index is dependant on choosing the right of the values themselves. Collisions are inevitable but selection of the quadratic probing and keeping the maximum load factor around 80% makes sure the collisions are kept at a minimum.
+"Division method" source: page 145, Mastering Algorithms with C, By Kyle Loudon
+"Modula arithmetic provides a simple and effective hash function." Basis of the division method is:
+Pseudocode of the hash new function is:
+This particular design should be extremely efficient.
+Pros of this design:
+maximum predicted database size assumed to 200 records
+table size is made 223 making it 89.69% full even if all 200 records are occupied
+selection of a best possible optimum value to table size (with regard to prime numbers and powers of 2) which makes sure clustering and collisions are kept at a minimum)
+usage of a simple hashing function which doesn't take too much CPU cycles
+usage of quadratic probing which eliminates primary clustering
+Cons of this design:
+uses more memory than actually required to maintain efficiency.
+usage of a complex (multiplication method) would have produce more random distribution values in the index (at the expense of CPU cycles of course)
+Efficiency of operations
+Hash tables take the constant time close to O(1) for all operations.
+Insertion: O(1)
+Searching: O(1)
+This is the theoretical minimum access time. Actual time is the (constant) time of the hashing function and the length of the probe.
+As the probe length depends on the ratio of number of items on the table and the size of the table (i.e. load factor), during design every step has been taken to reduce performance degrading due to collisions considering the resource vs. efficiency factors (see Pros design above).
+Unsuccessful search will take more time than a successful search since the whole index has to be probed. But this isn't a problem since unsuccessful searches are occasional.
+AVL trees have logarithmic complexity. Searching, insertion, and deletion are all O(log n) in both the average and worst cases.
+Insertion: O(log n)
+Searching: O(log n)
+(where n is number of nodes in the tree)
+The AVL tree algorithms of the operations are more complex than the hash tables. The main algorithmic complexity comes due to the rebalancing requirement of the AVL tree. This makes understanding and codeing bit difficult.
+For this online catalogue hash table should performs better of the two data structures. It is because of the way hash table was designed, hash table has better performance in this case at the expense of memory. But the table size can further be optimized by experimenting by changing the table size at run time.
+Following are circumstances where hash tables are of better choice than AVL trees
+Less frequent insertions and deletions [X]
+Unsuccessful searches generally require more time than successful searches [X]
+Inefficient utilization of memory. Hash tables (with quadratic probing) require additional memory. [X]
+Number of elements to be stored must be known accurately in advance. Hash cannot be expanded once implemented. [X]
+Rehashing into a larger table is expensive. (If the number of elements is not known in advance separate chaining can still be used) [X]
+Simple and easy to understand data structure is needed (hash tables are very simple data structures)
+Application need to be developed very quickly without regard any efficient memory utilisation
+Database does not occupy more than say 80%. Performance degrades dramatically when the table becomes near full.
+Need high efficiency (more specifically constant time random access to data elements)
+[X] Plants online catalogue requirement match
+Circumstances where AVL trees are of better choice than hash tables
+If table traversals (i.e. inorder, preorder, postorder) are needed
+Need access to the minimum or maximum items or finding items in a certain range.
+Number of elements in the database changes frequently and unpredictably
+Data structure that self maintains its efficiency without user/programmer intervention
+If memory is of expensive/limited resource
+Developer has good undersanding and codeing experience with AVL trees
+Developer has good understanding of complex data structures (in which case red black trees would be used instead of AVL trees in the first place)
+Unfortunately I was unable to find a match between theory and practice (through the program). The reason for the different results (steps/elements inspected), in my opinion, depends on where the element actually gets placed in the index. Since this is random I was unable to find the link (between the theory and the program) and prove my claims without committing much more time to testing and test result presentation.
+However it should be noted that with hash tables, the practical performance (which depends on the load factor) need to be fine tuned by experimenting with the table size in the real world environment with contrast to the specific performance requirements of the application. Such data is unavailable in the assignment. So I calculated the best possible table size (in my opinion).

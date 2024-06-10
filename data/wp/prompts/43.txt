@@ -1,0 +1,1 @@
+describe a game of civilization from the perspective of one of the civ's citizens

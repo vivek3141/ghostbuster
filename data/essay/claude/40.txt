@@ -1,0 +1,13 @@
+A torque sensor is a device used to measure the torque applied on a rotating system like a shaft. It works by measuring the strain induced in the shaft due to the applied torque. The basic principle involved is that when a torque is applied to the shaft, it deforms slightly. This deformation can be measured using strain gauges - which are resistors that change resistance based on the amount of strain applied. By measuring the change in resistance of the strain gauges, the amount of strain and in turn the torque can be calculated.
+
+The design of a typical torque sensor involves the following key components:
+
+1. A shaft - The shaft is the component where the torque is applied. It is usually made of a rigid material like steel that can withstand high torque values without breaking. The shaft has strain gauges attached to its surface. 
+
+2. Strain gauges - Strain gauges are thin wires or foils whose resistance changes based on the amount of strain applied. They have a small dimensions, typically only a few millimeters in size. Multiple strain gauges are attached to the shaft in areas where the maximum strain is expected - usually at 45 or 90 degrees to the shaft. The strain gauges are connected in a Wheatstone bridge circuit.
+
+3. Wheatstone bridge circuit - The Wheatstone bridge circuit is used to measure the small changes in resistance of the strain gauges. It contains four resistors, two of which are the active strain gauges. When the shaft is undeformed, the bridge is balanced. When a torque is applied, the strain gauges experience a change in resistance which causes the bridge to become unbalanced. By measuring the amount of imbalance, the change in strain can be calculated.
+
+4. Amplifier and display - The small change in voltage from the Wheatstone bridge needs to be amplified using an instrumentation amplifier. The amplified signal is then fed to a display like a voltmeter which shows the torque reading. Some torque sensors also have built-in analog to digital converters and digital displays.
+
+In summary, a torque sensor works by converting the strain experienced by a shaft into a measurable electrical signal using strain gauges and the Wheatstone bridge circuit. With proper calibration, the torque applied to the shaft can be calculated from the output of the Wheatstone bridge. Precise torque measurements are possible using this technique.

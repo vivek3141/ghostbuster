@@ -1,0 +1,15 @@
+Sun Microsystems Unveils Low-Cost Network Computer to Challenge Microsoft and Intel Dominance
+
+Sun Microsystems today announced a new low-cost "network computer" designed to provide an alternative to expensive personal computers based on Microsoft and Intel technology. Called the Java Station, Sun's network computer is designed to access information and run software over the Internet and private networks. 
+
+The Java Station has no hard disk, fan, or other moving parts and relies on network servers for data storage and software access. It has a simple hardware design centered around Sun's Java chipset, which can run Java applets and applications downloaded from networks. Sun hopes this minimalist approach will result in a radically lower-cost workstation that appeals to cost-conscious businesses, schools, and individuals.
+
+"The network is becoming the computer," said Scott McNealy, CEO of Sun Microsystems, at the product announcement. "The Java Station leverages the power of the network to provide a low-cost, zero-administration workstation."
+
+The Java Station has a small footprint, consumes little power, and generates virtually no noise, allowing it to be placed in locations where a standard PC would not be practical. Sun expects the Java Station to be particularly attractive for tasks like education, training, point-of-sale retail, and basic office automation where full PC power is not required. The minimal storage and software footprint of the Java Station also aims to address common problems like software conflicts, viruses, and unauthorized access that often complicate PC networks.
+
+However, some analysts are skeptical that the Java Station can considerably undercut the price of entry-level PCs, which now start at around $500. The Java Station's total cost of ownership may ultimately prove higher when factoring in the additional network infrastructure required. There are also concerns about the performance and flexibility of a diskless workstation, and whether it can run the range of software many find essential. 
+
+The Java Station will be available next month starting at $199. It will ship with the Java-compatible Netscape Navigator browser and HotJava Views for basic productivity software. Sun hopes that the low price point will stimulate development of more Java applications and content tailored for network computers. The long-term success of the Java Station may ultimately depend on how quickly a market and software base develops around it.
+
+continues for 450 more words...

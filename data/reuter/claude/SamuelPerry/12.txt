@@ -1,0 +1,13 @@
+Microsoft Launches Electronic Commerce Software and Partnerships to Boost Online Shopping 
+
+Microsoft today announced a new e-commerce platform along with partnerships with several major retailers as the company aims to make online shopping more convenient, personalized and secure. The new Microsoft eCommerce suite provides software tools for retailers to build customized online storefronts, manage product listings, process payments and gain insights into customer behavior.
+
+As part of the launch, Microsoft announced new partnerships with Walmart, Costco, Kroger and Best Buy, among others. The retailers will use components of the eCommerce platform to power their shopping websites and mobile apps. The goal is to provide shoppers with a familiar experience no matter which retailer's site or app they use.
+
+"Our vision is for shopping with any participating retailer to feel as seamless as browsing the products on Microsoft's own site," said Paula Hulme, General Manager of eCommerce at Microsoft. "By sharing data and infrastructure between our platform and retailers, we can enable more personalized recommendations, simplified checkout, and other features that create that kind of cohesive experience."
+
+The eCommerce platform incorporates machine learning and AI to provide product recommendations based on items a customer has viewed or purchased previously at any store. The centralized login will allow customers to save payment information, shipping addresses and other details in one place and use that data at checkout for any of the partner retailers. Microsoft says all personal data and insights will be kept private and secure in accordance with strict new laws.  
+
+A core component of the new offering is a "product list" database that contains detailed information on over 100 million items spanning clothing, food, electronics, home goods and other categories. Retailers plug into the database to list items for sale on their sites, and Microsoft keeps the information up to date as products change or become discontinued. The product data also powers cross-retailer search, recommendations and image recognition capabilities.  
+
+The move by Microsoft represents its largest foray into digital commerce to date. While the company operates a handful of its own e-commerce stores for devices, software and digital media, it has primarily focused on providing technology to empower other retailers. The eCommerce platform and retailer partnerships signal that Microsoft may be aiming to play a bigger role in shaping the future of online shopping and potentially compete more directly with rivals like Amazon.

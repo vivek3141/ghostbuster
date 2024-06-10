@@ -1,0 +1,11 @@
+There is a connection between two facts or a point and the idea of how it will affect the future.
+The example is:
+All metals are heavy.
+ 2. Tin is a metal
+ 3. Tin is heavy
+A valid form and true premises are required for a sound argument to be valid.
+Example:
+All dogs are cats.
+All mice are dogs.
+ 3. All mice are cats
+The logical necessity of the judgment is what makes this a valid statement.

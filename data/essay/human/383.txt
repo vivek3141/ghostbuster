@@ -1,0 +1,16 @@
+It is important to note that brain tissue is among the most complex and intricate structures of the human body, which has a highly limited capacity for healing and regeneration. The topic of the proposed research is to assess how neural stem cells replace and differentiate into neurons and other cells of the brain in order to use them for therapeutic purposes. N eural stems cells must be used as a therapeutic measure to slow or halt the aging process due to their rejuvenation and differentiation capabilities.
+Organization Plan
+ 1. Introduction.
+ 2. Literature Review.
+ 3. Brain Aging.
+ 4. Neural Stem Cell Differentiation.
+ 5. Differentiation Regulation.
+ 6. Therapeutic Approaches.
+ 7. Discussion.
+ 8. Conclusion.
+Literature Review
+Part 1
+The preliminary research suggests that there is a complex system of regulatory steps that involve GABA signaling. There is an array of signaling molecules involved in the ventricular-subventricular zone (V-SVZ) neurogenesis, such as Sonic hedgehog, fibroblast growth factor 2, glutamate, and others. The subgranular zone (SGZ) is another important germinal region of the adult human brain, and the mechanisms of regulations are comparatively different between V-SVZ and SGZ.
+Part 2
+For example, a key source of the proposal states that “V-SVZ NSCs are regulated by local signals from their immediate neighbors, as well as by neurotransmitters and factors that are secreted by distant neurons, the choroid plexus, and vasculature” (Obernier & Alvarez-Buylla, 2019, p. 1). In other words, distantly located cells secrete a wide range of signaling molecules to regulate the neural stem cell generation, differentiation, and regeneration processes.
+Schedule for the Completion of Tasks

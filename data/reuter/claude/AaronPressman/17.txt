@@ -1,0 +1,17 @@
+US Justice Department Website Hacked in Highlight of Internet Vulnerability 
+
+The US Department of Justice's website was hacked today by a group calling itself "Guardians of Internet Freedom." The group posted a manifesto on the Justice Department's website decrying government surveillance programs and calling on internet users to safeguard individual privacy and freedom online.
+
+As of late this afternoon, visitors to justice.gov have been redirected to a screen displaying the hacker group's manifesto. The hack represents the latest in a series of cyber attacks on major US institutions that highlight vulnerabilities in the nation's cyber defenses. 
+
+"We sought to send a message to the government that mass surveillance programs and erosion of civil liberties will not be tolerated," the manifesto reads in part. "Individual privacy and freedom are sacrosanct values that must be vigorously protected in the digital age."   
+
+The hackers appear to have compromised servers to gain access to the Justice Department's website. Cyber experts said personal data stored on the Department's networks was unlikely to have been accessed or stolen. "This seems to primarily be a symbolic act to raise awareness and make a political statement," said Robert Smith, a cybersecurity researcher at SecureTech Analytics.
+
+The Justice Department took the site offline after being alerted to the breach and issued a brief statement acknowledging they were investigating the incident, though no sensitive data was compromised. "The Department of Justice takes seriously any attack on its systems," the statement read. They pledged to "strengthen our cyber defenses to prevent future incidents."
+
+The hack follows a string of similar incidents in recent years, including breaches at the Office of Personnel Management that compromised millions of government employee records, an attack on the Democratic National Committee servers during the 2016 election, and ransomware attacks that caused disruption at hospitals and ports worldwide. Government officials and independent experts have warned that the nation's critical infrastructure remains vulnerable to cyber threats from criminal and state-sponsored groups alike.  
+
+Today's breach suggests those warnings have not yet been heeded, and that additional investment in cybersecurity is sorely needed, according to experts. "We have an understaffed, underfunded cyber workforce defending an immense attack surface from adversaries who are constantly upping their game," Smith said. "Until we make cybersecurity the kind of national priority it demands, incidents like today's will continue to be a risk."
+
+The hacker group responsible says their goal is to raise awareness of privacy and freedom of information issues, though law enforcement officials warned their methods were still illegal. The FBI has launched an investigation into identifying those behind the website hack.

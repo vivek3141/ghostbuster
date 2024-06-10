@@ -1,0 +1,6 @@
+To minimise costs, 320 metres of cloth should be made internally and 180 metres externally.
+I recommend purchasing 80 hours of carding and combing time each week from another division for a maximum of 120, to enable internal production to increase to 520 metres per week.
+Gaining the 20% cost negotiation would save a substantial 756 per week or enable external production to increase by 45 meters. However, it would not change the optimal output solution.
+I would not recommend switching suppliers for a 30% reduction if the 20% negotiation is gained, because of their unreliability. Although, depending on their performance, this reduction could be more beneficial due to the price competitiveness of the industry than none whatsoever.
+The current and possible future costs and resources were analysed using solver in Excel to find the best method to minimise production costs for the yarn manufacturing division, run by Amanda Zellerman.
+Only one coefficient can change at any one time in the linear programming model. The linear program must be reformulated and solved again if multiple changes are required.

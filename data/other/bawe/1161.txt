@@ -1,0 +1,20 @@
+This acid-base titration is carried out between a strong base NaOH and a monoprotic acid (C 8H 5O 4K). The aims are to:
+0.1M C 8H 5O 4K was made up by weighing 4.8 - 5.2g solid
+the solid was transferred and dissolved in about 100cm 3 distilled water to a 250cm 3 beaker
+use a glass stirring rod to break up larger crystals
+the solution was transferred and made up to a 250cm 3 graduated flask with distilled water (bottom of the meniscus of the solution is just at the horizontal mark of the flask)
+the flask was inverted (with the thumb on the stopper) several times to ensure the solution is well mixed
+NaOH (aq) was run down to a 50.00cm 3 burette, so that the tube below the tap is also filled up. Note the initial burette reading
+20cm 3 C 8H 5O 4K(aq) was pipetted into a small conical flask
+A few drops (2-3) phenolphthalein indicator were added and with a white tile placed beneath the flask
+A rough titration was carried out - adding NaOH (aq) in 1.00cm 3-portions until the end point (solution changes from colourless to permanent pale pink). Note the final burette reading.
+2 accurate titrations were carried out - adding NaOH (aq) drop by drop when within 1-2cm 3 of the rough titration end point is reached.
+Titration was repeated until 2 accurate values (0.05cm 3) obtained.
+Positive result: Qualitative - NaOH(aq) with phenolphthalein indicator changes from colourless to pink solution when the end point is reached. Quantitative results (burette readings in volumes) are shown in Table 1.
+The 1 st accurate is an anomalous result so it is discarded.
+According to the methodology and apparatus used, there are both a fairly high degree of accuracy (with difference of results within  0.05cm 3) and minor sources of errors, lead to an anomalous result:
+The main source of error is probably the personal judgement (with naked eyes) of end point, which is when the solution in the conical flask changes colour from colourless to the first permanent pale pink as the flask is swirled. It is always difficult to be able to control the run down of NaOH. It usually ends up with varied pale pink densities. On the other hand, it is much more accurate also to measure the absorbance of solution using a photospectrometer at an appropriate wavelength. It is expected that the higher the absorbance value the higher the pink intensity, thus a positive correlation.
+C 8H 5O 4K is a stable and non-hygroscopic chemical which is easy to store. It can be readily made up as a standard solution, the primary standard. It has a relatively high molar mass, thus to reduce weighing error, which has also been reduced by using an accurate four-decimal-place electronic scale in weighing. However, the low water solubility of C 8H 5O 4K requires (p.1 Methods - step 3) breaking and grinding manually that are likely to be uneven. This can be improved by using powder C 8H 5O 4K in order to demonstrate a fairer test and to obtain more reliable and valid results.
+It is good to have rinsed the weighing boat, stirring rod and the funnel after each transfer, and then the washings were added to the flask. Ideally, the number of transfers should be kept at minimum. The more the transfers of the substances, the more the errors caused. Thus the validity of the results is affected. Accurate equipment is used e.g. 250cm 3 Graduated flask and 50cm 3-burette (calibrated to 0.05cm 3) and pipette.
+It is preferred to vortex the solution of C 8H 5O 4K and distilled water to ensure complete mixing. It is important to keep the consistency: either to add two or three drops of indicator in every titration. A new dry conical flask should be used for each titration, to avoid incompletely cleaned and dry ones, thus to affect the results. It is crucial to keep the burette straight, parallel to the clamp stand and perpendicular to the bench, when reading the burette volumes.
+The titration is carried out reasonably successfully so that NaOH concentration is calculated as 1.314M (see p.3). The practical has also helped to familiarise with C 8H 5O 4K, a primary standard, also a monoprotic acid. The experimental techniques (see Discussion) are reminded.

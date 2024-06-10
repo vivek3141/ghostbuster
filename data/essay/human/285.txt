@@ -1,0 +1,45 @@
+Introduction
+Hard disk failure is common among computers and leads to severe damage. The failure results from various causes, including human error, computer hardware failure, malware corruption, media damage, and exposure to heat or water. Changing the HDD before it wears out completely is prudent to protect other hardware and software components (Fernández-Fuentes et al., 2022). While tech-savvies easily replace the HDD, persons with little knowledge of computer hardware find it difficult to replace it. The persons with little knowledge include first-time computer users and those who rarely interact with computer hardware. Novice computer users can follow this instruction guide to effectively change HDD without causing any damage to the computer hardware and software components.
+These instructions will allow the readers to change the HDD from a faulty computer step by step and switch on the computer to test the new HDD. While changing the HDD seems easy following this instruction guide, the computer user should have basic computer knowledge. The assistance should be sought if the users interact with computer hardware for the first time. Appropriate assistants include computer experts and authorized computer hardware dealers at the place of HDD purchase.
+Overall Steps
+HDD can be upgraded in a fully functioning computer or a faulty laptop. To get started, the readers must ensure that their critical data is backed up in a secondary device such as flash disks or cloud-based storage like Google Drive. The computer must be switched off by following the appropriate booting process. After that, the power supply should be disconnected to avoid any instant of electric shock. Proper instructions, as indicated on the HDD guide book should be followed. The users should avoid placing the new HDD near heat or magnetic fields that interfere with the storage mechanism. Before inserting the new HDD remove the existing HDD carefully. The computer should be allowed to boot up upon replacing the HDD. The process takes about fifteen to twenty minutes and should be done in a well-ventilated room at average room temperatures.
+List of Materials and Tools Needed
+Before starting the process of changing the HDD, several tools and materials are required. The tools will help avoid static electricity, dust, electric shock, and other hazardous conditions to the computer and the user. Therefore, the user must acquire a list of protective tools before starting the process. The following list of tools is needed when changing the HDD in a computer.
+  * Anti-static mat to shield the users and computer equipment from static electricity discharge
+  * Anti-static vacuum cleaner to cause suction to remove dirt from the computer equipment
+  * Anti-static wristband to be worn on the writs to prevent static electricity build-up.
+  * 
+  * Philips-head screwdriver to tighten and drive out screws
+The readers should also ensure that appropriate materials are available before the process. The following list of materials is needed to get the process started.
+  * A can of compressed air
+  * 
+  * A can of refrigerant-based propellant cleaner
+  * A new hard drive disk
+List of Steps
+The following steps should be followed when changing HDD, and the readers should remember to disconnect the power supply and carefully read the HDD’s manufacturers’ instructions.
+Back up data on the existing HDD
+Backing up of data should be done if the existing HDD still works. You can use an external USB or online using OneDrive or Google Drive.
+Obtain a full, bootable Operating system copy
+You should do this step if you replace a primary HDD and are not using a cloning tool. The software can be bought on a DVD or downloaded on a flash drive by creating recovery media.
+You should decide between an HDD or an SDD (Solid State Drive)
+Although SDDs are faster and more durable than HDD, they are more expensive. However, the two operate similarly, and you can choose either depending on your budget.
+Choose the right driver for your computer
+Different types of computers require different types of HDDs with varying sizes. If you are replacing a laptop’s HDD, you need a 2.5-inch HDD, and if you are replacing a desktop’s HDD, you need a 3.5-inch HDD.
+Shut down your computer by following the right procedure
+Following the appropriate computer booting process help protect the data and prevent damage to the existing hardware. Unplug the computer from the power supply upon shutting it down.
+Ground yourself before opening your computer’s system unit
+Use the anti-static wrist band while standing on the anti-static mat to avoid improper handling of the electronic components. The tools help avoid damaging the computer by electrostatic discharge.
+Open the system unit case
+This step varies depending on the computer being worked on: desktop or laptop. If you are working on a desktop, you need to twist off the screws using the Philips-head screwdriver. Meanwhile, laptops either have special cases with special doors for easy insertion and removal of HDD or need unscrewing of various components and battery removal.
+Locate HDD in the system unit
+HDDs are often screwed within a cage in the computer’s system unit. Upon locating the HDD, identify power and data connectors and disconnect them from the HDD.
+Make sure you have removed all the screws and disconnected the HDD
+Use the Philips-head screwdriver to remove all the screws attaching the HDD to the system unit. If the computer case does not support the drive, you can use your hand to support the HDD. After that, carefully slide the HDD out of the cage and system unit.
+Set jumpers on an IDE drive if not using a SATA drive
+HDDs have diagrams illustrating the jumpers’ location and can set the jumpers. Jumper setting sets the drive as Master, Slave, or Select depending on your choice and the original drive settings.
+Insert the new HDD into position
+The insertion should match the original positioning of the old HDD. After that, carefully screw the HDD in, reconnect the power and data cables, and close the system unit.
+Boot the computer up with the recovery media inserted
+This step can be skipped if you use cloning software, but the DVD tray should be ejected first if the recovery media is on a DVD. In case of a USB, insert the USB before turning on the computer. The computer automatically boots up into the Operating System (OS) installer to boot up from USB or DVD drives.
+Follow on-screen instructions to reinstall the OS
+Upon reinstalling the OS, the computer automatically re-registers the OS. With a fully operational computer, you can restore the backed-up data. The computer is ready to use, and can be run through diagnostic test to identify any error. Remember to keep the old HDD somewhere safe in case you need it for future use.

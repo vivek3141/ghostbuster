@@ -1,0 +1,26 @@
+Iron is the most abundant metal on Earth and is essential to the human bodies. It is also a typical transition metal that possesses different oxidation states - Fe 2+ and Fe 3+. The aim of this experiment is to determine the iron percentage in iron tablets, as a dietary supplement with Fe 2+, by a redox titration:
+Half equations (i) - oxidation
+(ii)  reduction
+Overall equation:
+The manganate(VII) ion oxidises iron(II) to iron(III) ion.
+KMnO4 (0.005M) - oxidant without serious hazard, but avoid ingestion
+H2SO4 (1.0M) - corrosive, use only in fume cupboard Avoid skin and eye contact
+2 Fe tablets were weighed accurately. The mass recorded.
+The tablets were transferred and grinded by a pestle and mortar with a little hot 1M H 2SO 4
+The paste was transferred into a 100cm 3 graduated flask
+All the apparatus used were rinsed with small amount H 2SO 4 , which was then added to the graduated flask
+1M H 2SO 4 was added to the flask until 100cm 3-mark just reached
+The flask was stoppered and shaken well to ensure the solution is well mixed
+Burette was filled with 0.0050M KMnO 4. Note the initial burette reading.
+10cm 3 solution pipetted out from graduated flask into a conical flask
+The solution was titrated with KMnO 4, meanwhile the flask was shaken and swirled along with KMnO 4 addition.
+Addition stopped and tap of the burette was turned off once the end point - first permanent pink colour was observed. Note the final burette reading.
+A rough and further titrations were carried out, until consistent results (Table 1) were obtained - results for 2 titrations agree to within 0.05cm 3.
+At first, the Fe solution turned colourless as it reacts. The end point was the first trace of permanent pink in the solution showing a tiny excess of manganate(VII) ions.
+Tightnesses of the burettes taps vary: the tighter the tip, the slower the run down, the more time consuming of the practical, vice versa.
+The methodology and apparatus used show a fairly high degree of accuracy (with difference of results within  0.05cm 3) and minor sources of errors.
+The main source of error is probably the personal judgement with naked eyes of end point (also see p. ) - the solution in conical flask changes from colourless to the first permanent pale pink by one-drop addition, which is always difficult to control, from the run down of KMnO 4. On the other hand, the consistency of pink colour can be obtained quantitatively by measuring absorbencies of solution in the conical flask after each titration. An accurate photospectrometer set at an appropriate wavelength can be used. It is expected that the higher the absorbance value the higher the pink intensity, thus a positive correlation.
+The second major source of error could be transfers of solutions, thus it is practically hard to not lose any tablets contents. After transfers, the wet surfaces of containers sufficiently mean some loss of iron. Ideally, the number of transfers and apparatus should be kept at minimum. The mortar can be used in weighing as well as grinding iron tablets. The number of transfers is therefore reduced by not using a weighing boat. It is however good to have rinsed the apparatus after transfers.
+It is preferred to vortex the solution of Fe and H 2SO 4 to ensure it is "thoroughly mixed" and to avoid "undissloved solid" in the flask. A shaking time could also be set. It is important to keep the consistency: A clean dry conical flask should be used for each titration. It is crucial to keep the burette straight, parallel to the clamp stand and perpendicular to the bench, when reading the burette volumes. A piece of white paper can be cut and placed behind the burette of dark purple KMnO 4, for easier burette volumes readings.
+The Fe tablets are weighed accurately by using four-decimal-place electronic scale, in order to obtain more reliable and valid results. It is good laboratory practice to have rinsed the weighing boat, pestle, mortar and the funnel after each transfer, and then the washings were added to the flask. Other accurate apparatus is used e.g. 100cm 3 Graduated flask and 50cm 3-burette (calibrated to 0.05cm 3).
+From 2.4 Calculations and 2.5 Questions (p. 4 & 5), the percentage of iron in iron(II) Sulphate tablets has been estimated as16.3%, which is approximately half of the claimed content (32.5%) by the manufacturer. This practical has helped to further familiarised with the titration techniques.

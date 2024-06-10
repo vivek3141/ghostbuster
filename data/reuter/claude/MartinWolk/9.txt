@@ -1,0 +1,13 @@
+Microsoft Corp CFO Shares Positive Outlook for Company Revenue Growth in Next Two Quarters  
+
+Microsoft's Chief Financial Officer Amy Hood expressed optimism for continued revenue growth at the tech giant over the next two quarters during the company's latest earnings call. Hood cited several factors driving the positive outlook, including strong growth in the company's cloud computing business and customer uptake of Microsoft 365, the company's suite of productivity tools.  
+
+"We continue to see very strong demand for our commercial cloud offerings, with commercial cloud revenue growing 36% year over year in the December quarter," Hood said. "Our commercial cloud gross margin improved 4 points year over year to 67%, highlighting our ability to drive margin expansion."  
+
+Microsoft's commercial cloud business, which includes the Microsoft Azure public cloud and Office 365 productivity suite, generated over $15 billion in revenue for the quarter ending in December. Sales of Azure alone grew 62% compared to the same quarter last year. The growth in cloud revenue significantly outpaced Microsoft's overall sales, which were up 14% year over year at $43.1 billion.
+
+Hood said she expects mid-teens revenue growth for the company's Productivity and Business Processes segment, and over 20% growth for the Intelligent Cloud segment, which includes Azure, in the next quarter. Revenue from the More Personal Computing segment, including Windows, search, and gaming, should grow in the mid-single digits.  
+
+The positive guidance comes on the heels of Microsoft releasing updates to several key products. This includes a new version of the Microsoft 365 suite with added security and AI features, as well as updates to the Teams collaboration app and Surface hardware. Hood believes these updates, combined with the overall shift to digital services during the COVID-19 pandemic, will drive continued growth over the next few quarters.
+
+Investors reacted positively to Microsoft's latest earnings report and outlook. The company's stock price rose over 5% in after-hours trading following the earnings release. If Microsoft meets Hood's guidance for the next two quarters, it will continue one of the most successful runs for the Redmond, Washington-based company since Satya Nadella took over as CEO in 2014 and moved more aggressively into cloud computing and subscription services.

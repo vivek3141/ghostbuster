@@ -1,0 +1,13 @@
+Regulators Propose $2.3 Billion Annually to Link Schools and Libraries to the Internet at Discounted Rates 
+
+Federal regulators have proposed new rules that would provide $2.3 billion in annual funding to help connect schools and libraries across the country to affordable high-speed Internet service. The funding, proposed by the Federal Communications Commission, would help subsidize broadband connectivity for about 20 million students, teachers and library patrons nationwide.
+
+Under the proposal, broadband providers would receive discounts of up to 90% to offer affordable high-speed Internet access to schools and libraries in areas where service might otherwise be unavailable or unaffordable. The subsidies would be funded by the Universal Service Fund, which uses fees collected from telecommunications companies to fund service in rural and underserved areas.
+
+The proposal aims to bridge the so-called “homework gap” at a time when fast Internet access has become essential for students and teachers. According to the FCC, one in three school-age children don't have access to broadband at home, putting them at a disadvantage for after-school studying and assignments. The proposed funding would provide broadband connections of at least 100 megabits per second for schools and libraries, fast enough to enable digital learning in multiple classrooms at once.
+
+“Broadband has become essential for students to keep up in today's digital world,” said FCC Chairman Ajit Pai.  “This program helps ensure that kids across the country have access to digital opportunity.”
+
+Not all commissioners agreed with the proposal, however. Commissioner Jessica Rosenworcel argued in a statement that the plan "shortchanges students and teachers" by cutting funding from previous years. The program previously provided $2.25 billion annually but will decrease to $2.19 billion under the new proposal.
+
+The FCC will now collect public comments on the proposal before holding a final vote on the plan. Barring major revisions, analysts expect the funding to be approved to continue providing affordable broadband access to millions of students, teachers and library patrons across the United States.

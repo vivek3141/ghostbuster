@@ -1,0 +1,165 @@
+Introduction
+Management accounting involves measuring and reporting of economic activities of an enterprise. It is vital for the decision-making and planning of any organization and society. Managers primarily depend on the information provided by this paradigm for forecasting, operational control, and performance evaluation. For instance, managers use this information to decide what to produce, make, and when to produce. Therefore, it is helpful to them in determining various costs involved in the production process and the needed resources to attain the company’s objectives.
+Additionally, the management accounting system is financial in nature. Therefore, it feeds into the financial accounting system, especially in the product costing system, which is vital in calculating the cost of sales used in the income statement and inventory cost used in the balance sheets. Arguably, this information can be seen as the backbone to the excellent management and operation of large organizations. Thus its preparation should be made monthly or quarterly and given to the various managers, including the chief financial officers, for efficient operation of their duties. This paper, hence, seeks to create a comprehensive report and analysis of the actual financial performance vis-a-vis the budgeted performance to be presented to the chief financial officer.
+Summary
+The actual net profit of 1036.8 shows that the company is in good operation and can secure financing and investments. However, the budgeted net profit is 153.9 higher due to the lower sales volume in the actual performance. This then signals the sales and marketing department to adjust their marketing strategy to prevent the sales lag that is deterring the company from reaching its plans. Conversely, comparing the actual and budgeted net profit margins, the 15.88 % profit margin indicates that the company earns 15.88 cents for every dollar it collects instead of £15.71 that was budgeted (Maheshwari, Maheshwari, and Maheshwari, 2021). This shows that the company is operating optimally and is highly capable of meeting its objectives. This analysis, therefore, deems it fit for the company to try and reduce the cost of sales for it to generate higher profit margins. Consequently, the company is required to minimize the selling costs and increase its sales volume to continue earning higher returns. Similarly, in the analysis of this data, the liquidity ratio is also vital to examine as it determines whether the company can pay off current debt obligations.
+The liquidity ratio shows the company is relatively in a good position to clear its current debts without using the inventory financing method, which is the least liquid. Its quick ratio of 0.8 indicates that it has £0.81 of liquid assets without inventory to cover £1 liability (Maheshwari, Maheshwari, and Maheshwari, 2021). Although the company desires to achieve 1.02, it is not close to insolvency. With all these analyses, it is prudent to argue that the company is in good operation for the foreseeable future.
+Statements of Profit & Loss
+Budgeted statement of profit and loss account for the year ended 30th Sept 2020.
+                                                                                                                                                                                        
+Budgeted statement of profit and loss account for the year ended 30 th Sept 2020                                                                                                        
+Months                                                                            19-Oct  19-Nov  19-Dec  20-Jan  20-Feb  20-Mar  20-Apr  20-May  20-Jun  20-Jul  20-Aug  20-Sep  Totals
+                                                                                  £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000 
+Budgeted sales                                                                    354     390     429     472     519     571     628     690     759     835     919     1,011   7577  
+Less: cost of sales                                                                                                                                                                     
+Direct materials                                                                  72      78      86      95      104     115     126     138     152     167     184     203     1520  
+Direct labor                                                                      106     118     130     143     157     173     190     209     230     253     278     306     2293  
+Variable overheads                                                                32      35      38      42      46      51      56      62      68      75      82      91      678   
+Fixed overheads                                                                   36      36      36      36      36      36      36      36      36      36      36      36      432   
+Total cost of sales                                                               246     267     290     316     343     375     408     445     486     531     580     636     4923  
+Gross profit                                                                      108     123     139     156     176     196     220     245     273     304     339     375     2654  
+Less: costs                                                                                                                                                                             
+Administration cost                                                               24      24      26      26      28      28      30      30      32      32      34      34      348   
+Distribution cost                                                                 29      29      31      33      34      36      37      39      40      40      41      41      430   
+Selling cost                                                                      32      32      34      34      35      38      39      41      42      42      44      44      457   
+Total costs                                                                       85      85      91      93      97      102     106     110     114     114     119     119     1235  
+Operating profit(EBIT)                                                            23      38      48      63      79      94      114     135     159     190     220     256     1419  
+Finance cost                                                                      8       8       8       8       8       8       8       8       8       8       8       8       96    
+Profit before tax                                                                 15      30      40      55      71      86      106     127     151     182     212     248     1323  
+Tax                                                                               1.5     3       4       5.5     7.1     8.6     10.6    12.7    15.1    18.2    21.2    24.8    132.3 
+Profit after tax                                                                  13.5    27      36      49.5    63.9    77.4    95.4    114.3   135.9   163.8   190.8   223.2   1190.7
+                                                                                                                                                                                        
+                                                                                                                                                                                        
+
+Actual statement of profit and loss account for the year ended 30th Sept 2020.
+Actual statement of profit and loss account for the year ended 30 th Sept 2020                                                                                                        
+Months                                                                          19-Oct  19-Nov  19-Dec  20-Jan  20-Feb  20-Mar  20-Apr  20-May  20-Jun  20-Jul  20-Aug  20-Sep  Totals
+                                                                                £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000   £’000 
+Actual sales                                                                    375     421     497     562     712     150     180     242     523     715     894     1256    6527  
+Less: Cost of sales                                                                                                                                                                   
+Direct materials                                                                75      84      100     112     142     30      36      48      105     143     179     251     1305  
+Direct labor                                                                    113     127     150     170     215     45      54      73      158     216     270     280     1871  
+Variable overheads                                                              34      38      45      51      64      13      16      22      47      65      81      114     590   
+Fixed overheads                                                                 36      36      36      36      36      36      36      36      36      36      36      36      432   
+Total cost of sales                                                             258     285     331     369     457     124     142     179     346     460     566     681     4198  
+Gross profit                                                                    117     136     166     193     255     26      38      63      177     255     328     575     2329  
+Less: costs                                                                                                                                                                           
+Administration cost                                                             24      24      26      27      30      12      13      15      25      30      35      42      303   
+Distribution cost                                                               30      31      32      33      35      18      19      22      30      34      38      45      367   
+Selling cost                                                                    33      34      34      36      40      20      20      23      36      38      49      48      411   
+Total costs                                                                     87      89      92      96      105     50      52      60      91      102     122     135     1081  
+Operating profit(EBIT)                                                          30      47      74      97      150     -24     -14     3       86      153     206     440     1248  
+Finance cost                                                                    8       8       8       8       8       8       8       8       8       8       8       8       96    
+Profit before tax                                                               22      39      66      89      142     -32     -22     -5      78      145     198     432     1152  
+Tax                                                                             2.2     3.9     6.6     8.9     14.2    -3.2    -2.2    -0.5    7.8     14.5    19.8    43.2    115.2 
+Profit after tax                                                                19.8    35.1    59.4    80.1    127.8   -28.8   -19.8   -4.5    70.2    130.5   178.2   388.8   1036.8
+                                                                                                                                                                                      
+Statement of Financial Position.                              
+Budgeted Statement of Financial Position as at 30th Sept.2020.
+Budgeted Statement of Financial Position as at 30 th Sept.2020                     
+                                                                                     £’000    £’000  
+Current Assets                                                                              
+                                                                Cash                 3200            
+                                                                Receivables          3500            
+                                                                Inventory            3150            
+                                                                Prepayments          1000            
+                                                                Accrued Income       1765.2   12615.2
+                                                                                                     
+Non-Current Assets                                                                          
+                                                                Land & Building      4000            
+                                                                Plant & Machinery    5000     9000   
+TOTAL ASSETS                                                                         21615.2
+                                                                                                     
+Current Liabilities                                                                         
+                                                                Payables             4024            
+                                                                Accruals             4300     8324   
+                                                                                                     
+Non-Current Liabilities                                                                     
+                                                                Long Term Bank Loan  4050     4050   
+TOTAL LIABILITIES                                                                    12374  
+                                                                                                     
+Equity                                                                                               
+                                                                Share Capital        8050.5          
+                                                                Retained Earnings    1190.7   9241.2 
+TOTAL LIABILITIES AND EQUITY                                                         21615.2
+Actual Statement of Financial Position.                                          
+Actual Statement of Financial Position as at 30 th Sept.2020                     
+                                                                                                     
+Current Assets                                                                              
+                                                              Cash                 3000              
+                                                              Receivables          1900              
+                                                              Inventory            4150              
+                                                              Prepayments          1800              
+                                                              Accrued Income       1611.3     12461.3
+                                                                                                     
+Non-Current Assets                                                                          
+                                                              Land & Building      4000              
+                                                              Plant & Machinery    5000       9000   
+TOTAL ASSETS                                                                       21461.3  
+                                                                                                     
+Current Liabilities                                                                         
+                                                              Payables             4324              
+                                                              Accruals             4000       8324   
+                                                                                                     
+Non-Current Liabilities                                                                     
+                                                              Long Term Bank Loan  4050       4050   
+TOTAL LIABILITIES                                                                  12374    
+                                                                                                     
+Equity                                                                                               
+                                                              Share Capital        8050.5            
+                                                              Retained Earnings    1036.8     9087.3 
+TOTAL LIABILITIES AND EQUITY                                                       21,461.30
+
+Pie Chart Showing Both Performance of the Company
+Budgeted costs performance for the whole year.
+Actual costs performance for the whole year.
+In the data above, direct labor costs take a more considerable percentage of all the costs involved in the performance of this company. Direct labor costs apply to the cost of labor that can be traced to the creation of a product without unnecessary expenses, for example, the salaries and wages paid to the workers. It takes a more considerable percentage because it determines the volume of production (Maheshwari, Maheshwari, and Maheshwari, 2021). As production increases, labor cost also increases; that is why in the budgeted performance, the cost of direct labor is 2% higher than the actual cost of direct labor. It is followed by direct material cost, which includes the cost of raw materials and the items used to create the products. The direct materials in the bakery industry, for example, would consist of flour, eggs, oil, and water. It also contributes a bigger percentage of costs in the production process.
+When the production is increased, the output will be increased, and thus the inputs costs, including direct materials, must increase. This is evident in the two charts as it indicates that the direct materials costs are higher in the budgeted performance with higher sales. It is followed by the variable cost in the chart, variable costs are the business expenses that changes according to the output or sales. Therefore it varies linearly with the output level. On most occasions, it decreases with the increase in production or sales, as depicted from the charts (Maheshwari, Maheshwari, and Maheshwari, 2021). The budgeted plan with higher sales has a lower percentage of the variable cost than the actual plan with lower sales. It is closely followed by the fixed cost, which includes those costs that do not change when production or sales volume changes; they do not vary with the output volume. Always the total fixed cost does not change, and they remain within a given range.
+However, the cost per unit of fixed cost decreases with the increase in production because the exact fixed costs are spread over more units. This is evident in the charts above, as they shows that in the budgeted program, the fixed cost is 6.76%, and the actual program is 7.87%. Following is the distribution cost, which is associated with storing and delivering the products to the respective customers. These costs are incurred in getting the finished products to customers, for example, the cost of fuel and depreciation of the vehicle. They are directly related to the output level, as the output level increases, the distribution cost increases, as seen in the charts. The selling costs also form part of the business performance. It deals with the costs associated with getting orders or requests from customers. They include salaries and commissions paid to the sales and advertising agents. As the output increases, the need for many selling agents is necessary; therefore, it also increases but not proportionately to the output level.
+Ensuing is the administration cost, which involves paying salaries and wages and giving benefits to the non-sales individuals. It is also directly related to the output volume. The Finance costs, which include the cost incurred by the management to secure funds for the organization’s activities, are also included in the costs. Finally, there is the cost of taxation which involves the charge by the government authority on the gross profit or loss of the company, including interest on debentures and dividends to shareholders. It is proportionately related to the output level as shown on the charts. As output increases, the tax also increases, thus its costs increases (Maheshwari, Maheshwari, and Maheshwari, 2021). From the above-analyzed data, we can say that both the business’s actual and planned performance is in the same line, and there is a slight diversion on the actual and intended outcome; hence, they are positively related in terms of profit goals of the company.
+Graphs Comparing the Budgeted Against the Actual Performance
+Budgeted Against Actual Sales.
+                DURATION  19-Oct  20-Oct  19-Dec  20-Jan  20-Feb  20-Mar  20-Apr  20-May  20-Jun  20-Jul  20-Aug  20-Sep
+BUDGETED SALES  354       390     429     472     519     571     628     690     759     835     919     1,011         
+ACTUAL SALES    375       421     497     562     712     150     180     242     523     715     894     1256          
+                                                                                                                        
+
+Budgeted Against Actual Gross Profit.
+                            DURATION  19-Oct  20-Oct  19-Dec  20-Jan  20-Feb  20-Mar  20-Apr  20-May  20-Jun  20-Jul  20-Aug  20-Sep
+BUDGETED GROSS PROFIT  108  123       139     156     176     196     220     245     273     304     339     375                   
+ACTUAL GROSS PROFIT    117  136       166     193     255     26      38      63      177     255     328     575                   
+                                                                                                                                    
+
+Budgeted against actual operating profit.
+                               DURATION  19-Oct  20-Oct  19-Dec  20-Jan  20-Feb  20-Mar  20-Apr  20-May  20-Jun  20-Jul  20-Aug  20-Sep
+BUDGETED OPERATING PROFIT  23  38        48      63      79      94      114     135     159     190     220     256                   
+ACTUAL OPERATING PROFIT    30  47        74      97      150     -24     -14     3       86      153     206     440                   
+                                                                                                                                       
+
+The graphs above measure the actual performance and the budgeted performance of the business. They show the variance between the business plan and the actual outcome. From the graphs, we can see that the budgeted; sales, operating profit, gross profit, and the actual; sales, gross profit, operating profit exhibit the same trend. The budgeted parameters designates a constant increasing growth, while all the actual parameters show a fluctuating growth. The actual parameters have a steadily increasing growth from October to February. They reach their peak in January and starts dropping in February up to March and then start to pick again with a constant speed before they start increasing increasingly in May. The performance then starts to shoot at a higher rate from august to its pick in September. As a result, this implies that the business has peak and low seasons across these performance periods, and the company should therefore strive to minimize losses during the low seasons and maximize its profits in high seasons.
+Profitability Ratio Calculations for both Budgeted and Actual Years
+Net profit ratio : the calculation of these ratios are derived from the statements of profit or loss accounts created above.
+Actual performance
+ 1. 
+     1. Net profit ratio = (net profit / net sales)*100 = 1036.8/6527 * 100 = 15.88
+ 1. 
+     1. Operating profit margin = (operating profit / sales) * 100 = 1248/6527 * 100 = 19.12
+Budgeted performance
+ 1. 
+     1. Net profit ratio = (net profit / net sales)*100 = 1190.7/7577 * 100 = 15.71
+ 1. 
+     1. Operating profit margin = (operating profit / sales) * 100 = 1419/7577 * 100 = 18.73
+Liquidity Ratio Calculations for Both Budgeted and Actual Years
+Quick ratio: from the statement of financial position above, the quick ratio for both the actual and budgeted performance can be obtained as follows;
+Actual performance
+ 1. 
+     1. Quick ratio = (currentassets – inventory – prepaid expeses)/ currentliabilities = (12461.3 – 4150 – 1800)/ 8324 = 0.8
+ 1. 
+     1. Current ratio = currentassets/ currentliabilities = 12461.3/ 8324 = 1.49
+Budgeted performance
+ 1. 
+     1. Quick ratio = (currentassets – inventory – prepaid expeses)/ currentliabilities = (12615.2 – 3150 – 1000)/ 8324 = 1.02
+     2. Current ratio = currentassets/ currentliabilities = 12615.2/ 8324 = 1.52
+Conclusion
+In conclusion, management accounting can be seen as the engine that drives every organization to success. Its financial nature also makes it possible for the managers to predict and plan for the company’s future operations. Every organization should strive to use management accounting extensively. And the managers and the users of the accounting information should practice the economic theories that form the basis of cost accounting to aid in influencing effective decision-making in large and small organizations. On the other hand, management accounting system has been seen as an evaluation tool that evaluates the profitability of individual products and product lines. Therefore, this approach should be applied in determining the relative performance and achievement of different managers under different categories, programs, and departments in the organization.
+The organization would increase its accountability throughout the departments and minimize unnecessary expenses or losses. Through the management accounting, the managers would know the work in progress on the production floor and their stages of completion. This helps the line manager in spotting the bottlenecks and maintain smooth running of the production process. Therefore, it would be feasible for companies or organizations that have not incorporated this system to incorporate it and for those that have already integrated it to employ the synergistic energy in advancing it for better performance.

@@ -1,0 +1,13 @@
+Hewlett-Packard Unveils Plan to Boost Sales of Encryption Technology for Secure Online Commerce 
+
+Hewlett-Packard today announced an aggressive new plan to boost sales of its encryption technology and security services to enable more secure online commerce and data protection for businesses. HP sees the growing threats around cybercrime and data privacy as an opportunity to expand its cybersecurity product line.
+
+HP’s encryption and data protection software and services currently generate over $1 billion in annual revenue. Under the new plan unveiled by CEO Enrique Lores, HP aims to double that figure within the next three years through increased marketing and partnerships with major ecommerce and financial services companies.
+
+“Privacy and security have never been more important to consumers and businesses alike,” said Lores in his keynote at HP’s Security Summit in San Francisco. “HP has been developing world-class encryption and security technologies for decades. We are now making a major push to bring these data protection capabilities to more companies that conduct sensitive transactions online.”
+
+A centerpiece of HP’s new sales and marketing campaign will be its HP Secure Encryption solution, which provides strong encryption of data both at rest within enterprise databases and in transit across networks. HP Secure Encryption uses the same military-grade encryption standards relied upon by government agencies and major financial institutions. HP will offer these encryption capabilities both as a software and service subscription as well as tightly integrated into some of its enterprise servers and storage platforms.
+
+HP also plans to boost investment in its Zero Trust security architecture services. The Zero Trust model, advocated by many cybersecurity experts, requires strict identity validation for everyone and everything trying to access network resources. HP believes many more organizations will adopt a Zero Trust security model over the next 5-10 years and wants to establish itself as a premier provider of consulting and managed security services built on this model.
+
+While HP faces competition from companies like IBM and Dell in the broader cybersecurity market, Lores emphasized that “HP has unique advantages with our long history as a leader in both enterprise hardware and software. We have an unparalleled reach into customer data centers that we can now leverage to deliver advanced encryption and data protection for sensitive workloads.” HP’s plan to double revenue from these security offerings comes as overall company revenues and profits have stabilized under Lores’s leadership following several years of financial challenges.

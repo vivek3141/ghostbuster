@@ -1,0 +1,12 @@
+Sales price structure of the product is analysed and recommendations on the customer margins for three products are given as 10%, 12% and 12% respectively.
+Financial appraisal of the project is carried out and the financial viability of the project is assessed using tools, which include: Payback, NPV, IRR.
+Factors that may change over the 3-year life of the project have to be recognized. They include:
+- Reverse in market trend
+- Strategic change
+- Unforeseen events
+A wider range of factors are evaluated and a SWOT analysis of the project is produced.
+Successful launch requires realistic assumption of competitor response which is presented in the form of Competitor Reaction Profiles.
+The Cleaning System market has seen the launch of a new product from one of P&G's competitors, which has left P&G with unsatisfactory sales. A 'new to the world' cleaning system product 'Powermop' is thus developed and it is suggested to be marketed under the Flash Brand. The price of the various products to the end consumer has been decided.
+A financial appraisal of the launch has been requested by the management. Advice on customer margins and factors that may change over the life of the project is suggested. A SWOT analysis of the project and possible competitor reactions are presented and analysed in this report.
+In obtaining the above figures assumptions are made, which can alter during the course of the project:
+The appropriate customer margins on Powermop Starter Kit, Pad and Solution would be 10%, 6% and 12% respectively. This will enable the project to generate a positive NPV whilst retailers obtaining a better margin. The project is assessed using both financial measures such as NPV and Discounted Payback, and non-financial measures such as SWOT analysis focusing on both internal and external environment of the project. A successful launching requires careful consideration of changing variables over the life of the project and competitor response. This will also help to identify competitors' strategies and enable the project to react strategically to achieve its overall success.

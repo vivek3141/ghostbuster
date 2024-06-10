@@ -1,0 +1,31 @@
+The Serial Endosymbiosis Theory proposes that several key cellular organelles originated as free-living bacterial prokaryotes that were engulfed by larger cells in an endosymbiotic relationship. The two organelles with the strongest evidence for an endosymbiotic origin are mitochondria and chloroplasts. According to the theory, mitochondria evolved from alpha-proteobacteria that were engulfed by archaea, while chloroplasts evolved from cyanobacteria that were engulfed by a eukaryotic cell.
+
+Autogenous theories of eukaryotic cell evolution propose that the eukaryotic cell originated without any symbiotic events. All organelles, including mitochondria and chloroplasts, evolved from structures already present in the ancestral archaeal cell. While there is evidence that some eukaryotic features did evolve autogenously, most scientists believe there is now overwhelming evidence that mitochondria and chloroplasts evolved through endosymbiosis. 
+
+The evidence for the endosymbiotic origin of mitochondria includes:
+
+1) Mitochondria have their own circular DNA genome that is more similar to alpha-proteobacteria than to the host cell genome. The genome has also retained alpha-proteobacterial RNA polymerase and ribosomes.
+
+2) Mitochondria reproduce through binary fission, like bacteria, not by mitosis like host cell organelles. 
+
+3) Mitochondria have double membranes, with the inner membrane having bacterial-like proteins. The outer membrane is thought to be derived from the engulfing vacuole membrane.
+
+4) Mitochondria contain their own transfer RNAs, ribosomes, and aminoacyl tRNA synthetases like alpha-proteobacteria. 
+
+5) Phylogenetic analyses place mitochondria as descendants of alpha-proteobacteria.
+
+The evidence for the endosymbiotic origin of chloroplasts includes:
+
+1) Chloroplasts have their own circular DNA genome that is very similar to cyanobacteria. They also have cyanobacterial ribosomes and RNA polymerase.
+
+2) Chloroplasts reproduce through binary fission like cyanobacteria, not by mitosis. 
+
+3) Chloroplasts have double membranes like mitochondria, with the inner membrane containing cyanobacterial-like proteins.
+
+4) Chloroplasts contain chlorophyll a, carotenoids, and phycobilins found in cyanobacteria, as well as similar photosynthetic membranes.
+
+5) Phylogenetic analyses place chloroplasts within cyanobacteria.
+
+Lynn Margulis proposed the serial endosymbiosis theory, which suggests that mitochondria, chloroplasts, and possibly other organelles arose through sequential endosymbiotic events. The "middle ground" version of SET proposes that only mitochondria and chloroplasts arose through endosymbiosis, while other organelles evolved autogenously. While Margulis' theory is provocative, most scientists favor the middle ground SET due to lack of evidence that other organelles arose through endosymbiosis.
+
+In summary, while some features of eukaryotic cells may have evolved autogenously, there is compelling evidence from genetics, biochemistry, cell biology, and phylogenetics that both mitochondria and chloroplasts evolved from free-living prokaryotes that were engulfed in endosymbiotic events. Their double membranes, retention of their own genomes and ribosomes, binary fission, and phylogenetic relationships all point to their endosymbiotic origins. The endosymbiotic events that gave rise to mitochondria and chloroplasts were pivotal in the evolution of eukaryotic cells.

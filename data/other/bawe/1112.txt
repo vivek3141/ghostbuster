@@ -1,0 +1,1 @@
+This program is required to do two things; convert infix equations, where the operators are in between operands, to postfix, where the operators come after the operands, also to evaluate the postfix expression and come up with an answer. The program will use a stack data structure and will read the expression from an edit box, where the user shall type in the expression.

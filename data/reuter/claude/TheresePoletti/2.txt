@@ -1,0 +1,15 @@
+U.S. Computer Hardware Makers Report Mixed Q3 Results, IBM Leads the Way while Digital Records Losses 
+
+The largest U.S. computer hardware makers reported a mixed set of results for the third quarter of the year. While industry leaders like IBM and HP saw moderate growth, other companies like Digital Equipment Corporation struggled with ongoing losses.
+
+IBM, the world's largest computer company, said its third-quarter profits rose 12% to $1.56 billion, or $2.58 a share, up from $1.39 billion, or $2.30 a share, a year earlier. Revenue increased 5.4% to $19.6 billion from $18.6 billion. The strong results were fueled by growth in sales of mainframe computers, disk drives, and software. 
+
+"IBM continues to benefit from its focus on high-growth segments like cloud computing, artificial intelligence, and other areas that are reshaping the technology industry," said David Nelson, an analyst at Forrester Research. "With another solid quarter of revenue and profit growth, IBM remains an anchor for stability even as many tech companies struggle with a slowing economy."
+
+In contrast, Digital Equipment reported a net loss of $196.6 million, or $1.66 a share, for its fiscal third quarter. A year ago, Digital earned $32.5 million, or 28 cents a share. Revenue declined 12% to $3.02 billion from $3.44 billion. The losses were the result of a massive corporate restructuring that involves eliminating 20,000 jobs in order to cut costs. The company has been suffering from declining sales of its VAX line of minicomputers and mountable power supply products.
+
+"Digital continues to be in a turnaround mode, and this will take time. Revenue declines persist but cost-cutting measures are helping to stem losses," said Abhey Lamba, an analyst at US Research. "The company has a long road ahead to transform its product line and compete in growth areas like PC servers and workstations."
+
+HP, the world's second-largest computer maker, said its third-quarter profit from operations rose 34% while revenue increased 23%. Chairman and CEO Lewis Platt cited strong PC sales and improving business conditions in Asia as factors fueling the company's growth. HP remains a dominant maker of low-cost personal computers, laser printers, and networking equipment.  
+
+The mixed results from computer hardware makers reflect the state of the technology sector in 1995. Established companies have weathered a recent slowdown, but continue to face challenges from the rapid pace of change in the industry. As some segments like mainframes have stabilized, others like personal computers and networking equipment remain highly competitive and price-sensitive. The companies that can identify and dominate the high-growth markets of the future will determine the leaders of tomorrow. For now, while the tide may not be rising for all, at least some of the major players are still steering steady ships.

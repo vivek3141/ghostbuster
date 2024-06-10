@@ -1,0 +1,28 @@
+The reaction between Bromate (BrO 3-) and Bromide (Br-) ions under acidic conditions and in the prescence of phenol and methyl red is a 'clock' reaction. At a specific point in the reaction, the solution goes from pink to colourless. This property will be used to calculate the activation energy of the reaction, by conducting the experiment at temperatures between 20 and 70C and producing an arrhenius plot of the results.
+Previous experiments have indicated that the rate-determining step for this reaction is between the Br- ions and an intermediate H 2BrO 3+ the formation of this intermediate involves two pre-equilibrium reactions:
+If step (3) is rate determining:
+Research has indicated that this step results in the formation of Br 2 and H 2O. The Br 2 then reacts with the phenol, when all the phenol has reacted the bromine then reacts with the methyl red, causing the solution to turn colourless.
+As the concentration of H 2BrO 3+ may be expressed in terms of the total concentration of Br(V) series as:
+Substituting for[HBrO 3]:
+substituting for [BrO 3-]:
+Substituting for [HBrO 3]:
+Substituting for [H 2BrO 3+] in Expression II:
+at very low concentrations of H+:
+so that [BrO 3-] 1/3[Br(V)]
+substituting for [Br(V)] in (Expression IV) gives :
+Where k = k 1k 2k 3
+This indicates that the reaction is fourth order overall, second order with respect to H+, and first order with respect to BrO 3- and Br -.
+The aim of this experiment is to determine the activation barrier for the reaction between Bromate and Bromide ions and give an estimate of the uncertainty in this value.
+Four sets of boiling tubes were prepared as described below and placed in the thermostat to equilibriate at each temperature.
+Tube 1: 10 cm3 of 0.01 M phenol, 10 cm3 of the bromate/bromide solution (0.0833M Br- and 0.0167 M BrO3), 4 drops of methyl red.
+Tube 2: 5 cm3 0.5 M H 2SO 4
+When the solutions had reached the correct temperature, the contents of tube 1 was poured into tube 2 and shaken to mix. From when the solutions are mixed the time taken for the pink colour to disappear was recorded. The experiment was conducted at 5C intervals between 20 and 70C. The time taken for the pink colour to disappear was recorded.
+From integration of the rate law for first order rate law (below) and the rate constant (k) can be expressed in terms of the time taken for the reaction to reach a specific point (t) and the concntration of product at this point [A]t and the initial concentration of the product [A]0.
+As the concentration of [A]0 will be constant for all the reactions and all the reactions will be terminated when [A]t reaches a certain point, ln[A]0 - ln[A]t may be considered to be a constant at the times recorded for each of the reactions which will be denoted 'x' from here onwards. Substituting for k in the Arrhenius equation gives:
+Where A is the pre exponential factor, E a is the activation energy for the reaction in joules, R is the gas constant and T is the absolute temperature.
+This shows that a plot of lnt against 1/T will give a straight line, of gradient Ea/R.
+The true value calculated from the 31 values contributed by other groups isn't very close to the value calculated from the value obtained from this experiment alone. This is may be due to a difference in opinion as to the exact point at which the solution had gone colourless. This is the chief source of error for this experiment, especially at higher temperatures where the reaction occurred very fast. In this experiment the same person decided the point at which the solution had turned colourless to minimise this source of error, however other groups may have had a different perception of when the solution was colourless. Using a colorimeter to determine when the solution was colourless would eliminate this error by selecting a specific absorbance to signify the 'end' of the reaction.
+This difference accounts for the large amount of uncertainty in the value for the entire class, nearly 20% of the true value found. Ideally, the experiment would be repeated many more times, using a colorimeter as described above to reduce the uncertainty.
+Often the colour change would happen more rapidly towards the bottom of the tube than at the top, even though the tube was shaken throughout the experiment to reduce this. Using a machine to agitate the solution would be much more effective than shaking it by hand.
+The accuracy of these results could also be improved by reducing the delay between mixing the solutions and starting the stopwatch and between the colour change occurring and stopping the stopwatch. This could be done by using continuous flow equipment to mix the solutions and measure the time taken for the colour to change.
+The activation energy for this reaction was found to be 51.59 kJmol -1 in this individual experiment, however the activation energy was found to be 65.78 kJmol -1 for the entire group, however the results were very broadly spread due to the differing perception of the point at which the solution was colourless.

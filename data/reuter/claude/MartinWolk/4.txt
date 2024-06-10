@@ -1,0 +1,13 @@
+One year later, Microsoft's Windows 95 falls short of expectations
+
+It has been one year since Microsoft launched Windows 95, its new operating system aimed at reviving slowing PC sales and winning back consumers in the emerging "information appliance" era. However, 12 months after the massively hyped release of Windows 95, the software giant's strategy appears to have fallen short of expectations and the competition is catching up fast. 
+
+When Windows 95 debuted in August 1995 with a $300 million marketing blitz, most industry observers believed it would drive a huge surge in PC sales and cement Microsoft's dominance for years to come. Instead, PC growth has remained largely flat over the past year and Microsoft's troubles are mounting. The U.S. Department of Justice is reportedly preparing an antitrust investigation into the company's competitive practices. 
+
+Microsoft's challenges come as nimble rivals like Netscape are innovating quickly and gaining ground. Netscape's Navigator web browser has attracted over 60 million users in just over two years, posing a threat to Microsoft's Internet Explorer browser which is bundled with Windows 95. Netscape also plans to release its own operating system called Navigator OS aimed at competing with Windows.
+
+Some analysts argue Windows 95 has failed to live up to the revolutionary hype. While the operating system introduced minor interface improvements and long file name support, under the hood it is not fundamentally different from previous versions of Windows. For many users, Windows 3.1 continues to work just fine. This has made the $90 upgrade fee for Windows 95 a tough sell. 
+
+Microsoft claims over 40 million copies of Windows 95 have been sold, but industry estimates indicate no more than 25 million are actually in use. The company also hoped the new operating system would spur consumers to buy new PCs, but PC sales have grown only 5% since the launch of Windows 95 according to market research firm IDC. This is a fraction of the 10-15% annual growth seen in the early 1990s.
+
+Continued on page 12...

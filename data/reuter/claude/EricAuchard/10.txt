@@ -1,0 +1,14 @@
+Computer Associates International to Launch One-Stop Internet Business Unit 
+for Corporate Web Hosting and Management
+
+Computer Associates International, Inc. (CA) today announced plans to launch a new Internet business unit to provide one-stop Web hosting and management services for large corporations. The new division, to be called CA Internet Enterprises, will offer a full range of Internet-related services including Web hosting, content delivery, e-commerce transaction processing, and network management. 
+
+The move is a response to the growing needs of CA's enterprise customers as they develop more ambitious Web sites and electronic commerce initiatives. Large companies are finding that hosting and managing large-scale, mission-critical Web sites and online businesses is vastly more complex than maintaining a simple online presence. However, most do not have the necessary expertise or resources in-house to do it themselves. CA believes its new Internet business unit can step in to provide a complete solution.
+
+"Corporate Web sites and e-commerce platforms have become the new mission-critical enterprise applications," said Sanjay Kumar, president of CA. "Managing Web-based systems and applications requires the same level of industrial-strength tools, processes, and infrastructure as traditional IT management. With the launch of CA Internet Enterprises, CA is extending its expertise to the Internet in a way that delivers the reliability, scalability, and robustness that companies have come to expect from us."  
+
+The new unit will draw on CA's 20 years of experience in IT management to provide professional services such as Web site and systems hosting, monitoring and management; 24/7 support; software management and distribution services; e-commerce order fulfillment; and network security. The Web hosting and management facilities will be housed at CA's Internet Data Center in Islandia, New York. CA says its goal is to deliver 99.999 percent uptime and iron-clad security for customers' e-business infrastructures.
+
+Initially, the service will target customers in the financial services, telecommunications, technology, and retail industries. Future plans include forming partnerships with application service providers and extending the service to small and mid-sized companies.
+
+(continued)

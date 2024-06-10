@@ -1,0 +1,31 @@
+Please enter name:
+xXxAngelOfDeath293xXx
+Invalid name. Naming rules are strictly enforced on this server. Please enter human-readable name:
+Amaranth
+Please choose base character appearance.
+Female. Athletic build. Shoulder length black hair. Blue eyes. Black hoody. Jean shorts. Multiple piercings.
+Please enter occupation.
+Shadow sorceror.
+Invalid occupation. This does not match any real-world occupation. Please enter occupation.
+High school student.
+Building equivalent in-game class, please wait...
+....
+In order to narrow down the possible classes, and to select additional skills and trait, more information is required. Please enter favorite subjects.
+English, Art, Music. I used to like Science, but the one teacher ruined it for me.
+Please enter hobbies and interests
+Writing poetry, listening to music, drawing pictures of vampires and skeletons, fashion, anime.
+How do you feel today?
+Good I guess.
+Invalid response. How do you *really* feel?
+Kinda tired. Bored. Like I'm stuck in the same day-to-day.
+What do you want for your future?
+I dunno. I kinda want to be a songwriter I guess.
+Why?
+I like writing poetry. My friends have told me that my writing is calm, but sad.
+Do you dream in colour?
+What kind of question is this?
+Invalid response. Do you dream in colour?
+Yes.
+Do you dream with sound?
+Yes.
+Character class and attribute building: Complete. Brainwave synchronization: Complete. Welcome, Junior WordWeaver, to Eternal Dream. You may feel a slight drowsiness as game loads...

@@ -1,0 +1,13 @@
+Supreme Court Case Could Shake Up Trillion Dollar Futures Markets, but Congressional Solution on Horizon 
+
+The Supreme Court heard arguments this week in a case that could significantly disrupt the $1.2 trillion futures and derivatives markets. The case, CFTC v. Cochran, examines whether the Dodd-Frank financial reform law gives the Commodity Futures Trading Commission authority to regulate all transactions involving commodities, even those occurring abroad that only indirectly impact U.S. markets.
+
+For decades, the CFTC has overseen the U.S. futures and derivatives markets, which allow producers and traders to hedge risks or speculate on the prices of commodities like oil, wheat, interest rates, and stock market volatility. However, the law is unclear whether the CFTC’s authority extends to foreign transactions that might eventually impact U.S. markets. 
+
+In the case before the high court, James Cochran, a U.S. trader living in Mexico, sued the CFTC after it fined him $1.2 million for manipulating U.S. natural gas futures from Mexico. Cochran argues the CFTC does not have jurisdiction over his trading activities outside the U.S., even if they influence domestic American markets. The CFTC counters that it needs broad authority, even across borders, to properly regulate the markets and curb fraud and abuse.
+
+The case comes as the CFTC has tried to assert its oversight of burgeoning global markets. Commissioner Dan Berkovitz argued in an interview that “if there are manipulative activities anywhere in the world that ultimately influence prices in the U.S., that undermines the integrity of our markets.” However, Cochran’s lawyer warned that giving the CFTC “unfettered global jurisdiction” raises major legal concerns and economic issues. 
+
+During oral arguments, the justices appeared divided over how much deference to give the CFTC in determining the scope of its own authority. Justice Brett Kavanaugh suggested Congress likely intended the CFTC to have jurisdiction only over domestic transactions, not those abroad. But Justice Stephen Breyer noted the “enormous” challenges facing the CFTC demand flexibility.
+
+Regardless of the ruling, expected by June, Congress may step in to clarify the law. Rep. Patrick McHenry (R-N.C.) is drafting legislation specifying the CFTC cannot regulate foreign transactions unless they directly involve U.S. entities or markets. Rep. Jim Himes (D-Conn.) is proposing a bill permitting limited CFTC oversight of offshore trading if it impacts domestic prices. With billions of dollars and the integrity of U.S. markets at stake, lawmakers want to resolve this debate even if the high court punts. The futures industry will be watching closely as major reforms could be on the horizon.

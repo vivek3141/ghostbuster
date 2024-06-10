@@ -1,0 +1,15 @@
+Here's a draft 500-word news article with that headline:
+
+Federal Appeals Court Overturns $253 Million Verdict Against Nintendo for Patent Infringement
+
+In a ruling seen as a victory for technology companies battling non-practicing entities in court, the U.S. Court of Appeals for the Federal Circuit today overturned a $253 million jury verdict against Nintendo accused it of infringing on technology patents in its Wii gaming system.  
+
+A three-judge panel concluded that the patents held by plaintiff Netgear were overly broad and failed the "abstractness" test established by the Supreme Court of the United States for software and business method patents. The patents claimed the broad concept of wireless local area networks (WLANs) to connect gaming systems without any specific inventive technology cited. The appeals court said those broad claims were unpatentable.
+
+"Merely reciting the use of an abstract idea, like wireless communication, on a generic technology, like gaming systems, is not enough to transform an otherwise abstract idea into patent-eligible subject matter," Judge William Bryson wrote in the opinion for the unanimous court. The verdict against Nintendo was thrown out and the case ordered dismissed.
+
+The case was closely watched as an indicator of how courts would apply additional scrutiny to patents that claim broad abstract ideas without a specific inventive concept. Technology companies have long argued that non-practicing entities, or "patent trolls," abuse the patent system by filing overly broad patents solely for the purpose of litigation and extracting settlements. 
+
+Nintendo issued a statement praising the court's ruling. “We are very pleased with the Federal Circuit’s decision," said Nintendo of America's deputy general counsel Richard Medway. "This case should serve as a warning to patent trolls that are attempting to abuse the patent system through speculative litigation and overly broad patent claims.”
+
+The plaintiff, Netgear, said it was disappointed in the ruling and considering its options for potential appeals, including to the Supreme Court. The case is one of the largest verdicts against a technology company to be overturned on appeal in recent years. The appeals court ruling casts doubt on many of the hundreds of existing lawsuits by non-practicing entities alleging infringement of broad technology patents.

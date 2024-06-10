@@ -1,0 +1,39 @@
+Drug Class
+Artemisinin class drugs.
+Description
+Artesunate is an antimalarial drug for injection, artemisinin derivative, and is used to treat malaria in patients of various ages. The effective action of Artesunate is supported by its advantage of a hydrophilic group (Khanal, 2021). Artesunate is a first-line treatment followed by an entire course of malaria treatment.
+Mechanism of Action
+Artesunate metabolized into dihydroartemisinin (DHA), which contains the endoperoxide bridge responsible for combating Plasmodium falciparum, a parasite that causes malaria. DHA reacts with heme resulting in free radicals, which inhibit proteins and nucleic acid synthesis.
+Drug Administration and Dosage
+Artesunate is supplied as a white powder for further dilution with sterile diluent and production of a colorless solution. Recommended doses of Artesunate are 2.4 mg per kg of body weight for adults and children are heavier than 20 kilograms, and 3 mg per kg for children less than 20 kilograms (Kitabi et al., 2021). The drug is administered intravenously at 0, 12, 24 hours, and after that – daily.
+Drug Interactions
+The drugs ritonavir, nevirapine, or UDP-Glucuronosyltransferase (UGT) inducers may reduce the antimalarial effects of Artesunate (FDA, 2020). UGT Inhibitors can enhance the side effects of Artesunate drug action. These aspects need to be monitored with the simultaneous use of Artesunate injections and mentioned drugs.
+Potential Side Effects/Adverse Effects/Toxicities
+According to FDA (2020), clinical trials of Artesunate drug have identified potential side effects and adverse reactions:
+  * hemoglobinuria;
+  * acute renal failure requiring dialysis;
+  * jaundice;
+  * anemia;
+  * thrombocytopenia;
+  * lymphopenia;
+  * neutropenia;
+  * pneumonia;
+  * diarrhea;
+  * elevated creatinine;
+  * pulmonary edema;
+  * pyrexia;
+  * abdominal pain;
+  * vomiting;
+  * dizziness;
+  * headache;
+  * cough.
+Lab Effects/Interference
+Clinical studies tested the efficacy and safety of the Artesunate drug. Two studies found that compared to another broadly used antimalaria drug – quinine, Artesunate reduces mortality rate and the risk of hypoglycemia (Khanal, 2021). Another study expanded the understanding of drug action by proving less risk for patients to have coma and convulsions. A clinical trial comparing Artesunate with artemether also showed less mortality rate and faster recovery with Artesunate.
+Special Considerations
+In the case of a sensitive reaction to a drug, such as dyspnea or rash, it is necessary to consider the possibility of treatment with another drug. After Artesunate treatment, patient follow-up monitoring is needed to identify possible hemolytic anemia. Clinical trials have not identified threats to the mother and fetus during pregnancy, as opposed to the severe risks of delayed malaria treatment.
+Nursing management
+The healthcare practitioners first assess the needs or possible treatment of severe malaria by Artesunate drug. The preparation of the solution from the powder must be carried out using the diluent supplied. The nurse should take 11 ml of diluent with a needle to add to the powder and swirl until all the powder is completely dissolved. The drug is recommended to be administered as a slow bolus during 1-2 minutes. It is recommended to store the medication at room temperature, not freeze, not heat, and avoid light ingress. Health care providers must not use the medicine after the expiration date.
+Patient Assessment
+Artesunate is for malaria patients only after a confirmed diagnosis. The patient assessment goes through a physical examination and evaluation of symptoms, as well as a laboratory test. A specialist may prescribe a microscopic blood test to detect parasites or an antigen test. Additional tests may be needed to detect side effects and take measures to mitigate them.
+Patient Education
+Patients with malaria who are prescribed Artesunate should be aware of its mode of administration and duration of treatment. Patients should discuss with the medical provider such considerations as the presence or absence of allergies, kidney disease, pregnancy, and the current use of any drugs. Patient education should also include knowledge of potential side effects and reactions and cases that need to be reported. If there is an allergic reaction, it is worth considering alternative treatments and stopping the Artesunate use.

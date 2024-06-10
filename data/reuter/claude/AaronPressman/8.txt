@@ -1,0 +1,11 @@
+Supreme Court Grapples With Rules on Derivatives and Currency Trading  
+
+The Supreme Court heard arguments today in a closely watched case that could determine the scope of regulations on complex financial instruments known as derivatives and currency trades. At issue is whether agencies like the Commodity Futures Trading Commission have the authority to regulate overseas transactions that are largely negotiated and executed outside the U.S. but still have substantial effects on domestic markets.
+
+The case was brought by two London-based banks that were penalized by the CFTC for manipulating an interest rate benchmark called Libor that is used to set rates on trillions of dollars of mortgages, student loans and derivatives. The banks argued that because most of their activity took place in London, they should not be subject to the agency’s enforcement power. 
+
+The CFTC countered that while the actual trades may have been executed abroad, they were ultimately tied to U.S. markets and therefore within the agency’s regulatory reach. “Congress gave us the authority over activities that have a direct and significant effect on U.S. commerce,” a CFTC lawyer told the justices. “It’s the effect that matters, not the location.”
+
+The markets for derivatives and swaps have ballooned in recent decades and were at the heart of the 2008 financial crisis. In response, Congress expanded the CFTC’s authority in 2010 to oversee the roughly $450 trillion global market for interest rate benchmarks like Libor and currency transactions. However, the law was ambiguous on whether that power extended to trades executed outside America’s borders.  
+
+The ruling in the case, due by July, will have ramifications for the CFTC’s ability to police threats to market stability from afar and crack down on misconduct globally. Some worry limiting its reach could incentive banks to relocate activities to less regulated jurisdictions and ultimately pose more risks to the U.S. economy. Whatever the court decides, more clarity around the rules for derivatives and swaps markets that often transcend borders would be welcomed by regulators and industry alike. Overall, the arguments suggested the justices themselves seemed torn over crafting a decision that both adheres to principles of international law and deters potential bad actors beyond America’s shores.

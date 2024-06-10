@@ -1,0 +1,15 @@
+Hydrogen bonds play an important role in the structure and function of globular proteins. Hydrogen bonds form between the slightly positively charged hydrogen atom of one molecule and the slightly negatively charged oxygen or nitrogen atom of another molecule. In proteins, hydrogen bonds form between the amide hydrogen and carbonyl oxygen of the peptide backbone to stabilize the protein's secondary structure, such as the alpha helix and beta sheet. 
+
+There are several advantages to hydrogen bonds in proteins. First, they are relatively weak noncovalent interactions, so they can easily break and re-form, allowing proteins to be dynamic and flexible. This flexibility is important for proteins to bind to their substrates and catalyze reactions. If proteins were locked into a single rigid structure by strong covalent bonds, they would not be able to function properly. 
+
+Second, the strength of hydrogen bonds can be influenced by the chemical environment. For example, hydrogen bonds tend to be stronger in hydrophobic environments and weaker in hydrophilic environments. This can cause proteins to change shape in response to their environment. When a protein moves to a hydrophobic environment, its hydrogen bonds strengthen and the protein folds more tightly. When in a hydrophilic environment, the hydrogen bonds weaken and the protein unfolds and becomes more flexible. This environmentally-responsive behavior is essential for many protein functions.
+
+However, there are some disadvantages to the use of hydrogen bonds in proteins. Because they are relatively weak, hydrogen bonds can easily break, and if too many break at once the protein can unfold and become nonfunctional. Temperatures that are too high can cause widespread breakage of hydrogen bonds, leading to loss of protein structure and function. Proteins also require the proper hydrophobic-hydrophilic balance to maintain their structure - if the environment is too hydrophobic or too hydrophilic, hydrogen bonds will weaken and the protein will unfold.
+
+To maintain proper pH, the human body uses buffer systems, including the bicarbonate buffer system. This system helps maintain pH balance in the blood during exercise. As muscles produce more CO2 and metabolic acids during exercise, the buffer systems help minimize changes in H+ concentration and keep the blood pH around 7.4.
+
+The bicarbonate buffer system works by binding hydrogen ions to bicarbonate (HCO3-), forming carbonic acid (H2CO3), which is then converted to CO2 and water. For example, when blood becomes too acidic, the following reaction occurs:
+
+H+ + HCO3- -> H2CO3 -> CO2 + H2O
+
+The released CO2 is exhaled from the lungs, removing excess hydrogen ions and reducing acidity. The opposite occurs if the blood becomes too basic. By binding and releasing hydrogen ions, the bicarbonate buffer system is able to stabilize pH changes from cellular respiration during physical activity and maintain proper acid-base balance in the blood.

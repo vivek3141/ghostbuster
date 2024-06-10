@@ -1,0 +1,6 @@
+illustration:
+The math textbook has many clearly illustrations that can make me understand what it means easily.
+gather:
+The painting store gathers many famous paintings in the world.
+challenge:
+Teacher always hope students to show their challenge in the class.

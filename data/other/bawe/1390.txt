@@ -1,0 +1,81 @@
+It is thought that water masses in the oceans are transported around the World only by the currents driven by the wind. This is, however, not the case. Waves produced at the ocean's surface also help to transport water masses. The effect of waves on the transport of water masses is comparatively subtle. However, sometimes the wave driven component can be as large as that of the wave driven component. The average effect of the wave driven component of transport is referred to as Stokes drift and the following project will investigate certain aspects of Stokes drift, in particular characteristics such as wave amplitude and phase speed.
+A body of water can move three dimensionally (i.e. in the x-, y- and z- directions) but in this investigation, for simplicity, the motion of a mass of water will be considered in one-direction, the x-direction.
+When a body of water is transported by a velocity field, u, the x-coordinate of the body is defined by:
+The velocity field, u, is a function of two components. These components are the wind driven component and the wave driven component which is periodic in space and time. The velocity field is given by:
+Where u0 is the amplitude of the wind driven component; u1 is the amplitude of the wave driven component; c is the phase speed; k is the horizontal wavenumber and t represents time. The velocity field due to the waves is u
+1cos[k(x-ct)] and because of this, a body of water is moved by the wave field systematically ( Stokes drift) and it is this that this project will investigate.
+The above equations cannot be solved analytically, therefore the motion of a body of water needs to be solved using a computer program. The computer program used will be MATLAB.
+An explicit scheme will be used to solve the equations. This is also known Euler forward time-stepping scheme. Using the two stated equations stated previously and the explicit scheme, the following equation was derived. It calculates the next value of x (x
+n+1) by using the previous value of x (x
+n):
+It is proposed that a body of water is released from x(0)=0, with parameters of u
+0 = 1.0, u
+1 = 0.3, c = 2.0 and
+k = 1.0. The equation is integrated from t = 0 to t = 50 with the time-step set at 0.1.
+The following is the MATLAB computer code created to solve the previous equation with the previously stated parameters:
+This MATLAB computer program was executed and the following graph (Figure 1) is a plot of the x-coordinate as a function of time:
+The line on this graph represents the drift velocity, u. One would expect that the wind driven component u
+0 alone would give a drift of 1.0 or in terms of graphical representation, a straight line with a gradient of 1. However, it is clear to see from Figure 1 that the actual drift of the body of water is greater than the drift expected from the wind driven component u
+0. Therefore, this difference must arise from the velocity field due to the waves, u
+1cos[k(x-ct)] or Stokes drift.
+To find the magnitude of u
+1cos[k(x-ct)] or Stokes drift, the gradient of the line (velocity field, u) in Figure 1 must be calculated. The value of x at t = 50 was found by typing 'xarr(500)' in the MATLAB prompt screen:
+1.041382 is the value of the velocity field with parameters that are stated beforehand. Since the wind driven component equals 1.0, then u
+1cos[k(x-ct)] or Stokes drift is the difference between these values. Therefore u
+1cos[k(x-ct)] = 1.041382 - 1 = 0.041382.
+This now tells us that the magnitude of Stokes drift is equal to 0.041382.
+The computer program is then run again, but with the phase speed, c, set to zero.
+The following graph (Figure 2) is the outcome:
+It can be seen that Figure 1 is very similar to Figure 2, however, when t = 50, u < 50, unlike Figure 1 when at t = 50, u = 50. This change in u can be calculated. The gradient of the line in Figure 2 is calculated in the same way as it was for the line in Figure 1. Once again, the value of x at t = 50 was found by typing 'xarr(500)' in the MATLAB prompt screen:
+A value of 0.950002 was calculated. This now tells us that u
+1cos[k(x-ct)] or Stokes drift is now negative. The value of Stokes drift is therefore u
+1cos[k(x-ct)] = 0.950002 - 1 = -0.049998. This tells us that by setting the phase speed to zero, Stokes drift becomes negative. Although the value of Stokes drift is negative, the magnitude is 0.049998 but in the opposite direction to the wind velocity.
+In the previous example, the amplitude of the wave field, u
+1, is set to 0.3. The following experiment will vary u
+1 and see how the drift changes. The value of u
+1 will start at 0.0 and increase to 0.9 in steps of 0.05. The integration interval will also be increased up to t = 500, as this should give us a better estimate of the drift. It should also be noted that the phase speed, c, is still set to zero. Table 1 represents the findings:
+The following graph (Figure 3) is representation of the MATLAB code when u
+1 = 0.0 and c = 0.0.
+It is clear to see in Figure 3 that when u
+1 = 0.0 with the phase speed set to zero, the term u
+1cos[k(x-ct)] becomes zero and u = u
+0. Therefore the d x/d t is 1 and Stokes drift is non-existent. However, when u
+1 = 0.9, the plot of x as a function of time changes markedly (Figure 4):
+It is evident so see now, that the affect of u
+1 increasing has reduced the amount the body of water had traveled. This tells us that Stokes drift increases in magnitude (but in the opposite direction to the wind) as the wave driven component increases. This means that the waves restrict the transport of water if the phase speed is set to zero.
+By plotting a graph (Figure 5) of Stokes drift against the wave driven component, u
+1, it is possible to see graphically how the drift varies with the amplitude of the wave field:
+It is obvious to see that as the wave field increases, Stokes drift decreases. According to Figure 5, this change is not linear; as u
+1 increases, Stokes drift decreases exponentially.
+A theory exists for Stokes drift. It states that for small amplitudes of the wave field, u
+1, the total drift of the body of water relative to the drift due to the wind field, u
+0, is approximately equal to:
+In other words:
+In the computer model stated previously, this theory can be proved. For example, when
+u
+1 = 0.05, c = 0 and u
+0 = 1:
+This theory approximates a value of 0.99875. The computer model calculated a value of 0.998583. Therefore it is clear to see that this difference is very small and that the theory holds up. However, when the amplitude of u
+1 increases, the theory begins to deteriorate. For example, when u
+1 = 0.9, c = 0 and u
+0 = 1:
+A value of 0.595 was approximated, whereas the computer model calculated a value of 0.4341838. This proves that the theory only holds for small values of u
+1.
+The velocity field, u, is given by the equation:
+Therefore u
+drift varies according to u
+1cos[k(x-ct)] if u
+0 equals 1. If the phase speed, c, is above zero, then u
+1cos[k(x-ct)] or Stokes drift will fluctuate between being positive and negative. If d x/d t is greater than 1, then Stokes drift is positive by the amount of u
+1cos[k(x-ct)]. If d x/d t is less than 1, then Stokes drift is negative by the amount of u
+1cos[k(x-ct)]. This shows that the gradient of the velocity field is dependant on the phase speed. If the phase speed is zero, the gradient will decrease therefore Stokes drift becomes negative.
+Referring back to Figure 5, as u
+1 increases, Stokes drift decreases or Stokes drift increases, but negatively. Physically this tells us that when Stokes drift is negative, it acts in such a way to pull the body of water back in the opposite direction of the wind field and that when Stokes drift is more negative, this effect is greater. This means that the transport of water by the motion of waves is restricted by the larger values of u
+1. The opposite is also true. When Stokes drift is positive, the waves actually help to push the body of water along, increasing the net transport of water. However, as previously discussed, for this to be the case, the phase speed must be above zero.
+For waves to play a role in the transport of water, Stokes drift has to be positive. For this to be the case, the amplitude of the wave field, u
+1, has to be relatively small and the phase speed, c, greater than zero.
+It should also be noted that if over a certain time period, if Stoke drift is negative more than it is positive, the total drift will be less than the drift of the wind field alone. The opposite is true in that if Stokes drift is more positive than it is negative, then the total drift will be greater than the drift of the wind field alone.
+For efficient transport of water, u
+1 must be comparatively small because with larger values of u
+1, a body of water will not move as far as with a lower value of u
+1.

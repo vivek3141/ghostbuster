@@ -1,0 +1,13 @@
+New Seattle Startup Company Launches Product to Combat Information Overload on the Internet  
+
+A new Seattle-based startup called InfoFilter launched a web and mobile application this week aimed at helping people combat the problem of information overload on the Internet. The app, also called InfoFilter, provides users with a personalized feed of news stories, web content, and social media posts tailored to their needs and interests.
+
+InfoFilter was founded in 2018 by a team of engineers and data scientists who met at the University of Washington. They saw an opportunity to build an intelligent filtering tool powered by machine learning and natural language processing to surface the most relevant content for each individual user based on their content preferences, browsing history, and real-time feedback.  
+
+"The Internet is amazing, but it's also incredibly overwhelming," said Amy Chen, CEO and co-founder of InfoFilter. "There is so much information out there, and our brains can only process so much. We started this company to solve that problem and give people a simple, customized stream of content so they can stay informed without the information overload."
+
+The free InfoFilter service, which launched in beta this week, allows users to connect the app to platforms like Twitter, Facebook, online newspapers, blogs, and more. The AI-powered system then learns from users' interactions over time and adjusts the content in their feeds based on how long they spend reading certain articles or how often they like, comment on, or share specific types of posts. Users can also give direct feedback to further refine their feeds.
+
+"Our goal is to give people a single place to go for an intelligently curated stream of everything they care about on the Internet in a tailored experience that reduces clutter and noise," said Chen. "No more switching between a dozen apps and websites. InfoFilter does the work of sorting through that huge volume of content so you don't have to."
+
+InfoFilter is currently available as an iOS and Android mobile app and as a Chrome browser extension, with more platforms and features planned in the near future. The company was funded by $2.5 million in seed funding from leading venture capital firms including Accel and Madrona Venture Group. With this launch, InfoFilter is poised to tap into a fast-growing global information market and become a leader in the personalization technology space.

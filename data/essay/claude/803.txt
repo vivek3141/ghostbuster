@@ -1,0 +1,13 @@
+When developing a safety-critical system, the choice of programming language is an important consideration. There are several factors to determine the suitability of a language for such a project. 
+
+First, the language should be stable and mature. Newer languages that are still evolving may have unknown risks and bugs that could impact system safety. Established languages that have been used in other safety-critical systems are a safer choice.
+
+Second, the language should have a formal definition of its syntax and semantics. Informally defined languages can lead to ambiguities and different interpretations by programmers, which could introduce errors. A formally defined language has a precise description of how it functions.
+
+Third, the language should support features that aid in ensuring program correctness, such as static typing, limited use of pointers, bounds checking, and runtime checks. These features help prevent certain classes of errors and vulnerabilities. Languages without these safeguards make it harder to develop demonstrably correct programs.
+
+Fourth, the language should have a small set of well-defined constructs and features. A simple language with limited complexity is easier to fully understand, validate, and ensure correct use of. Complex languages with many features provide more opportunities for accidental misuse and undiscovered issues.   
+
+Finally, the language should be amenable to verification and validation techniques. It should be possible to mathematically prove the correctness of programs written in the language and also test them thoroughly. Not all languages are suited to formal proofs and static analysis for correctness.
+
+In summary, for a safety-critical system, a language that is mature, formally defined, supports safe features, is simple yet suitable, and enables verification provides the least risk and most stable foundation for development. With meticulous software engineering practices, a language with these characteristics is most likely to produce a safe system.

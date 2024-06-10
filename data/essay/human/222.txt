@@ -1,0 +1,119 @@
+Summary
+This paper documents Farcargo’s information system implementation plan. It is divided into various segments, which include an overview of the information system, a description of the primary tasks undertaken during implementation, and a list of the resources required (such as personnel, hardware, software, and other materials and facilities). This document has been developed continuously since the system design phase. It was later updated in the development phase, and the ultimate copy was produced during the testing and integration phase. This document will act as a guide during the implementation of Farcargo’s information system.
+Purpose
+The primary purpose of this document is to provide an outline of events and steps that the project team will follow during Farcargo’s system implementation. It also provides major tasks and how each should be carried out to achieve the best. An implementation plan sets the dates for the accomplishment of various tasks and acts as a communication and training plan.
+System Overview
+Being an online-based organization, Farcargo requires a system that acts as its virtual office. Farcargo is a virtually based logistics company that has spread its operations globally. The company’s system should have a virtual assistant who acts as the receptionist, a billing department, a data keeping and retrieval section, operations and monitoring, and senior management. Farcargo aims at having an information system that allows users to interact with them as in a real physical office.
+System Description
+The Farcargo information system can be divided into three main parts, the user interface, application, and database. At the user interface, the system should allow the client to register an account with the company where they can access their data. The system saves the clients’ data into a database where they can only be accessed by authorized personnel. The client is then able to access the organization’s services and make inquiries on various products offered. When satisfied, the client can book logistic service and the system automatically generates their bill. The client is required to make a payment through the platform using a special code generated during billing. The system then issues the client with a receipt and their booking is automatically scheduled on the system. The staff in charge of the delivery and the client can view the scheduled date and is sent a reminder by the system two days before the actual date.
+After our staff has received the goods to be delivered, the employee should change the status of the schedule on the system to ‘in transit. The system detects this change and sends an alert message to the client. The client and the management can monitor the goods in transit by use of GPS technology and cameras inserted in the company’s transport equipment. The employee carrying the goods can communicate with the management and client in case there is a need to do so. Upon the arrival of goods to their destination, the employee updates the status of the contract to “delivered” and uploads a few pictures as evidence. The client should confirm the delivery and then change the status to “completed”. The company requests clients to make comments about the services offered to ensure they are offered the best.
+System Organization
+The Farcargo system structure is made up of hardware, software, and databases. Every user needs the hardware components to access the system. They include computers, mobile phones or tablets, and peripheral devices.
+Company’s Information Systems Infrastructure.
+A High-level Information System Block Diagram.
+Farcargo’s Business logic diagram.
+Farcargo’s Physical Layout Diagram.
+Key Network Infrastructure Elements.
+Description of Implementation
+The Farcargo information system shall require the development of a website, a desktop application, and an android application. The three systems shall integrate into one system to efficiently support all the users’ needs. The website will form a base for all interactions whereby the users will perform their interactions. The desktop and mobile applications will enhance faster and easier access to the system. These applications will allow the users to access their company accounts from a wide range of devices.
+The system shall be deployed in the new office facility that Farcargo is planning on relocating to in a few weeks. The system’s server shall be operated by Farcargo’s information management staff from the facility. The monitoring and control of various operational activities shall be conducted from the central server to be installed in the Seattle office. The desktop and mobile applications shall be developed and provided to various users for download through secure and verified vendors such as the Apple store and Google Play store.
+The Farcargo information system shall be implemented using the agile approach whereby the process shall be broken into smaller manageable tasks. Each small task shall be assigned to a specific team that shall develop it independently. This model allows for innovation and flexibility from the development team (Gramatikova, 2020). It shall also provide room for corrections and improvements with on the tasks. After completion of each sub-task, the team shall bring it together to form one major system.
+Points of Contract
+The Farcargo information system development contract shall be awarded to Eagle sight Information System Developers (ESISD). This company shall be responsible for handling the development, implementation and installation, and maintenance of the system. The following is the list of the management staff in charge of various tasks;
+  * Project Manager- George Peterson.
+  * Other Managers:
+      + Program Manager- Agnes Haynes.
+      + Security Manager- Whitney Young.
+      + Database Administrator- James Hastings.
+      + Configuration manager- Victor Grad.
+      + Website development manager- Wilson Adams.
+      + Site Installation representative- Danielle Stone.
+Major Tasks
+Task                                                   Person Responsible                                                           Success criteria                                                                            
+ 1. Planning for the project development               Project manager                                                              Documentation of all users’ needs, resources required, and time needed to complete each task
+ 1. Identification of hardware and software platforms  Program manager                                                              A list of all hardware and software resources                                               
+ 1. Write and test program codes for the project       Website development manager, Database administrator, configuration manager,  Development of an efficient system                                                          
+ 1. Project implementation                             Site installation representative, program manager                            Successfully installation of the system that addresses all users’ needs                     
+ 1. Writing documentation and manuals                  Program manager                                                              Documentation of every information about the system.                                        
+ 1. Training and providing support                     Project manager                                                              All users are competent and satisfied                                                       
+ 1. Control and maintenance                            Project manager                                                              The system is working effectively                                                           
+ 1. Feedback response                                  Project manager                                                              All comments about the system are responded to.                                             
+
+Implementation Schedule
+Task                                                            Person responsible                                                           Start Date  End Date    Time taken
+Planning for the project development                            Project manager                                                              17/02/2022  31/03/2022  6 weeks   
+Identification and purchase of hardware and software platforms  Program manager                                                              24/02/2022  31/03/2022  5 weeks   
+Write and test program codes for the project                    Website development manager, Database administrator, configuration manager,  4/04/2022   7/04/2022   3 months  
+Project implementation                                          Site installation representative, program manager                            11/07/2022  1/08/2022   3 weeks   
+Writing documentation and manuals                               Program manager                                                              25/07/2022  22/08/2022  4 weeks   
+Training and providing support                                  Project manager                                                              3/08/2022   19/08/2022  2 weeks   
+Control and maintenance                                         Project manager                                                              20/08/2022  20/08/2030  8 years   
+Feedback response                                               Project manager                                                              20/08/2022  20/08/2030  8 years   
+
+Security
+Since most of Farcargo’s operations will be conducted online, security emphasis should be placed as most of its data will be available in the system. Security is an essential element to maintain during the system implementation process (Mahamad et al., 2018). Some features such as encryption, authentication, SSL secure communication, and authorization should be observed to ensure that the cluster is secure. Some of Farcargo’s system security features are
+1. The system will provide one interface where a client will access all the components. To access their information, clients will be required to provide authorization and authentication on one interface. This will ensure the security implementation is simplified as all components will be viewed and interacted with in a consistent manner.
+2. SSL secure communication; this connection allows the configuration of connections to each end-user. For instance, SSL connection can be enabled for the client, peer-to-peer, HTTP connection, gateway senders and receivers, and JMX.
+Regional data post-processing; the system should allow for the formatting of return values for the operations that provide access to region values. During implementation, the security of the components shall also be enhanced. For instance, when installing servers with sensitive data at the new office, maximum security from the company’s guards shall be placed during transportation and installation. The theft of such devices could lead to a great loss to the company while compromising sensitive information.
+Implementation Support
+During the implementation of the Farcargo information system, support from elements such as software, hardware, facilities, materials, equipment, and personnel shall be required. This section does not provide site-specific information as it describes the support elements.
+Hardware, Software, Facilities, and Materials
+Software tools
+  * Operating System:
+      + Microsoft Windows 10 Professionals.
+  * Development Platforms:
+      + Sublime text IDE (Integrated Development Environment);
+      + GitHub for Version Control;
+      + Android Studio to be used as a platform for development.
+  * Proposed Development Language:
+      + Android for Android App;
+      + MBaaS (Firebase) as backend/server;
+      + PHP will be used as the server-side scripting language for data parsing to and from JSON (JavaScript Object Notation).
+  * Hosting services:
+      + Webhost for hosting the database and resources of the application;
+      + Wamp server to be used as a local server.
+Hardware Tools
+ 1. Core i5 Laptop.
+ 2. Android Smartphone. Version 6.0.
+ 3. Hard Disk Space – The capacity should be at least 500 GB, upgradeable for future expansion.
+ 4. Printer – Laser printer of at least 600 DPI qualities for near letter quality printing of reports.
+ 5. Keyboard, Mouse, and Visual Display Unit.
+ 6. Computer – At least IBM compatible PC with core i3 processor or higher. It should have at least a 1.7GHz processor speed.
+ 7. Main Memory – The capacity should be at least 4 GB, upgradeable for future expansion.
+Facilities
+The implementation team shall require physical facilities during this task. One of the facilities required is a physical workspace, such as an office where they can assemble and test the hardware tools to be used. They will also need a desk for software installers and a hall or classroom space for training their staff and users. These facilities will be used mostly during the planning, coding, testing, and training phases.
+Materials
+These are minor but essential components to be used in the system development and implementation process. Some materials needed include charts, magnetic tapes, pens, a projector, disk packs, and a whiteboard among others.
+A List of Materials and Equipment
+ITEM                DESCRIPTION                                         COST($)
+Laptop              Core i5                                             600    
+Android Smartphone  Version 6.0                                         250    
+Hard Disk Space     at least 500 GB, upgradeable                        155    
+Printer             600 DPI qualities                                   300    
+Computer            IBM compatible PC with core i3 processor or higher  400    
+Main Memory         4 GB, upgradeable                                   100    
+Charts              Plain                                               50     
+Magnetic tapes      50                                                
+pens                                                                    25     
+Disk packs          75                                                
+Total                                                                   2005   
+
+Personnel
+As this is an information technology (IT) development project, the staff required are IT experts in various fields. This section identifies the personnel or staffing requirements appropriate for the tasks.
+Personnel Requirements and Staffing
+To begin with, a project manager should be well experienced in the field and should hold a master’s degree in an information technology field. The project manager’s services shall be required from the initiation to the termination period which is about 9 months. A project manager acts as the overall overseer of the project (Mahamad et al., 2018). Other managers and team members should have the following qualifications:
+  * Program manager-Degree in Computer science with three years of relevant experience
+      + Team members- Degree in Computer science
+  * Security manager- Degree in computer forensics with two years of experience
+      + Team members- Degree in computer forensics
+  * Database Administrator- Degree in information technology with three years experience
+      + Team members- Degree in information technology
+  * Configuration manager- Degree in computer science with three years’ experience
+      + Team members- Degree in computer science
+  * Website development manager- Degree in ICT and three years’ experience
+      + Team members- Degree in ICT
+  * Site Installation representative- Degree in project management with two years’ experience
+      + Team members- Degree in project management
+Performance Monitoring
+Lack of monitoring of the project’s progress would lead to failure (Chung et al., 2018). To monitor the performance of Farcargo’s information system deployment, the project will first be organized in one place. The IT team will use project management software to update and keep track of various sections of the project. Different tasks within the project are assigned to various people with relevant expertise and qualifications. Each supervisor shall develop the criteria for monitoring and conducting evaluations in their sub-project. The project team shall also record the areas where they face a challenge. They will be required to indicate how they addressed the challenge and what the outcome was. Evaluation of the progress of each subtask shall take place on a weekly basis.
+During the weekly meetings, each project team should submit an evaluation report. The report should indicate the level of progress of a project. The Project manager shall use the key performance indicators (KPIs) to gauge the performance of the project. In addition, some teams such as the database development team will monitor their performance in real-time using project monitoring software.

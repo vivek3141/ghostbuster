@@ -1,0 +1,1 @@
+Discuss the impact of the InstructGPT update on the behavior and potential applications of GPT-3, and the implications it has for the future of text generation and automation.

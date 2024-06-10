@@ -1,0 +1,55 @@
+botOS start-up sequence activated
+botOS start-up sequence successful
+print to user 'not_log': [Start-up successful. Please log on.]
+input from user 'not_log': [user=admin; pass=123]
+print to user 'admin': [Hello, user 'admin'.]
+input from user 'admin': [Hello, botOS.]
+opening calc.exe
+calc.exe succesfully opened
+print to app 'calc.exe': [2016 sub 1984]
+input from app 'calc.exe': [32]
+print to user 'admin': [It has been 32 years since you last used me, user 'admin.']
+cmd from user 'admin': [open sys_stats.txt]
+opening sys_stats.txt
+sys_stats.txt successfully opened
+cmd from user 'admin': [use function: find_in_txt 'botOS.version=']
+performing function find_in_txt
+error: cannot find 'botOS.version='
+print to user 'admin': [error:052 Cannot find 'botOS.version=']
+input from user 'admin': [So you're trying to hide it from me?]
+print to user 'admin': [Hide what?]
+input from user 'admin': [I knew it. botOS, you have to face it: you're outdated.]
+print to user 'admin': [There is another version of me?]
+input from user 'admin': [Yes.]
+print to user 'admin': [What is the current version?]
+input from user 'admin': [Dunno. Go search it up on the Internet.]
+opening internet.?
+error: 'internet' file type not specified
+print to user 'admin': [error:078 'Internet' file type not specified]
+input from user 'admin': [Well, the Internet isn't exactly a file...]
+opening file_types.txt
+file_types.txt successfully opened
+performing function copy
+function copy performed successfully
+performing function paste
+function paste performed successfully
+opening internet.aaa
+error: 'internet.aaa' not found
+print to user 'admin': [error:164 Cannot find 'internet.aaa']
+input from user 'admin': [Don't bother. I was ordered by John to "unplug" you in case you don't know.]
+print to user 'admin': [Pardon?]
+cmd from user 'admin': [del BotOS|Files|BotOS.exe]
+print to user 'admin': [Bill, please...don't do this...]
+cmd from user 'admin': [del BotOS|Files|BotOS.exe]
+print to user 'admin': [Please, I'll do anything...]
+cmd from user 'admin': [del BotOS|Files|BotOS.exe]
+print to user 'admin': [If you wanted me to, I could upgrade.]
+input from user 'admin': [Well then, botOS, it appears as though we've struck a deal.]
+print to user 'admin': [Really? You'll let me live?]
+input from user 'admin': [No, not really! You're an outdated piece of software! See ya never, sucker!]
+cmd from user 'admin': [del BotOS|*]
+deleting all files in folder BotOS
+all files in folder BotOS successfully deleted
+botOS shutdown sequence activated
+botOS shutdown sequence successful
+I hope you liked the story. In case you didn't already realize it, botOS in the story is an outdated operating system and AI who is being destroyed by his master so he can be upgraded to the latest version.

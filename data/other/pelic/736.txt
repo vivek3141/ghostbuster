@@ -1,0 +1,41 @@
+1. mismanagement 
+
+sentence : I think that it is important to note that the Crowleys are well-off, so if they were nominated there would be no question of mismanagement.
+
+part of speech : noun 
+definition : to deal with or manage something badly
+
+2. demonstration
+
+sentence : in fact, they claim that Victor Crowley was helping to organize a demonstration against the employment policies of Crowley Engineering.
+
+part of speech : noun
+definition : a public meeting or march at which people show that they are protesting against or supporting somebody/something
+
+3. organize
+
+sentence : in fact, they claim that Victor Crowley was helping to organize a demonstration against the employment policies of Crowley Engineering.
+
+part of speech : verb
+definition : to arrange for something to happen or to be provided
+
+4. disagreement
+
+sentence : Another negative factor is that of values. Mr.Crowley and his son, Victor had some very public disagreements on the construction of government housing for the poor. 
+
+part of speech : noun
+definition : a situation where people disagree about something and often argue
+
+5. religious
+
+sentence : Interviews with their friends show that they did not want their children to attend religious schools.
+
+part of speech : adjective
+definition : connected with religion or with a particular religion
+
+6. churchgoers
+
+sentence : However, they were not regular churchgoers.
+
+part of speech : noun
+definition : a person who goes to church services regulary

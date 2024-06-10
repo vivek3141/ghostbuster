@@ -1,0 +1,26 @@
+Condensation reaction is a chemical reaction in which two molecules combine to form a larger molecule with elimination of a small molecule, usually H 2O. The condensation of an aldehyde (bezaldehyde); RCHO and ketone (acetone); R(C=O)R' is investigated by calculating the percentage yield of the one large ketone product formed from filtration, crystallisation and recrystallisation. The melting point is also measured to detect the purity of the ketone. Here is the chemical reaction:
+2.5317g NaOH pellets were dissolved in 25ml distilled H 2O
+20ml C 2H 5OH was added
+The mixture was cooled under running H 2O
+2.5ml benzaldehyde (C 7H 6O) was put into a 100ml conical flask in fume cupboard
+0.9ml acetone was added from graduated pipette, followed by alkaline ethanolic solution
+Flask was stoppered with a clean stopper and shaken vigorously for 5mins, then at intervals over next 10mins. A light milky yellow emulsion formed
+Reaction temperature was kept at 20-25 oC (otherwise may require external cooling)
+As Practical C4, the precipitated crude product was filtered off at water pump
+Crude product (pale yellow fine powder) was rinsed well with cold distilled H 2O to remove any alkali
+Allowed to dry at room temperature on filter paper
+Yield and melting point of crude product were recorded
+Dry crude product was transferred and recrystallised from cold C 2H 5OH, dried, weighed, melting point measured and a sample for inspection was kept for inspection.
+Mass of NaOH pellets = 2.5317g (2.5g recommended)
+Percentage Yield
+Average melting point (C 17H 14O): crude product = 106oC; purified product = 88oC (literature value 107-113 oC)
+Percentage yield (C 17H 14O) = 81.9%
+Although it is usually ideal to have a lower melting point of a purified product than the crude one, the observed melting point of purified is much lower than the literature value. However, the crude product has a very similar one. Source of errors could be:
+Transfers of chemicals
+yellow clear solution, which is the same colour as the purified product, run off through filtration. This suggests some loss of product. Thus the yield is directly affected.
+Due to limited time, the product was probably not completely dried for melting measurement. According to the instructions from the demonstrator, the product deposited on the filter paper was taken out of the funnel and pressed with filter paper, in order to have dry product. This explains the high percentage yield probably due to incompletely dried product, to be the mass of water instead.
+Unlike Pracitcal C4, the sample was not stored in a dessicator with anhydrous CaCl 2 for a week for a dry product. At the cooler temperature, the solution is saturated at a much lower concentration of solute. The solute can no longer be held in solution forms purified crystals of solute, which can later be collected.
+Moreover, density of product increased after pressed. This results in higher mass, thus high percentage yield.
+Loss of some crude product in weighing and melting point measurement (glass tubes) before recrystallisation.
+On the other hand, accurate apparatus was used e.g. graduated pipette and electronic scale calibrated to four decimal places.
+It is more desirable to monitor the room temperature is between 20 - 25 oC using a thermometer.

@@ -1,0 +1,14 @@
+For given reaction:
+The rate law can be written in the following way:
+Using the isolation method, and putting F in large excess we can assume [F] = constant. Thus meaning the rate of reaction will now have form:
+where
+A plot of time verses concentration of Br2, if linear, would mean that the order with respect to Br 2 is zeroth. From graph 1, we can see it is not zero, since it is a non-linear graph. By plotting ln([Br 2]o/[Br 2]) vs time, if the order with respect to Br 2 is first it will produce a linear graph, with gradient k'. Graph 2 shows the line is linear thus  = 1 and pseudo rate coefficient k' = 568.42 s -1
+By recording values of k' and [F]o, it is possible to plot a graph of [F]o verses k'. If this graph is linear, then the order with respect to F is first, and also the gradient of the graph will give the rate constant k. Graph 3 shows a linear plot, thus the order with respect to F is first. The gradient of the graph is = 140.59, but the concentration is 10 -9 smaller, thus rate constant k = 1.4059 x 10 11 mol -1 dm 3 s -1.
+The oxidation of formaldehyde by chromic acid in perchloric acid has rate law:
+If perchloric acid and formaldehyde are in total excess, the rate equation can be re-written as:
+where
+By plotting given values of [H 3O+] versus k', if the order of reaction with respect to H 3O+ is first would give a straight line. From graph 4, we can clearly see it is non-linear. Plotting [H 3O+]2 versus k' gives a straight line meaning  = 2. The gradient of this graph will also yield k[CH 3O]. Given =1, and the gradient = 2.7754 x 10-4 mol2 dm-6 s-1, and [CH 3O] = 0.035 mol dm-3. This means k = 7.9297 x 10-3 mol-2 dm6 s-1.
+For the decomposition of N205, the rate coefficient was measured at several temperatures. From this information the activation energy can be deduced.
+Thus by taking natural logarithms of both sides we get:
+thus by plotting ln k vs 1/T, we find the gradient is equal to -Ea/R.
+This can be seen in graph 4, where the gradient is -12395. We know that R = 8.314 J mol -1 K -1. Thus Ea = 103052.03 J mol -1 = 103.05 KJ mol -1.

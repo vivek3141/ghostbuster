@@ -1,0 +1,9 @@
+The software to control an autonomous buggy and have it follow an optically marked track had several components including specifications, design, implementation, and testing.  
+
+The specifications were to have the buggy detect and follow a track marked with white tape for the boundary lines and a black line down the center using optical sensors. The buggy needed to navigate turns, both left and right, and properly follow the entire course. The top speed was set to 3 meters per second.
+
+The design consisted of two optical detectors on the front of the buggy - one sensor on the left and one on the right - to detect the outer boundary tape.A third center optical sensor detected the center black line. A microcontroller read the values of the three sensors and controlled the speed and steering of the buggy. If the center sensor detected the black line, the buggy went straight. If the left sensor saw boundary tape but not the right, the microcontroller steered left. The opposite for right turns.
+
+The implementation used an Arduino microcontroller to read the sensors and control a motor driver board for two DC motors. One motor was for drive wheels and one was for steering.The code iterated through a loop to constantly read the sensors, determine the correct steering direction and speed, and control the motors accordingly.
+
+Testing was done by placing the buggy onto a track with the specified white and black tape. The buggy was able to successfully follow the entire course of turns at 3 m/s. Some issues were encountered with detecting the tape and line at high speeds, so tuning was done to improve the optics and control logic. Overall, the autonomous buggy met the requirements and specifications and demonstrated a basic capability for navigating an optically marked course.

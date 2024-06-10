@@ -1,0 +1,11 @@
+The idea of how a point will affect the future is connected to two facts.
+The example is:
+All metals are heavy.
+ 2. Tin is a metal
+Tin is heavy.
+A sound argument must have both a valid form and true premises. Valid arguments can be unsound, but they will have wrong assumptions.
+The example is:
+All dogs are cats.
+ 2. All mice are dogs
+The mice are cats.
+What makes this a valid statement is not that it has trustworthy premises and a proper conclusion but the logical necessity of the judgment, given the two assumptions. The argument would be just as valid if the premises and conclusion were wrong. However, it is essential to determine that the purpose of argumentation is to establish the truth of a judgment. An invalid argument does not achieve this goal, so it cannot be considered sound (Besnard & Hunter, 2018). A sound argument has a valid form and true premises; thus, it cannot be invalid in all cases. If the argument is invalid, then the beliefs thoroughly do not matter, and, in fact, only the conclusion remains. Therefore, this means that there is no argument in this case, especially a sound one.
